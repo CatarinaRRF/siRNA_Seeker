@@ -28,4 +28,25 @@ class RegisterView(View):
 
         return render(request, self.template_name, {'form': form})
 
+class LogInView(View):
 
+    def get(self, request, *args, **kwargs):
+        a = print('insira sua função aqui')
+        return render(request, self.template_name, a)
+    
+class LogOutView(View):
+    """ 
+    O logout pode ser um botão que redireciona para a 
+    pag de login, e no backend sai da conta
+    não precisa fazer um template para ele
+
+    """
+    def get(self, request, *args, **kwargs):
+        a = print('insira sua função aqui')
+        return render(request, self.template_name, a)
+
+class ProfileView(View):
+
+    def get(self, request, *args, **kwargs):
+        a = print('insira sua função aqui')
+        return render(request, self.template_name, a)
