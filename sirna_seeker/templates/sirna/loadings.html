@@ -1,0 +1,125 @@
+{% extends "navbar_footer_overlap.html" %}
+{% load static %}
+
+{% block conteudo %}
+<div class="page-wrapper">
+    <div class="page-body" id="body_id">
+        <div class="container-xl">
+            
+      <!-- cards -->
+      <div class= "row row-deck row-cards">
+        <!-- Breadcrumber -->
+        <div class="col-12">
+            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item"><a href="/search">search</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="#">Loading</a></li>
+            </ol>
+            <style>
+                .breadcrumb {
+                  --tblr-breadcrumb-padding-x: 0;
+                  --tblr-breadcrumb-padding-y: 0;
+                  --tblr-breadcrumb-margin-bottom: 1rem;
+                  --tblr-breadcrumb-divider-color: #2fb344; /* Cor branca para o divisor */
+                  --tblr-breadcrumb-item-padding-x: 0.5rem;
+                  --tblr-breadcrumb-item-active-color: #2fb344; /* Cor branca para item ativo */
+                  --tblr-breadcrumb-link-color: #2fb344; /* Cor branca para links */
+                  display: flex;
+                  flex-wrap: wrap;
+                  padding: var(--tblr-breadcrumb-padding-y) var(--tblr-breadcrumb-padding-x);
+                  margin-bottom: var(--tblr-breadcrumb-margin-bottom);
+                  font-size: var(--tblr-breadcrumb-font-size);
+                  list-style: none;
+                  background-color: var(--tblr-breadcrumb-bg);
+                  border-radius: var(--tblr-breadcrumb-border-radius);
+                }
+
+                .breadcrumb-item + .breadcrumb-item {
+                  padding-left: var(--tblr-breadcrumb-item-padding-x);
+                }
+
+                .breadcrumb-item + .breadcrumb-item::before {
+                  float: left;
+                  padding-right: var(--tblr-breadcrumb-item-padding-x);
+                  color: #2fb344; /* Cor branca para o divisor */
+                  content: var(--tblr-breadcrumb-divider, "/");
+                }
+
+                .breadcrumb-item.active {
+                  color: #2fb344; /* Cor branca para item ativo */
+                }
+
+                .breadcrumb a {
+                  color: #2fb344; /* Cor branca para links */
+                }
+
+                .breadcrumb a:hover {
+                  text-decoration: underline;
+                  color: #f8f9fa; /* Cor de hover ajustada para branco claro */
+                }
+              </style>
+                      
+        </div>
+                
+        <!-- Titulo -->
+        <div class="col-12">
+                            <div class="card card-md">
+                                <div class="card-stamp card-stamp-lg">
+                                    <div class="card-stamp-icon bg-green">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5" /><path d="M16.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" /><path d="M18.5 19.5l2.5 2.5" /></svg>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-10">
+                                            <h3 class="h1">Finding siRNAs..</h3>
+                                            <div class="markdown text-secondary"> Our algorithm is hard at work, fine-tuning and optimizing to deliver the most effective results.
+                                                While you wait, why not explore your dashboard further? Monitor your projects, delve into detailed reports, and harness advanced data visualization tools.
+                                                 Click below to navigate directly to the dashboard and continue optimizing your research experience."
+                                            </div>
+                                            <div class="mt-3">
+                                                <a href="/dashboard" class="btn btn-primary" target="_blank" rel="noopener">Go to Dashboard</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div> 
+        <div class="col-12">
+            <style>
+                .progress {
+                  height: 20px; 
+                }
+                .progress-bar {
+                  height: 20px;
+                }
+            </style>
+
+            <!-- Progress Bar -->
+            <div class="progress progress-sm">
+                <div id="progress-bar-celery" class="progress-bar">&nbsp;</div>
+            </div> 
+        </div>
+        <div>
+          <div class="alert alert-info"><script src="{% static 'celery_progress/celery_progress.js' %}"></script></div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var progressUrl = "{% url 'celery_progress:task_status' task_id %}";
+          
+              fetch(progressUrl)
+                  .then(response => response.json())
+                  .then(data => {
+                      console.log(data);  // Verifique se os dados estão corretos
+                      CeleryProgressBar.initProgressBar(progressUrl);
+                  })
+                  .catch(error => console.error('Error fetching task status:', error));
+          });          
+        </script>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock conteudo %}

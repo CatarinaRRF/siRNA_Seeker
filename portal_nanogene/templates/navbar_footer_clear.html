@@ -1,0 +1,365 @@
+{% load static%}
+
+<!DOCTYPE html> 
+<html dir="ltr" lang="en" data-theme="light" style="color-scheme:light;">
+  <head>
+      <meta charSet="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+      <link rel="preload" as="image" Src="{% static '/img/undraw_quitting_time_dm8t.svg' %}" fetchPriority="high"/>
+
+      <!-- CSS files -->
+      <link rel="stylesheet" href="static\static_main\css\main.css"/>
+      <link rel="stylesheet" href="static\static_main\css\projects.css" data-precedence="next"/> 
+
+
+      
+      <link rel="stylesheet" href="static\static_main\css\tabler_main.css" data-precedence="next"/> 
+
+      <!-- Libs JS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+
+      <!-- Metadados-->
+      <title>Nanogene</title>
+      <meta name="description" content="Nanogene"/>
+      <link rel="author" href="https://tabler.io"/>
+      <meta name="author" content="codecalm"/>
+      <meta name="keywords" content="css,html,jekyll,sass,bootstrap,modular,html5,dashboard,sponsors,uikit,boilerplate-template,scss,admin-dashboard,themes,dashboards,ui-kit,adminpanel,dashboard-templates,bootstrap4-theme,bootstrap5,bootstrap"/>
+      <link rel="icon" href="{% static '/img/flavicon_verde.png' %}" type="image/x-icon" sizes="48x48"/>
+      <script src="static\static_main\js\polyfills-78c92fac7aa8fdd8.js" noModule=""></script>
+  </head>
+
+  <body>
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              // Função para alternar o tema
+              function toggleTheme(theme) {
+                  var d = document.documentElement;
+                  var n = 'data-theme';
+                  var s = 'setAttribute';
+
+                  // Atualiza o tema localmente
+                  localStorage.setItem('theme', theme);
+
+                  // Define o tema no documento HTML
+                  if (theme === 'system') {
+                      var t = '(prefers-color-scheme: dark)';
+                      var m = window.matchMedia(t);
+                      if (m.media !== t || m.matches) {
+                          d.style.colorScheme = 'dark';
+                          d[s](n, 'dark');
+                      } else {
+                          d.style.colorScheme = 'light';
+                          d[s](n, 'light');
+                      }
+                  } else {
+                      d.style.colorScheme = theme;
+                      d[s](n, theme);
+                  }
+              }
+
+              // Seleciona todos os botões de alternância de tema
+              var buttons = document.querySelectorAll('.theme-switcher-button_main');
+
+              // Adiciona um evento de clique para cada botão
+              buttons.forEach(function(button) {
+                  button.addEventListener('click', function() {
+                      var theme = this.dataset.title.toLowerCase();
+                      toggleTheme(theme);
+                      // Remove 'active' class de todos os botões e adiciona ao botão clicado
+                      buttons.forEach(btn => btn.classList.remove('active_main'));
+                      this.classList.add('active_main');
+                  });
+              });
+
+              // Inicializa o tema com base no armazenamento local ao carregar a página
+              var storedTheme = localStorage.getItem('theme');
+              if (storedTheme) {
+                  toggleTheme(storedTheme);
+                  // Adiciona 'active' class ao botão correspondente ao tema armazenado
+                  buttons.forEach(btn => {
+                      if (btn.dataset.title.toLowerCase() === storedTheme) {
+                          btn.classList.add('active_main');
+                      }
+                  });
+              } else {
+                  // Caso nenhum tema esteja armazenado localmente, verifica o tema do sistema
+                  toggleTheme('system');
+                  // Adiciona 'active' class ao botão correspondente ao sistema
+                  buttons.forEach(btn => {
+                      if (btn.dataset.title.toLowerCase() === 'system') {
+                          btn.classList.add('active_main');
+                      }
+                  });
+              }
+          });      
+      </script>
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              var aosInitialized = false;
+
+              // Função para inicializar AOS apenas uma vez ao rolar para baixo
+              function initAOSOnce() {
+                  if (!aosInitialized && window.scrollY > 0) {
+                      AOS.init();
+                      aosInitialized = true;
+                  }
+              }
+
+              // Inicializa AOS ao carregar a página
+              initAOSOnce();
+
+              // Adiciona listener para verificar scroll down
+              window.addEventListener('scroll', initAOSOnce);
+
+              // Reinicializa AOS apenas se o usuário estiver rolando para baixo
+              if (window.scrollY > 0) {
+                  AOS.refresh();
+              }
+          });    
+      </script>
+     
+        <header class="header header-sticky" >
+            <div class="container_main container-2xl_main">
+            <nav class="row_main items-center_main"> 
+                <div class="col-auto_main">
+                    <div class="d-flex_main items-center_main">
+                        <a class="logo_main logo-autodark_main logo-tabler-dashboard_main active_main" aria-label="Nanogene" href="/">
+                        </a>
+                        <div class="ml-3_main badge_main badge-outline_main">Beta</div> 
+                    </div>
+                </div>
+                <div class="col-auto_main ml-auto_main">
+                    <div class="navbar_main">
+                        <div class="navbar-menu_main">
+                            <div class="dropdown_main"> 
+                                <div class="navbar-link_main dropdown_main">
+                                    <a href="#" class="navbar-link_main" >
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zoom">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                            <path d="M21 21l-6 -6" />
+                                        </svg>
+                                        Explore
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M6 9l6 6l6 -6" />
+                                        </svg>  
+                                    </a>
+                                    <div class="dropdown-content_main">
+
+                                        <a href="/projects">Projects</a>
+                                        <a href="/events">Events</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="dropdown_main"> 
+                                <div class="navbar-link_main dropdown_main">
+                                    <a href="#" class="navbar-link_main" >
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-book-2">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z" />
+                                            <path d="M19 16h-12a2 2 0 0 0 -2 2" />
+                                            <path d="M9 8h6" /></svg>
+                                        Products
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M6 9l6 6l6 -6" />
+                                        </svg>  
+                                    </a>
+                                    <div class="dropdown-content_main">
+                                        <a href="/tools">All Tools</a>
+                                        <a href="/sirna">siRNA Seeker</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown_main"> 
+                                <div class="navbar-link_main dropdown_main">
+                                    <a href="#" class="navbar-link_main" > 
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lifebuoy">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                            <path d="M15 15l3.35 3.35" />
+                                            <path d="M9 15l-3.35 3.35" />
+                                            <path d="M5.65 5.65l3.35 3.35" />
+                                            <path d="M18.35 5.65l-3.35 3.35" />
+                                        </svg>
+                                        Resources
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M6 9l6 6l6 -6" />
+                                        </svg>  
+                                    </a>
+                                    <div class="dropdown-content_main">
+                                        <a href="/faq">FAQ</a>
+                                        <a href="/documentation">Documentation</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            {% if user.is_authenticated %}
+                            <a href="/dashboard" class="navbar-link_main btn_main btn-accent_main">Dashboard</a>
+                            {% else %}
+                            <a href="/accounts/login/" class="navbar-link_main btn_main btn-accent_main">Log In</a>
+                            {% endif %}
+                        </div>
+                        <button class="navbar-toggle_main" aria-label="Toggle sidebar"> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="navbar-backdrop_main"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <button class="go-to-top_main" >
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon_main icon-tabler_main icon-tabler-chevron-up_main icon_main" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 15 12 9 18 15"></polyline>
+            </svg>
+        </button>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var goToTopButton = document.querySelector('.go-to-top_main');
+            
+                // Mostrar ou esconder o botão baseado na rolagem da página
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300) {
+                        goToTopButton.classList.add('visible');
+                    } else {
+                        goToTopButton.classList.remove('visible');
+                    }
+                });
+            
+                // Adicionar evento de clique para rolar para o topo
+                goToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });            
+        </script>
+        
+        <main class="main_main"> 
+
+                {% block conteudo %}
+
+                {% endblock conteudo %}
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer_main">
+            <div class="container_main">
+                <div class="py-6_main border-bottom_main">
+                    <div class="row_main">
+                        <div class="lg_main:col-7_main">
+                            <div class="row_main">
+                                <div class="sm:col-6_main md:col_main">
+                                    <div class="h-subheader_main mb-3_main">Our products</div>
+                                    <ul class="list-unstyled_main list-separated_main">  
+                                        <li>
+                                            <a class="link-secondary_main" href="/tools">Tools</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-secondary_main" href="/sirna"> siRNA Seeker</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-secondary_main" href="/projects">Projects</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-secondary_main" href="/events">Events</a>
+                                        </li> 
+                                    </ul>
+  
+                                    <!-- Botão de Preferencia de modo -->
+                                    <div class="mt-6_main">
+                                        <div class="h-subheader_main mb-3_main">Preferences</div>
+                                        <div class="theme-switcher_main">
+                                            <button class="theme-switcher-button_main tooltip_main" data-title="System" aria-label="System">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-imac icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-12z"></path><path d="M3 13h18"></path><path d="M8 21h8"></path><path d="M10 17l-.5 4"></path><path d="M14 17l.5 4"></path></svg>
+                                            </button>
+                                            <button class="theme-switcher-button_main tooltip_main" data-title="Light" aria-label="Light">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path></svg>
+                                            </button>
+                                            <button class="theme-switcher-button_main tooltip_main" data-title="Dark" aria-label="Dark">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path><path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path><path d="M19 11h2m-1 -1v2"></path></svg>
+                                            </button>
+                                        </div>   
+                                    </div>
+                                </div>
+  
+                                <!-- Sirna -->
+                                <div class="sm:col-6_main md:col_main">
+                                    <div class="h-subheader_main mb-3_main">Sirna Seeker</div>
+                                    <ul class="list-unstyled_main list-separated_main"> 
+                                        <li>
+                                          <a class="link-secondary_main" href="/sirna">About</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-secondary_main" href="/sirna/search">Search</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-secondary_main" href="/dashboard">Dashboard</a>
+                                        </li>
+                                    </ul>
+                                </div>
+  
+                                <!-- Resources -->
+                                <div class="sm:col-6_main md:col_main">
+                                  <div class="h-subheader_main mb-3_main">Resources</div>
+                                  <ul class="list-unstyled_main list-separated_main">  
+                                      <li>
+                                          <a class="link-secondary_main" href="/faq">FAQ</a>
+                                      </li>
+                                      <li>
+                                          <a class="link-secondary_main" href="/documentation">Documentation</a>
+                                      </li> 
+                                  </ul>
+                              </div> 
+                            </div>
+                        </div>
+                        <!-- Logo -->
+                        <div class="lg_main:col-4_main ml-auto_main">
+                            <div class="logo_footer_main logo-autodark_main logo-tabler-dashboard_main active_main mb-4_main"> 
+                            </div>
+                            <div class="text-secondary_main">
+                                Join us in advancing scientific discovery and innovation, shaping the future of genetic medicine.
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="footer_main">
+            <div class="container_main">
+                <div class="py-5_main text-center_main lg_main:text-left_main">
+                    <div class="row_main">
+                        <div class="lg_main:col-auto_main lg_main:text-right_main lg_main:order-last_main">
+                            <div class="row_main justify-center_main"> 
+                                <div class="col-auto_main">
+                                    <div class="list-inline-dots_main"> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg_main:col_main"> Portal Nanogene • v1.0.0-beta20
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--$!-->
+        <template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+        <!--/$-->
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
+
+    </body>
+</html>

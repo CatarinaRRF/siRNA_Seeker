@@ -1,0 +1,71 @@
+{% extends "navbar_footer_main.html" %}
+{% load static %}
+
+{% block conteudo %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('nav');
+
+      function toggleStickyClass() {
+          if (window.scrollY > 0) {
+              header.classList.add('header-sticky');
+          } else {
+              header.classList.remove('header-sticky');
+          }
+      }
+
+      // Verificação inicial
+      toggleStickyClass();
+
+      // Adiciona listener para verificar scroll
+      window.addEventListener('scroll', toggleStickyClass);
+  });
+</script>
+<!-- Inclua o CSS do Glide.js (substitua {versão} pela versão desejada) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@{versão}/dist/css/glide.core.min.css">
+
+<!-- Inclua o JavaScript do Glide.js (substitua {versão} pela versão desejada) -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@{versão}/dist/glide.min.js"></script>
+
+
+
+<header class="hero pb-8" id="julia">
+  <div class="container">
+    <div class="hero-gradient">
+      <div class="row items-center">
+        <div class="md:col-6 text-center md:text-left aos-init aos-animate" data-aos="fade-up">
+            <div class="hero-subheader">Upcoming Events</div>
+          <h1 class="hero-title"> Exploring Future Innovations Together </h1>
+          <p class="hero-description mt-4">
+            Currently, no events are available. Stay tuned for exciting updates on upcoming events to foster innovation. While you're here, explore our projects or delve into our range of cutting-edge tools.
+          </p>
+          <div class="mt-6 lg:mt-7">
+            <div class="row justify-center md:justify-start">
+              <div class="col-auto">
+                <a href="/projects" class="btn btn-lime lg:btn-lg"  rel="noopener noreferrer">
+                  <span class="btn-text">View our Projects</span>
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a href="/dashboard" class="btn lg:btn-lg">
+                  <span class="btn-text">Go to your dashboard</span>
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-6">
+            <img alt="" loading="lazy" width="564" height="762" decoding="async" data-nimg="1" class="mx-auto img-light"  src="static/img/event.png" style="color: transparent">
+            <img alt="" loading="lazy" width="564" height="762" decoding="async" data-nimg="1" class="mx-auto img-dark" src="static/img/event.png" style="color: transparent">
+        </div>
+      </div>
+    </div>
+</header>
+
+
+
+
+{% endblock conteudo %}

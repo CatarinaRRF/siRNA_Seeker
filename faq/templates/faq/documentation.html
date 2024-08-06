@@ -1,0 +1,277 @@
+{% extends "page_in_contruction.html" %}
+
+<main class="main">
+    <div class="border-bottom bg-primary">
+        <div class="container container-2xl">
+            <div class="row g-0">
+                <div class="col-12 col-docs-mobile-menu">
+                    <button class="btn btn-block mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-vocabulary icon icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2z"></path><path d="M12 5v16"></path><path d="M7 7h1"></path><path d="M7 11h1"></path><path d="M16 7h1"></path><path d="M16 11h1"></path><path d="M16 15h1"></path></svg>
+                        <span class="btn-text">Toggle docs menu</span>
+                    </button>
+                </div>
+
+                <!-- NavBar -->
+                <div class="col-12 col-docs-side">
+                    <div class="mr-4 hidden md:flex mt-4 mb-2">
+                        <button class="form-control d-flex items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search icon form-control-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Quick search"><circle cx="10" cy="10" r="7"></circle><line x1="21" y1="21" x2="15" y2="15"></line></svg>
+                            <div class="flex-fill"><span class="form-control-placeholder">Quick search…</span></div>
+                            <span class="badge">ctrl<span>K</span></span>
+                        </button>
+                    </div>
+                    <ul role="list" class="docs-menu scrollbar flex-fill">
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Getting started
+                                <span class="docs-menu-header-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                </span>
+                            </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item active active" href="/docs/getting-started">Introduction</a>
+                                <a class="docs-menu-item" href="/docs/getting-started/browser-support">Browser Support</a>
+                                <a class="docs-menu-item" href="/docs/getting-started/customize">Customize Tabler</a>
+                                <a class="docs-menu-item" href="/docs/getting-started/download">Download</a>
+                                <a class="docs-menu-item" href="/docs/getting-started/faq">FAQ</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Base
+                                <span class="docs-menu-header-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                </span>
+                            </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/base/colors">Colors
+                                    <span class="badge badge-accent ml-2">new</span>
+                                </a>
+                                <a class="docs-menu-item" href="/docs/base/typography">Typography</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Layout
+                                <span class="docs-menu-header-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                </span>
+                            </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/layout/page-layouts">Page layouts
+                                    <span class="badge badge-accent ml-2">new</span>
+                                </a>
+                                <a class="docs-menu-item" href="/docs/layout/page-headers">Page headers</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Components
+                                <span class="docs-menu-header-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                </span>
+                            </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/components/alerts">Alerts</a>
+                                <a class="docs-menu-item" href="/docs/components/autosize">Autosize</a>
+                                <a class="docs-menu-item" href="/docs/components/avatars">Avatars</a>
+                                <a class="docs-menu-item" href="/docs/components/badges">Badges</a>
+                                <a class="docs-menu-item" href="/docs/components/breadcrumb">Breadcrumb</a>
+                                <a class="docs-menu-item" href="/docs/components/buttons">Buttons</a>
+                                <a class="docs-menu-item" href="/docs/components/cards">Cards</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Forms
+                                <span class="docs-menu-header-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                </span>
+                            </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/forms/form-elements">Base elements</a>
+                                <a class="docs-menu-item" href="/docs/forms/form-fieldset">Fieldset</a>
+                                <a class="docs-menu-item" href="/docs/forms/form-color-check">Color check</a>
+                                <a class="docs-menu-item" href="/docs/forms/form-image-check">Image check</a>
+                                <a class="docs-menu-item" href="/docs/forms/form-selectboxes">Selectbox</a>
+                                <a class="docs-menu-item" href="/docs/forms/form-validation">Validation</a>
+                                <a class="docs-menu-item" href="/docs/forms/form-input-mask">Input mask</a> 
+                                <a class="docs-menu-item" href="/docs/forms/form-helpers">Form helpers</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Plugins
+                                <span class="docs-menu-header-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                </span>
+                            </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/plugins/flags">Flags</a>
+                                <a class="docs-menu-item" href="/docs/plugins/payments">Payments</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Utilities<span class="docs-menu-header-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                            </span>
+                        </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/utilities/borders">Borders</a>
+                                <a class="docs-menu-item" href="/docs/utilities/cursors">Cursors</a>
+                                <a class="docs-menu-item" href="/docs/utilities/interactions">Interactions</a>
+                            </div>
+                        </li>
+                        <li class="docs-menu-group">
+                            <div class="docs-menu-header">Tabler Icons<span class="docs-menu-header-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                            </span>
+                        </div>
+                            <div class="docs-menu-submenu">
+                                <a class="docs-menu-item" href="/docs/icons">Introduction</a>
+                                <a class="docs-menu-item" href="/docs/icons/svg">SVG version</a>
+                                <a class="docs-menu-item" href="/docs/icons/sprite">SVG sprite version
+                                    <span class="badge badge-accent ml-2">new</span>
+                                </a>
+                                <a class="docs-menu-item" href="/docs/icons/react">React plugin</a>
+                                <a class="docs-menu-item" href="/docs/icons/react-native">React Native plugin
+                                    <span class="badge badge-accent ml-2">new</span>
+                                </a>
+                                <a class="docs-menu-item" href="/docs/icons/preact">Preact plugin</a>
+                                <a class="docs-menu-item" href="/docs/icons/vue">Vue plugin</a>
+                                <a class="docs-menu-item" href="/docs/icons/solidjs">SolidJS plugin</a>
+                                <a class="docs-menu-item" href="/docs/icons/svelte">Svelte plugin</a>
+                                <a class="docs-menu-item" href="/docs/icons/figma">Figma plugin</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Conteudo -->
+                <div class="col">
+                    <div class="row gy-0">
+                        <div class="md:col">
+                            <div class="py-4 lg:py-6 lg:pl-6">
+                                <nav aria-label="breadcrumbs" class="breadcrumb mb-4 lg:md-6">
+                                    <ul class="breadcrumb-list">
+                                        <li class="breadcrumb-item"><a class="breadcrumb-link active" href="/">Home</a></li>
+                                        <li class="breadcrumb-item"><a class="breadcrumb-link active" href="/docs">Documentation</a></li>
+                                        <li class="breadcrumb-item"><a class="breadcrumb-link active" href="/docs/getting-started">Introduction</a></li>
+                                    </ul>
+                                </nav>
+                                <article class="markdown">
+                                    <h1>Introduction</h1>
+                                    <p class="lead">Free and open-source HTML Dashboard UI Kit built on Bootstrap</p>
+                                    <h2 id="what-is-tabler">
+                                        <a class="" aria-hidden="true" tabindex="-1" href="#what-is-tabler">
+                                            <span class="icon icon-link"></span>
+                                        </a> 
+                                        What is Tabler?
+                                    </h2>
+                                    <p>
+                                        Tabler is fully responsive and compatible with all modern browsers. Thanks to its modern and user-friendly design you can create a fully functional interface that users will love! Choose the layouts and components you
+                                        need and customize them to make your design consistent and eye-catching. Every component has been created with attention to detail to make your interface beautiful!
+                                    </p>
+                                    <h2 id="what-are-the-benefits">
+                                        <a class="" aria-hidden="true" tabindex="-1" href="#what-are-the-benefits">
+                                            <span class="icon icon-link"></span>
+                                        </a>
+                                        What are the benefits?
+                                    </h2>
+                                    <p>
+                                        Tabler is a perfect solution if you want to create an interface which is not only user-friendly but also fully responsive. Thanks to the big choice of ready-made components, you can customize your design and adapt it
+                                        to the needs of even the most demanding users. On top of that, Tabler is an open source solution, continuously developed and improved by the open source community.
+                                    </p>
+                                    <figure><img alt="" loading="lazy" decoding="async" data-nimg="1" class="border rounded" sizes="100vw" src="/_next/image?url=https%3A%2F%2Fraw.githubusercontent.com%2Ftabler%2Ftabler%2Fdev%2Fsrc%2Fstatic%2Ftabler-preview.png&amp;w=3840&amp;q=75" style="">
+                                        <figcaption></figcaption>
+                                    </figure>
+                                    <h2 id="set-up-the-environment"><a class="" aria-hidden="true" tabindex="-1" href="#set-up-the-environment"><span class="icon icon-link"></span></a>Set up the environment</h2>
+                                    <p>To use our build system and run our documentation locally, you’ll need a copy of Tabler’s source files. Follow the steps below:</p>
+                                    <ol>
+                                        <li><a class="" rel="nofollow" target="_blank" href="https://nodejs.org/download/">Install Node.js</a>, which we use to manage our dependencies.</li>
+                                        <li>Navigate to the root <code>/tabler</code> directory and run <code>npm install</code> to install our local dependencies listed in <code>package.json</code>.</li>
+                                        <li><a class="" rel="nofollow" target="_blank" href="https://ruby-lang.org/en/documentation/installation/">Install Ruby</a> - the recommended version is <a class="" rel="nofollow" target="_blank" href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.5.tar.gz">2.5.5</a>.</li>
+                                        <li><a class="" rel="nofollow" target="_blank" href="https://bundler.io">Install Bundler</a> with <code>gem install bundler</code> and, finally, run <code>bundle install</code>. It will install all Ruby dependencies,
+                                            such as
+                                            <a class="" rel="nofollow" target="_blank" href="https://jekyllrb.com">Jekyll and plugins</a>.</li>
+                                    </ol>
+                                    <h3 id="windows-users"><a class="" aria-hidden="true" tabindex="-1" href="#windows-users"><span class="icon icon-link"></span></a>Windows users</h3>
+                                    <ol>
+                                        <li><a class="" rel="nofollow" target="_blank" href="https://git-scm.com/download/win">Install Git</a> in <code>C:\Program Files\git\bin</code> directory and run <code>npm config set script-shell "C:\Program Files\git\bin\bash.exe"</code>                                            to change the default shell.</li>
+                                        <li><a class="" rel="nofollow" target="_blank" href="https://rubyinstaller.org/downloads/">Install Ruby+Devkit</a> - recommended version is <a class="" rel="nofollow" target="_blank" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.5-1/rubyinstaller-devkit-2.5.5-1-x86.exe">2.5.5</a>.</li>
+                                        <li><a class="" rel="nofollow" target="_blank" href="https://jekyllrb.com/docs/installation/windows/">Read guide</a> to get Jekyll up and running without problems.</li>
+                                    </ol>
+                                    <p>Once you’ve completed the setup, you’ll be able to run the various commands provided from the command line.</p>
+                                    <h2 id="build-tabler-locally"><a class="" aria-hidden="true" tabindex="-1" href="#build-tabler-locally"><span class="icon icon-link"></span></a>Build Tabler locally</h2>
+                                    <ol>
+                                        <li>From the root <code>/tabler</code> directory, run <code>npm run start</code> in the command line.</li>
+                                        <li>Open <a class="" rel="nofollow" target="_blank" href="http://localhost:3000">http://localhost:3000</a> in your browser, and voilà.</li>
+                                        <li>Any change in <code>/src</code> directory will build the application and refresh the page.</li>
+                                    </ol>
+                                    <h2 id="bugs-and-feature-requests"><a class="" aria-hidden="true" tabindex="-1" href="#bugs-and-feature-requests"><span class="icon icon-link"></span></a>Bugs and feature requests</h2>
+                                    <p>Found a bug or have a feature request? <a class="" rel="nofollow" target="_blank" href="https://github.com/tabler/tabler/issues/new">Please open a new issue</a>.</p>
+                                    <div class="mt-7">
+                                        <div class="row justify-between">
+                                            <div class="col-auto"></div>
+                                            <div class="col-auto"><a href="/docs/getting-started/browser-support" class="btn"><span class="btn-text">Browser Support</span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right icon icon-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6 border-top border-top-light pt-6">
+                                        <div class="row text-secondary font-h6">
+                                            <div class="col">
+                                                <div class="space-y-1">
+                                                    <div class="d-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-help icon"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 17l0 .01"></path><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"></path></svg>
+                                                        <div>Do you have a question? <a target="_blank" rel="noopener, noreferrer" class="link link-underlined text-base" href="https://github.com/tabler/tabler/discussions">ask the community</a></div>
+                                                    </div>
+                                                    <div class="d-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bug icon"><path d="M9 9v-1a3 3 0 0 1 6 0v1"></path><path d="M8 9h8a6 6 0 0 1 1 3v3a5 5 0 0 1 -10 0v-3a6 6 0 0 1 1 -3"></path><path d="M3 13l4 0"></path><path d="M17 13l4 0"></path><path d="M12 20l0 -6"></path><path d="M4 19l3.35 -2"></path><path d="M20 19l-3.35 -2"></path><path d="M4 7l3.75 2.4"></path><path d="M20 7l-3.75 2.4"></path></svg>
+                                                        <div>Do you see a bug? <a target="_blank" rel="noopener, noreferrer" class="link link-underlined text-base" href="https://github.com/tabler/tabler/issues">open an issue on GitHub</a></div>
+                                                    </div>
+                                                    <div class="d-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                                            stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                                                        <div>Do you like Tabler? <a target="_blank" rel="noopener, noreferrer" class="link link-underlined text-base" href="https://twitter.com/intent/tweet?url=https://tabler.io&amp;via=codecalm&amp;text=Tabler - Premium dashboard template with responsive and high quality UI">tweet about it!</a></div>
+                                                    </div>
+                                                    <div class="d-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-filled icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                                            stroke-linecap="round" stroke-linejoin="round"><path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" stroke-width="0" fill="currentColor"></path></svg>
+                                                        <div>Support Tabler's development: <a target="_blank" rel="noopener, noreferrer" class="link link-underlined text-base" href="https://github.com/sponsors/codecalm">Github Sponsors</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <div class="d-flex items-center justify-end gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round"><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path><path d="M16 5l3 3"></path></svg>
+                                                    <div><a target="_blank" rel="noopener, noreferrer" class="link link-underlined text-base" href="https://github.com/tabler/tabler/edit/main/docs/getting-started.mdx">Edit this page on GitHub</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="docs-side-toc">
+                            <div class="pl-6 font-h6 pt-6">
+                                <div class="h6 mb-3">On this page</div>
+                                <div>
+                                    <ul class="p-0 list-unstyled space-y-2">
+                                        <li><a href="#what-is-tabler" class="link-secondary font-medium text-headers">What is Tabler?</a></li>
+                                        <li><a href="#what-are-the-benefits" class="link-secondary">What are the benefits?</a></li>
+                                        <li><a href="#set-up-the-environment" class="link-secondary">Set up the environment</a>
+                                            <ul class="p-0 list-unstyled space-y-2 pl-4">
+                                                <li><a href="#windows-users" class="link-secondary">Windows users</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#build-tabler-locally" class="link-secondary">Build Tabler locally</a></li>
+                                        <li><a href="#bugs-and-feature-requests" class="link-secondary">Bugs and feature requests</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mt-5">
+                                    <div class="rklm">
+                                        <div class="rklm-wrap"><a class="rklm-img" href="/illustrations"><img alt="Tabler Illustrations" data-no-statview="no" loading="lazy" width="130" height="100" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimg%2Fillustrations%2Fbanner-carbon.png&amp;w=280&amp;q=75 1x" src="/_next/image?url=%2Fimg%2Fillustrations%2Fbanner-carbon.png&amp;w=280&amp;q=75" style="color: transparent;"></a>
+                                            <a class="carbon-text" href="/illustrations">55 sleek illustrations for your startup's visual identity.</a>
+                                        </div>
+                                        <div>
+                                            <script async="" src="//cdn.carbonads.com/carbon.js?serve=CWYDCKQE&amp;placement=tabler-iconsio" id="_carbonads_js"></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

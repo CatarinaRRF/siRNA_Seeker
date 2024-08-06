@@ -1,0 +1,184 @@
+{% extends "navbar_footer_overlap.html" %}
+{% load static %}
+
+
+{% block conteudo %}
+<!-- Pagina -->
+<div class="page-wrapper"> 
+         
+  <!-- Page body -->
+  <div class="page-body" id="body_id">
+    <div class="container-xl">
+      <!-- cards -->
+      <div class="row row-deck row-cards">
+        <!-- Breadcrumber -->
+        <div class="col-12">
+                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                              <li class="breadcrumb-item"><a href="">Home</a></li>
+                              <li class="breadcrumb-item" aria-current="page"><a href="#">search</a></li>
+                            </ol>                 
+        </div>
+            
+        <!-- Titulo -->
+        <div class="col-12"> 
+                            <div class="card card-md">
+                                <div class="card-stamp card-stamp-lg">
+                                    <div class="card-stamp-icon bg-green">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5" /><path d="M16.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" /><path d="M18.5 19.5l2.5 2.5" /></svg>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-10">
+                                            <h3 class="h1">SiRNA Design Customization</h3>
+                                                <div class="markdown text-secondary">
+                                                    Take control by fine-tuning parameters to suit your specific needs. 
+                                                    Whether it's selecting literature references or configuring alignment analyses with precision, every detail is customizable. 
+                                                  
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div> 
+
+        <!-- Formulario -->
+        <div> 
+            <form class="card" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <!-- siRNAs Parameters -->
+                <div class="card-body">
+                    <h2 class="card-title"><b> siRNAs Parameters </b></h2>
+                    <div class="row row-cards">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.sequence_tag.id_for_label }}">Sequence Tag</label>
+                                {{ form.sequence_tag }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="form-label" for="{{ form.sequence.id_for_label }}">Insert Fasta</div>
+                                {{ form.sequence }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.size.id_for_label }}">Size</label>
+                                {{ form.size }}
+                                <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>É recomendado que o tamanho esteja entre 19 e 22</p><p class='mb-0'>">?</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-label" for="{{ form.autor.id_for_label }}">Autor</div>
+                            {{ form.autor }}
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-label">Include Melting Temperature?</div>
+                            <div>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="include_tm" value="True" {% if form.include_tm.value == 'True' %}checked{% endif %}>
+                                    <span class="form-check-label">Yes</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="include_tm" value="False" {% if form.include_tm.value == 'False' %}checked{% endif %}>
+                                    <span class="form-check-label">No</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.max_tm.id_for_label }}">Max Melting Temperature</label>
+                                {{ form.max_tm }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blast Parameters -->
+                <div class="card-body">
+                        <h3 class="card-title"><b> Blast </b></h3> 
+                        <div class="row row-cards">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="form-label">Run Blast?</div>
+                            <div>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="run_blast" value="True" {% if form.run_blast.value == True %}checked{% endif %}>
+                                    <span class="form-check-label">Yes</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="run_blast" value="False" {% if form.run_blast.value == False %}checked{% endif %}>
+                                    <span class="form-check-label">No</span>
+                                </label>
+                                <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>Due to restrictions of the NCBI servers, running BLAST by remote access is very slow. Checking this option will make the search considerably longer.</p><p class='mb-0'>">?</span>
+                            </div>
+                        </div> 
+                        <div class="col-sm-6 col-md-6 run-blast-field">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.organism.id_for_label }}">Organism</label>
+                                {{ form.organism }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 run-blast-field">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.database.id_for_label }}">Database</label>
+                                {{ form.database }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 run-blast-field">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.identity.id_for_label }}">Identity</label>
+                                {{ form.identity }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 run-blast-field">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.query_cover.id_for_label }}">Query Cover</label>
+                                {{ form.query_cover }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var runBlastRadio = document.querySelectorAll('input[name="run_blast"]');
+                        var dependentFields = document.querySelectorAll('.run-blast-field input, .run-blast-field select');
+                    
+                        function toggleFields() {
+                            var selectedRadio = document.querySelector('input[name="run_blast"]:checked');
+                            if (selectedRadio) {
+                                var isBlastChecked = selectedRadio.value === 'True';
+                                console.log('Run BLAST selected:', selectedRadio.value);  // Adicione isto para verificar o valor selecionado
+                                dependentFields.forEach(function(field) {
+                                    field.disabled = !isBlastChecked;
+                                });
+                            }
+                        }
+                    
+                        runBlastRadio.forEach(function(radio) {
+                            radio.addEventListener('change', toggleFields);
+                        });
+                    
+                        // Initialize state based on initial checked value
+                        toggleFields();
+                    });                    
+                </script>
+                 
+                <!-- submit -->
+                <div class="card-footer text-end">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+{% endblock conteudo %}
+
+
+
+
+
