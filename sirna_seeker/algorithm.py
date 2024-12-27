@@ -3,21 +3,24 @@
 ## Tratamento dos dados
 #--------------------#
 import Bio
-from Bio import SeqIO, Entrez
+from Bio import SeqIO
 from Bio.Seq import Seq
 import json
+import time
 
 ## Filtros
 #--------------------#
 from Bio.SeqUtils import MeltingTemp as mt
 from Bio.SeqUtils import gc_fraction
-from seqfold import dg
 import pandas as pd
+from ViennaRNA import RNA
 
 ## Blast
 #--------------------#
 from Bio.SeqRecord import SeqRecord
 from Bio.Blast import NCBIWWW, NCBIXML
+
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 import re
 
@@ -36,7 +39,7 @@ def extract_gene_symbol_from_header(header):
         return match.group(1)
     return None
 
-def meta_data(sequence, tamanho, autor):
+def meta_data(sequence, tamanho, autor,sequence_tag):
   sequencias = list(SeqIO.parse(sequence, 'fasta'))
   # Gene Symbol
   header = sequencias[0].description
@@ -53,6 +56,7 @@ def meta_data(sequence, tamanho, autor):
           'autor':autor, #enter data
           'gene_size': gene_size, #run function
           'sirna_size':tamanho, #enter data
+          'query_title':sequence_tag
   }
   return meta
 
@@ -86,6 +90,34 @@ def possiveis_siRNA(dado, tamanho=21):
     siRNA = possiveis_siRNA[:-tamanho]
 
     return siRNA, tuplas
+
+# ----------------------------------------------------------------- #
+#                            Free Energy                            #
+# ----------------------------------------------------------------- #
+def free_energy(seq1):
+    """
+    Calculates the Minimum Free Energy (MFE) and structure of an RNA duplex
+    using the complementary sequence of the input RNA sequence.
+
+    Parameters:
+        seq1 (str): The input RNA sequence.
+
+    Returns:
+        tuple: A tuple containing the MFE (float) and the dot-bracket structure (str).
+    """
+    # Create a Seq object
+    seq1_obj = Seq(seq1)
+
+    # Generate the complementary sequence and convert it to a string
+    complementary_seq_str = str(seq1_obj.complement())
+
+    # Perform RNA duplex folding
+    result = RNA.duplexfold(seq1, complementary_seq_str)
+
+    # Extract the free energy and structure
+    mfe = round(result.energy,3)  # Free energy in kcal/mol
+
+    return mfe
 
 # ----------------------------------------------------------------- #
 #                             Classifing
@@ -286,7 +318,7 @@ def siRNA_score (sequence, tuplas,
 
         # G°
         #--------------------------------------------------------------#
-        energia_livre = dg(sequence)
+        energia_livre = free_energy(sequence)
         if -13 < energia_livre < -7:
             score += 2
         else:
@@ -385,7 +417,7 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
 
         # Organizando os resultados por pontuação
         resultados = list(zip(siRNA_verificados, score, TM_score, conteudo_gc, energia_livre, falha, posicao))
-        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)
+        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)[:50]
         siRNA_verificados = [resultado[0] for resultado in resultados_ordenados]
         score = [resultado[1] for resultado in resultados_ordenados]
         TM_score = [resultado[2] for resultado in resultados_ordenados] 
@@ -415,7 +447,6 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
 
         return dados_json, siRNA_verificados
 
- 
 # ----------------------------------------------------------------- #
 #                              Blast                                #
 # ----------------------------------------------------------------- #
@@ -442,37 +473,77 @@ def guardando_sequence (data):
 
 # Rodando o Blast
 # ---------------------------------------------- #    
-def blast_siRNA (sequence , sequence_tag, db = None, organismo = "txid9606[ORGN]",
-                 df=None, identidade=0.78):
 
-        # Variaveis
-        description = []
-        identidade = []
+def blast_siRNA(sequence, sequence_tag, db=None, organismo="txid9606[ORGN]",
+                df=None, identidad=0.78):
+    """
+    Executa o BLAST de uma sequência de siRNA contra um banco de dados especificado.
 
-        result_handle = NCBIWWW.qblast(
-                                             program=df, database=db,
-                                             sequence = sequence,
-                                             entrez_query=organismo,
-                                             perc_ident=identidade
-                                           )
+    Parâmetros:
+    -----------
+    sequence : str
+        A sequência de siRNA a ser analisada.
+    sequence_tag : str
+        Identificador para a sequência.
+    db : str, opcional
+        Banco de dados BLAST a ser usado. Padrão é None.
+    organismo : str, opcional
+        Filtro taxonômico para o BLAST. Padrão é "txid9606[ORGN]" (Homo sapiens).
+    df : str, opcional
+        Programa BLAST a ser usado, como "blastn". Padrão é None.
+    identidad : float, opcional
+        Identidade mínima para considerar um alinhamento. Padrão é 0.78 (78%).
 
-        # Parsear os resultados do BLAST
+    Retorna:
+    --------
+    list of dict
+        Uma lista de dicionários contendo os resultados do BLAST com os campos:
+        - "description": Identificador do hit (nome do alinhamento).
+        - "identity": Porcentagem de identidade do alinhamento.
+        - "coverage": Cobertura da sequência alinhada.
+
+    Exceções:
+    ---------
+    ValueError:
+        Lançada se a identidade ou a sequência forem inválidas.
+
+    """
+    
+    resultados = []  # Lista para armazenar os resultados
+
+    try:
+        print("Iniciando a requisição BLAST...")
+        result_handle = NCBIWWW.qblast(program=df, database=db,
+                                       sequence=sequence,
+                                       entrez_query=organismo,
+                                       perc_ident=identidad)
+        print("Analisando os resultados...")
         blast_records = NCBIXML.parse(result_handle)
 
         for blast_record in blast_records:
             for alignment in blast_record.alignments:
-                  hit = alignment.hsps[0]  # Pega apenas o melhor alinhamento
-                  # Extrair informações relevantes
-                  description.append(str(alignment.hit_id[18:])) # Name
+                hit = alignment.hsps[0]
 
-                  p_i = hit.identities / hit.align_length # Identidade
-                  identidade.append(str(p_i))
-                  #cobertura = hit.align_length / hit.query_length
+                # Calcular porcentagem de identidade e cobertura
+                p_identity = hit.identities / hit.align_length
+                coverage = hit.align_length / blast_record.query_length
 
-        # Preprarando os dados para a criação do grafo
-        tuplas = [(sequence_tag, valor) for valor in description]
+                # Adicionar o resultado como dicionário
+                resultados.append({
+                    "description": alignment.hit_id[18:],  # Nome do hit
+                    "identity": p_identity,  # Porcentagem de identidade
+                    "coverage": coverage  # Cobertura da sequência
+                })
+                print(resultados)
+        
+                time.sleep(1)
 
-        return tuplas, identidade#, cobertura
+    except Exception as e:
+        print(f"Erro durante o processamento do BLAST: {e}")
+        raise
+
+    return resultados
+
 
 def identidade_siRNA(fasta_file, sequence_tag, db = "refseq_rna", organismo = "txid9606[ORGN]",
                  df=None, identidade=0.78):
@@ -484,11 +555,11 @@ def identidade_siRNA(fasta_file, sequence_tag, db = "refseq_rna", organismo = "t
         print(f"Processando sequência {i}...")
 
         # Blast
-        tuplas_blast, identity = blast_siRNA (sequence , sequence_tag, 
+        resultados = blast_siRNA (sequence , sequence_tag, 
                                                db, organismo,
                                                 df, identidade)
 
-    return tuplas_blast, identity
+    return resultados
 
 
 

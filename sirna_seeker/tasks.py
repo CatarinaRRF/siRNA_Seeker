@@ -1,9 +1,10 @@
-from celery import shared_task
+from celery import shared_task, current_task
 from celery_progress.backend import ProgressRecorder
 from django.core.cache import cache
 from django.contrib.auth.models import User
 from .algorithm import *
 from .blast import *
+from django_celery_results.models import TaskResult
 
 @shared_task(bind=True)
 def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
@@ -18,7 +19,7 @@ def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
     print(f"**** {self.request.id} ****")
 
     # Meta data 
-    meta = meta_data(sequence, size, autor)
+    meta = meta_data(sequence, size, autor, sequence_tag)
     
     # Starting the selectio 
     progress_recorder = ProgressRecorder(self)
@@ -43,18 +44,22 @@ def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
  
             
             sequences = list(SeqIO.parse(sirna_verified_fasta, "fasta"))
-
+            perc_identidy = identity/100
+            result_dict = {}
             # Blast for Every sequence
+            # Blast for the first 10 sequences
             for i, sequence in enumerate(sequences, start=1):
-                    print(f"Processando sequência {i}...")
+                if i > 10:  # Após 10 sequências, interrompe o loop
+                    break
+                print(f"Processando sequência {i}...")
 
-                    # Blast
-                    tuplas_blast, identidade = blast_siRNA (sequence , sequence_tag, 
-                                                                    database, organism,
-                                                                        "blastn", identity)
-                    
+                # Blast
+                resultados = blast_siRNA (sequence , sequence_tag, database, organism, "blastn", perc_identidy)
+                result_dict[str(sequence.seq)] = resultados
+
             print("siRNAs selected successfully")
-
+        
+           
             # Returning results
             progress_recorder.set_progress(100, 100, description='siRNAs selected successfully')
             return [{
@@ -62,10 +67,7 @@ def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
                         'sirna_verified': sirna_verified
                     },
                     meta, 
-                    {
-                        'tuplas_blast': tuplas_blast,
-                        'identidade': identidade
-                    },
+                    result_dict,
                    ]
         
         else: 
@@ -81,7 +83,7 @@ def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
                     meta,
                     {}
                     ]
-            
+         
     
     # Configuration of error descripitions
     except Exception as e:
@@ -91,3 +93,4 @@ def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
             'exc_message': str(e)
         })
         raise e
+    

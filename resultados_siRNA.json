@@ -1,0 +1,598 @@
+[
+    {
+        "Sequencia'": "GCUGGAGAAAGAAUUUCACUA",
+        "Pontuacao": 7,
+        "TM": -2.38,
+        "CG": 50.0,
+        "AG": -10.7,
+        "Falhas": [
+            "Extremidade antisenso"
+        ],
+        "posicao": "551:572"
+    },
+    {
+        "Sequencia'": "AUCGAAUAGGGAAGUAAAAAA",
+        "Pontuacao": 7,
+        "TM": -14.1,
+        "CG": 33.33,
+        "AG": -8.4,
+        "Falhas": [
+            "Extremidade senso"
+        ],
+        "posicao": "837:858"
+    },
+    {
+        "Sequencia'": "UCGAAUAGGGAAGUAAAAAAA",
+        "Pontuacao": 7,
+        "TM": -8.24,
+        "CG": 33.33,
+        "AG": -8.4,
+        "Falhas": [
+            "Extremidade senso"
+        ],
+        "posicao": "838:859"
+    },
+    {
+        "Sequencia'": "UAUCUAAAGGAUGGAAAAAUA",
+        "Pontuacao": 7,
+        "TM": -19.95,
+        "CG": 31.25,
+        "AG": -9.5,
+        "Falhas": [
+            "Extremidade senso"
+        ],
+        "posicao": "1323:1344"
+    },
+    {
+        "Sequencia'": "UAUAUCAAGGAAUCUCGUAAA",
+        "Pontuacao": 6,
+        "TM": -19.95,
+        "CG": 40.0,
+        "AG": -8.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "34:55"
+    },
+    {
+        "Sequencia'": "AUAUCAAGGAAUCUCGUAAAA",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 37.5,
+        "AG": -8.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "35:56"
+    },
+    {
+        "Sequencia'": "UAUCAAGGAAUCUCGUAAAAC",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 43.75,
+        "AG": -8.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "36:57"
+    },
+    {
+        "Sequencia'": "AUCAAGGAAUCUCGUAAAACC",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 47.06,
+        "AG": -8.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "37:58"
+    },
+    {
+        "Sequencia'": "CGUAAAACCGACACUAAAACG",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 47.37,
+        "AG": -8.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "49:70"
+    },
+    {
+        "Sequencia'": "GUAAAACCGACACUAAAACGU",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 44.44,
+        "AG": -9.5,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "50:71"
+    },
+    {
+        "Sequencia'": "CGGCCAAAUUAUGAGUUCAUU",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 57.14,
+        "AG": -7.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "89:110"
+    },
+    {
+        "Sequencia'": "AUUAUGAGUUCAUUGUAUUAU",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 40.0,
+        "AG": -7.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "96:117"
+    },
+    {
+        "Sequencia'": "UCAUUGUAUUAUGCGAAUACU",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 50.0,
+        "AG": -9.3,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "105:126"
+    },
+    {
+        "Sequencia'": "CAUUGUAUUAUGCGAAUACUU",
+        "Pontuacao": 6,
+        "TM": -19.95,
+        "CG": 50.0,
+        "AG": -8.6,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "106:127"
+    },
+    {
+        "Sequencia'": "AUUGUAUUAUGCGAAUACUUU",
+        "Pontuacao": 6,
+        "TM": -19.95,
+        "CG": 45.45,
+        "AG": -8.6,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "107:128"
+    },
+    {
+        "Sequencia'": "UUGUAUUAUGCGAAUACUUUA",
+        "Pontuacao": 6,
+        "TM": -19.95,
+        "CG": 45.45,
+        "AG": -8.6,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "108:129"
+    },
+    {
+        "Sequencia'": "UGUAUUAUGCGAAUACUUUAU",
+        "Pontuacao": 6,
+        "TM": -19.95,
+        "CG": 45.45,
+        "AG": -8.5,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "109:130"
+    },
+    {
+        "Sequencia'": "GUAUUAUGCGAAUACUUUAUU",
+        "Pontuacao": 6,
+        "TM": -19.95,
+        "CG": 45.45,
+        "AG": -8.0,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "110:131"
+    },
+    {
+        "Sequencia'": "GCCUUCCCAGAACAAACUUCU",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 62.5,
+        "AG": -10.4,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "171:192"
+    },
+    {
+        "Sequencia'": "CCUUCCCAGAACAAACUUCUU",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 60.0,
+        "AG": -10.0,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "172:193"
+    },
+    {
+        "Sequencia'": "CUUGGCGGCCGAGAGUAACUU",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 75.0,
+        "AG": -11.5,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "449:470"
+    },
+    {
+        "Sequencia'": "UUGGCGGCCGAGAGUAACUUC",
+        "Pontuacao": 6,
+        "TM": 9.33,
+        "CG": 75.0,
+        "AG": -11.3,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "450:471"
+    },
+    {
+        "Sequencia'": "GACCCUGGAGCUGGAGAAAGA",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 63.16,
+        "AG": -8.7,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "542:563"
+    },
+    {
+        "Sequencia'": "ACCCUGGAGCUGGAGAAAGAA",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 57.89,
+        "AG": -8.7,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "543:564"
+    },
+    {
+        "Sequencia'": "CCCUGGAGCUGGAGAAAGAAU",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 61.11,
+        "AG": -9.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "544:565"
+    },
+    {
+        "Sequencia'": "CCUGGAGCUGGAGAAAGAAUU",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 58.82,
+        "AG": -9.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "545:566"
+    },
+    {
+        "Sequencia'": "CUGGAGCUGGAGAAAGAAUUU",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 56.25,
+        "AG": -9.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "546:567"
+    },
+    {
+        "Sequencia'": "GGAGCUGGAGAAAGAAUUUCA",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 52.94,
+        "AG": -10.3,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "548:569"
+    },
+    {
+        "Sequencia'": "GAGCUGGAGAAAGAAUUUCAC",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 52.94,
+        "AG": -10.5,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "549:570"
+    },
+    {
+        "Sequencia'": "AGCUGGAGAAAGAAUUUCACU",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 50.0,
+        "AG": -10.5,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "550:571"
+    },
+    {
+        "Sequencia'": "GGAGAAAGAAUUUCACUACAA",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 41.18,
+        "AG": -9.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "554:575"
+    },
+    {
+        "Sequencia'": "GAGAAAGAAUUUCACUACAAU",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 37.5,
+        "AG": -8.7,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "555:576"
+    },
+    {
+        "Sequencia'": "GCUCUGCCUCACGGAAAGACA",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 66.67,
+        "AG": -12.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "617:638"
+    },
+    {
+        "Sequencia'": "CCUCACGGAAAGACAGAUCAA",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 52.63,
+        "AG": -11.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "623:644"
+    },
+    {
+        "Sequencia'": "UCACGGAAAGACAGAUCAAGA",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 47.37,
+        "AG": -11.3,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "625:646"
+    },
+    {
+        "Sequencia'": "CACGGAAAGACAGAUCAAGAU",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 47.37,
+        "AG": -11.8,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "626:647"
+    },
+    {
+        "Sequencia'": "ACGGAAAGACAGAUCAAGAUU",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 44.44,
+        "AG": -11.8,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "627:648"
+    },
+    {
+        "Sequencia'": "CGGAAAGACAGAUCAAGAUUU",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 47.06,
+        "AG": -11.8,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "628:649"
+    },
+    {
+        "Sequencia'": "GGAAAGACAGAUCAAGAUUUG",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 47.06,
+        "AG": -11.7,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "629:650"
+    },
+    {
+        "Sequencia'": "AAAGACAGAUCAAGAUUUGGU",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 43.75,
+        "AG": -10.0,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "631:652"
+    },
+    {
+        "Sequencia'": "AAGACAGAUCAAGAUUUGGUU",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 46.67,
+        "AG": -10.0,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "632:653"
+    },
+    {
+        "Sequencia'": "AGACAGAUCAAGAUUUGGUUU",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 50.0,
+        "AG": -9.5,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "633:654"
+    },
+    {
+        "Sequencia'": "AGAUCAAGAUUUGGUUUCAGA",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 50.0,
+        "AG": -10.4,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "637:658"
+    },
+    {
+        "Sequencia'": "GAUCAAGAUUUGGUUUCAGAA",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 50.0,
+        "AG": -12.2,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "638:659"
+    },
+    {
+        "Sequencia'": "GGCGCAUGAAGUGGAAAAAGG",
+        "Pontuacao": 6,
+        "TM": 3.47,
+        "CG": 57.89,
+        "AG": -11.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "661:682"
+    },
+    {
+        "Sequencia'": "GCGCAUGAAGUGGAAAAAGGA",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 52.63,
+        "AG": -12.9,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "662:683"
+    },
+    {
+        "Sequencia'": "AGCCCAGCUCUGGGAACUGAA",
+        "Pontuacao": 6,
+        "TM": 9.33,
+        "CG": 66.67,
+        "AG": -8.1,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "803:824"
+    },
+    {
+        "Sequencia'": "CCAGCUCUGGGAACUGAAUCA",
+        "Pontuacao": 6,
+        "TM": -2.38,
+        "CG": 64.71,
+        "AG": -7.9,
+        "Falhas": [
+            "Conteudo CG",
+            "Extremidade antisenso"
+        ],
+        "posicao": "806:827"
+    },
+    {
+        "Sequencia'": "GGAACUGAAUCAGGAAACUCA",
+        "Pontuacao": 6,
+        "TM": -8.24,
+        "CG": 50.0,
+        "AG": -12.4,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "815:836"
+    },
+    {
+        "Sequencia'": "GAACUGAAUCAGGAAACUCAA",
+        "Pontuacao": 6,
+        "TM": -14.1,
+        "CG": 44.44,
+        "AG": -9.1,
+        "Falhas": [
+            "Extremidade senso",
+            "Extremidade antisenso"
+        ],
+        "posicao": "816:837"
+    }
+]

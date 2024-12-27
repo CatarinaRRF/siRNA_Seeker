@@ -8,6 +8,10 @@
 * Copyright 2018-2023 The Tabler Authors
 * Copyright 2018-2023 codecalm.net Paweł Kuna
 * Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+
+<Avatar name="Amelia Earhart" colors={["#20130a", "#142026", "#123142", "#3b657a", "#e9f0c9"]} variant="marble" square size={80}/>
+
+
 -->
 
 <html lang="en">
@@ -99,25 +103,33 @@
                       </a>
                   </li>
                   <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
-                            <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12l0 9" /><path d="M12 12l-8 -4.5" /><path d="M16 5.25l-8 4.5" /></svg>
-                            </span>
-                            <span class="nav-link-title">
-                                Consultas antigas
-                            </span>
-                        </a>
-                        <div class="dropdown-menu">
+                    <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+                                <path d="M12 12l8 -4.5" />
+                                <path d="M12 12l0 9" />
+                                <path d="M12 12l-8 -4.5" />
+                                <path d="M16 5.25l-8 4.5" />
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">
+                            Past Querys
+                        </span>
+                    </a>
+                    <div class="dropdown-menu">
                         <div class="dropdown-menu-columns">
                             <div class="dropdown-menu-column">
-                                <a class="dropdown-item" href="./alerts.html">
-                                    Query Name 1
-                                </a>
-                                <a class="dropdown-item" href="./accordion.html">
-                                    Query Name 2
-                                </a>
+                                {% for query in user_queries %}
+                                  <a class="dropdown-item" href="{% url 'dashboard' %}?query_id={{ query.id }}">
+                                      {{ query.title }} - {{ query.date_created }}
+                                  </a>
+                                {% endfor %}
                             </div>
                         </div>
+                    </div>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
@@ -129,14 +141,10 @@
                       </span>
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href=" " target="_blank" rel="noopener">
-                        ???
+                      <a class="dropdown-item" href="/sirna/" target="_blank" rel="noopener">
+                        siRNA Seeker
                         <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                      </a>
-                      <a class="dropdown-item" href="https://github.com/CatarinaRRF/siRNA_seeker_0.0.1" target="_blank" rel="noopener">
-                        ???
-                        <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                      </a>
+                      </a> 
                     </div>
 
                   </li>
@@ -178,120 +186,40 @@
                 <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
               </a>
-              <div class="nav-item dropdown d-none d-md-flex me-3">
-                <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
-                  <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
-                  <span class="badge bg-red"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card">
-                  <div class="card">
-                    <div class="card-header">
-                      <h3 class="card-title">Notifications</h3>
-                    </div>
-                    <div class="list-group list-group-flush list-group-hoverable">
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot status-dot-animated bg-red d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">siRNA</a>
-                            <div class="d-block text-secondary text-truncate mt-n1">
-                              The seach_2 for is finished
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">siRNA</a>
-                            <div class="d-block text-secondary text-truncate mt-n1">
-                              The seach_1 is finished
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions show">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-yellow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">other tool</a>
-                            <div class="d-block text-secondary text-truncate mt-n1">
-                              the selection is read to be viewd
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="list-group-item">
-                        <div class="row align-items-center">
-                          <div class="col-auto"><span class="status-dot status-dot-animated bg-green d-block"></span></div>
-                          <div class="col text-truncate">
-                            <a href="#" class="text-body d-block">other tool</a>
-                            <div class="d-block text-secondary text-truncate mt-n1">
-                              the selection is read to be viewd
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <a href="#" class="list-group-item-actions">
-                              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <!-- Usuario -->
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                  <span class="avatar avatar-sm" style="background-image: url(/static/img/avatar.jpg)"></span>
+                  <span class="avatar avatar-sm">
+                    <img src="{{ user_profile.profile_image }}" alt="Avatar" style="width: 100%; height: 100%;">
+                </span>
                   <div class="d-none d-xl-block ps-2">
-                    <div>Paweł Katia</div>
-                    <div class="mt-1 small text-secondary">siRNA Designer</div>
+                    <div>{{ user.first_name }} {{ user.last_name }}</div>
+                    <div class="mt-1 small text-secondary">{{ user_profile.profission }}</div>
                   </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                  <a href="#" class="dropdown-item">Status</a>
                   <a href="accounts/profile/" class="dropdown-item">Profile</a>
-                  <a href="support" class="dropdown-item"> Give Feedback</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="accounts/logout/" class="dropdown-item">Logout</a>
+                  <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="dropdown-item" style="color:red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/>
+                            <path d="M9 12h12l-3 -3"/>
+                            <path d="M18 15l3 -3"/>
+                        </svg>
+                        Logout
+                    </button>
+                </form>
               </div>
             </div>
           </div>
           <div class="collapse navbar-collapse" id="navbar-menu">
             <div>
-              <form action="./" method="get" autocomplete="off" novalidate>
-                <div class="input-icon">
-                  <span class="input-icon-addon">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/search -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
-                  </span>
-                  <input type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
-                </div>
-              </form>
+              <div class="input-icon">
+                
+              </div>
             </div>
           </div>
         </div>
@@ -768,46 +696,46 @@
                                     <div class="card-footer d-flex align-items-center">
                                       <p class="m-0 text-secondary">Showing {{ page_obj.start_index }} to {{ page_obj.end_index }} of {{ total_sirnas }} entries ({{ hidden_siRNAs }} hidden)</p>
                                       <ul class="pagination m-0 ms-auto">
-                                          {% if page_obj.has_previous %}
-                                          <li class="page-item">
-                                              <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
-                                                  prev
-                                              </a>
-                                          </li>
-                                          {% else %}
-                                          <li class="page-item disabled">
-                                              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
-                                                  prev
-                                              </a>
-                                          </li>
-                                          {% endif %}
-                          
-                                          {% for num in page_obj.paginator.page_range %}
-                                          {% if page_obj.number == num %}
-                                          <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
-                                          {% else %}
-                                          <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
-                                          {% endif %}
-                                          {% endfor %}
-                          
-                                          {% if page_obj.has_next %}
-                                          <li class="page-item">
-                                              <a class="page-link" href="?page={{ page_obj.next_page_number }}">
-                                                  next
-                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-                                              </a>
-                                          </li>
-                                          {% else %}
-                                          <li class="page-item disabled">
-                                              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                                  next
-                                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-                                              </a>
-                                          </li>
-                                          {% endif %}
-                                      </ul>
+                                        {% if page_obj.has_previous %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?query_id={{ request.GET.query_id }}&page={{ page_obj.previous_page_number }}" tabindex="-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+                                                prev
+                                            </a>
+                                        </li>
+                                        {% else %}
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+                                                prev
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                    
+                                        {% for num in page_obj.paginator.page_range %}
+                                        {% if page_obj.number == num %}
+                                        <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
+                                        {% else %}
+                                        <li class="page-item"><a class="page-link" href="?query_id={{ request.GET.query_id }}&page={{ num }}">{{ num }}</a></li>
+                                        {% endif %}
+                                        {% endfor %}
+                                    
+                                        {% if page_obj.has_next %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?query_id={{ request.GET.query_id }}&page={{ page_obj.next_page_number }}">
+                                                next
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                                            </a>
+                                        </li>
+                                        {% else %}
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                next
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
                                     </div>
 
                                 </div>
@@ -815,199 +743,225 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- select a siRNA -->
                 <div class="col-12">
                   <div class="card card-md">
-                    <div class="card-stamp card-stamp-lg">
-                      <div class="card-stamp-icon bg-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-layers-selected"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 10.5l6.492 -6.492" /><path d="M13.496 16l6.504 -6.504z" /><path d="M8.586 15.414l10.827 -10.827" /><path d="M8 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /><path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" /></svg>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-10">
-                          <h3 class="h1">View individual siRNA</h3>
-                          <div class="markdown text-secondary">
-                            To analyze complementarity using BLAST or compare each parameter to literature, select an siRNA.
+                      <div class="card-stamp card-stamp-lg">
+                          <div class="card-stamp-icon bg-primary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-layers-selected">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M8 10.5l6.492 -6.492" />
+                                  <path d="M13.496 16l6.504 -6.504z" />
+                                  <path d="M8.586 15.414l10.827 -10.827" />
+                                  <path d="M8 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                                  <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
+                              </svg>
                           </div>
-                          <div class="mt-3">
-                            <div class="dropdown">
-                              <button id="dropdownButton" class="btn dropdown-toggle align-text-top btn-primary" data-bs-boundary="viewport" data-bs-toggle="dropdown">Select</button>
-                              <div class="dropdown-menu dropdown-menu-end" id="sirnaDropdown">
-                                {% for sirna in sirnas %}
-                                  <a class="dropdown-item" href="#" onclick="changeSiRNA('{{ sirna.sequence }}', {{ sirna.index }})">{{ sirna.sequence }}</a>
-                                {% endfor %}
+                      </div>
+                      <div class="card-body">
+                          <div class="row align-items-center">
+                              <div class="col-10">
+                                  <h3 class="h1">View individual siRNA</h3>
+                                  <div class="markdown text-secondary">
+                                      To analyze complementarity using BLAST or compare each parameter to literature, select an siRNA.
+                                  </div>
+                                  <div class="mt-3">
+                                      <div class="dropdown">
+                                          <button id="dropdownButton" class="btn dropdown-toggle align-text-top btn-primary" data-bs-boundary="viewport" data-bs-toggle="dropdown">Select</button>
+                                          <div class="dropdown-menu dropdown-menu-end" id="sirnaDropdown">
+                                              {% for sirna in sirnas %}
+                                                  <a class="dropdown-item" href="#" onclick="changeSiRNA(event, 'siRNA {{ forloop.counter|add:page_obj.start_index|add:'-1' }}', {{ sirna.index }})">siRNA {{ forloop.counter|add:page_obj.start_index|add:'-1' }}</a>
+                                              {% endfor %}
+                                          </div>
+                                      </div>
+                                  </div>
                               </div>
-                            </div>
                           </div>
-                        </div>
                       </div>
-                    </div>
                   </div>
-                </div>
-                <!-- Fails -->
-                <div class="col-md-12 col-lg-8" id="failsSection">
+              </div>
+              
+              <!-- Fails -->
+              <div class="col-md-12 col-lg-8" id="failsSection" style="display: none;">
                   <div class="card" style="height: 28rem">
-                    <div class="card-body card-body-scrollable card-body-scrollable-shadow">
-                      <div class="card-header border-0">
-                        <h3 class="card-title">Fails of [sequence 1]</h3>
+                      <div class="card-body card-body-scrollable card-body-scrollable-shadow">
+                          <div class="card-header border-0">
+                              <h3 class="card-title">Fails of <span id="sequenceFailTitle"></span></h3>
+                          </div>
+                          <div class="divide-y" id="failsContent">
+                              <!-- Fails content will be inserted here dynamically -->
+                          </div>
                       </div>
-                        <div class="divide-y" id="failsContent">
-                        <div>
-                          <div class="row">
-                            <div class="col-auto">
-                              <span class="avatar"></span>
-                            </div>
-                            <div class="col">
-                              <div class="text-truncate">
-                                <strong>Position 19:</strong> the sequence has a <strong> G </strong> instead of <strong> A </strong>
-                              </div>
-                              <div class="text-secondary">-1 point</div>
-                            </div>
-                            <div class="col-auto align-self-center">
-                              <div class="badge bg-red"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="row">
-                            <div class="col-auto">
-                              <span class="avatar" style="background-image: url(./static/avatars/002m.jpg)"></span>
-                            </div>
-                            <div class="col">
-                              <div class="text-truncate">
-                                <strong>Position 2:</strong> the sequence has a <strong> C </strong> instead of <strong> A </strong>
-                              </div>
-                              <div class="text-secondary">-1 point</div>
-                            </div>
-                            <div class="col-auto align-self-center">
-                              <div class="badge bg-red"></div>
-                            </div>
-                          </div>
-                        </div> 
-                      </div>  
-                    </div>    
-                  </div>    
-                </div>
-                <!-- Aligment -->
-                <div class="col-md-6 col-lg-4" id="aligmentSection">
-                  <div class="card">
-                    <div class="card-header">
-                      <h3 class="card-title">Blast Alignment</h3>
-                    </div>
-                    <table class="table card-table table-vcenter">
-                      <thead>
-                        <tr>
-                          <th>Hit Name</th>
-                          <th>Identity</th>
-                          <th>Query Cover</th>
-                        </tr>
-                      </thead>
-                      <tbody id="aligmentContent">
-                        <tr>
-                          <td>NM_0045002.4</td>
-                          <td>0.6</td>
-                          <td class="w-50">
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-primary" style="width: 71.0%"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>XR_007063125</td>
-                          <td>0.94</td>
-                          <td class="w-50">
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-primary" style="width: 35.96%"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>XM_007063125</td>
-                          <td>0.4</td>
-                          <td class="w-50">
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-primary" style="width: 24.9%"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>XM_0115116469</td>
-                          <td>1</td>
-                          <td class="w-50">
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-primary" style="width: 19.72%"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>NM_000216</td>
-                          <td>0.86</td>
-                          <td class="w-50">
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-primary" style="width: 17.08%"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>NM_000216</td>
-                          <td>0.86</td>
-                          <td class="w-50">
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-primary" style="width: 17.08%"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- Adicione mais linhas conforme necessário -->
-                      </tbody>
-                    </table>
-                    <!-- Índice para trocar de páginas -->
-                    <div class="card-footer">
-                      <nav>
-                        <ul class="pagination justify-content-end">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                          </li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
                   </div>
-                </div>    
-                <!-- footer -->
-                <footer class="footer footer-transparent d-print-none">
-                    <div class="container-xl">
-                      <div class="row text-center align-items-center flex-row-reverse">
-                        <div class="col-lg-auto ms-lg-auto">
-                          <ul class="list-inline list-inline-dots mb-0">
-                            <li class="list-inline-item"><a href="https://tabler.io/docs" target="_blank" class="link-secondary" rel="noopener">Documentation</a></li>
-                            <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
-                            <li class="list-inline-item"><a href="https://github.com/CatarinaRRF/siRNA_seeker_0.0.1" target="_blank" class="link-secondary" rel="noopener">Source code</a></li>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-12 col-lg-auto mt-3 mt-lg-0">
-                          <ul class="list-inline list-inline-dots mb-0">
-                            <li class="list-inline-item">
-                              Copyright &copy; 2024
-                              <a href="." class="link-secondary">NanoGen</a>.
-                              All rights reserved.
-                            </li>
-                            <li class="list-inline-item">
-                              <a href="./changelog.html" class="link-secondary" rel="noopener">
-                                v0.1.0-beta20
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
+              </div>
+              
+              <!-- Aligment -->
+              <div class="col-md-6 col-lg-4" id="aligmentSection" style="display: none;">
+                  <div class="card">
+                      <div class="card-header">
+                          <h3 class="card-title">Blast Alignment</h3>
                       </div>
-                    </div>
-                </footer>
+                      <table class="table card-table table-vcenter">
+                          <thead>
+                              <tr>
+                                  <th>Hit Name</th>
+                                  <th>Identity</th>
+                                  <th>Query Cover</th>
+                              </tr>
+                          </thead>
+                          <tbody id="aligmentContent">
+                              <!-- Aligment content will be inserted here dynamically -->
+                              
+                              <!-- Message if no alignment data -->
+                              
+                              <div id="noAlignmentDataMessage" style="display: none;">
+                              </div>
+                          </tbody>
+                          
+                      </table>
+                  </div>
+              </div>
+              
+              
+              
+              <script>
+                const sirnas = {{ sirnas | safe }};
+
+                function changeSiRNA(event, sequence, index) {
+                    event.preventDefault(); // Prevent the default behavior of the anchor tag
+                
+                    const dropdownButton = document.getElementById('dropdownButton');
+                    const failsSection = document.getElementById('failsSection');
+                    const aligmentSection = document.getElementById('aligmentSection');
+                    const sequenceFailTitle = document.getElementById('sequenceFailTitle');
+                    const failsContent = document.getElementById('failsContent');
+                    const aligmentContent = document.getElementById('aligmentContent');
+                    const noAlignmentDataMessage = document.getElementById('noAlignmentDataMessage');
+                
+                    if (!dropdownButton || !failsSection || !aligmentSection || !sequenceFailTitle || !failsContent || !aligmentContent || !noAlignmentDataMessage) {
+                        console.error("One or more elements are missing in the DOM.");
+                        return;
+                    }
+                
+                    dropdownButton.innerText = sequence;
+                    failsSection.style.display = 'block';
+                    aligmentSection.style.display = 'block';
+                    sequenceFailTitle.innerText = sequence;
+                
+                    failsContent.innerHTML = '';
+                    aligmentContent.innerHTML = '';
+                
+                    const selectedSiRNA = sirnas.find(s => s.index === index);
+                
+                    if (selectedSiRNA && selectedSiRNA.falhas) {
+                        selectedSiRNA.falhas.forEach(fail => {
+                            let failDescription = '';
+                
+                            switch (fail) {
+                                case 'Conteudo CG':
+                                    failDescription = `<strong>Content CG:</strong> CG content out of 30-52%<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'tm':
+                                    failDescription = `<strong>Tm:</strong> Melting temperature too high<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'Energia livre':
+                                    failDescription = `<strong>Free Energy:</strong> Out of -13 to -7 kcal/mol<div class="text-secondary">-2 points</div>`;
+                                    break;
+                                case 'posicao 1':
+                                    failDescription = `<strong>Position 1:</strong> Contains U or A<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicao 6':
+                                    failDescription = `<strong>Position 6:</strong> Missing A<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicao 19':
+                                    failDescription = `<strong>Position 19:</strong> Contains G or C<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'assimetria':
+                                    failDescription = `<strong>Asymmetry:</strong> Sequence is symmetric<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'Extremidade senso':
+                                    failDescription = `<strong>Sense End:</strong> Lacks C or G<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'Extremidade antisenso':
+                                    failDescription = `<strong>Antisense End:</strong> Lacks A or U<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicoes [:7]':
+                                    failDescription = `<strong>Positions [:7]:</strong> Fewer than 5 A/U<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'Repeticao de mais de 9 C/G seguidos':
+                                    failDescription = `<strong>Long C/G Stretch:</strong> More than 9 consecutive C/G<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'estabilidade interna':
+                                    failDescription = `<strong>Internal Stability:</strong> No A/G in 14:19<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicao 13':
+                                    failDescription = `<strong>Position 13:</strong> Contains A, C, or U instead of G<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicao 19!= A':
+                                    failDescription = `<strong>Position 19 Not A:</strong> Contains G, C, or U instead of A<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicao 10':
+                                    failDescription = `<strong>Position 10:</strong> Contains A, G, or C instead of U<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                case 'posicao 3':
+                                    failDescription = `<strong>Position 3:</strong> Contains G, C, or U instead of A<div class="text-secondary">-1 point</div>`;
+                                    break;
+                                default:
+                                    failDescription = `<strong>Unknown Failure:</strong> ${fail}<div class="text-secondary">-1 point</div>`;
+                                    break;
+                            }
+                
+                            const failItem = `<div class="row">
+                                                <div class="col-auto">
+                                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 9v4"/><path d="M12 16v.01"/></svg></span>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="text-truncate">
+                                                        ${failDescription}
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto align-self-center">
+                                                    <div class="badge bg-red"></div>
+                                                </div>
+                                              </div>`;
+                            failsContent.innerHTML += failItem;
+                        });
+                    }
+                
+                    // Check if alignment data exists
+                    if (selectedSiRNA && selectedSiRNA.aligment && selectedSiRNA.aligment.length > 0) {
+                        noAlignmentDataMessage.style.display = 'none'; // Hide the no alignment message
+                        // Update aligmentContent with alignment data
+                        selectedSiRNA.aligment.forEach(alignment => {
+                            const alignmentItem = `<tr>
+                                                    <td>${alignment.hitName}</td>
+                                                    <td>${alignment.identity}</td>
+                                                    <td class="w-50">
+                                                      <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-primary" style="width: ${alignment.queryCover}%"></div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>`;
+                            aligmentContent.innerHTML += alignmentItem;
+                        });
+                    } else {
+                        noAlignmentDataMessage.style.display = 'block'; // Show the no alignment message
+                        // Move the message to after the table headers
+                        aligmentContent.innerHTML = `<tr>
+                                                        <td colspan="3">
+                                                          <p class="text-center text-secondary">The query was performed without running BLAST locally.</p>
+                                                          <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome" class="btn btn-primary" target="_blank" rel="noopener" style="display: flex;  align-items: center; ">
+                                                            <!-- Download SVG icon from http://tabler-icons.io/i/download -->
+                                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                                                            Run Blast in NCBI
+                                                          </a>
+                                                        </td>
+                                                     </tr>`;
+                    }
+                }
+                
+              </script>
 
               </div>
             </div>

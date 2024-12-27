@@ -97,28 +97,30 @@
             </style>
 
             <!-- Progress Bar -->
-            <div class="progress progress-sm">
-                <div id="progress-bar-celery" class="progress-bar">&nbsp;</div>
+            <div class="progress progress-sm mb-2">
+              <div id='progress-bar' class='progress-bar' style="background-color: #0a0908; width: 0%;">&nbsp;</div>
             </div> 
         </div>
+        <!-- Progress description -->
         <div>
-          <div class="alert alert-info"><script src="{% static 'celery_progress/celery_progress.js' %}"></script></div>
+          <div id='progress-bar-message' class="alert alert-info">Waiting for progress to start...
+              <script src="{% static 'celery_progress/celery_progress.js' %}"></script>
+          </div>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
               var progressUrl = "{% url 'celery_progress:task_status' task_id %}";
+              CeleryProgressBar.initProgressBar(progressUrl, {
+                  onSuccess: function (result) {
+                      var message = "Success! The task completed successfully.";
           
-              fetch(progressUrl)
-                  .then(response => response.json())
-                  .then(data => {
-                      console.log(data);  // Verifique se os dados estão corretos
-                      CeleryProgressBar.initProgressBar(progressUrl);
-                  })
-                  .catch(error => console.error('Error fetching task status:', error));
-          });          
-        </script>
-        </div>
-
-        </div>
+                      document.getElementById('progress-bar-message').textContent = message;
+                  }
+              });
+            });
+          </script>
+        </div> 
+        
+      </div>
     </div>
 </div>
 

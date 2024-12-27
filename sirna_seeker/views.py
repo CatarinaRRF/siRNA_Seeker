@@ -16,6 +16,8 @@ from django_celery_results.models import TaskResult
 from .algorithm import *
 from .tasks import *
 
+from user.models import UserProfile
+
 # Debugging the functions
 logger = logging.getLogger(__name__)
 
@@ -25,6 +27,10 @@ logger = logging.getLogger(__name__)
 #-------------------------------------------------------------------------------#
 @login_required(redirect_field_name='next', login_url="/accounts/login/")
 def form_view(request):
+    user = request.user
+    user_profile, _ = UserProfile.objects.get_or_create(user=user)
+
+
     if request.method == "POST":
         form = form_search(request.POST, request.FILES)
         if form.is_valid():
@@ -49,8 +55,16 @@ def form_view(request):
             logger.error("Form is not valid: %s", form.errors)
     else:
         form = form_search()
-        
-    return render(request, 'sirna/forms.html', {'form': form})
+        # Adiciona informações do usuário ao contexto
+    context = {
+        'form': form,
+        'user_profile': {
+            'name': user.get_full_name(),
+            'profission': user_profile.profission,
+            'profile_image': user_profile.profile_image,
+        }
+    }
+    return render(request, 'sirna/forms.html', context)
 
 
 #-------------------------------------------------------------------------------#
@@ -58,6 +72,8 @@ def form_view(request):
 #-------------------------------------------------------------------------------#
 @login_required(redirect_field_name='next', login_url="/accounts/login/")
 def loading(request, token):
+    user_p = request.user
+    user_profile, _ = UserProfile.objects.get_or_create(user=user_p)
     # Obtém o token da sessão
     session_token = request.session.get('loading_token')
 
@@ -97,7 +113,22 @@ def loading(request, token):
         task = selection.delay(user, sequence_path, sequence_tag, autor,
                                size, include_tm, max_tm, run_blast, organism,
                                database, identity, query_cover)
+        try:
+            task_result = TaskResult.objects.get(task_id=task.task_id)
+            task_result.task_name = sequence_tag  # Atualizando o nome da tarefa
+            task_result.save()
+        except TaskResult.DoesNotExist:
+            pass
 
-    return render(request, 'sirna/loadings.html', {'task_id': task.task_id})
+    context = {
+        'task_id': task.task_id,
+        'user_profile': {
+            'name': user_p.get_full_name(),
+            'profission': user_profile.profission,
+            'profile_image': user_profile.profile_image,
+        }
+    }
+
+    return render(request, 'sirna/loadings.html', context)
 
             

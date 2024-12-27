@@ -162,7 +162,7 @@
                             </a>
                             <div class="dropdown-content">
                                 <a href="/tools">All Tools</a>
-                                <a href="/sirna">siRNA Seeker</a>
+                                <a href="/sirna/search">siRNA Seeker</a>
                             </div>
                         </div>
                     </div>
@@ -190,7 +190,8 @@
                     {% if user.is_authenticated %}
                     <a href="/dashboard" class="navbar-link btn btn-accent">Dashboard</a>
                     {% else %}
-                    <a href="/accounts/login/" class="navbar-link btn btn-accent">Log In</a>
+                    <a href="/accounts/login/" class="navbar-link btn btn-accent">Login</a>
+                    <a href="accounts/signup/" class="navbar-link btn btn-lime">Signup</a>
                     {% endif %}
                   </div>
                   <button class="navbar-toggle" aria-label="Toggle sidebar"> 

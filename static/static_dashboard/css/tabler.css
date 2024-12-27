@@ -25870,3 +25870,8 @@ th.sort-asc::after {
 th.sort-desc::after {
     content: ' ↓'; /* Add a descending arrow or indicator */
 }
+
+.selected {
+  border: 2px solid #007bff; /* Borda azul para a imagem selecionada */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra opcional */
+}
