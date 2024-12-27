@@ -24,9 +24,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-ko@8^pgwg&g+%2pry)8^%q$)smwop$6la^ks^6+%lsz%*3%z77"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+PREPEND_WWW = True
+BASE_URL = 'https://www.nanogene.com.br'
+ALLOWED_HOSTS = ['nanogene.com.br', 'www.nanogene.com.br']
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 
 # Application definition
