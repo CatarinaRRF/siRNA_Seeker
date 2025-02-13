@@ -27,7 +27,6 @@
 
 The project is still in development, and upcoming updates will focus on the following tasks:
 
-- [ ] Upload to server
 - [ ] Documentation setup
 
 # About 
