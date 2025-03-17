@@ -1,6 +1,3 @@
-> <B>⚠️ This README is still under development</B>
-
-
 <h1 align="center">
   <img src="https://github.com/CatarinaRRF/siRNA_Seeker/blob/main/static/img/siRNAseeker_preto.png" alt="logo">
 </h1>
@@ -27,7 +24,6 @@
 
 The project is still in development, and upcoming updates will focus on the following tasks:
 
-- [ ] Upload to server
 - [ ] Documentation setup
 
 # About 
