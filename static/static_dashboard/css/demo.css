@@ -153,9 +153,9 @@ pre.highlight::-webkit-scrollbar-corner,
 }
 
 .card-sponsor {
-  background: var(--tblr-primary-lt) no-repeat center/100% 100%;
+  background: #182433 no-repeat center / 100% 100%;
   border-color: var(--tblr-primary);
-  min-height: 316px;
+  background-image: url(./static/banner-BLAST.svg);
 }
 
 .dropdown-menu-demo {

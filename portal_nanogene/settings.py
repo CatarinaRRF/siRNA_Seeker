@@ -24,21 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-ko@8^pgwg&g+%2pry)8^%q$)smwop$6la^ks^6+%lsz%*3%z77"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-PREPEND_WWW = True
-BASE_URL = 'https://www.nanogene.com.br'
-ALLOWED_HOSTS = ['nanogene.com.br', 'www.nanogene.com.br']
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
+DEBUG = True
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -97,7 +85,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "portal_nanogene.wsgi.application"
-
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -171,7 +158,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
+STATIC_ROOT = '/var/www/portal_nanogene/static_files/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -187,6 +174,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -214,11 +202,14 @@ CELERY_RESULT_EXTENDED = True
 
 FORKED_BY_MULTIPROCESSING = 1
 
+CELERY_WORKER_CONCURRENCY = 25  
+CELERYD_PREFETCH_MULTIPLIER = 5
+
 # email configs
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'host'
 EMAIL_USE_TLS = False  # Não usar TLS, pois estamos usando SSL
 EMAIL_USE_SSL = True  # Habilita SSL
 EMAIL_PORT = 465  # Porta 465 para SSL
-EMAIL_HOST_USER = str(os.getenv("teste@gmail.com"))
+EMAIL_HOST_USER = str(os.getenv("email"))
 EMAIL_HOST_PASSWORD = str(os.getenv("senha"))

@@ -397,13 +397,14 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
             # Exclui RNAs indesejadas
             # ----------------------------------#
             incluir_siRNA = True
+            tm_value = resultado[4]
 
             if autor == "reynolds":
-                if resultado[0] <= total_reynolds or resultado[4] > tmmax:
+                if resultado[0] <= total_reynolds or not (0 < tm_value <= tmmax):
                     incluir_siRNA = False
 
             if autor == 'ui-tei' or autor == 'amarzguioui':
-                if resultado[0] <= total_uitei_ama or resultado[4] > tmmax:
+                if resultado[0] <= total_uitei_ama or not (0 < tm_value <= tmmax):
                     incluir_siRNA = False
 
             if incluir_siRNA:
@@ -536,7 +537,7 @@ def blast_siRNA(sequence, sequence_tag, db=None, organismo="txid9606[ORGN]",
                 })
                 print(resultados)
         
-                time.sleep(1)
+                time.sleep(20)
 
     except Exception as e:
         print(f"Erro durante o processamento do BLAST: {e}")
