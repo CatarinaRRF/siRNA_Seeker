@@ -21743,8 +21743,8 @@ Icon input
   justify-content: center;
   min-width: 2.5rem;
   color: var(--tblr-icon-color);
-  pointer-events: none;
   font-size: 1.2em;
+  pointer-events: all !important
 }
 .input-icon-addon:last-child {
   right: 0;

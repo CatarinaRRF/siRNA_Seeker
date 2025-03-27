@@ -76,7 +76,7 @@ def transcrever(arquivo):
 
 # Achando todas as possiveis sequencias de siRNA dado == sequencias trascritas
 # ----------------------------------------------------------------- #
-def possiveis_siRNA(dado, tamanho=21):
+def possiveis_siRNA(dado, tamanho=21): 
     # definindo variaveis
     possiveis_siRNA = []
     tuplas = []
@@ -126,157 +126,171 @@ def free_energy(seq1):
 # Reynolds 
 # ----------------------------------------------------------------- #
 def reynolds (sequence):
-    score = 0
-    falha = []
-    # Instabilidade na posicao 15 - 19
-    #----------------------------------#
-    check_estabilidade = 0
-    for letra in sequence[14:19]:
-        if letra == "A" or letra == "G":
-            check_estabilidade += 1
-    if check_estabilidade >= 1:
-        score += 1
-    else:
-        falha.append(str("estabilidade interna"))
-    # posicao 13
-    #----------------------------------#
-    if sequence[12] != "G":
-        score += 1
-    else:
-        falha.append(str("posicao 13"))
-    # posicao 19
-    #----------------------------------#
-    if sequence [18] != "G" and sequence [18] != "C":
-        score += 1
-    else:
-        falha.append(str("posicao 19"))
-    if sequence [18] == "A":
-        score += 1
-    else:
-        falha.append(str("posicao 19!= A"))
-    # posicao 10
-    #----------------------------------#
-    if sequence [9] == "U":
-        score += 1
-    else:
-        falha.append(str("posicao 10"))
+  score = 0
+  falha = []
+  # Instabilidade na position 15 - 19
+  #----------------------------------#
+  check_estabilidade = 0
+  for letra in sequence[14:19]:
+     if letra == "A" or letra == "G":
+        check_estabilidade += 1
+  if check_estabilidade >= 1:
+     score += 2
+  else:
+     falha.append(str("internal stability"))
 
-    # posicao 3
-    #----------------------------------#
-    if sequence [2] == "A":
-        score += 1
-    else:
-        falha.append(str("posicao 3"))
+  # Caracteristicas da Fita
+  # position 13
+  #----------------------------------#
+  if sequence[12] != "G":
+     score += 1
+  else:
+     falha.append(str("position 13"))
+  # position 19
+  #----------------------------------#
+  if sequence [18] != "G" and sequence [18] != "C":
+     score += 1
+  else:
+     falha.append(str("position 19"))
+  if sequence [18] == "A":
+     score += 1
+  else:
+     falha.append(str("position 19!= A"))
+  # position 10
+  #----------------------------------#
+  if sequence [9] == "U":
+     score += 1
+  else:
+     falha.append(str("position 10"))
 
-    return score, falha
+  # position 3
+  #----------------------------------#
+  if sequence [2] == "A":
+     score += 1
+  else:
+     falha.append(str("position 3"))
+
+  return score, falha
 
 # Ui-Tei
 # ----------------------------------------------------------------- #
 def Ui_Tei (sequence, extremidade=7):
-    # Variaveis
-    #----------------------------------#
-    score = 0
-    falha = []
-    antisenso = Seq(sequence).complement_rna()
+  # Variaveis
+  #----------------------------------#
+  score = 0
+  falha = []
+  antisenso = Seq(sequence).complement_rna()
 
-    #Senso
-    #----------------------------------#
-    check_senso = 0
+  #Senso
+  #----------------------------------#
+  check_senso = 0
 
-    for letra in sequence[:extremidade]:
-        if letra == "G" or letra == "C":
-            check_senso += 1
-    if check_senso == 5:
-        score += 1
-    else:
-        falha.append(str("Extremidade senso"))
+  for letra in sequence[:extremidade]:
+      if letra == "G" or letra == "C":
+         check_senso += 1
+  if check_senso > 0:
+     score += 1
+  else:
+     falha.append(str("no C/G at the 5' sense end"))
 
-    #Antisenso
-    #----------------------------------#
-    check_antisenso = 0
+  #Antisenso
+  #----------------------------------#
+  check_antisenso = 0
 
-    for letra in antisenso[-extremidade:]:
-        if letra == "A" or letra == "U":
-            check_antisenso += 1
-    if check_antisenso == extremidade:
-        score += 1
-    else:
-        falha.append(str("Extremidade antisenso"))
+  for letra in antisenso[:extremidade]:
+      if letra == "A" or letra == "U":
+         check_antisenso += 1
+  if check_antisenso > 0:
+     score += 1
+  else:
+     falha.append(str("no A/U at the 5' antisense end"))
 
-    # Presença de no minimo 5 A/U nas posições [:7]
-    #----------------------------------#
-    check_min_5 = 0
+  # Presença de no minimo 5 A/U nas posições [:7]
+  #----------------------------------#
+  check_min_5 = 0
 
-    for letra in antisenso[-7:]:
-        if letra == "A" or letra == "U":
-            check_min_5 += 1
-    if check_min_5 >= 5:
-        score += 1
-    else:
-        falha.append(str("posições [:7]"))
+  for letra in antisenso[-extremidade:]:
+      if letra == "A" or letra == "U":
+         check_min_5 += 1
+  if check_min_5 >= 5:
+     score += 2
+  else:
+     falha.append(str("Less than 5pb A/U in antisense 5'"))
 
-    # Mais de 9 repetições
-    #----------------------------------#
-    segment_size = 9
-    check = True
+  # Mais de 9 repetições
+  #----------------------------------#
+  segment_size = 9
+  check = True
 
-    for index in range(len(sequence) - segment_size + 1):
-            segmento = sequence[index:index + segment_size]
-            count = 0
-            for letra in segmento:
-                if letra == 'C' or letra == 'G':
-                    count += 1
-            if count >= segment_size:
-                check = False
+  for index in range(len(sequence) - segment_size + 1):
+        segmento = sequence[index:index + segment_size]
+        count = 0
+        for letra in segmento:
+            if letra == 'C' or letra == 'G':
+                count += 1
+        if count >= segment_size:
+            check = False
 
-    if check == True:
-        score += 1
-    else:
-        falha.append(str("Repetição de mais de 9 C/G seguidos"))
+  if check == True:
+    score += 1
+  else:
+    falha.append(str("Repetition of more than 9 C/G in a row"))
+    score -= 2
 
-    return score, falha
+  return score, falha
 
 # Amarzguioui
 # ----------------------------------------------------------------- #
 def Amarzguioui(sequence):
-    score = 0
-    falha = []
-    check_assimetria_5 = 0
-    check_assimetria_3 = 0
-    antisenso = Seq(sequence).complement_rna()
+  score = 0
+  falha = []
+  check_assimetria_5 = 0
+  check_assimetria_3 = 0
+  antisenso = Seq(sequence).complement_rna()
 
-    # posicao 1
-    #----------------------------------#
-    if sequence [0] != "U" and sequence [0] != "A":
-        score += 1
-    else:
-        falha.append(str("posicao 1"))
-    # posicao 6
-    #----------------------------------#
-    if sequence [5] == "A":
-        score += 1
-    else:
-        falha.append(str("posicao 6"))
-    # posicao 19
-    #----------------------------------#
-    if sequence [18] != "G" and sequence [18] != "C":
-        score += 1
-    else:
-        falha.append(str("posicao 19"))
-    # Assimetria
-    #----------------------------------#
-    for letra in sequence[:3]:
-        if letra == "A" or letra == "U": # baixo
-            check_assimetria_5 += 1
-    for letra in antisenso[-3:]:
-        if letra == "A" or letra == "U": # alto
-            check_assimetria_3 += 1
-    if check_assimetria_3 > check_assimetria_5:
-        score += 1
-    else:
-        falha.append(str("assimetria"))
+  # position 1
+  #----------------------------------#
+  if sequence [0] != "U":
+     score += 1
+  else:
+     falha.append(str("position 1"))
+  
+  if sequence [0] == "C" and sequence [0] == "G":
+     score += 1
+  else:
+     falha.append(str("position 1 has no C/G"))
 
-    return score, falha
+  # position 6
+  #----------------------------------#
+  if sequence [5] == "A":
+     score += 1
+  else:
+     falha.append(str("position 6"))
+  # position 19
+  #----------------------------------#
+  if sequence [18] != "G":
+     score += 1
+  else:
+     falha.append(str("position 19 is G"))
+  
+  if sequence [18] == "A" or sequence [18] == "U":
+     score += 1
+  else:
+     falha.append(str("position 19 is C/G"))
+  # Assimetria
+  #----------------------------------#
+  for letra in sequence[:3]:
+      if letra == "A" or letra == "U": # baixo
+         check_assimetria_5 += 1
+  for letra in antisenso[-3:]:
+      if letra == "A" or letra == "U": # alto
+         check_assimetria_3 += 1
+  if check_assimetria_3 > check_assimetria_5:
+     score += 1
+  else:
+     falha.append(str("asymmetry"))
+
+  return score, falha
 
 # Testando a funcionalidade de um siRNA
 # ----------------------------------------------------------------- #
@@ -304,14 +318,12 @@ def siRNA_score (sequence, tuplas,
         conteudo_gc = round(gc_fraction(sequence)*100, 2)
         if 30 <= conteudo_gc <= 52:
             score += 1
-        else:
-            falha.append(str("Conteudo CG"))
 
         # tempmelt
         #--------------------------------------------------------------#
-        if tm == True:
-            tm_score = round(mt.Tm_GC(sequence[1:8]), 2)
-            if tm_score <= tmmax:
+        tm_score = round(mt.Tm_GC(sequence[:8]), 2)
+        if autor != 'reynolds':
+            if 0 < tm_score <= tmmax:
                 score += 1
             else:
                 falha.append(str("tm"))
@@ -319,27 +331,28 @@ def siRNA_score (sequence, tuplas,
         # G°
         #--------------------------------------------------------------#
         energia_livre = free_energy(sequence)
-        if -13 < energia_livre < -7:
-            score += 2
-        else:
-            falha.append(str("Energia livre"))
+        if autor != 'ui-tei':
+            if -13 < energia_livre < -7:
+                score += 2
+            else:
+                falha.append(str("free energy"))
 
         # Autores
-        # Score reynolds total = 6
+        # Score reynolds total = 10
         #--------------------------------------------------------------#
         if autor == 'reynolds':
             r = reynolds(sequence)
             score += r[0]
             falha.extend(r[1] if isinstance(r[1], list) else [r[1]])
 
-        # Score ui-tei total = 4
+        # Score ui-tei total = 6
         #--------------------------------------------------------------#
         if autor == 'ui-tei':
             u = Ui_Tei(sequence)
             score += u[0]
             falha.extend(u[1] if isinstance(u[1], list) else [u[1]])
 
-        # Score amarzguioui total = 4
+        # Score amarzguioui total = 10
         #--------------------------------------------------------------#
         if autor == 'amarzguioui':
             a = Amarzguioui(sequence)
@@ -383,8 +396,10 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
         energia_livre = []
         TM_score = []
 
-        total_reynolds = round(10 * conformidade)
-        total_uitei_ama = round(8 * conformidade)
+        total_reynolds = 9 * conformidade
+        total_uitei = 6 * conformidade
+        total_ama = 9 * conformidade
+
 
         # Iterador
         # --------------------------------------------------------------#
@@ -397,14 +412,20 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
             # Exclui RNAs indesejadas
             # ----------------------------------#
             incluir_siRNA = True
-            tm_value = resultado[4]
+
+            if 30 <= resultado[2] <= 52:
+                incluir_siRNA = False
 
             if autor == "reynolds":
-                if resultado[0] <= total_reynolds or not (0 < tm_value <= tmmax):
+                if resultado[0] <= total_reynolds or not (0 < resultado[4] <= tmmax):
                     incluir_siRNA = False
 
-            if autor == 'ui-tei' or autor == 'amarzguioui':
-                if resultado[0] <= total_uitei_ama or not (0 < tm_value <= tmmax):
+            if autor == 'ui-tei':
+              if resultado[0] <= total_uitei or not (-13 < resultado[3] <-7):
+                    incluir_siRNA = False
+
+            if autor == 'amarzguioui':
+                if resultado[0] <= total_ama:
                     incluir_siRNA = False
 
             if incluir_siRNA:
@@ -474,7 +495,6 @@ def guardando_sequence (data):
 
 # Rodando o Blast
 # ---------------------------------------------- #    
-
 def blast_siRNA(sequence, sequence_tag, db=None, organismo="txid9606[ORGN]",
                 df=None, identidad=0.78):
     """
@@ -544,7 +564,6 @@ def blast_siRNA(sequence, sequence_tag, db=None, organismo="txid9606[ORGN]",
         raise
 
     return resultados
-
 
 def identidade_siRNA(fasta_file, sequence_tag, db = "refseq_rna", organismo = "txid9606[ORGN]",
                  df=None, identidade=0.78):

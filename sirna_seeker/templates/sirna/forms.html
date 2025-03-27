@@ -13,38 +13,42 @@
       <div class="row row-deck row-cards">
         <!-- Breadcrumber -->
         <div class="col-12">
-                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-                              <li class="breadcrumb-item"><a href="">Home</a></li>
-                              <li class="breadcrumb-item" aria-current="page"><a href="#">search</a></li>
-                            </ol>                 
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-muted">
+                  <li class="breadcrumb-item">
+                    <a href="/">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    <a href="#">Search</a>
+                  </li>
+                </ol>
+              </nav>              
         </div>
             
         <!-- Titulo -->
         <div class="col-12"> 
-                            <div class="card card-md">
-                                <div class="card-stamp card-stamp-lg">
-                                    <div class="card-stamp-icon bg-green">
-                                        <!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
-                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5" /><path d="M16.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" /><path d="M18.5 19.5l2.5 2.5" /></svg>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-10">
-                                            <h3 class="h1">SiRNA Design Customization</h3>
-                                                <div class="markdown text-secondary">
-                                                    Take control by fine-tuning parameters to suit your specific needs. 
-                                                    Whether it's selecting literature references or configuring alignment analyses with precision, every detail is customizable. 
-                                                  
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="card card-md">
+                <div class="card-stamp card-stamp-lg">
+                    <div class="card-stamp-icon bg-lime">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5" /><path d="M16.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" /><path d="M18.5 19.5l2.5 2.5" /></svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-10">
+                                <h3 class="h1">siRNA Design Customization</h3>
+                            <div class="markdown text-secondary">
+                                Take control by fine-tuning parameters to suit your specific needs. 
+                                Whether it's selecting literature references or configuring alignment analyses with precision, every detail is customizable. 
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div> 
 
         <!-- Formulario -->
-        <div> 
+        <div class="col-md-12 col-lg-8"> 
             <form class="card" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 
@@ -58,29 +62,54 @@
                                 {{ form.sequence_tag }}
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <div class="form-label" for="{{ form.sequence.id_for_label }}">Insert Fasta</div>
-                                {{ form.sequence }}
-                                <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>The FASTA file must adhere to the standard specified by NCBI. If it does not, ensure that the gene name is included in parentheses within the header.</p><p class='mb-0'>">?</span>
-                            </div>
-                        </div>
                         <div class="col-sm-6 col-md-3">
                             <div class="mb-3">
                                 <label class="form-label" for="{{ form.size.id_for_label }}">Size</label>
-                                {{ form.size }}
-                                <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>It is recommended that the size be between 19 and 22. Less than 5 will return error</p><p class='mb-0'>">?</span>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        {{ form.size }}
+                                    </div>
+                                    <div class="col-auto align-self-center">
+                                        <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="
+                                            <p>It is recommended that the size be between 19 and 22. Less than 8 will return an error.</p><p class='mb-0'>">
+                                            ?
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="col-sm-6 col-md-4">
                             <div class="form-label" for="{{ form.autor.id_for_label }}">Autor</div>
                             {{ form.autor }}
                         </div>
+                    </div>
+                    <div class="row row-cards">
+                        <div class="col-md-8">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.sequence.id_for_label }}">Insert Fasta</label>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        {{ form.sequence }}
+                                    </div>
+                                    <div class="col-auto align-self-center">
+                                        <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="
+                                            <p>The FASTA file must adhere to the standard specified by NCBI. 
+                                            If it does not, ensure that the gene name is included in parentheses 
+                                            within the header. You can obtain the FASTA file by visiting the NCBI website.<br> 
+                                            <a href='https://www.ncbi.nlm.nih.gov/gene/' target='_blank'>NCBI Gene Database</a>.</p><p class='mb-0'>">
+                                            ?
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-sm-6 col-md-4 d-none">
                             <input type="hidden" name="include_tm" value="True">
                         </div>
-                        
-                        <div class="col-sm-6 col-md-3">
+                    </div>
+                    <div class="row row-cards">
+                        <div class="col-sm-6 col-md-4">
                             <div class="mb-3">
                                 <label class="form-label" for="{{ form.max_tm.id_for_label }}">Max Melting Temperature</label>
                                 {{ form.max_tm }}
@@ -95,6 +124,41 @@
                 </div>
             </form>
         </div>
+
+        <!-- Documentação -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card card-md sticky-top">
+              <div class="card-body">
+                <div class="row align-items-center">
+                    <h3 class="h1">Need Help Using the Program?</h3>
+                    <div class="markdown text-secondary">
+                        For detailed guidance on how to use the program, check out our documentation. 
+                        Visit our official docs for step-by-step instructions and best practices.
+                    </div>
+                    <div style='text-align:center'>
+                    <div class="mt-3">
+                      <a href="https://drive.google.com/file/d/1YieE7DS4jViGwDZgsTl4cE2O5l_gnzQ1/view?usp=sharing" class="btn btn-outline-primary" target="_blank" rel="noopener">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg>
+                        Step-by-Step Guide
+                      </a>
+                    </div>
+                    <div class="mt-3">
+                      <a href="" class="btn btn-outline-lime" target="_blank" rel="noopener">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-video"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" /><path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /></svg>
+                        Video Tutorial
+                      </a>
+                    </div>
+                    <div class="mt-3">
+                      <a href="mailto:techsupport@nanogene.com.br" class="btn btn-outline-secondary" target="_blank" rel="noopener">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-share"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M13 18l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v6" /><path d="M16 22l5 -5" /><path d="M21 21.5v-4.5h-4.5" /></svg>
+                        Contact Us
+                      </a>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div> 
     </div>
   </div>

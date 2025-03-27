@@ -61,7 +61,7 @@ def dashboard(request):
                 
                 # Obtendo a sequência complementar
                 if sequence != 'N/A':
-                    complementary_seq = str(Seq(sequence).complement())  # Obtém a fita complementar
+                    complementary_seq = str(Seq(sequence).complement().transcribe())  # Obtém a fita complementar
                 else:
                     complementary_seq = 'N/A'
 

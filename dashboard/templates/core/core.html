@@ -158,7 +158,7 @@
                       </span>
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href=" " target="_blank" rel="noopener">
+                      <a class="dropdown-item" href="https://drive.google.com/file/d/1YieE7DS4jViGwDZgsTl4cE2O5l_gnzQ1/view?usp=sharing" target="_blank" rel="noopener">
                         Documentation
                       </a>
                       <a class="dropdown-item" href="https://github.com/CatarinaRRF/siRNA_seeker_0.0.1" target="_blank" rel="noopener">
@@ -632,12 +632,12 @@
                                     const chart = new ApexCharts(document.querySelector("#sirna-chart"), options);
                                     chart.render();
                                 });
-                                </script>
+                              </script>
 
                               <div id="sirna-chart" class="chart-lg"></div>
-                              </div>
+                            </div>
                             
-                              <!-- Tabela -->
+                            <!-- Tabela -->
                             <div class="container mt-5">
                               <div class="card-table table-responsive">
                                     <div class="card-header">
@@ -646,7 +646,13 @@
                                           <button  class="btn btn-6 btn-outline-secondary" id="exportFastaBtn" style="margin-left:10px">
                                             Export all to Fasta
                                           </button>
-                                          <button class="btn btn-6 btn-dark" id="blastBtn" style="margin-left:10px;">Run BLAST</button>
+                                          <button class="btn btn-6 btn-dark" id="blastBtn" style="margin-left:10px;">
+                                            Run BLAST per page
+                                          </button>
+                                          <span class="form-help" style="margin-left:5px" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content= 
+                                          "<p>The Blast button is page-specific, meaning when clicked, it will direct you to the Blast page with all sequences displayed. On that page, you can select which sequences to run by checking the corresponding checkmarks. A maximum of 10 sequences can be processed per page.</p><p class='mb-0'>">
+                                          ?
+                                        </span>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
@@ -669,7 +675,7 @@
                                                   ?
                                                 </span>
                                               </th>
-                                              <th data-sort="text">Complementary Sequence 3'- 5'
+                                              <th data-sort="text">Complementary Sequence
                                                 <span class="form-help" style="margin-left:5px" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content= 
                                                   "<p>This column displays the anti-sense strand in the 5′ to 3′ orientation</p><p class='mb-0'>">
                                                   ?
@@ -716,13 +722,13 @@
                                                 <td>{{ siRNA.complementary_sequence }}</td>
                                               </td> 
                                                 <td>
-                                                  {% if meta_data.autor == 'reynolds' %}
-                                                    {% if siRNA.pontuacao >= 8 %}
+                                                  {% if meta_data.autor == 'reynolds' or meta_data.autor == 'amarzguioui'%}
+                                                    {% if siRNA.pontuacao >= 9 %}
                                                     <span class="text-green">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" /></svg>
                                                     </span>
                                                     {{ siRNA.pontuacao }}
-                                                    {% elif 7 <= siRNA.pontuacao < 8 %}
+                                                    {% elif 6 <= siRNA.pontuacao < 9 %}
                                                     <span class="text-orange">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" /></svg>
                                                     </span>
@@ -735,7 +741,7 @@
                                                     {% endif %}
                                                   {% endif %}
 
-                                                  {% if meta_data.autor == 'ui-tei' or meta_data.autor == 'amarzguioui'  %}
+                                                  {% if meta_data.autor == 'ui-tei'%}
                                                     {% if siRNA.pontuacao >= 6 %}
                                                     <span class="text-green">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" /></svg>
@@ -817,24 +823,14 @@
                                 </div>
                               </div>
                             </div>
-                            
-                              
                     </div>
                 </div>
-                
                 <!-- select a siRNA -->
                 <div class="col-12">
                   <div class="card card-md">
                       <div class="card-stamp card-stamp-lg">
                           <div class="card-stamp-icon bg-primary">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-layers-selected">
-                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                  <path d="M8 10.5l6.492 -6.492" />
-                                  <path d="M13.496 16l6.504 -6.504z" />
-                                  <path d="M8.586 15.414l10.827 -10.827" />
-                                  <path d="M8 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
-                                  <path d="M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2" />
-                              </svg>
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-dna-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3v1c-.01 3.352 -1.68 6.023 -5.008 8.014c-3.328 1.99 3.336 -2 .008 -.014c-3.328 1.99 -5 4.662 -5.008 8.014v1" /><path d="M17 21.014v-1c-.01 -3.352 -1.68 -6.023 -5.008 -8.014c-3.328 -1.99 3.336 2 .008 .014c-3.328 -1.991 -5 -4.662 -5.008 -8.014v-1" /><path d="M7 4h10" /><path d="M7 20h10" /><path d="M8 8h8" /><path d="M8 16h8" /></svg>
                           </div>
                       </div>
                       <div class="card-body">
@@ -860,425 +856,505 @@
                   </div>
                 </div>
                   <!-- Fails -->
-                  <div class="col-md-12 col-lg-8" id="failsSection" style="display: none;">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Failure to Conform to Criteria<span id="sequenceFailTitle"></span></h3>
+                  <div class="col-lg-6" id="failsSection" style="display: none;">
+                    <div id="tableContainer">
+                      <div class="card">
+                          <div class="card-header">
+                            <div>
+                                <h3 class="card-title">Conformity Score <span class="badge bg-azure text-azure-fg" id="sequenceFailTitle">c</span></h3>
+                                <p class="card-subtitle">This table shows the failures of the sequence in relation to {{ meta_data.autor|capfirst }}'s Method</p>
+                            </div>
+                          </div>
+                          <div class="card-table table-responsive">
+                              <table class="table table-vcenter">
+                                  <thead>
+                                      <tr>
+                                          <th>Criterion</th>
+                                          <th>Description</th>
+                                          <th>Was there a failure?</th>
+                                          <th>Point Deduction</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody id="failsContent">
+                                      <!-- As falhas serão inseridas aqui via JavaScript -->
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <div id="noFailsContainer" style="display: none;">
+                      <div class="card"> 
+                        <div class="card-status-top bg-lime"></div>
+                        <div class="card-body">
+                          <h3 class="card-title">Conformity Score <span class="badge bg-azure text-azure-fg" id="cardSequenceFailTitle">c</span></h3> 
+                          <p>No Failures Detected, this sequence meets all quality standards.</p>
                         </div>
-                        <div class="card-table table-responsive">
-                            <table class="table table-vcenter">
-                                <thead>
-                                    <tr>
-                                        <th>Criterion</th>
-                                        <th>Description</th>
-                                        <th>Was there a failure?</th>
-                                        <th>Point Deduction</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="failsContent">
-                                    <!-- As falhas serão inseridas aqui via JavaScript -->
-                                </tbody>
-                            </table>
-                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  <!-- Aligment -->
-                  <div class="col-md-6 col-lg-4">
-                    <a href="" id="aligmentSection" style="display: none;" class="card card-sponsor" target="_blank" rel="noopener">
-                      <div >
-                          <img id="blast-img" src="./static/static_dashboard/img/banner-BLAST-dark.svg" alt="BLAST" class="card-img-top">
+                  <!-- Actions -->
+                  <div class="col-lg-6 " id="aligmentSection" style="display: none;">
+                    <div class="card">
+                      <div class="card-header">
+                        <div>
+                          <h3 class="card-title">Actions</h3>
+                          <p class="card-subtitle">Perform various actions on your sequence using the options below.</p>
+                        </div>
                       </div>
-                        
-                    </a>
-                  
-                  
-                  <script>
-                    const sirnas = {{ sirnas | safe }};  // Supondo que sirnas sejam passadas do backend
-                  
-                    function changeSiRNA(event, sequence, index) {
-                      event.preventDefault();  // Evita o comportamento padrão do link
-                  
-                      const dropdownButton = document.getElementById('dropdownButton');
-                      const failsSection = document.getElementById('failsSection');
-                      const aligmentSection = document.getElementById('aligmentSection');
-                      const failsContent = document.getElementById('failsContent');
-                  
-                      // Verifica se os elementos necessários estão presentes no DOM
-                      if (!dropdownButton || !failsSection || !aligmentSection || !failsContent) {
-                        console.error("One or more elements are missing in the DOM.");
-                        return;
-                      }
-                  
-                      // Atualiza o texto do botão do dropdown
-                      dropdownButton.innerText = sequence;
-                  
-                      // Exibe a seção de falhas
-                      failsSection.style.display = 'block';
-                      aligmentSection.style.display = 'block';
-                      failsContent.innerHTML = '';  // Limpa o conteúdo da tabela antes de adicionar os novos dados
-                  
-                      const selectedSiRNA = sirnas.find(s => s.index === index);
-                  
-                      if (selectedSiRNA && selectedSiRNA.falhas) {
-                        // Itera sobre as falhas e cria as linhas da tabela
-                        selectedSiRNA.falhas.forEach(fail => {
-                          let failDescription = '';
-                          let pointDeduction = '';
-                          let failTextColor = '';
-                  
-                          // Atribui as falhas e suas descrições
-                          switch (fail) {
-                            case 'Conteudo CG':
-                                failDescription = "CG content out of 30-52%";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'tm':
-                                failDescription = "Melting temperature surpasses the established limit";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'Energia livre':
-                                failDescription = "Free energy outside the range of -13 to -7 kcal/mol";
-                                pointDeduction = "-2 points";
-                                break;
-                            case 'posicao 1':
-                                failDescription = "Contains U or A in <strong>Position 1</strong>";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicao 6':
-                                failDescription = "Missing A in Position 6";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'assimetria':
-                                failDescription = "Sequence has higher presence of A/U in the sense strand than in the antisense";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'Extremidade senso':
-                                failDescription = "<strong>Sense End:</strong> Lacks more than 5nt that are C or G";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'Extremidade antisenso':
-                                failDescription = "<strong>Antisense End:</strong> Lacks A or U";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicoes [:7]':
-                                failDescription = "Fewer than 5 A/U in the last 7 nucleotides";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'Repeticao de mais de 9 C/G seguidos':
-                                failDescription = "<strong>Long C/G Stretch:</strong> More than 9 consecutive C/G";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'estabilidade interna':
-                                failDescription = "<strong>Internal Stability:</strong> No A/G in the last 5 nucleotides";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicao 13':
-                                failDescription = "Position 13 contains G";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicao 19!= A':
-                                failDescription = "Position 19 does not contain A";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicao 19':
-                                failDescription = "Position 19 contains G or C";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicao 10':
-                                failDescription = "Position 10 does not contain U";
-                                pointDeduction = "-1 point";
-                                break;
-                            case 'posicao 3':
-                                failDescription = "<strong>Position 3 does not contain A</strong>";
-                                pointDeduction = "-1 point";
-                                break;
-                            default:
-                                failDescription = "<strong>Unknown Failure:</strong> " + fail + "<div class=\"text-secondary\">-1 point</div>";
-                                pointDeduction = "-1 point";
-                                break;
-                        }    
-                          // Se houve falha, coloca o texto em vermelho
-                          failTextColor = "yes" === 'yes' ? "text-danger" : "text-success";  // Aqui você pode ajustar a lógica para verificar a falha
-                  
-                          // Cria a linha da tabela
-                          const failItem = `
-                            <tr>
-                              <td>${fail}</td>
-                              <td>${failDescription}</td>
-                              <td class="${failTextColor}">${'yes'}</td>  <!-- Ajuste para exibir 'yes' ou 'no' -->
-                              <td>${pointDeduction}</td>
-                            </tr>
-                          `;
-                          
-                          // Adiciona a linha na tabela de falhas
-                          failsContent.innerHTML += failItem;
-                        });
-                      }
-                      const blastUrl = `https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome&QUERY=${encodeURIComponent(selectedSiRNA.sequence)}`;
-                      aligmentSection.href = blastUrl;
-                    }
-                  </script>
+                      <div class="card-body">
+                        <a href="" id="blastButton" class="btn btn-6 btn-info active w-50" target="_blank" rel="noopener">
+                          <div >
+                            Run Blast for this sequence
+                          </div>
+                        </a>
+                      </div>
 
+                      <!-- overhanger -->
+                      <div class="card-body">
+                        <h3 class="card-title">Overhanger</h3>
+                        <p class="card-subtitle">Select the type of overhang to copy the sequence + overhang and the overhang + Complementary Sequence</p>
+                        <div>
+                            <button id="dtdt-btn" class="btn btn-outline-secondary" onclick="addOverhanger('dTdT')">dTdT</button>
+                            <button id="ouou-btn" class="btn btn-outline-secondary" onclick="addOverhanger('oUoU')">oUoU</button>
+                            <button id="rnrn-btn" class="btn btn-outline-secondary" onclick="addOverhanger('rNrN')">rNrN</button>
+                            <button id="onon-btn" class="btn btn-outline-secondary" onclick="addOverhanger('oNoN')">oNoN</button>
+                        </div>
+                        <div id="sequence-with-overhanger" style="padding-top:10px">
+                          <div class="input-icon">
+                            <input type="text" id="sequence-input" class="form-control" readonly value="AUAGGGAAGUAAAAAAACAAA dTdT dTdT UAUCCCUUCAUUUUUUUGUUU">
+                            <span class="input-icon-addon">
+                              <button class="btn btn-ghost-secondary" onclick="myFunction()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                  <path d="M15 3v4a1 1 0 0 0 1 1h4"></path>
+                                  <path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z"></path>
+                                  <path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"></path>
+                                </svg>
+                              </button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
               </div>
             </div>
         </div>
-      </div>
-    </div>
 
-    <!-- SCRIPTS -->
+    <!-- --------------------------------------- SCRIPTS ---------------------------------------- -->
 
-    <!-- sort table -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          let table = document.querySelector('.datatable');
-          let headers = table.querySelectorAll('th');
-          let rows = Array.from(table.querySelectorAll('tbody tr'));
-          let currentSort = { column: null, direction: 'asc' };
-  
-          headers.forEach((header, index) => {
-              header.addEventListener('click', () => {
-                  let newDirection = (currentSort.column === index && currentSort.direction === 'asc') ? 'desc' : 'asc';
-                  currentSort = { column: index, direction: newDirection };
-  
-                  rows.sort((a, b) => {
-                      let aText = a.children[index].textContent.trim();
-                      let bText = b.children[index].textContent.trim();
-  
-                      if (index === 0) { // Checkbox column
-                          return 0;
-                      }
-  
-                      // Função para verificar se o valor é numérico
-                      function isNumeric(value) {
-                          return !isNaN(value) && value.trim() !== '';
-                      }
-  
-                      // Se a coluna for numérica (baseado na posição ou outro critério)
-                      if (isNumeric(aText) && isNumeric(bText)) {
-                          aText = parseFloat(aText);
-                          bText = parseFloat(bText);
-                      }
-  
-                      // Ordenação numérica
-                      if (newDirection === 'asc') {
-                          return aText < bText ? -1 : aText > bText ? 1 : 0;
-                      } else {
-                          return bText < aText ? -1 : bText > aText ? 1 : 0;
-                      }
-                  });
-  
-                  let tbody = table.querySelector('tbody');
-                  rows.forEach(row => tbody.appendChild(row)); // Reorganiza as linhas na tabela
-  
-                  // Alterna o indicador de direção de ordenação (opcional)
-                  headers.forEach(header => header.classList.remove('sort-asc', 'sort-desc'));
-                  if (newDirection === 'asc') {
-                      headers[index].classList.add('sort-asc');
-                  } else {
-                      headers[index].classList.add('sort-desc');
-                  }
-              });
-          });
-      });
-    </script>
-  
-    <!-- table actions -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <script>
-          document.addEventListener('DOMContentLoaded', function () {
-              var popoverTrigger = document.getElementById('popover-trigger');
-              var popoverContent = document.getElementById('popover-content').innerHTML;
-
-              var popover = new bootstrap.Popover(popoverTrigger, {
-                  html: true,
-                  content: popoverContent
-              });
-          });
-    </script>
-
-    <!-- selection of sirnas -->
-    <script>
-      const sirnas = {{ sirnas | safe }};
-    
-      function changeSiRNA(sequence, index) {
-        document.getElementById('dropdownButton').innerText = sequence;
-        document.getElementById('failsSection').style.display = 'block';
-        document.getElementById('aligmentSection').style.display = 'block';
-        document.getElementById('sequenceFailTitle').innerText = sequence;
-    
-        const failsContent = document.getElementById('failsContent');
-        const aligmentContent = document.getElementById('aligmentContent');
+          <!-- sort table -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let table = document.querySelector('.datatable');
+                let headers = table.querySelectorAll('th');
+                let rows = Array.from(table.querySelectorAll('tbody tr'));
+                let currentSort = { column: null, direction: 'asc' };
+      
+                headers.forEach((header, index) => {
+                    header.addEventListener('click', () => {
+                        let newDirection = (currentSort.column === index && currentSort.direction === 'asc') ? 'desc' : 'asc';
+                        currentSort = { column: index, direction: newDirection };
+      
+                        rows.sort((a, b) => {
+                            let aText = a.children[index].textContent.trim();
+                            let bText = b.children[index].textContent.trim();
+      
+                            if (index === 0) { // Checkbox column
+                                return 0;
+                            }
+      
+                            // Função para verificar se o valor é numérico
+                            function isNumeric(value) {
+                                return !isNaN(value) && value.trim() !== '';
+                            }
+      
+                            // Se a coluna for numérica (baseado na posição ou outro critério)
+                            if (isNumeric(aText) && isNumeric(bText)) {
+                                aText = parseFloat(aText);
+                                bText = parseFloat(bText);
+                              }
         
-        failsContent.innerHTML = '';
-        aligmentContent.innerHTML = '';
-    
-        const selectedSiRNA = sirnas.find(s => s.index === index);
-    
-        if (selectedSiRNA && selectedSiRNA.falhas) {
-          selectedSiRNA.falhas.forEach(fail => {
-            const failItem = `<div class="row">
-                                <div class="col-auto">
-                                  <span class="avatar"></span>
-                                </div>
-                                <div class="col">
-                                  <div class="text-truncate">
-                                    <strong>Position ${fail.position}:</strong> the sequence has a <strong>${fail.expected}</strong> instead of <strong>${fail.actual}</strong>
-                                  </div>
-                                  <div class="text-secondary">-1 point</div>
-                                </div>
-                                <div class="col-auto align-self-center">
-                                  <div class="badge bg-red"></div>
-                                </div>
-                              </div>`;
-            failsContent.innerHTML += failItem;
-          });
-        }
-    
-        // Update aligmentContent similarly with relevant data
-        // Example:
-        // selectedSiRNA.alignment.forEach(alignment => {
-        //   const alignmentItem = `<tr>
-        //                             <td>${alignment.hitName}</td>
-        //                             <td>${alignment.identity}</td>
-        //                             <td class="w-50">
-        //                               <div class="progress progress-xs">
-        //                                 <div class="progress-bar bg-primary" style="width: ${alignment.queryCover}%"></div>
-        //                               </div>
-        //                             </td>
-        //                           </tr>`;
-        //   aligmentContent.innerHTML += alignmentItem;
-        // });
-      }
-    </script>
-
-    <!-- Botão fasta-->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var selectAllCheckbox = document.querySelector('thead input[type="checkbox"]');
-          var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          var allSelected = true;
-    
-          // Função para marcar/desmarcar todas as sequências
-          function toggleSelection(selectAll) {
-              checkboxes.forEach(cb => cb.checked = selectAll);
-          }
-    
-          toggleSelection(true);
-    
-          selectAllCheckbox.addEventListener('click', function() {
-              allSelected = !allSelected;
-              toggleSelection(allSelected);
-          });
-    
-          // Evento para exportar os selecionados em FASTA
-          document.getElementById('exportFastaBtn').addEventListener('click', function() {
-              // Requisição AJAX para buscar todas as sequências
-              fetch('/get_all_sequences/')  // O URL da view Django que retorna as sequências
-                  .then(response => response.json())
-                  .then(data => {
-                      var selectedSiRNAs = [];
-                      var geneSymbol = "{{ meta_data.gene_symbols }}";
-                      var index = 1;
-    
-                      // Processa as sequências retornadas pela API
-                      data.forEach(function(seq) {
-                          var sequence = seq.sequence;
-    
-                          // Cabeçalho FASTA
-                          var fastaHeader = `>sequence ${index} derivate of mRNA of (${geneSymbol})`;
-                          selectedSiRNAs.push(fastaHeader + '\n' + sequence);
-                          index++;
+                              // Ordenação numérica
+                              if (newDirection === 'asc') {
+                                  return aText < bText ? -1 : aText > bText ? 1 : 0;
+                              } else {
+                                  return bText < aText ? -1 : bText > aText ? 1 : 0;
+                              }
+                          });
+        
+                          let tbody = table.querySelector('tbody');
+                          rows.forEach(row => tbody.appendChild(row)); // Reorganiza as linhas na tabela
+        
+                          // Alterna o indicador de direção de ordenação (opcional)
+                          headers.forEach(header => header.classList.remove('sort-asc', 'sort-desc'));
+                          if (newDirection === 'asc') {
+                              headers[index].classList.add('sort-asc');
+                          } else {
+                              headers[index].classList.add('sort-desc');
+                          }
                       });
-    
-                      if (selectedSiRNAs.length === 0) {
-                          alert("Nenhuma sequência encontrada.");
-                          return;
-                      }
-    
-                      // Criando arquivo FASTA para download
-                      var blob = new Blob([selectedSiRNAs.join('\n\n')], { type: 'text/plain' });
-                      var url = URL.createObjectURL(blob);
-                      var a = document.createElement('a');
-                      a.style.display = 'none';
-                      a.href = url;
-                      a.download = 'all_sequences.fasta';
-                      document.body.appendChild(a);
-                      a.click();
-                      document.body.removeChild(a);
-                      URL.revokeObjectURL(url);
-                  })
-                  .catch(error => console.error('Erro ao buscar sequências:', error));
-          });
-      });
-    </script>
-    
-    <!-- Botão BLAST -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var selectAllCheckbox = document.querySelector('thead input[type="checkbox"]');
-          var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          var allSelected = true;
-
-          // Função para marcar/desmarcar todas as sequências
-          function toggleSelection(selectAll) {
-              checkboxes.forEach(cb => cb.checked = selectAll);
-          }
-
-          toggleSelection(true);
-
-          selectAllCheckbox.addEventListener('click', function() {
-              allSelected = !allSelected;
-              toggleSelection(allSelected);
-          });
-
-          // Evento para enviar os selecionados para o BLAST
-          document.getElementById('blastBtn').addEventListener('click', function() {
-              var selectedIndices = [];
-              checkboxes.forEach(function(checkbox, index) {
-                  if (checkbox.checked) {
-                      selectedIndices.push(index + 1);  // Armazena o índice da sequência selecionada
-                  }
+                  });
               });
+          </script>
 
-              if (selectedIndices.length === 0) {
-                  alert("Nenhuma sequência selecionada.");
-                  return;
+          <!-- table actions -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+          <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var popoverTrigger = document.getElementById('popover-trigger');
+                    var popoverContent = document.getElementById('popover-content').innerHTML;
+
+                    var popover = new bootstrap.Popover(popoverTrigger, {
+                        html: true,
+                        content: popoverContent
+                    });
+                });
+          </script>
+
+          <!-- selection of sirnas -->
+          <script>
+            const sirnas = {{ sirnas | safe }};  // Supondo que sirnas sejam passadas do backend
+
+            function changeSiRNA(event, sequence, index) {
+              event.preventDefault();  // Evita o comportamento padrão do link
+
+              const dropdownButton = document.getElementById('dropdownButton');
+              const failsSection = document.getElementById('failsSection');
+              const aligmentSection = document.getElementById('aligmentSection');
+              const tableContainer = document.getElementById('tableContainer');
+              const noFailsContainer = document.getElementById('noFailsContainer');
+              const failsContent = document.getElementById('failsContent');
+
+
+              // Verifica se os elementos necessários estão presentes no DOM
+              if (!dropdownButton || !failsSection || !aligmentSection || !failsContent) {
+                console.error("One or more elements are missing in the DOM.");
+                return;
               }
 
-              // Requisição AJAX para buscar as sequências selecionadas
-              fetch(`/get_selected_sequences/?indices[]=${selectedIndices.join('&indices[]=')}`, {
-                  method: 'GET',
-                  headers: {
-                      'Content-Type': 'application/json',
+              // Atualiza o texto do botão do dropdown
+              dropdownButton.innerText = sequence;
+
+              // Exibe a seção de falhas
+              failsSection.style.display = 'block';
+              tableContainer.style.display = 'block';
+              noFailsContainer.style.display = 'none';
+              aligmentSection.style.display = 'block';
+              failsContent.innerHTML = '';  // Limpa o conteúdo da tabela antes de adicionar os novos dados
+
+              const selectedSiRNA = sirnas.find(s => s.index === index);
+              currentSiRNA = selectedSiRNA;
+              
+              document.getElementById('sequenceFailTitle').textContent = selectedSiRNA.pontuacao;
+              document.getElementById('cardSequenceFailTitle').textContent = selectedSiRNA.pontuacao;
+
+              // Falhas
+              if (selectedSiRNA && selectedSiRNA.falhas && selectedSiRNA.falhas.length > 0) {
+                // Itera sobre as falhas e cria as linhas da tabela
+                selectedSiRNA.falhas.forEach(fail => {
+                  let failDescription = '';
+                  let pointDeduction = '';
+                or = '';
+
+                  // Atribui as falhas e suas descrições
+                  switch (fail) {
+                    case 'internal stability':
+                        failDescription = "<strong>Internal Stability:</strong> No A/G in the last 5 nucleotides";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 13':
+                        failDescription = "Position 13 contains G";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 19':
+                        failDescription = "Position 19 contains G or C";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 19!= A':
+                        failDescription = "Position 19 does not contain A";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 10':
+                        failDescription = "Position 10 does not contain U";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 3':
+                        failDescription = "<strong>Position 3 does not contain A</strong>";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'no C/G at the 5\' sense end':
+                        failDescription = "<strong>Sense End:</strong> Lacks more than 5nt that are C or G";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'no A/U at the 5\' antisense end':
+                        failDescription = "<strong>Antisense End:</strong> Lacks A or U";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'Less than 5 A/U in antisense 5':
+                        failDescription = "Fewer than 5 A/U in the last 7 nucleotides";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'Repetition of more than 9 C/G in a row':
+                        failDescription = "<strong>Long C/G Stretch:</strong> More than 9 consecutive C/G";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 1':
+                        failDescription = "Contains U or A in <strong>Position 1</strong>";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 1 has no C/G':
+                        failDescription = "Base at position 1 must be C or G";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 6':
+                        failDescription = "Missing A in Position 6";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 19 is G':
+                        failDescription = "Base at position 19 must not be G";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'position 19 is C/G':
+                        failDescription = "Base at position 19 must be A or U";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'asymmetry':
+                        failDescription = "Sequence has higher presence of A/U in the sense strand than in the antisense";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'tm':
+                        failDescription = "Melting temperature surpasses the established limit";
+                        pointDeduction = "-1 point";
+                        break;
+                    case 'free energy':
+                        failDescription = "Free energy outside the range of -13 to -7 kcal/mol";
+                        pointDeduction = "-2 points";
+                        break;
+                    default:
+                        failDescription = "<strong>Unknown Failure:</strong> " + fail + "<div class=\"text-secondary\">-1 point</div>";
+                        pointDeduction = "-1 point";
+                        break;
                   }
-              })
-              .then(response => response.json())
-              .then(data => {
-                  var selectedSequences = [];
-                  var geneSymbol = "{{ meta_data.gene_symbols }}";  // Substitua pelo gene_symbol, se necessário
+                
+                  // Se houve falha, coloca o texto em vermelho
+                  failTextColor = "yes" === 'yes' ? "text-danger" : "text-success";  // Aqui você pode ajustar a lógica para verificar a falha
 
-                  // Processa as sequências retornadas pela API
-                  data.forEach(function(seq, index) {
-                      var sequence = seq.sequence;
+                  // Cria a linha da tabela
+                  const failItem = `
+                    <tr>
+                      <td>${fail}</td>
+                      <td>${failDescription}</td>
+                      <td class="${failTextColor}">${'yes'}</td>  <!-- Ajuste para exibir 'yes' ou 'no' -->
+                      <td>${pointDeduction}</td>
+                    </tr>
+                  `;
 
-                      // Cabeçalho BLAST
-                      var blastHeader = `>sequence ${index + 1} derivate of mRNA of (${geneSymbol})`;
-                      selectedSequences.push(blastHeader + '\n' + sequence);
+                  // Adiciona a linha na tabela de falhas
+                  failsContent.innerHTML += failItem;
+                });
+              } else {
+                // Se não houver falhas, oculta a tabela e exibe o card
+                tableContainer.style.display = 'none';
+                noFailsContainer.style.display = 'block';
+              }
+
+              // Ações
+              // Supondo que o botão tenha um ID
+              const blastButton = document.getElementById("blastButton");
+              const blastUrl = `https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome&QUERY=${encodeURIComponent(selectedSiRNA.sequence)}`;
+              blastButton.href = blastUrl;
+
+              // overhang
+              addOverhanger('dTdT');
+
+            }
+              // overhang
+              function addOverhanger(overhanger) {
+                if (!currentSiRNA) {
+                  console.error("No siRNA selected.");
+                  return;
+                }
+                // Seleciona o elemento input que está dentro do div "sequence-with-overhanger"
+                const inputElement = document.querySelector('#sequence-with-overhanger input');
+                if (!inputElement) {
+                  console.error("Input element for overhanger not found.");
+                  return;
+                }
+                // Monta o novo valor seguindo o padrão:
+                // sequence + ' ' + selected-overhanger + ' ' + selected-overhanger + ' ' + complementary sequence
+                const newValue = `${currentSiRNA.sequence} ${overhanger} ${overhanger} ${currentSiRNA.complementary_sequence}`;
+                inputElement.value = newValue;
+              }
+              // Script to make the copy icon clickable without interfering with other events.
+              document.addEventListener('DOMContentLoaded', function() {
+                const copyIcon = document.getElementById('copyIcon');
+                const inputField = document.querySelector('.input-icon input');
+
+                if (copyIcon && inputField) {
+                  copyIcon.style.cursor = 'pointer';
+                  copyIcon.addEventListener('click', function(event) {
+                    // Apenas copie o texto sem interromper outros handlers
+                    inputField.select();
+                    inputField.setSelectionRange(0, 99999); // para dispositivos móveis
+
+                    navigator.clipboard.writeText(inputField.value)
+                      .then(() => {
+                        alert('Texto copiado para a área de transferência!');
+                      })
+                      .catch(err => {
+                        console.error('Erro ao copiar o texto: ', err);
+                      });
                   });
+                }
+              });
+          </script>
 
-                  // Gera a URL do BLAST com todas as sequências selecionadas
-                  var blastQuery = selectedSequences.join('\n');
-                  var blastUrl = `https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome&QUERY=${encodeURIComponent(blastQuery)}`;
+          <!-- copy bottum -->
+          <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("sequence-input");
+            
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+            
+               // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+            
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
 
-                  // Redireciona para o BLAST com as sequências
-                  window.open(blastUrl, '_blank');  // Abre o BLAST em uma nova aba
-              })
-              .catch(error => console.error('Erro ao buscar sequências:', error));
-          });
-      });
-    </script>
+          <!-- Botão fasta-->
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var selectAllCheckbox = document.querySelector('thead input[type="checkbox"]');
+                var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+                var allSelected = true;
+          
+                // Função para marcar/desmarcar todas as sequências
+                function toggleSelection(selectAll) {
+                    checkboxes.forEach(cb => cb.checked = selectAll);
+                }
+          
+                toggleSelection(true);
+          
+                selectAllCheckbox.addEventListener('click', function() {
+                    allSelected = !allSelected;
+                    toggleSelection(allSelected);
+                });
+          
+                // Evento para exportar os selecionados em FASTA
+                document.getElementById('exportFastaBtn').addEventListener('click', function() {
+                    // Requisição AJAX para buscar todas as sequências
+                    fetch('/get_all_sequences/')  // O URL da view Django que retorna as sequências
+                        .then(response => response.json())
+                        .then(data => {
+                            var selectedSiRNAs = [];
+                            var geneSymbol = "{{ meta_data.gene_symbols }}";
+                            var index = 1;
+          
+                            // Processa as sequências retornadas pela API
+                            data.forEach(function(seq) {
+                                var sequence = seq.sequence;
+          
+                                // Cabeçalho FASTA
+                                var fastaHeader = `>sequence ${index} derivate of mRNA of (${geneSymbol})`;
+                                selectedSiRNAs.push(fastaHeader + '\n' + sequence);
+                                index++;
+                            });
+          
+                            if (selectedSiRNAs.length === 0) {
+                                alert("Nenhuma sequência encontrada.");
+                                return;
+                            }
+          
+                            // Criando arquivo FASTA para download
+                            var blob = new Blob([selectedSiRNAs.join('\n\n')], { type: 'text/plain' });
+                            var url = URL.createObjectURL(blob);
+                            var a = document.createElement('a');
+                            a.style.display = 'none';
+                            a.href = url;
+                            a.download = 'all_sequences.fasta';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            URL.revokeObjectURL(url);
+                        })
+                        .catch(error => console.error('Erro ao buscar sequências:', error));
+                });
+            });
+          </script>
+          
+          <!-- Botão BLAST -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var selectAllCheckbox = document.querySelector('thead input[type="checkbox"]');
+                var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+                var allSelected = true;
+
+                // Função para marcar/desmarcar todas as sequências
+                function toggleSelection(selectAll) {
+                    checkboxes.forEach(cb => cb.checked = selectAll);
+                }
+
+                toggleSelection(true);
+
+                selectAllCheckbox.addEventListener('click', function() {
+                    allSelected = !allSelected;
+                    toggleSelection(allSelected);
+                });
+
+                // Evento para enviar os selecionados para o BLAST
+                document.getElementById('blastBtn').addEventListener('click', function() {
+                    var selectedIndices = [];
+                    checkboxes.forEach(function(checkbox, index) {
+                        if (checkbox.checked) {
+                            selectedIndices.push(index + 1);  // Armazena o índice da sequência selecionada
+                        }
+                    });
+
+                    if (selectedIndices.length === 0) {
+                        alert("Nenhuma sequência selecionada.");
+                        return;
+                    }
+
+                    // Requisição AJAX para buscar as sequências selecionadas
+                    fetch(`/get_selected_sequences/?indices[]=${selectedIndices.join('&indices[]=')}`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        var selectedSequences = [];
+                        var geneSymbol = "{{ meta_data.gene_symbols }}";  // Substitua pelo gene_symbol, se necessário
+
+                        // Processa as sequências retornadas pela API
+                        data.forEach(function(seq, index) {
+                            var sequence = seq.sequence;
+
+                            // Cabeçalho BLAST
+                            var blastHeader = `>sequence ${index + 1} derivate of mRNA of (${geneSymbol})`;
+                            selectedSequences.push(blastHeader + '\n' + sequence);
+                        });
+
+                        // Gera a URL do BLAST com todas as sequências selecionadas
+                        var blastQuery = selectedSequences.join('\n');
+                        var blastUrl = `https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome&QUERY=${encodeURIComponent(blastQuery)}`;
+
+                        // Redireciona para o BLAST com as sequências
+                        window.open(blastUrl, '_blank');  // Abre o BLAST em uma nova aba
+                    })
+                    .catch(error => console.error('Erro ao buscar sequências:', error));
+                });
+            });
+          </script> 
+          
 
  </body>
 </html>

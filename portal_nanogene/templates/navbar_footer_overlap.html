@@ -60,47 +60,6 @@
           display: flex;
           align-items: center;
       }
-      .breadcrumb {
-        --tblr-breadcrumb-padding-x: 0;
-        --tblr-breadcrumb-padding-y: 0;
-        --tblr-breadcrumb-margin-bottom: 1rem;
-        --tblr-breadcrumb-divider-color: #2fb344; /* Cor branca para o divisor */
-        --tblr-breadcrumb-item-padding-x: 0.5rem;
-        --tblr-breadcrumb-item-active-color: #FFFFFF; /* Cor branca para item ativo */
-        --tblr-breadcrumb-link-color: #2fb344; /* Cor branca para links */
-        display: flex;
-        flex-wrap: wrap;
-        padding: var(--tblr-breadcrumb-padding-y) var(--tblr-breadcrumb-padding-x);
-        margin-bottom: var(--tblr-breadcrumb-margin-bottom);
-        font-size: var(--tblr-breadcrumb-font-size);
-        list-style: none;
-        background-color: var(--tblr-breadcrumb-bg);
-        border-radius: var(--tblr-breadcrumb-border-radius);
-      }
-
-      .breadcrumb-item + .breadcrumb-item {
-        padding-left: var(--tblr-breadcrumb-item-padding-x);
-      }
-
-      .breadcrumb-item + .breadcrumb-item::before {
-        float: left;
-        padding-right: var(--tblr-breadcrumb-item-padding-x);
-        color: #2fb344; /* Cor branca para o divisor */
-        content: var(--tblr-breadcrumb-divider, "/");
-      }
-
-      .breadcrumb-item.active {
-        color: #bbc3cd; /* Cor branca para item ativo */
-      }
-
-      .breadcrumb a {
-        color: #2fb344; /* Cor branca para links */
-      }
-
-      .breadcrumb a:hover {
-        text-decoration: underline;
-        color: #f8f9fa; /* Cor de hover ajustada para branco claro */
-      }
     </style>
 
     <div class="page">

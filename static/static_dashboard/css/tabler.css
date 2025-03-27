@@ -21743,7 +21743,6 @@ Icon input
   justify-content: center;
   min-width: 2.5rem;
   color: var(--tblr-icon-color);
-  pointer-events: none;
   font-size: 1.2em;
 }
 .input-icon-addon:last-child {
