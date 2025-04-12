@@ -94,30 +94,79 @@ def possiveis_siRNA(dado, tamanho=21):
 # ----------------------------------------------------------------- #
 #                            Free Energy                            #
 # ----------------------------------------------------------------- #
-def free_energy(seq1):
-    """
-    Calculates the Minimum Free Energy (MFE) and structure of an RNA duplex
-    using the complementary sequence of the input RNA sequence.
+from Bio.Seq import Seq
 
-    Parameters:
-        seq1 (str): The input RNA sequence.
+# Parâmetros de energia do modelo nearest-neighbor (valores refinados do usuário)
+nearest_neighbor_params = {
+    'GC': (-16.52, -42.13),  # GC/CG
+    'CG': (-9.61, -23.46),   # CG/GC
+    'GG': (-13.94, -34.41),  # CC/GG
+    'CC': (-13.94, -34.41),  # CC/GG
+    'GA': (-13.75, -36.53),  # GA/CU
+    'UC': (-13.75, -36.53),  # GA/CU (reverso complementar)
+    'AC': (-11.98, -31.37),  # AC/UG
+    'UG': (-11.98, -31.37),  # AC/UG (reverso complementar)
+    'CA': (-10.47, -27.08),  # CA/GU
+    'GU': (-10.47, -27.08),  # CA/GU (reverso complementar)
+    'AG': (-9.34, -23.66),   # AG/UC
+    'CU': (-9.34, -23.66),   # AG/UC (reverso complementar)
+    'UA': (-9.16, -25.40),   # UA/AU
+    'AU': (-8.91, -25.22),   # AU/UA
+    'AA': (-7.44, -20.98),   # AA/UU
+    'UU': (-7.44, -20.98)    # AA/UU (reverso complementar)
+}
 
-    Returns:
-        tuple: A tuple containing the MFE (float) and the dot-bracket structure (str).
-    """
-    # Create a Seq object
-    seq1_obj = Seq(seq1)
+# Correções adicionais
+INITIATION_ENTHALPY = 4.66     # kcal/mol
+INITIATION_ENTROPY = 1.78      # cal/mol·K
+SYMMETRY_CORRECTION = -1.38    # cal/mol·K
 
-    # Generate the complementary sequence and convert it to a string
-    complementary_seq_str = str(seq1_obj.complement())
+# Função para verificar se a sequência é auto-complementar
+def is_self_complementary(seq):
+    complement = {'A': 'U', 'U': 'A', 'G': 'C', 'C': 'G'}
+    rev_comp = ''.join(complement.get(base, base) for base in reversed(seq))
+    return seq == rev_comp
 
-    # Perform RNA duplex folding
-    result = RNA.duplexfold(seq1, complementary_seq_str)
+# Função principal que recebe fita senso (DNA) e retorna a energia livre da complementar
+def free_energy(seq):
+    
+    def calc_dG(rna_seq, temp_C=37.0):
+        seq = rna_seq.upper()
+        total_dh = INITIATION_ENTHALPY
+        total_ds = INITIATION_ENTROPY
 
-    # Extract the free energy and structure
-    mfe = round(result.energy,3)  # Free energy in kcal/mol
+        for i in range(len(seq) - 1):
+            pair = seq[i:i+2]
+            if pair in nearest_neighbor_params:
+                dh, ds = nearest_neighbor_params[pair]
+                total_dh += dh
+                total_ds += ds
+            else:
+                raise ValueError(f"Par não encontrado nos parâmetros: {pair}")
 
-    return mfe
+        if is_self_complementary(seq):
+            total_ds += SYMMETRY_CORRECTION
+
+        temp_K = temp_C + 273.15
+        delta_G = total_dh - (temp_K * total_ds / 1000)
+        return round(delta_G, 2)
+
+
+    sense_rna = Seq(seq)
+
+    # Gera a fita antissenso como complementar reversa da fita senso (transcrita para RNA)
+    antisense_rna = sense_rna.reverse_complement().transcribe()
+
+    # Calcula energia livre de cada fita
+    dG_sense = calc_dG(str(sense_rna[:7]))
+    dG_antisense = calc_dG(str(antisense_rna[:7]))
+
+    # Calcula diferença ΔG_senso - ΔG_antissenso e força resultado a ser negativo
+    dG_diff = round(dG_sense - dG_antisense, 2)
+    dG_diff = -abs(dG_diff)
+
+    # Retorna ΔG da fita complementar e diferença
+    return dG_antisense, dG_diff
 
 # ----------------------------------------------------------------- #
 #                             Classifing
@@ -331,8 +380,9 @@ def siRNA_score (sequence, tuplas,
         # G°
         #--------------------------------------------------------------#
         energia_livre = free_energy(sequence)
+        dG_antisense, dG_diff = energia_livre
         if autor != 'ui-tei':
-            if -13 < energia_livre < -7:
+            if -13 < dG_antisense < -7:
                 score += 2
             else:
                 falha.append(str("free energy"))
@@ -367,7 +417,7 @@ def siRNA_score (sequence, tuplas,
                     posicao = pos
                     break
         #--------------------------------------------------------------#
-        return score, falha, conteudo_gc, energia_livre, tm_score, posicao
+        return score, falha, conteudo_gc, dG_diff, tm_score, posicao
 
 # ----------------------------------------------------------------- #
 # Selecionando os siRNA funcionais
@@ -439,7 +489,7 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
 
         # Organizando os resultados por pontuação
         resultados = list(zip(siRNA_verificados, score, TM_score, conteudo_gc, energia_livre, falha, posicao))
-        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)[:50]
+        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)
         siRNA_verificados = [resultado[0] for resultado in resultados_ordenados]
         score = [resultado[1] for resultado in resultados_ordenados]
         TM_score = [resultado[2] for resultado in resultados_ordenados] 

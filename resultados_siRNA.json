@@ -1,435 +1,1068 @@
 [
     {
-        "Sequencia'": "CCGAGAGUAACUUCCGGAUCU",
-        "Pontuacao": 8,
-        "TM": 10.53,
-        "CG": 52.38,
-        "AG": -9.5,
-        "Falhas": [
-            "position 1 has no C/G"
-        ],
-        "posicao": "457:478"
-    },
-    {
-        "Sequencia'": "AGCUCAGGAACUGACCGCAAA",
-        "Pontuacao": 8,
-        "TM": 10.53,
-        "CG": 52.38,
-        "AG": -10.4,
-        "Falhas": [
-            "position 1 has no C/G"
-        ],
-        "posicao": "492:513"
-    },
-    {
-        "Sequencia'": "GAGAAAGAAUUUCACUACAAU",
-        "Pontuacao": 8,
+        "Sequencia'": "AAACCCUAUUUAAAUGAAAGG",
+        "Pontuacao": 9,
         "TM": 0.28,
         "CG": 28.57,
-        "AG": -8.7,
-        "Falhas": [
-            "position 1 has no C/G"
-        ],
-        "posicao": "555:576"
+        "AG": -1.03,
+        "Falhas": [],
+        "posicao": "888:909"
     },
     {
-        "Sequencia'": "GCCUCACGGAAAGACAGAUCA",
-        "Pontuacao": 8,
+        "Sequencia'": "CCACUCGCGUGUUCCCCAAGC",
+        "Pontuacao": 9,
         "TM": 15.65,
-        "CG": 52.38,
-        "AG": -10.9,
-        "Falhas": [
-            "position 1 has no C/G"
-        ],
-        "posicao": "622:643"
+        "CG": 66.67,
+        "AG": -0.83,
+        "Falhas": [],
+        "posicao": "1240:1261"
     },
     {
-        "Sequencia'": "GGCGCAUGAAGUGGAAAAAGG",
+        "Sequencia'": "CUACCGGAGCCUUCCCAGAAC",
         "Pontuacao": 8,
-        "TM": 15.65,
-        "CG": 52.38,
-        "AG": -11.1,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -1.46,
         "Falhas": [
-            "position 1 has no C/G"
+            "position 10"
         ],
-        "posicao": "661:682"
+        "posicao": "163:184"
+    },
+    {
+        "Sequencia'": "CUUGUGCGUUUGCUUCCAACC",
+        "Pontuacao": 8,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -1.25,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "190:211"
+    },
+    {
+        "Sequencia'": "CCAGCGCCCGGGCUAUGGAGC",
+        "Pontuacao": 8,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -2.28,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "212:233"
+    },
+    {
+        "Sequencia'": "ACUCGGACUUGGCGGCCGAGA",
+        "Pontuacao": 8,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.2,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "442:463"
+    },
+    {
+        "Sequencia'": "UUCCGGAUCUACCCCUGGAUG",
+        "Pontuacao": 8,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -1.72,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "468:489"
+    },
+    {
+        "Sequencia'": "AUCUACCCCUGGAUGCGAAGC",
+        "Pontuacao": 8,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -2.29,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "474:495"
+    },
+    {
+        "Sequencia'": "CUCAGGAACUGACCGCAAACG",
+        "Pontuacao": 8,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -2.21,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "494:515"
+    },
+    {
+        "Sequencia'": "CGAGGCCGCCAGACCUACACC",
+        "Pontuacao": 8,
+        "TM": 20.78,
+        "CG": 71.43,
+        "AG": -3.8,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "513:534"
+    },
+    {
+        "Sequencia'": "ACCAGACCCUGGAGCUGGAGA",
+        "Pontuacao": 8,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.07,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "538:559"
+    },
+    {
+        "Sequencia'": "ACACGCUCUGCCUCACGGAAA",
+        "Pontuacao": 8,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.4,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "613:634"
     },
     {
         "Sequencia'": "CCAAGACAGGGCUGAAGCAGA",
         "Pontuacao": 8,
         "TM": 5.4,
         "CG": 57.14,
-        "AG": -12.5,
+        "AG": -0.11,
         "Falhas": [
-            "position 1 has no C/G"
+            "position 10"
         ],
         "posicao": "713:734"
     },
     {
-        "Sequencia'": "AGGAGAAAUUUUGGUUUUUCA",
+        "Sequencia'": "ACAGGGCUGAAGCAGAGGAGG",
         "Pontuacao": 8,
-        "TM": 0.28,
-        "CG": 28.57,
-        "AG": -9.2,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.93,
         "Falhas": [
-            "position 1 has no C/G"
+            "position 10"
         ],
-        "posicao": "939:960"
+        "posicao": "718:739"
     },
     {
-        "Sequencia'": "GCGGCACCAAGGGGCCUUAGG",
+        "Sequencia'": "GGAGGAAGAGGAAGAGUGAGG",
+        "Pontuacao": 8,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.29,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "734:755"
+    },
+    {
+        "Sequencia'": "GAAGAGGAAGAGUGAGGGAUG",
+        "Pontuacao": 8,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.07,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "738:759"
+    },
+    {
+        "Sequencia'": "GAAAGGGAGAGGAAGAGAAGC",
+        "Pontuacao": 8,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -0.4,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "785:806"
+    },
+    {
+        "Sequencia'": "AGAAGCCCAGCUCUGGGAACU",
+        "Pontuacao": 8,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.12,
+        "Falhas": [
+            "position 10"
+        ],
+        "posicao": "800:821"
+    },
+    {
+        "Sequencia'": "GGAGCCCCAAAACCUACCACU",
         "Pontuacao": 8,
         "TM": 20.78,
-        "CG": 71.43,
-        "AG": -12.4,
+        "CG": 57.14,
+        "AG": -4.73,
         "Falhas": [
-            "position 1 has no C/G"
+            "position 10"
         ],
-        "posicao": "1204:1225"
+        "posicao": "1224:1245"
     },
     {
-        "Sequencia'": "CCCCAAGCGCCUGGCUGCUGC",
-        "Pontuacao": 8,
+        "Sequencia'": "GGACUCUAAUUCUGUAAUAUA",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 28.57,
+        "AG": -7.4,
+        "Falhas": [
+            "free energy"
+        ],
+        "posicao": "17:38"
+    },
+    {
+        "Sequencia'": "GUCCCUGCCUACAAAUCAUCC",
+        "Pontuacao": 7,
         "TM": 15.65,
-        "CG": 76.19,
-        "AG": -9.2,
+        "CG": 52.38,
+        "AG": -2.74,
         "Falhas": [
-            "position 1 has no C/G"
+            "position 19!= A",
+            "position 3"
         ],
-        "posicao": "1253:1274"
-    },
-    {
-        "Sequencia'": "GAUGGAAAAAUAAAACGCAAU",
-        "Pontuacao": 8,
-        "TM": 0.28,
-        "CG": 28.57,
-        "AG": -8.6,
-        "Falhas": [
-            "position 1 has no C/G"
-        ],
-        "posicao": "1332:1353"
-    },
-    {
-        "Sequencia'": "CUGUAAUAUAUCAAGGAAUCU",
-        "Pontuacao": 7,
-        "TM": -4.85,
-        "CG": 28.57,
-        "AG": -7.6,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "28:49"
-    },
-    {
-        "Sequencia'": "AGUUCAUUGUAUUAUGCGAAU",
-        "Pontuacao": 7,
-        "TM": -4.85,
-        "CG": 28.57,
-        "AG": -8.6,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "102:123"
+        "posicao": "69:90"
     },
     {
         "Sequencia'": "GUUCAUUGUAUUAUGCGAAUA",
         "Pontuacao": 7,
         "TM": 0.28,
         "CG": 28.57,
-        "AG": -8.6,
+        "AG": -1.99,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
         "posicao": "103:124"
     },
     {
-        "Sequencia'": "GUAUUAUGCGAAUACUUUAUU",
+        "Sequencia'": "CGAAUACUUUAUUUUCUAAAU",
         "Pontuacao": 7,
-        "TM": -4.85,
-        "CG": 23.81,
-        "AG": -8.0,
+        "TM": 0.28,
+        "CG": 19.05,
+        "AG": -1.65,
         "Falhas": [
-            "tm",
-            "position 1 has no C/G"
+            "free energy"
         ],
-        "posicao": "110:131"
+        "posicao": "118:139"
     },
     {
-        "Sequencia'": "GCCGCCUCGAUGCAGGGCUUG",
+        "Sequencia'": "CAAGUUCGGUUUUCGCUACCG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -3.98,
+        "Falhas": [
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "148:169"
+    },
+    {
+        "Sequencia'": "UUCGGUUUUCGCUACCGGAGC",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 57.14,
+        "AG": -4.79,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "152:173"
+    },
+    {
+        "Sequencia'": "CGCUACCGGAGCCUUCCCAGA",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -1.04,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "161:182"
+    },
+    {
+        "Sequencia'": "UACCGGAGCCUUCCCAGAACA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.89,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "164:185"
+    },
+    {
+        "Sequencia'": "ACCCCCAGCGCCCGGGCUAUG",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -4.22,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "208:229"
+    },
+    {
+        "Sequencia'": "CCCGGGCUAUGGAGCGGGUUC",
         "Pontuacao": 7,
         "TM": 20.78,
         "CG": 71.43,
-        "AG": -11.0,
+        "AG": -4.38,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 19!= A",
+            "position 3"
         ],
-        "posicao": "252:273"
+        "posicao": "218:239"
+    },
+    {
+        "Sequencia'": "GGAGCGGGUUCGGGCGCUUCC",
+        "Pontuacao": 7,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -2.34,
+        "Falhas": [
+            "position 13",
+            "position 19!= A"
+        ],
+        "posicao": "228:249"
+    },
+    {
+        "Sequencia'": "CCUUCGCCGCCUCGAUGCAGG",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -0.28,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "247:268"
     },
     {
         "Sequencia'": "CCGCCUCGAUGCAGGGCUUGU",
         "Pontuacao": 7,
         "TM": 20.78,
         "CG": 66.67,
-        "AG": -10.6,
+        "AG": -2.77,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 19!= A",
+            "position 3"
         ],
         "posicao": "253:274"
     },
     {
-        "Sequencia'": "GCCUCGAUGCAGGGCUUGUAC",
-        "Pontuacao": 7,
-        "TM": 10.53,
-        "CG": 61.9,
-        "AG": -8.4,
-        "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
-        ],
-        "posicao": "255:276"
-    },
-    {
-        "Sequencia'": "CCUCGAUGCAGGGCUUGUACC",
-        "Pontuacao": 7,
-        "TM": 10.53,
-        "CG": 61.9,
-        "AG": -8.6,
-        "Falhas": [
-            "position 1 has no C/G",
-            "asymmetry"
-        ],
-        "posicao": "256:277"
-    },
-    {
-        "Sequencia'": "AGCCGAGUUCCUUCAACAUGC",
-        "Pontuacao": 7,
-        "TM": 10.53,
-        "CG": 52.38,
-        "AG": -10.0,
-        "Falhas": [
-            "position 1 has no C/G",
-            "asymmetry"
-        ],
-        "posicao": "340:361"
-    },
-    {
-        "Sequencia'": "CGCCCUUUGAGCAGAACCUCU",
-        "Pontuacao": 7,
-        "TM": 10.53,
-        "CG": 57.14,
-        "AG": -7.4,
-        "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
-        ],
-        "posicao": "367:388"
-    },
-    {
-        "Sequencia'": "CCCUUUGAGCAGAACCUCUCC",
-        "Pontuacao": 7,
-        "TM": 5.4,
-        "CG": 57.14,
-        "AG": -12.0,
-        "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
-        ],
-        "posicao": "369:390"
-    },
-    {
-        "Sequencia'": "GGGGUGUGUCCCGGCGACUCC",
+        "Sequencia'": "AGAGCGCGGCCGGCGUCUACG",
         "Pontuacao": 7,
         "TM": 15.65,
         "CG": 76.19,
-        "AG": -12.2,
+        "AG": -3.31,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 13",
+            "position 10"
         ],
-        "posicao": "390:411"
+        "posicao": "301:322"
+    },
+    {
+        "Sequencia'": "GCGUCUACGCGGCCGGCUAUG",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -0.39,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "313:334"
+    },
+    {
+        "Sequencia'": "UGCACUGCGCGCCCUUUGAGC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -2.47,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "358:379"
+    },
+    {
+        "Sequencia'": "ACUGCGCGCCCUUUGAGCAGA",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 61.9,
+        "AG": -1.2,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "361:382"
+    },
+    {
+        "Sequencia'": "UGCGCGCCCUUUGAGCAGAAC",
+        "Pontuacao": 7,
+        "TM": 20.78,
+        "CG": 61.9,
+        "AG": -4.15,
+        "Falhas": [
+            "position 13",
+            "position 3"
+        ],
+        "posicao": "363:384"
+    },
+    {
+        "Sequencia'": "AGCAGAACCUCUCCGGGGUGU",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -3.5,
+        "Falhas": [
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "376:397"
+    },
+    {
+        "Sequencia'": "CCGGGGUGUGUCCCGGCGACU",
+        "Pontuacao": 7,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -1.93,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "388:409"
+    },
+    {
+        "Sequencia'": "UGUCCCGGCGACUCCGCCAAG",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -1.37,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "396:417"
+    },
+    {
+        "Sequencia'": "GUCCCGGCGACUCCGCCAAGG",
+        "Pontuacao": 7,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -1.45,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "397:418"
+    },
+    {
+        "Sequencia'": "CCAAGGCGGCGGGCGCCAAGG",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -0.18,
+        "Falhas": [
+            "position 13",
+            "position 10"
+        ],
+        "posicao": "412:433"
+    },
+    {
+        "Sequencia'": "AGGCGGCGGGCGCCAAGGAGC",
+        "Pontuacao": 7,
+        "TM": 20.78,
+        "CG": 80.95,
+        "AG": -3.7,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "415:436"
+    },
+    {
+        "Sequencia'": "GCGCCAAGGAGCAGAGGGACU",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -0.48,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "424:445"
+    },
+    {
+        "Sequencia'": "AGGAGCAGAGGGACUCGGACU",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.7,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "430:451"
     },
     {
         "Sequencia'": "GCCGAGAGUAACUUCCGGAUC",
         "Pontuacao": 7,
         "TM": 15.65,
         "CG": 57.14,
-        "AG": -11.1,
+        "AG": -1.1,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
         "posicao": "456:477"
     },
     {
-        "Sequencia'": "GAUCUACCCCUGGAUGCGAAG",
+        "Sequencia'": "CCCCUGGAUGCGAAGCUCAGG",
         "Pontuacao": 7,
-        "TM": 5.4,
-        "CG": 57.14,
-        "AG": -8.1,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -1.93,
         "Falhas": [
-            "position 1 has no C/G",
-            "asymmetry"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "473:494"
+        "posicao": "479:500"
+    },
+    {
+        "Sequencia'": "CUGGAUGCGAAGCUCAGGAAC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.33,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "482:503"
+    },
+    {
+        "Sequencia'": "UGGAUGCGAAGCUCAGGAACU",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -2.03,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "483:504"
     },
     {
         "Sequencia'": "GCUCAGGAACUGACCGCAAAC",
         "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
-        "AG": -10.6,
+        "AG": -3.24,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
         "posicao": "493:514"
+    },
+    {
+        "Sequencia'": "AGGAACUGACCGCAAACGAGG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.15,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "497:518"
+    },
+    {
+        "Sequencia'": "CGCAAACGAGGCCGCCAGACC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -3.3,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "507:528"
+    },
+    {
+        "Sequencia'": "AAACGAGGCCGCCAGACCUAC",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -2.25,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "510:531"
+    },
+    {
+        "Sequencia'": "AACGAGGCCGCCAGACCUACA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.26,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "511:532"
+    },
+    {
+        "Sequencia'": "CGCCAGACCUACACCCGCUAC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -1.14,
+        "Falhas": [
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "519:540"
+    },
+    {
+        "Sequencia'": "GCCAGACCUACACCCGCUACC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -1.06,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "520:541"
+    },
+    {
+        "Sequencia'": "AGACCUACACCCGCUACCAGA",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.07,
+        "Falhas": [
+            "position 13",
+            "position 10"
+        ],
+        "posicao": "523:544"
+    },
+    {
+        "Sequencia'": "ACCUACACCCGCUACCAGACC",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -2.15,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "525:546"
+    },
+    {
+        "Sequencia'": "ACACCCGCUACCAGACCCUGG",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -0.51,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "529:550"
+    },
+    {
+        "Sequencia'": "CCCGCUACCAGACCCUGGAGC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -0.39,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "532:553"
     },
     {
         "Sequencia'": "CAGACCCUGGAGCUGGAGAAA",
         "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
-        "AG": -8.7,
+        "AG": -3.3,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
         "posicao": "540:561"
     },
     {
-        "Sequencia'": "GACCCUGGAGCUGGAGAAAGA",
+        "Sequencia'": "CACUACAAUCGCUACCUGACG",
         "Pontuacao": 7,
-        "TM": 15.65,
-        "CG": 57.14,
-        "AG": -8.7,
-        "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
-        ],
-        "posicao": "542:563"
-    },
-    {
-        "Sequencia'": "CCCUGGAGCUGGAGAAAGAAU",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "TM": 0.28,
         "CG": 52.38,
-        "AG": -9.1,
+        "AG": -2.24,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "544:565"
+        "posicao": "567:588"
     },
     {
-        "Sequencia'": "CGCAUCGAGAUCGCGCACACG",
+        "Sequencia'": "CUGACGCGGCGGCGGCGCAUC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -0.29,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "582:603"
+    },
+    {
+        "Sequencia'": "GGCGCAUCGAGAUCGCGCACA",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -0.15,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "595:616"
+    },
+    {
+        "Sequencia'": "GCAUCGAGAUCGCGCACACGC",
         "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
-        "AG": -11.4,
+        "AG": -0.64,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 19",
+            "position 19!= A"
         ],
-        "posicao": "597:618"
+        "posicao": "598:619"
     },
     {
-        "Sequencia'": "GCUCUGCCUCACGGAAAGACA",
+        "Sequencia'": "GCGCACACGCUCUGCCUCACG",
         "Pontuacao": 7,
         "TM": 15.65,
-        "CG": 57.14,
-        "AG": -12.1,
+        "CG": 71.43,
+        "AG": -1.29,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "617:638"
+        "posicao": "609:630"
     },
     {
-        "Sequencia'": "GGUUUCAGAACCGGCGCAUGA",
+        "Sequencia'": "CACGCUCUGCCUCACGGAAAG",
         "Pontuacao": 7,
-        "TM": 5.4,
-        "CG": 57.14,
-        "AG": -10.3,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -2.64,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "649:670"
+        "posicao": "614:635"
+    },
+    {
+        "Sequencia'": "ACGCUCUGCCUCACGGAAAGA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.48,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "615:636"
+    },
+    {
+        "Sequencia'": "UCUGCCUCACGGAAAGACAGA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -2.23,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "619:640"
+    },
+    {
+        "Sequencia'": "UGCCUCACGGAAAGACAGAUC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -3.22,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "621:642"
+    },
+    {
+        "Sequencia'": "UGGUUUCAGAACCGGCGCAUG",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 57.14,
+        "AG": -2.77,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "648:669"
     },
     {
         "Sequencia'": "AACCGGCGCAUGAAGUGGAAA",
         "Pontuacao": 7,
         "TM": 15.65,
         "CG": 52.38,
-        "AG": -9.1,
+        "AG": -3.63,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
         "posicao": "657:678"
     },
     {
-        "Sequencia'": "ACCGGCGCAUGAAGUGGAAAA",
+        "Sequencia'": "CCCGGGGACCACCGGCCAAGA",
         "Pontuacao": 7,
         "TM": 20.78,
-        "CG": 52.38,
-        "AG": -8.6,
+        "CG": 76.19,
+        "AG": -4.34,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "658:679"
+        "posicao": "698:719"
     },
     {
-        "Sequencia'": "CCGGCGCAUGAAGUGGAAAAA",
-        "Pontuacao": 7,
-        "TM": 20.78,
-        "CG": 52.38,
-        "AG": -7.8,
-        "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
-        ],
-        "posicao": "659:680"
-    },
-    {
-        "Sequencia'": "CGGCGCAUGAAGUGGAAAAAG",
+        "Sequencia'": "GGGACCACCGGCCAAGACAGG",
         "Pontuacao": 7,
         "TM": 15.65,
-        "CG": 52.38,
-        "AG": -7.8,
+        "CG": 71.43,
+        "AG": -2.53,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "660:681"
+        "posicao": "702:723"
     },
     {
         "Sequencia'": "AAGACAGGGCUGAAGCAGAGG",
         "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
-        "AG": -12.5,
+        "AG": -3.72,
         "Falhas": [
-            "position 1 has no C/G",
-            "asymmetry"
+            "position 10",
+            "position 3"
         ],
         "posicao": "715:736"
+    },
+    {
+        "Sequencia'": "AGACAGGGCUGAAGCAGAGGA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.34,
+        "Falhas": [
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "716:737"
+    },
+    {
+        "Sequencia'": "GGGCUGAAGCAGAGGAGGAAG",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -3.61,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "721:742"
+    },
+    {
+        "Sequencia'": "CUGAAGCAGAGGAGGAAGAGG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.01,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "724:745"
+    },
+    {
+        "Sequencia'": "AAGCAGAGGAGGAAGAGGAAG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -0.17,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "727:748"
+    },
+    {
+        "Sequencia'": "AGCAGAGGAGGAAGAGGAAGA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -0.9,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "728:749"
+    },
+    {
+        "Sequencia'": "CAGAGGAGGAAGAGGAAGAGU",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -2.16,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "730:751"
+    },
+    {
+        "Sequencia'": "AGAGUGAGGGAUGGAGAAAGG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.61,
+        "Falhas": [
+            "position 13",
+            "position 10"
+        ],
+        "posicao": "746:767"
+    },
+    {
+        "Sequencia'": "GAGGGAUGGAGAAAGGGCAGA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.19,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "751:772"
+    },
+    {
+        "Sequencia'": "AUGGAGAAAGGGCAGAGGAAG",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -0.4,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "756:777"
+    },
+    {
+        "Sequencia'": "UGGAGAAAGGGCAGAGGAAGA",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -0.25,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "757:778"
+    },
+    {
+        "Sequencia'": "GAGAAAGGGCAGAGGAAGAGA",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.49,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "759:780"
+    },
+    {
+        "Sequencia'": "GAAAGGGCAGAGGAAGAGACA",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -0.34,
+        "Falhas": [
+            "position 13",
+            "position 10"
+        ],
+        "posicao": "761:782"
+    },
+    {
+        "Sequencia'": "AAGGGCAGAGGAAGAGACAUG",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -3.09,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "763:784"
+    },
+    {
+        "Sequencia'": "GAGACAUGAGAAAGGGAGAGG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -3.13,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "776:797"
+    },
+    {
+        "Sequencia'": "GGAAGAGAAGCCCAGCUCUGG",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -2.17,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "795:816"
     },
     {
         "Sequencia'": "GAGAAGCCCAGCUCUGGGAAC",
         "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
-        "AG": -7.1,
+        "AG": -0.8,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 10",
+            "position 3"
         ],
         "posicao": "799:820"
     },
@@ -438,155 +1071,2473 @@
         "Pontuacao": 7,
         "TM": 10.53,
         "CG": 52.38,
-        "AG": -7.9,
+        "AG": -4.03,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "position 19!= A",
+            "position 10"
         ],
         "posicao": "806:827"
     },
     {
-        "Sequencia'": "AUCGAAUAGGGAAGUAAAAAA",
+        "Sequencia'": "AGCUCUGGGAACUGAAUCAGG",
         "Pontuacao": 7,
-        "TM": -4.85,
-        "CG": 28.57,
-        "AG": -8.4,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -2.17,
         "Falhas": [
-            "tm",
-            "position 1 has no C/G"
+            "position 10",
+            "position 3"
         ],
-        "posicao": "837:858"
+        "posicao": "808:829"
     },
     {
-        "Sequencia'": "UAGGGAAGUAAAAAAACAAAA",
-        "Pontuacao": 7,
-        "TM": 5.4,
-        "CG": 23.81,
-        "AG": -7.3,
-        "Falhas": [
-            "position 1",
-            "position 1 has no C/G"
-        ],
-        "posicao": "843:864"
-    },
-    {
-        "Sequencia'": "GAAGUAAAAAAACAAAACAAA",
-        "Pontuacao": 7,
-        "TM": -4.85,
-        "CG": 19.05,
-        "AG": -10.3,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "847:868"
-    },
-    {
-        "Sequencia'": "AAGUAAAAAAACAAAACAAAA",
-        "Pontuacao": 7,
-        "TM": -9.97,
-        "CG": 14.29,
-        "AG": -12.1,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "848:869"
-    },
-    {
-        "Sequencia'": "AACAAAAAAAAAACCCUAUUU",
-        "Pontuacao": 7,
-        "TM": -9.97,
-        "CG": 19.05,
-        "AG": -10.7,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "878:899"
-    },
-    {
-        "Sequencia'": "ACAAAAAAAAAACCCUAUUUA",
-        "Pontuacao": 7,
-        "TM": -9.97,
-        "CG": 19.05,
-        "AG": -10.7,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "879:900"
-    },
-    {
-        "Sequencia'": "CAAAAAAAAAACCCUAUUUAA",
-        "Pontuacao": 7,
-        "TM": -9.97,
-        "CG": 19.05,
-        "AG": -10.4,
-        "Falhas": [
-            "tm",
-            "position 1 has no C/G"
-        ],
-        "posicao": "880:901"
-    },
-    {
-        "Sequencia'": "GAAAGGAGAAAUUUUGGUUUU",
-        "Pontuacao": 7,
-        "TM": 5.4,
-        "CG": 28.57,
-        "AG": -8.4,
-        "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
-        ],
-        "posicao": "936:957"
-    },
-    {
-        "Sequencia'": "AAAGGAGAAAUUUUGGUUUUU",
+        "Sequencia'": "AUAGGGAAGUAAAAAAACAAA",
         "Pontuacao": 7,
         "TM": 0.28,
         "CG": 23.81,
-        "AG": -9.2,
+        "AG": -5.27,
         "Falhas": [
-            "position 1 has no C/G",
-            "asymmetry"
+            "free energy"
         ],
-        "posicao": "937:958"
+        "posicao": "842:863"
     },
     {
-        "Sequencia'": "GGAGAAAUUUUGGUUUUUCAA",
+        "Sequencia'": "AAAACCCUAUUUAAAUGAAAG",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -2.14,
+        "Falhas": [
+            "free energy"
+        ],
+        "posicao": "887:908"
+    },
+    {
+        "Sequencia'": "UGAAAGGAGUUUAAAAACAUU",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -3.6,
+        "Falhas": [
+            "free energy"
+        ],
+        "posicao": "902:923"
+    },
+    {
+        "Sequencia'": "UGAAAAGGAUAUUAUCUACCU",
         "Pontuacao": 7,
         "TM": 0.28,
         "CG": 28.57,
-        "AG": -9.2,
+        "AG": -3.58,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 19 is C/G"
+            "position 19",
+            "position 19!= A"
         ],
-        "posicao": "940:961"
+        "posicao": "1018:1039"
     },
     {
-        "Sequencia'": "GAGAAAUUUUGGUUUUUCAAC",
+        "Sequencia'": "UGUGGACUGUGGGUCUGGACU",
         "Pontuacao": 7,
-        "TM": -4.85,
-        "CG": 28.57,
-        "AG": -9.2,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.67,
         "Falhas": [
-            "tm",
-            "position 1 has no C/G"
+            "position 13",
+            "position 3"
         ],
-        "posicao": "941:962"
+        "posicao": "1139:1160"
+    },
+    {
+        "Sequencia'": "GACUGUGGGUCUGGACUAACC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -1.62,
+        "Falhas": [
+            "position 13",
+            "position 3"
+        ],
+        "posicao": "1143:1164"
+    },
+    {
+        "Sequencia'": "UGGUUGCCUGCCCUCCUGAGC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.99,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1167:1188"
+    },
+    {
+        "Sequencia'": "UGCCUGCCCUCCUGAGCCUCC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -0.27,
+        "Falhas": [
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1171:1192"
+    },
+    {
+        "Sequencia'": "CUGAGCCUCCGCCUUCCCAGC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -1.26,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1182:1203"
+    },
+    {
+        "Sequencia'": "AGCCUCCGCCUUCCCAGCAGC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -1.0,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1185:1206"
+    },
+    {
+        "Sequencia'": "CGCCUUCCCAGCAGCGGCACC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -2.24,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1191:1212"
+    },
+    {
+        "Sequencia'": "CACCAAGGGGCCUUAGGGAGC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -3.81,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1208:1229"
+    },
+    {
+        "Sequencia'": "GGGGCCUUAGGGAGCCCCAAA",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -4.61,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1214:1235"
+    },
+    {
+        "Sequencia'": "UUAGGGAGCCCCAAAACCUAC",
+        "Pontuacao": 7,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.54,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1220:1241"
+    },
+    {
+        "Sequencia'": "UAGGGAGCCCCAAAACCUACC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.28,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1221:1242"
+    },
+    {
+        "Sequencia'": "CAAAACCUACCACUCGCGUGU",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -4.31,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1231:1252"
+    },
+    {
+        "Sequencia'": "AAACCUACCACUCGCGUGUUC",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -1.59,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1233:1254"
+    },
+    {
+        "Sequencia'": "ACCACUCGCGUGUUCCCCAAG",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.73,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1239:1260"
+    },
+    {
+        "Sequencia'": "CCAAGCGCCUGGCUGCUGCUU",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -0.14,
+        "Falhas": [
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "1255:1276"
+    },
+    {
+        "Sequencia'": "CAAGCGCCUGGCUGCUGCUUC",
+        "Pontuacao": 7,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -1.37,
+        "Falhas": [
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1256:1277"
+    },
+    {
+        "Sequencia'": "GCUGCUUCUUGCUUCCCGUCC",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -2.71,
+        "Falhas": [
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1269:1290"
+    },
+    {
+        "Sequencia'": "UUCCCGUCCCCCAGCCCCAUG",
+        "Pontuacao": 7,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -0.92,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1281:1302"
+    },
+    {
+        "Sequencia'": "GAUGGAAAAAUAAAACGCAAU",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -0.25,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1332:1353"
+    },
+    {
+        "Sequencia'": "GCCUACAAAUCAUCCGGCCAA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.18,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "75:96"
+    },
+    {
+        "Sequencia'": "UUAUGCGAAUACUUUAUUUUC",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -3.75,
+        "Falhas": [
+            "free energy",
+            "position 19!= A"
+        ],
+        "posicao": "113:134"
+    },
+    {
+        "Sequencia'": "GCGAAUACUUUAUUUUCUAAA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 23.81,
+        "AG": -3.0,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "117:138"
+    },
+    {
+        "Sequencia'": "AAGUUCGGUUUUCGCUACCGG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -3.53,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "149:170"
+    },
+    {
+        "Sequencia'": "GUUCGGUUUUCGCUACCGGAG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -2.26,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "151:172"
+    },
+    {
+        "Sequencia'": "GGUUUUCGCUACCGGAGCCUU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -3.52,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "155:176"
+    },
+    {
+        "Sequencia'": "CCGGAGCCUUCCCAGAACAAA",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 57.14,
+        "AG": -7.21,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "166:187"
+    },
+    {
+        "Sequencia'": "UUGUGCGUUUGCUUCCAACCC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.77,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "191:212"
+    },
+    {
+        "Sequencia'": "CAACCCCCAGCGCCCGGGCUA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -0.55,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "206:227"
+    },
+    {
+        "Sequencia'": "AACCCCCAGCGCCCGGGCUAU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -1.9,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "207:228"
+    },
+    {
+        "Sequencia'": "UGGAGCGGGUUCGGGCGCUUC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -1.13,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "227:248"
+    },
+    {
+        "Sequencia'": "GGCGCUUCCUUCGCCGCCUCG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -0.36,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "240:261"
+    },
+    {
+        "Sequencia'": "GCGCUUCCUUCGCCGCCUCGA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -1.3,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "241:262"
+    },
+    {
+        "Sequencia'": "GCUUCCUUCGCCGCCUCGAUG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 66.67,
+        "AG": -1.74,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "243:264"
+    },
+    {
+        "Sequencia'": "CUUCCUUCGCCGCCUCGAUGC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 66.67,
+        "AG": -2.23,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "244:265"
+    },
+    {
+        "Sequencia'": "GCCGCCUCGAUGCAGGGCUUG",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 71.43,
+        "AG": -2.78,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "252:273"
+    },
+    {
+        "Sequencia'": "CCUCGAUGCAGGGCUUGUACC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -1.65,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "256:277"
+    },
+    {
+        "Sequencia'": "CGAUGCAGGGCUUGUACCCCG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.87,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "259:280"
+    },
+    {
+        "Sequencia'": "UACCCCGGCGGGGGGGGCAUG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -0.27,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "273:294"
+    },
+    {
+        "Sequencia'": "GGGGGCAUGGCGGGCCAGAGC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -3.2,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "285:306"
+    },
+    {
+        "Sequencia'": "GCAUGGCGGGCCAGAGCGCGG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -1.26,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "289:310"
+    },
+    {
+        "Sequencia'": "GCCAGAGCGCGGCCGGCGUCU",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -0.51,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "298:319"
+    },
+    {
+        "Sequencia'": "CCAGAGCGCGGCCGGCGUCUA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -1.48,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "299:320"
+    },
+    {
+        "Sequencia'": "CGUCUACGCGGCCGGCUAUGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -0.81,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "314:335"
+    },
+    {
+        "Sequencia'": "CUACGCGGCCGGCUAUGGGCU",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -1.49,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "317:338"
+    },
+    {
+        "Sequencia'": "ACGCGGCCGGCUAUGGGCUCG",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -0.34,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "319:340"
+    },
+    {
+        "Sequencia'": "GGCUAUGGGCUCGAGCCGAGU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -2.38,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "327:348"
+    },
+    {
+        "Sequencia'": "GCUAUGGGCUCGAGCCGAGUU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.14,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "328:349"
+    },
+    {
+        "Sequencia'": "CUAUGGGCUCGAGCCGAGUUC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.8,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "329:350"
+    },
+    {
+        "Sequencia'": "UAUGGGCUCGAGCCGAGUUCC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -1.31,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "330:351"
+    },
+    {
+        "Sequencia'": "GAGCCGAGUUCCUUCAACAUG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 52.38,
+        "AG": -5.23,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "339:360"
+    },
+    {
+        "Sequencia'": "AGCCGAGUUCCUUCAACAUGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -3.61,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "340:361"
+    },
+    {
+        "Sequencia'": "CCGAGUUCCUUCAACAUGCAC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -0.16,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "342:363"
+    },
+    {
+        "Sequencia'": "CCUUCAACAUGCACUGCGCGC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -5.47,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "349:370"
+    },
+    {
+        "Sequencia'": "CAACAUGCACUGCGCGCCCUU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -4.59,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "353:374"
+    },
+    {
+        "Sequencia'": "AACAUGCACUGCGCGCCCUUU",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 57.14,
+        "AG": -1.81,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "354:375"
+    },
+    {
+        "Sequencia'": "GCACUGCGCGCCCUUUGAGCA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -2.35,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "359:380"
+    },
+    {
+        "Sequencia'": "CGCCCUUUGAGCAGAACCUCU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.56,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "367:388"
+    },
+    {
+        "Sequencia'": "GCAGAACCUCUCCGGGGUGUG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -2.05,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "377:398"
+    },
+    {
+        "Sequencia'": "CAGAACCUCUCCGGGGUGUGU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -1.21,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "378:399"
+    },
+    {
+        "Sequencia'": "GAACCUCUCCGGGGUGUGUCC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 66.67,
+        "AG": -1.03,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "380:401"
+    },
+    {
+        "Sequencia'": "UCCGGGGUGUGUCCCGGCGAC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -1.95,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "387:408"
+    },
+    {
+        "Sequencia'": "CGGGGUGUGUCCCGGCGACUC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -1.76,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "389:410"
+    },
+    {
+        "Sequencia'": "GCCAAGGCGGCGGGCGCCAAG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -0.76,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "411:432"
+    },
+    {
+        "Sequencia'": "CAAGGCGGCGGGCGCCAAGGA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -0.08,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "413:434"
+    },
+    {
+        "Sequencia'": "GCCAAGGAGCAGAGGGACUCG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.48,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "426:447"
+    },
+    {
+        "Sequencia'": "GGAGCAGAGGGACUCGGACUU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -2.19,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "431:452"
+    },
+    {
+        "Sequencia'": "GAGCAGAGGGACUCGGACUUG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -1.6,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "432:453"
+    },
+    {
+        "Sequencia'": "AGCAGAGGGACUCGGACUUGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -1.18,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "433:454"
+    },
+    {
+        "Sequencia'": "AGAGGGACUCGGACUUGGCGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.05,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "436:457"
+    },
+    {
+        "Sequencia'": "UCGGACUUGGCGGCCGAGAGU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 66.67,
+        "AG": -1.27,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "444:465"
+    },
+    {
+        "Sequencia'": "GGCCGAGAGUAACUUCCGGAU",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 57.14,
+        "AG": -1.95,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "455:476"
+    },
+    {
+        "Sequencia'": "CCGAGAGUAACUUCCGGAUCU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -0.92,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "457:478"
+    },
+    {
+        "Sequencia'": "GUAACUUCCGGAUCUACCCCU",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -5.69,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "463:484"
+    },
+    {
+        "Sequencia'": "UAACUUCCGGAUCUACCCCUG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -6.13,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "464:485"
+    },
+    {
+        "Sequencia'": "ACUUCCGGAUCUACCCCUGGA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -3.09,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "466:487"
+    },
+    {
+        "Sequencia'": "UCCGGAUCUACCCCUGGAUGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.43,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "469:490"
+    },
+    {
+        "Sequencia'": "GAUCUACCCCUGGAUGCGAAG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -1.75,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "473:494"
+    },
+    {
+        "Sequencia'": "UACCCCUGGAUGCGAAGCUCA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.28,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "477:498"
+    },
+    {
+        "Sequencia'": "GGAUGCGAAGCUCAGGAACUG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.05,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "484:505"
+    },
+    {
+        "Sequencia'": "GAUGCGAAGCUCAGGAACUGA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -2.05,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "485:506"
+    },
+    {
+        "Sequencia'": "UGCGAAGCUCAGGAACUGACC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.51,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "487:508"
+    },
+    {
+        "Sequencia'": "CGAAGCUCAGGAACUGACCGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -2.47,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "489:510"
+    },
+    {
+        "Sequencia'": "GAAGCUCAGGAACUGACCGCA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -2.57,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "490:511"
+    },
+    {
+        "Sequencia'": "AGCUCAGGAACUGACCGCAAA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 52.38,
+        "AG": -0.78,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "492:513"
+    },
+    {
+        "Sequencia'": "GGAACUGACCGCAAACGAGGC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -2.42,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "498:519"
+    },
+    {
+        "Sequencia'": "GAACUGACCGCAAACGAGGCC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -4.47,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "499:520"
+    },
+    {
+        "Sequencia'": "ACCGCAAACGAGGCCGCCAGA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 66.67,
+        "AG": -1.42,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "505:526"
+    },
+    {
+        "Sequencia'": "CAAACGAGGCCGCCAGACCUA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -2.11,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "509:530"
+    },
+    {
+        "Sequencia'": "CCAGACCUACACCCGCUACCA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.95,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "521:542"
+    },
+    {
+        "Sequencia'": "CUACACCCGCUACCAGACCCU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -1.9,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "527:548"
+    },
+    {
+        "Sequencia'": "UACACCCGCUACCAGACCCUG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.71,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "528:549"
+    },
+    {
+        "Sequencia'": "GCUACCAGACCCUGGAGCUGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.89,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "535:556"
+    },
+    {
+        "Sequencia'": "AGACCCUGGAGCUGGAGAAAG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -4.5,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "541:562"
+    },
+    {
+        "Sequencia'": "CCCUGGAGCUGGAGAAAGAAU",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 52.38,
+        "AG": -8.17,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "544:565"
+    },
+    {
+        "Sequencia'": "GAGAAAGAAUUUCACUACAAU",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -1.08,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "555:576"
+    },
+    {
+        "Sequencia'": "CUACAAUCGCUACCUGACGCG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 57.14,
+        "AG": -5.06,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "569:590"
+    },
+    {
+        "Sequencia'": "UACAAUCGCUACCUGACGCGG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 57.14,
+        "AG": -5.83,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "570:591"
+    },
+    {
+        "Sequencia'": "ACAAUCGCUACCUGACGCGGC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -5.82,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "571:592"
+    },
+    {
+        "Sequencia'": "UGACGCGGCGGCGGCGCAUCG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -1.16,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "583:604"
+    },
+    {
+        "Sequencia'": "CGCAUCGAGAUCGCGCACACG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.73,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "597:618"
+    },
+    {
+        "Sequencia'": "UCGAGAUCGCGCACACGCUCU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -1.59,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "601:622"
+    },
+    {
+        "Sequencia'": "CGAGAUCGCGCACACGCUCUG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.59,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "602:623"
+    },
+    {
+        "Sequencia'": "GAGAUCGCGCACACGCUCUGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -2.71,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "603:624"
+    },
+    {
+        "Sequencia'": "AGAUCGCGCACACGCUCUGCC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.5,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "604:625"
+    },
+    {
+        "Sequencia'": "UCGCGCACACGCUCUGCCUCA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -0.6,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "607:628"
+    },
+    {
+        "Sequencia'": "GCACACGCUCUGCCUCACGGA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -0.34,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "611:632"
+    },
+    {
+        "Sequencia'": "CACACGCUCUGCCUCACGGAA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -1.15,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "612:633"
+    },
+    {
+        "Sequencia'": "UCAGAACCGGCGCAUGAAGUG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.35,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "653:674"
+    },
+    {
+        "Sequencia'": "CAGAACCGGCGCAUGAAGUGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.0,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "654:675"
+    },
+    {
+        "Sequencia'": "AGAACCGGCGCAUGAAGUGGA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.26,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "655:676"
+    },
+    {
+        "Sequencia'": "ACCGGCGCAUGAAGUGGAAAA",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 52.38,
+        "AG": -6.35,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "658:679"
+    },
+    {
+        "Sequencia'": "AAAAGGAGAACAAGACCGCGG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -6.24,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "676:697"
+    },
+    {
+        "Sequencia'": "CAAGACCGCGGGCCCGGGGAC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 80.95,
+        "AG": -3.68,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "686:707"
+    },
+    {
+        "Sequencia'": "AGACCGCGGGCCCGGGGACCA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 80.95,
+        "AG": -0.82,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "688:709"
+    },
+    {
+        "Sequencia'": "ACCGCGGGCCCGGGGACCACC",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 85.71,
+        "AG": -1.56,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "690:711"
+    },
+    {
+        "Sequencia'": "CGGGGACCACCGGCCAAGACA",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 71.43,
+        "AG": -4.88,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "700:721"
+    },
+    {
+        "Sequencia'": "GGACCACCGGCCAAGACAGGG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -0.25,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "703:724"
+    },
+    {
+        "Sequencia'": "CCACCGGCCAAGACAGGGCUG",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 71.43,
+        "AG": -0.39,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "706:727"
+    },
+    {
+        "Sequencia'": "CACCGGCCAAGACAGGGCUGA",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 66.67,
+        "AG": -0.17,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "707:728"
+    },
+    {
+        "Sequencia'": "CCGGCCAAGACAGGGCUGAAG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -4.78,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "709:730"
+    },
+    {
+        "Sequencia'": "CGGCCAAGACAGGGCUGAAGC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 66.67,
+        "AG": -2.45,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "710:731"
+    },
+    {
+        "Sequencia'": "GGCUGAAGCAGAGGAGGAAGA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -1.28,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "722:743"
+    },
+    {
+        "Sequencia'": "AGAGGAAGAGUGAGGGAUGGA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.49,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "740:761"
+    },
+    {
+        "Sequencia'": "AGGAAGAGUGAGGGAUGGAGA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -0.22,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "742:763"
+    },
+    {
+        "Sequencia'": "AGUGAGGGAUGGAGAAAGGGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.16,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "748:769"
+    },
+    {
+        "Sequencia'": "UGAGGGAUGGAGAAAGGGCAG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.62,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "750:771"
+    },
+    {
+        "Sequencia'": "GGGAUGGAGAAAGGGCAGAGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -0.16,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "753:774"
+    },
+    {
+        "Sequencia'": "GGCAGAGGAAGAGACAUGAGA",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 52.38,
+        "AG": -2.97,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "766:787"
+    },
+    {
+        "Sequencia'": "AAAGGGAGAGGAAGAGAAGCC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.25,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "786:807"
+    },
+    {
+        "Sequencia'": "GGAGAGGAAGAGAAGCCCAGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -2.32,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "790:811"
+    },
+    {
+        "Sequencia'": "GAGGAAGAGAAGCCCAGCUCU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -1.08,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "793:814"
+    },
+    {
+        "Sequencia'": "GAAGAGAAGCCCAGCUCUGGG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 61.9,
+        "AG": -2.83,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "796:817"
+    },
+    {
+        "Sequencia'": "AGAGAAGCCCAGCUCUGGGAA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -2.18,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "798:819"
+    },
+    {
+        "Sequencia'": "GAAGCCCAGCUCUGGGAACUG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -2.58,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "801:822"
+    },
+    {
+        "Sequencia'": "AAGCCCAGCUCUGGGAACUGA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -3.08,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "802:823"
+    },
+    {
+        "Sequencia'": "GAAUAGGGAAGUAAAAAAACA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 28.57,
+        "AG": -2.94,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "840:861"
+    },
+    {
+        "Sequencia'": "AAAAACCCUAUUUAAAUGAAA",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 19.05,
+        "AG": -0.87,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "886:907"
+    },
+    {
+        "Sequencia'": "AACCCUAUUUAAAUGAAAGGA",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -1.03,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "889:910"
+    },
+    {
+        "Sequencia'": "GAAAGGAGUUUAAAAACAUUU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 23.81,
+        "AG": -3.77,
+        "Falhas": [
+            "free energy",
+            "position 19!= A"
+        ],
+        "posicao": "903:924"
+    },
+    {
+        "Sequencia'": "AAAGGAGUUUAAAAACAUUUU",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 19.05,
+        "AG": -3.35,
+        "Falhas": [
+            "free energy",
+            "position 19!= A"
+        ],
+        "posicao": "904:925"
+    },
+    {
+        "Sequencia'": "ACACUGAAAAAAUACUACCUA",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -1.34,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "960:981"
     },
     {
         "Sequencia'": "GGUUUGGUUUUUUUGUACAAU",
-        "Pontuacao": 7,
+        "Pontuacao": 6,
         "TM": 5.4,
         "CG": 28.57,
-        "AG": -10.9,
+        "AG": -2.85,
         "Falhas": [
-            "position 1 has no C/G",
-            "position 6"
+            "free energy",
+            "position 3"
         ],
         "posicao": "996:1017"
+    },
+    {
+        "Sequencia'": "GUUUGGUUUUUUUGUACAAUA",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -2.62,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "997:1018"
+    },
+    {
+        "Sequencia'": "UAAGGUCUUUGUAAAAUCUUG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -2.53,
+        "Falhas": [
+            "free energy",
+            "position 19!= A"
+        ],
+        "posicao": "1087:1108"
+    },
+    {
+        "Sequencia'": "UGCUGUCUUUGUGGACUGUGG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -0.71,
+        "Falhas": [
+            "position 13",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1130:1151"
+    },
+    {
+        "Sequencia'": "CUGUCUUUGUGGACUGUGGGU",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -3.5,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1132:1153"
+    },
+    {
+        "Sequencia'": "GUCUUUGUGGACUGUGGGUCU",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 52.38,
+        "AG": -4.67,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1134:1155"
+    },
+    {
+        "Sequencia'": "CUUUGUGGACUGUGGGUCUGG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -4.84,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1136:1157"
+    },
+    {
+        "Sequencia'": "UGGACUGUGGGUCUGGACUAA",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -2.46,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1141:1162"
+    },
+    {
+        "Sequencia'": "GGACUGUGGGUCUGGACUAAC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -3.48,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "1142:1163"
+    },
+    {
+        "Sequencia'": "CUGUGGGUCUGGACUAACCCU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.28,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1145:1166"
+    },
+    {
+        "Sequencia'": "GUGGGUCUGGACUAACCCUGU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -0.42,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1147:1168"
+    },
+    {
+        "Sequencia'": "GGGUCUGGACUAACCCUGUGG",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 61.9,
+        "AG": -0.35,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1149:1170"
+    },
+    {
+        "Sequencia'": "GGUCUGGACUAACCCUGUGGU",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -1.36,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1150:1171"
+    },
+    {
+        "Sequencia'": "UCUGGACUAACCCUGUGGUUG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 52.38,
+        "AG": -1.76,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1152:1173"
+    },
+    {
+        "Sequencia'": "CUGGACUAACCCUGUGGUUGC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.14,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1153:1174"
+    },
+    {
+        "Sequencia'": "GGACUAACCCUGUGGUUGCCU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -1.82,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1155:1176"
+    },
+    {
+        "Sequencia'": "ACCCUGUGGUUGCCUGCCCUC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.37,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1161:1182"
+    },
+    {
+        "Sequencia'": "GUGGUUGCCUGCCCUCCUGAG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.34,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1166:1187"
+    },
+    {
+        "Sequencia'": "CCCUCCUGAGCCUCCGCCUUC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -1.82,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1177:1198"
+    },
+    {
+        "Sequencia'": "CCUCCUGAGCCUCCGCCUUCC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -0.14,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1178:1199"
+    },
+    {
+        "Sequencia'": "UGAGCCUCCGCCUUCCCAGCA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.09,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1183:1204"
+    },
+    {
+        "Sequencia'": "GCCUCCGCCUUCCCAGCAGCG",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -1.25,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1186:1207"
+    },
+    {
+        "Sequencia'": "CCUCCGCCUUCCCAGCAGCGG",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -0.01,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1187:1208"
+    },
+    {
+        "Sequencia'": "CUUCCCAGCAGCGGCACCAAG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -1.18,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1194:1215"
+    },
+    {
+        "Sequencia'": "UUCCCAGCAGCGGCACCAAGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.17,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1195:1216"
+    },
+    {
+        "Sequencia'": "CCAGCAGCGGCACCAAGGGGC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 76.19,
+        "AG": -1.32,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1198:1219"
+    },
+    {
+        "Sequencia'": "GCAGCGGCACCAAGGGGCCUU",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 71.43,
+        "AG": -0.39,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1201:1222"
+    },
+    {
+        "Sequencia'": "GCGGCACCAAGGGGCCUUAGG",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 71.43,
+        "AG": -4.07,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1204:1225"
+    },
+    {
+        "Sequencia'": "GCACCAAGGGGCCUUAGGGAG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.19,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1207:1228"
+    },
+    {
+        "Sequencia'": "GGGCCUUAGGGAGCCCCAAAA",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 61.9,
+        "AG": -4.6,
+        "Falhas": [
+            "position 13",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1215:1236"
+    },
+    {
+        "Sequencia'": "AGCCCCAAAACCUACCACUCG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.98,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1226:1247"
+    },
+    {
+        "Sequencia'": "CCCAAAACCUACCACUCGCGU",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -3.39,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1229:1250"
+    },
+    {
+        "Sequencia'": "CCAAAACCUACCACUCGCGUG",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -4.48,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1230:1251"
+    },
+    {
+        "Sequencia'": "ACCUACCACUCGCGUGUUCCC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 61.9,
+        "AG": -0.11,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1235:1256"
+    },
+    {
+        "Sequencia'": "ACUCGCGUGUUCCCCAAGCGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 66.67,
+        "AG": -0.37,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1242:1263"
+    },
+    {
+        "Sequencia'": "CUCGCGUGUUCCCCAAGCGCC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 71.43,
+        "AG": -0.83,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1243:1264"
+    },
+    {
+        "Sequencia'": "GCGUGUUCCCCAAGCGCCUGG",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -3.28,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1246:1267"
+    },
+    {
+        "Sequencia'": "GUUCCCCAAGCGCCUGGCUGC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 71.43,
+        "AG": -1.09,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1250:1271"
+    },
+    {
+        "Sequencia'": "CCUGGCUGCUGCUUCUUGCUU",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 57.14,
+        "AG": -4.85,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1262:1283"
+    },
+    {
+        "Sequencia'": "CUGGCUGCUGCUUCUUGCUUC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 57.14,
+        "AG": -3.42,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1263:1284"
+    },
+    {
+        "Sequencia'": "UGGCUGCUGCUUCUUGCUUCC",
+        "Pontuacao": 6,
+        "TM": 10.53,
+        "CG": 57.14,
+        "AG": -2.53,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1264:1285"
+    },
+    {
+        "Sequencia'": "GGCUGCUGCUUCUUGCUUCCC",
+        "Pontuacao": 6,
+        "TM": 15.65,
+        "CG": 61.9,
+        "AG": -1.08,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1265:1286"
+    },
+    {
+        "Sequencia'": "UGCUGCUUCUUGCUUCCCGUC",
+        "Pontuacao": 6,
+        "TM": 5.4,
+        "CG": 57.14,
+        "AG": -0.55,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1268:1289"
+    },
+    {
+        "Sequencia'": "CGUCCCCCAGCCCCAUGCUCC",
+        "Pontuacao": 6,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -2.33,
+        "Falhas": [
+            "position 19!= A",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1285:1306"
+    },
+    {
+        "Sequencia'": "UCUAAAGGAUGGAAAAAUAAA",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -3.47,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "1325:1346"
+    },
+    {
+        "Sequencia'": "CUAAAGGAUGGAAAAAUAAAA",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -4.32,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "1326:1347"
+    },
+    {
+        "Sequencia'": "AAAGGAUGGAAAAAUAAAACG",
+        "Pontuacao": 6,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -2.16,
+        "Falhas": [
+            "free energy",
+            "position 10"
+        ],
+        "posicao": "1328:1349"
     }
 ]

@@ -116,7 +116,7 @@
                             </svg>
                         </span>
                         <span class="nav-link-title">
-                            Past Querys
+                            Past Queries
                         </span>
                     </a>
                     <div class="dropdown-menu">
@@ -669,15 +669,15 @@
                                                 </span>
                                               </th>
                                               
-                                              <th data-sort="text">Sequence 5'- 3'
+                                              <th data-sort="text">sense strand 5'- 3'
                                                 <span class="form-help" style="margin-left:5px" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content= 
                                                   "<p>This column displays the sense strand in the 5′ to 3′ orientation</p><p class='mb-0'>">
                                                   ?
                                                 </span>
                                               </th>
-                                              <th data-sort="text">Complementary Sequence
+                                              <th data-sort="text">anti-sense strand 3′ - 5′
                                                 <span class="form-help" style="margin-left:5px" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content= 
-                                                  "<p>This column displays the anti-sense strand in the 5′ to 3′ orientation</p><p class='mb-0'>">
+                                                  "<p>This column displays the anti-sense strand in the 3′ to 5′ orientation</p><p class='mb-0'>">
                                                   ?
                                                 </span>
                                               </th> 
@@ -705,8 +705,7 @@
                                               </th> 
                                               <th data-sort="numeric">ΔG
                                                 <span class="form-help" style="margin-left:5px" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content= 
-                                                "<p>This column displays the Gibbs free energy (ΔG) of the siRNA, representing the thermodynamic 
-                                                stability.</p><p class='mb-0'>">
+                                                "<p>This column displays the Gibbs free energy difference (ΔΔG) between the sense and antisense strands of the siRNA duplex, calculated as ΔG_sense – ΔG_antisense. This value reflects the thermodynamic asymmetry of the duplex and is used to infer the strand with preferential incorporation into the RISC complex. The calculation is based on the nearest-neighbor model originally proposed by Freier et al. (1986), but the thermodynamic parameters (ΔH°, ΔS°, and ΔG°₃₇) are updated using the more accurate experimental dataset provided by Zuber et al. (2022).</p><p class='mb-0'>">
                                                 ?
                                                 </span>
                                               </th>
@@ -776,7 +775,7 @@
                                     </div>
                                   
                                     <div class="card-footer d-flex align-items-center">
-                                      <p class="m-0 text-secondary">Showing {{ page_obj.start_index }} to {{ page_obj.end_index }} of {{ total_sirnas }} entries ({{ hidden_siRNAs }} hidden)</p>
+                                      <p class="m-0 text-secondary">Showing {{ page_obj.start_index }} to {{ page_obj.end_index }} of {{ total_sirnas }}</p>
                                       <ul class="pagination m-0 ms-auto">
                                         {% if page_obj.has_previous %}
                                         <li class="page-item">
@@ -1145,7 +1144,7 @@
                     <tr>
                       <td>${fail}</td>
                       <td>${failDescription}</td>
-                      <td class="${failTextColor}">${'yes'}</td>  <!-- Ajuste para exibir 'yes' ou 'no' -->
+                      <td class="${failTextColor}">${'Yes'}</td>  <!-- Ajuste para exibir 'yes' ou 'no' -->
                       <td>${pointDeduction}</td>
                     </tr>
                   `;
