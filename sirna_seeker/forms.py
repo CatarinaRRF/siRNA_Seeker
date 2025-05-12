@@ -20,6 +20,7 @@ class form_search(forms.ModelForm):
     size = forms.IntegerField(widget=forms.NumberInput(attrs={'class': 'form-control'})) 
     include_tm = forms.ChoiceField(choices=[(True, 'Yes'), (False, 'No')], widget=forms.RadioSelect(attrs={'class': 'form-check-input'}), required=True)
     max_tm = forms.FloatField(initial=21.5, widget=forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}))
+    threshold = forms.FloatField(initial=0.6, widget=forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}))
 
     # Blast
     #----------------------------------------------#
@@ -32,7 +33,7 @@ class form_search(forms.ModelForm):
     class Meta:
         model = model_forms
         fields = ['sequence', 'sequence_tag', 'autor', 
-                  'size', 'include_tm', 'max_tm', 'run_blast', 'organism', 
+                  'size', 'include_tm', 'max_tm', 'threshold', 'run_blast', 'organism', 
                   'database', 'identity', 'query_cover',]
 
 

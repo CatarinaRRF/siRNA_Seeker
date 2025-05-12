@@ -343,12 +343,12 @@ def Amarzguioui(sequence):
 
 # Testando a funcionalidade de um siRNA
 # ----------------------------------------------------------------- #
-def siRNA_score (sequence, tuplas, 
+def siRNA_score (sequence, tuplas,
                  autor=['reynolds', 'ui-tei', 'amarzguioui'],
                  tm=True, tmmax = 21.5):
         """
         Avalia o score e a conformidade do siRNA com base em diversos parâmetros.
-        
+
         :param sequence: Sequência do siRNA para avaliação.
         :param autor: Lista de autores para o método de scoring.
         :param tm: Flag para calcular a temperatura de fusão (melt temperature).
@@ -360,7 +360,7 @@ def siRNA_score (sequence, tuplas,
         #--------------------------------------------------------------#
         score = 0
         falha = []
-        posicao = 'Não encontrado' 
+        posicao = 'Não encontrado'
 
         # Conteudo Baixo GC
         #--------------------------------------------------------------#
@@ -370,39 +370,40 @@ def siRNA_score (sequence, tuplas,
 
         # tempmelt
         #--------------------------------------------------------------#
-        tm_score = round(mt.Tm_GC(sequence[:8]), 2)
-        if autor != 'reynolds':
-            if 0 < tm_score <= tmmax:
-                score += 1
-            else:
-                falha.append(str("tm"))
+        tm_score = round(mt.Tm_GC(sequence[1:9]), 2)
+        if tm == True:
+          #if autor != 'reynolds':
+              if 0 < tm_score <= tmmax:
+                  score += 1
+              else:
+                  falha.append(str("tm"))
 
         # G°
         #--------------------------------------------------------------#
         energia_livre = free_energy(sequence)
         dG_antisense, dG_diff = energia_livre
-        if autor != 'ui-tei':
-            if -13 < dG_antisense < -7:
+        #if autor != 'ui-tei':
+        if -13 < dG_antisense < -7:
                 score += 2
-            else:
+        else:
                 falha.append(str("free energy"))
 
         # Autores
-        # Score reynolds total = 10
+        # Score reynolds total = 9
         #--------------------------------------------------------------#
         if autor == 'reynolds':
             r = reynolds(sequence)
             score += r[0]
             falha.extend(r[1] if isinstance(r[1], list) else [r[1]])
 
-        # Score ui-tei total = 6
+        # Score ui-tei total = 7
         #--------------------------------------------------------------#
         if autor == 'ui-tei':
             u = Ui_Tei(sequence)
             score += u[0]
             falha.extend(u[1] if isinstance(u[1], list) else [u[1]])
 
-        # Score amarzguioui total = 10
+        # Score amarzguioui total = 4
         #--------------------------------------------------------------#
         if autor == 'amarzguioui':
             a = Amarzguioui(sequence)
@@ -418,11 +419,10 @@ def siRNA_score (sequence, tuplas,
                     break
         #--------------------------------------------------------------#
         return score, falha, conteudo_gc, dG_diff, tm_score, posicao
-
 # ----------------------------------------------------------------- #
 # Selecionando os siRNA funcionais
 # ----------------------------------------------------------------- #
-def filtro_siRNA(sequences, tuplas, conformidade=0.6,
+def filtro_siRNA(sequences, tuplas, threshold=0.6,
                     autor=['reynolds', 'ui-tei', 'amarzguioui'],
                     tm=True, tmmax=21.5):
         """
@@ -445,10 +445,15 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
         conteudo_gc = []
         energia_livre = []
         TM_score = []
-
-        total_reynolds = 9 * conformidade
-        total_uitei = 6 * conformidade
-        total_ama = 9 * conformidade
+        
+        if tm == True:
+          total_reynolds = 11 * threshold
+          total_uitei = 9 * threshold
+          total_ama = 11 * threshold
+        else:
+          total_reynolds = 10 * threshold
+          total_uitei = 8 * threshold
+          total_ama = 10 * threshold
 
 
         # Iterador
@@ -467,11 +472,11 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
                 incluir_siRNA = False
 
             if autor == "reynolds":
-                if resultado[0] <= total_reynolds or not (0 < resultado[4] <= tmmax):
+                if resultado[0] <= total_reynolds: #or not (0 < resultado[4] <= tmmax):
                     incluir_siRNA = False
 
             if autor == 'ui-tei':
-              if resultado[0] <= total_uitei or not (-13 < resultado[3] <-7):
+              if resultado[0] <= total_uitei: #or not (-13 < resultado[3] <-7):
                     incluir_siRNA = False
 
             if autor == 'amarzguioui':
@@ -479,7 +484,7 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
                     incluir_siRNA = False
 
             if incluir_siRNA:
-                siRNA_verificados.append(sequence) 
+                siRNA_verificados.append(sequence)
                 score.append(resultado[0])
                 falha.append(resultado[1])
                 conteudo_gc.append(resultado[2])
@@ -489,15 +494,16 @@ def filtro_siRNA(sequences, tuplas, conformidade=0.6,
 
         # Organizando os resultados por pontuação
         resultados = list(zip(siRNA_verificados, score, TM_score, conteudo_gc, energia_livre, falha, posicao))
-        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)
+        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)[:50]
         siRNA_verificados = [resultado[0] for resultado in resultados_ordenados]
         score = [resultado[1] for resultado in resultados_ordenados]
-        TM_score = [resultado[2] for resultado in resultados_ordenados] 
+        TM_score = [resultado[2] for resultado in resultados_ordenados]
         conteudo_gc = [resultado[3] for resultado in resultados_ordenados]
         energia_livre = [resultado[4] for resultado in resultados_ordenados]
         falha = [resultado[5] for resultado in resultados_ordenados]
         posicao = [resultado[6] for resultado in resultados_ordenados]
 
+        #"score, falha, conteudo_gc, energia_livre, tm_score, posicao"
 
         # Preparando dados para JSON
         dados_json = [
@@ -630,7 +636,4 @@ def identidade_siRNA(fasta_file, sequence_tag, db = "refseq_rna", organismo = "t
                                                 df, identidade)
 
     return resultados
-
-
-
 

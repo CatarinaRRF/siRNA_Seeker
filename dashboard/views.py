@@ -21,7 +21,8 @@ from Bio.Seq import Seq
 
 # --------------------------------------------------------------------------------------#
 
-@login_required(redirect_field_name='next', login_url="/accounts/login/")
+
+"""
 def dashboard(request):
     user_p = request.user
     user_profile, _ = UserProfile.objects.get_or_create(user=user_p)
@@ -120,6 +121,103 @@ def dashboard(request):
     }
 
     return render(request, 'core/core.html', context)
+"""
+@login_required(redirect_field_name='next', login_url="/accounts/login/")
+def dashboard(request):
+    user_p = request.user
+    user_profile, _ = UserProfile.objects.get_or_create(user=user_p)
+    user = request.user
+    query_id = request.GET.get('query_id')
+    strand_type = request.GET.get('strand_type', 'sense')  # Padrão é 'sense'
+    sequence_search = request.GET.get('sequence_search', '')
+
+    meta_data = {}
+    total_sirnas = 0
+    sirnas = []
+
+    if query_id:
+        user_task = TaskResult.objects.filter(id=query_id, task_creator=user, status='SUCCESS').first()
+        if user_task:
+            task_result_string = user_task.result
+        else:
+            return HttpResponseRedirect('sirna/search', {'error': 'Query not found or not successful.'})
+    else:
+        user_tasks = TaskResult.objects.filter(task_creator=user, status='SUCCESS').order_by('-date_created')
+        if not user_tasks.exists():
+            return HttpResponseRedirect('sirna/search', {'error': 'No successful tasks found for this user.'})
+        latest_user_task = user_tasks.first()
+        task_result_string = latest_user_task.result
+
+    try:
+        result_data = json.loads(task_result_string)
+
+        if result_data and isinstance(result_data, list):
+            table_data = result_data[0].get('table', [])
+            sirnas_verified = result_data[0].get('sirna_verified', [])
+            total_sirnas = len(sirnas_verified)
+
+            if len(result_data) > 1 and isinstance(result_data[1], dict):
+                meta_data = result_data[1]
+
+            # Filtrar pela sequência e tipo de fita
+            for index, item in enumerate(table_data):
+                sequence = item.get("Sequencia'", 'N/A')
+                complementary_seq = str(Seq(sequence).complement().transcribe()) if sequence != 'N/A' else 'N/A'
+
+                if sequence_search:
+                    search_query = sequence_search.upper().replace("U", "T")
+                    if strand_type == 'sense':
+                        match = search_query in sequence.upper().replace("U", "T")
+                    elif strand_type == 'antisense':
+                        match = search_query in complementary_seq.upper().replace("U", "T")
+                    else:
+                        match = False
+                else:
+                    match = True
+
+
+                # Adiciona o dado do siRNA caso a sequência corresponda à pesquisa
+                if match:
+                    siRNA_data = {
+                        'index': index + 1,
+                        'sequence': sequence,
+                        'complementary_sequence': complementary_seq,
+                        'pontuacao': item.get('Pontuacao', 'N/A'),
+                        'tm': item.get('TM', 'N/A'),
+                        'cg': item.get('CG', 'N/A'),
+                        'ag': item.get('AG', 'N/A'),
+                        'falhas': item.get('Falhas', []),
+                        'posicao': item.get('posicao', 'N/A')
+                    }
+                    sirnas.append(siRNA_data)
+
+    except json.JSONDecodeError:
+        return render(request, 'resultado_task.html', {'error': 'Error decoding task result data.'})
+
+    paginator = Paginator(sirnas, 10)
+    page_number = request.GET.get('page', 1)
+    try:
+        page_obj = paginator.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = paginator.page(1)
+    except EmptyPage:
+        page_obj = paginator.page(paginator.num_pages)
+
+    context = {
+        'sirnas': page_obj.object_list,
+        'total_sirnas': paginator.count,
+        'page_obj': page_obj,
+        'meta_data': meta_data,
+        'total_sirnas': total_sirnas,
+        'user_profile': {
+            'name': user_p.get_full_name(),
+            'profission': user_profile.profission,
+            'profile_image': user_profile.profile_image,
+        }
+    }
+
+    return render(request, 'core/core.html', context)
+
 
 def get_all_sequences(request):
     user_p = request.user

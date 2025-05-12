@@ -641,8 +641,8 @@
                             <div class="container mt-5">
                               <div class="card-table table-responsive">
                                     <div class="card-header">
-                                        <h3 class="card-title">Parameters and siRNAs</h3>
-                                        <div style="text-align: right;">
+                                        <h3 class="card-title">Parameters and siRNA</h3>
+                                        <div class="d-flex justify-content-end align-items-center flex-wrap gap-2">
                                           <button  class="btn btn-6 btn-outline-secondary" id="exportFastaBtn" style="margin-left:10px">
                                             Export all to Fasta
                                           </button>
@@ -652,7 +652,43 @@
                                           <span class="form-help" style="margin-left:5px" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content= 
                                           "<p>The Blast button is page-specific, meaning when clicked, it will direct you to the Blast page with all sequences displayed. On that page, you can select which sequences to run by checking the corresponding checkmarks. A maximum of 10 sequences can be processed per page.</p><p class='mb-0'>">
                                           ?
-                                        </span>
+                                          </span>
+                                          <div class="input-group d-inline-flex align-items-center" style="width: 35rem;">
+                                            <button type="button" class="btn btn-6 btn-dark dropdown-toggle" id="strand-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Select Strand
+                                            </button>
+                                            <div class="dropdown-menu">
+                                              <a class="dropdown-item" href="#" data-strand="sense">Sense Strand (5'→3')</a>
+                                              <a class="dropdown-item" href="#" data-strand="antisense">Antisense Strand (3′→5')</a>
+                                            </div>
+                                            <input type="text" class="form-control" id="sequence-input" placeholder="Enter sequence" aria-label="Text input with dropdown button">
+                                            <button class="btn btn-6 btn-dark" type="button" id="search-btn">Search</button>
+                                          </div>
+
+                                          <script>
+                                            let selectedStrand = null;
+
+                                            // Update dropdown label when strand is selected
+                                            document.querySelectorAll('.dropdown-item').forEach(item => {
+                                              item.addEventListener('click', function (e) {
+                                                e.preventDefault();
+                                                selectedStrand = this.getAttribute('data-strand');
+                                                document.getElementById('strand-dropdown').innerText = this.innerText;
+                                              });
+                                            });
+
+                                            // On click, build URL with parameters
+                                            document.getElementById('search-btn').addEventListener('click', function () {
+                                              const sequenceSearch = document.getElementById('sequence-input').value.trim();
+                                              const url = new URL(window.location.href);
+                                              url.searchParams.set('sequence_search', sequenceSearch);
+                                              url.searchParams.set('strand_type', selectedStrand || '');
+                                              window.location.href = url.toString();
+                                            });
+                                          </script>
+
+
+
                                         </div>
                                     </div>
                                     <div class="table-responsive">

@@ -102,6 +102,7 @@ def loading(request, token):
     size = int(model_forms_data.size)
     include_tm = bool(model_forms_data.include_tm)
     max_tm = float(model_forms_data.max_tm)
+    threshold = float(model_forms_data.threshold)
     run_blast = bool(model_forms_data.run_blast)
     organism = model_forms_data.organism
     database = model_forms_data.database
@@ -111,7 +112,7 @@ def loading(request, token):
     # Executar tarefa Celery se houver um registro no banco de dados
     if model_forms_data:
         task = selection.delay(user, sequence_path, sequence_tag, autor,
-                               size, include_tm, max_tm, run_blast, organism,
+                               size, include_tm, max_tm, threshold, run_blast, organism, 
                                database, identity, query_cover)
         try:
             task_result = TaskResult.objects.get(task_id=task.task_id)

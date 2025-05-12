@@ -1,7 +1,7 @@
 [
     {
         "Sequencia'": "AAACCCUAUUUAAAUGAAAGG",
-        "Pontuacao": 9,
+        "Pontuacao": 10,
         "TM": 0.28,
         "CG": 28.57,
         "AG": -1.03,
@@ -10,7 +10,7 @@
     },
     {
         "Sequencia'": "CCACUCGCGUGUUCCCCAAGC",
-        "Pontuacao": 9,
+        "Pontuacao": 10,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -0.83,
@@ -18,8 +18,19 @@
         "posicao": "1240:1261"
     },
     {
+        "Sequencia'": "AGUUCAUUGUAUUAUGCGAAU",
+        "Pontuacao": 9,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -1.71,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "102:123"
+    },
+    {
         "Sequencia'": "CUACCGGAGCCUUCCCAGAAC",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -1.46,
@@ -30,8 +41,8 @@
     },
     {
         "Sequencia'": "CUUGUGCGUUUGCUUCCAACC",
-        "Pontuacao": 8,
-        "TM": 10.53,
+        "Pontuacao": 9,
+        "TM": 5.4,
         "CG": 52.38,
         "AG": -1.25,
         "Falhas": [
@@ -41,7 +52,7 @@
     },
     {
         "Sequencia'": "CCAGCGCCCGGGCUAUGGAGC",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 20.78,
         "CG": 76.19,
         "AG": -2.28,
@@ -51,8 +62,30 @@
         "posicao": "212:233"
     },
     {
+        "Sequencia'": "GGGGGGGCAUGGCGGGCCAGA",
+        "Pontuacao": 9,
+        "TM": 20.78,
+        "CG": 80.95,
+        "AG": -2.95,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "283:304"
+    },
+    {
+        "Sequencia'": "GCGCGCCCUUUGAGCAGAACC",
+        "Pontuacao": 9,
+        "TM": 20.78,
+        "CG": 66.67,
+        "AG": -5.35,
+        "Falhas": [
+            "position 3"
+        ],
+        "posicao": "364:385"
+    },
+    {
         "Sequencia'": "ACUCGGACUUGGCGGCCGAGA",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -1.2,
@@ -63,8 +96,8 @@
     },
     {
         "Sequencia'": "UUCCGGAUCUACCCCUGGAUG",
-        "Pontuacao": 8,
-        "TM": 5.4,
+        "Pontuacao": 9,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -1.72,
         "Falhas": [
@@ -74,8 +107,8 @@
     },
     {
         "Sequencia'": "AUCUACCCCUGGAUGCGAAGC",
-        "Pontuacao": 8,
-        "TM": 5.4,
+        "Pontuacao": 9,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -2.29,
         "Falhas": [
@@ -85,7 +118,7 @@
     },
     {
         "Sequencia'": "CUCAGGAACUGACCGCAAACG",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -2.21,
@@ -96,7 +129,7 @@
     },
     {
         "Sequencia'": "CGAGGCCGCCAGACCUACACC",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 20.78,
         "CG": 71.43,
         "AG": -3.8,
@@ -107,8 +140,8 @@
     },
     {
         "Sequencia'": "ACCAGACCCUGGAGCUGGAGA",
-        "Pontuacao": 8,
-        "TM": 10.53,
+        "Pontuacao": 9,
+        "TM": 15.65,
         "CG": 61.9,
         "AG": -0.07,
         "Falhas": [
@@ -118,7 +151,7 @@
     },
     {
         "Sequencia'": "ACACGCUCUGCCUCACGGAAA",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -2.4,
@@ -129,7 +162,7 @@
     },
     {
         "Sequencia'": "CCAAGACAGGGCUGAAGCAGA",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -0.11,
@@ -140,8 +173,8 @@
     },
     {
         "Sequencia'": "ACAGGGCUGAAGCAGAGGAGG",
-        "Pontuacao": 8,
-        "TM": 10.53,
+        "Pontuacao": 9,
+        "TM": 15.65,
         "CG": 61.9,
         "AG": -0.93,
         "Falhas": [
@@ -151,8 +184,8 @@
     },
     {
         "Sequencia'": "GGAGGAAGAGGAAGAGUGAGG",
-        "Pontuacao": 8,
-        "TM": 10.53,
+        "Pontuacao": 9,
+        "TM": 5.4,
         "CG": 57.14,
         "AG": -0.29,
         "Falhas": [
@@ -162,8 +195,8 @@
     },
     {
         "Sequencia'": "GAAGAGGAAGAGUGAGGGAUG",
-        "Pontuacao": 8,
-        "TM": 5.4,
+        "Pontuacao": 9,
+        "TM": 0.28,
         "CG": 52.38,
         "AG": -1.07,
         "Falhas": [
@@ -173,7 +206,7 @@
     },
     {
         "Sequencia'": "GAAAGGGAGAGGAAGAGAAGC",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -0.4,
@@ -184,7 +217,7 @@
     },
     {
         "Sequencia'": "AGAAGCCCAGCUCUGGGAACU",
-        "Pontuacao": 8,
+        "Pontuacao": 9,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -0.12,
@@ -194,9 +227,31 @@
         "posicao": "800:821"
     },
     {
+        "Sequencia'": "UAAAAACAUUUUUUAAGGAGG",
+        "Pontuacao": 9,
+        "TM": -9.97,
+        "CG": 23.81,
+        "AG": -6.62,
+        "Falhas": [
+            "tm"
+        ],
+        "posicao": "913:934"
+    },
+    {
+        "Sequencia'": "AAAUUUUGGUUUUUCAACACU",
+        "Pontuacao": 9,
+        "TM": -4.85,
+        "CG": 23.81,
+        "AG": -5.82,
+        "Falhas": [
+            "tm"
+        ],
+        "posicao": "944:965"
+    },
+    {
         "Sequencia'": "GGAGCCCCAAAACCUACCACU",
-        "Pontuacao": 8,
-        "TM": 20.78,
+        "Pontuacao": 9,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -4.73,
         "Falhas": [
@@ -206,8 +261,8 @@
     },
     {
         "Sequencia'": "GGACUCUAAUUCUGUAAUAUA",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 0.28,
         "CG": 28.57,
         "AG": -7.4,
         "Falhas": [
@@ -216,8 +271,32 @@
         "posicao": "17:38"
     },
     {
+        "Sequencia'": "UAAUUCUGUAAUAUAUCAAGG",
+        "Pontuacao": 8,
+        "TM": -4.85,
+        "CG": 23.81,
+        "AG": -3.3,
+        "Falhas": [
+            "tm",
+            "position 10"
+        ],
+        "posicao": "23:44"
+    },
+    {
+        "Sequencia'": "UCUGUAAUAUAUCAAGGAAUC",
+        "Pontuacao": 8,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -1.17,
+        "Falhas": [
+            "tm",
+            "position 3"
+        ],
+        "posicao": "27:48"
+    },
+    {
         "Sequencia'": "GUCCCUGCCUACAAAUCAUCC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 52.38,
         "AG": -2.74,
@@ -228,31 +307,20 @@
         "posicao": "69:90"
     },
     {
-        "Sequencia'": "GUUCAUUGUAUUAUGCGAAUA",
-        "Pontuacao": 7,
-        "TM": 0.28,
-        "CG": 28.57,
-        "AG": -1.99,
+        "Sequencia'": "UUUAUUUUCUAAAUAUCCAGC",
+        "Pontuacao": 8,
+        "TM": -9.97,
+        "CG": 23.81,
+        "AG": -8.38,
         "Falhas": [
-            "position 10",
+            "tm",
             "position 3"
         ],
-        "posicao": "103:124"
-    },
-    {
-        "Sequencia'": "CGAAUACUUUAUUUUCUAAAU",
-        "Pontuacao": 7,
-        "TM": 0.28,
-        "CG": 19.05,
-        "AG": -1.65,
-        "Falhas": [
-            "free energy"
-        ],
-        "posicao": "118:139"
+        "posicao": "125:146"
     },
     {
         "Sequencia'": "CAAGUUCGGUUUUCGCUACCG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -3.98,
@@ -264,7 +332,7 @@
     },
     {
         "Sequencia'": "UUCGGUUUUCGCUACCGGAGC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 0.28,
         "CG": 57.14,
         "AG": -4.79,
@@ -276,7 +344,7 @@
     },
     {
         "Sequencia'": "CGCUACCGGAGCCUUCCCAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -1.04,
@@ -288,8 +356,8 @@
     },
     {
         "Sequencia'": "UACCGGAGCCUUCCCAGAACA",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -2.89,
         "Falhas": [
@@ -300,8 +368,8 @@
     },
     {
         "Sequencia'": "ACCCCCAGCGCCCGGGCUAUG",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 76.19,
         "AG": -4.22,
         "Falhas": [
@@ -312,8 +380,8 @@
     },
     {
         "Sequencia'": "CCCGGGCUAUGGAGCGGGUUC",
-        "Pontuacao": 7,
-        "TM": 20.78,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 71.43,
         "AG": -4.38,
         "Falhas": [
@@ -324,8 +392,8 @@
     },
     {
         "Sequencia'": "GGAGCGGGUUCGGGCGCUUCC",
-        "Pontuacao": 7,
-        "TM": 20.78,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 76.19,
         "AG": -2.34,
         "Falhas": [
@@ -336,7 +404,7 @@
     },
     {
         "Sequencia'": "CCUUCGCCGCCUCGAUGCAGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 71.43,
         "AG": -0.28,
@@ -348,8 +416,8 @@
     },
     {
         "Sequencia'": "CCGCCUCGAUGCAGGGCUUGU",
-        "Pontuacao": 7,
-        "TM": 20.78,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -2.77,
         "Falhas": [
@@ -360,8 +428,8 @@
     },
     {
         "Sequencia'": "AGAGCGCGGCCGGCGUCUACG",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 76.19,
         "AG": -3.31,
         "Falhas": [
@@ -372,7 +440,7 @@
     },
     {
         "Sequencia'": "GCGUCUACGCGGCCGGCUAUG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 71.43,
         "AG": -0.39,
@@ -384,8 +452,8 @@
     },
     {
         "Sequencia'": "UGCACUGCGCGCCCUUUGAGC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -2.47,
         "Falhas": [
@@ -396,8 +464,8 @@
     },
     {
         "Sequencia'": "ACUGCGCGCCCUUUGAGCAGA",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 61.9,
         "AG": -1.2,
         "Falhas": [
@@ -407,21 +475,9 @@
         "posicao": "361:382"
     },
     {
-        "Sequencia'": "UGCGCGCCCUUUGAGCAGAAC",
-        "Pontuacao": 7,
-        "TM": 20.78,
-        "CG": 61.9,
-        "AG": -4.15,
-        "Falhas": [
-            "position 13",
-            "position 3"
-        ],
-        "posicao": "363:384"
-    },
-    {
         "Sequencia'": "AGCAGAACCUCUCCGGGGUGU",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -3.5,
         "Falhas": [
@@ -432,8 +488,8 @@
     },
     {
         "Sequencia'": "CCGGGGUGUGUCCCGGCGACU",
-        "Pontuacao": 7,
-        "TM": 20.78,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 76.19,
         "AG": -1.93,
         "Falhas": [
@@ -444,8 +500,8 @@
     },
     {
         "Sequencia'": "UGUCCCGGCGACUCCGCCAAG",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 71.43,
         "AG": -1.37,
         "Falhas": [
@@ -456,7 +512,7 @@
     },
     {
         "Sequencia'": "GUCCCGGCGACUCCGCCAAGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 20.78,
         "CG": 76.19,
         "AG": -1.45,
@@ -468,7 +524,7 @@
     },
     {
         "Sequencia'": "CCAAGGCGGCGGGCGCCAAGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 80.95,
         "AG": -0.18,
@@ -479,20 +535,8 @@
         "posicao": "412:433"
     },
     {
-        "Sequencia'": "AGGCGGCGGGCGCCAAGGAGC",
-        "Pontuacao": 7,
-        "TM": 20.78,
-        "CG": 80.95,
-        "AG": -3.7,
-        "Falhas": [
-            "position 10",
-            "position 3"
-        ],
-        "posicao": "415:436"
-    },
-    {
         "Sequencia'": "GCGCCAAGGAGCAGAGGGACU",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -0.48,
@@ -504,7 +548,7 @@
     },
     {
         "Sequencia'": "AGGAGCAGAGGGACUCGGACU",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -0.7,
@@ -516,8 +560,8 @@
     },
     {
         "Sequencia'": "GCCGAGAGUAACUUCCGGAUC",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -1.1,
         "Falhas": [
@@ -528,8 +572,8 @@
     },
     {
         "Sequencia'": "CCCCUGGAUGCGAAGCUCAGG",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -1.93,
         "Falhas": [
@@ -540,7 +584,7 @@
     },
     {
         "Sequencia'": "CUGGAUGCGAAGCUCAGGAAC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -0.33,
@@ -552,7 +596,7 @@
     },
     {
         "Sequencia'": "UGGAUGCGAAGCUCAGGAACU",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -2.03,
@@ -564,8 +608,8 @@
     },
     {
         "Sequencia'": "GCUCAGGAACUGACCGCAAAC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 57.14,
         "AG": -3.24,
         "Falhas": [
@@ -576,7 +620,7 @@
     },
     {
         "Sequencia'": "AGGAACUGACCGCAAACGAGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -0.15,
@@ -588,8 +632,8 @@
     },
     {
         "Sequencia'": "CGCAAACGAGGCCGCCAGACC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 71.43,
         "AG": -3.3,
         "Falhas": [
@@ -600,8 +644,8 @@
     },
     {
         "Sequencia'": "AAACGAGGCCGCCAGACCUAC",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -2.25,
         "Falhas": [
@@ -612,8 +656,8 @@
     },
     {
         "Sequencia'": "AACGAGGCCGCCAGACCUACA",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 61.9,
         "AG": -0.26,
         "Falhas": [
@@ -624,7 +668,7 @@
     },
     {
         "Sequencia'": "CGCCAGACCUACACCCGCUAC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -1.14,
@@ -636,8 +680,8 @@
     },
     {
         "Sequencia'": "GCCAGACCUACACCCGCUACC",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -1.06,
         "Falhas": [
@@ -648,7 +692,7 @@
     },
     {
         "Sequencia'": "AGACCUACACCCGCUACCAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -0.07,
@@ -660,8 +704,8 @@
     },
     {
         "Sequencia'": "ACCUACACCCGCUACCAGACC",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -2.15,
         "Falhas": [
@@ -672,7 +716,7 @@
     },
     {
         "Sequencia'": "ACACCCGCUACCAGACCCUGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -0.51,
@@ -684,7 +728,7 @@
     },
     {
         "Sequencia'": "CCCGCUACCAGACCCUGGAGC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 71.43,
         "AG": -0.39,
@@ -696,7 +740,7 @@
     },
     {
         "Sequencia'": "CAGACCCUGGAGCUGGAGAAA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -3.3,
@@ -707,20 +751,8 @@
         "posicao": "540:561"
     },
     {
-        "Sequencia'": "CACUACAAUCGCUACCUGACG",
-        "Pontuacao": 7,
-        "TM": 0.28,
-        "CG": 52.38,
-        "AG": -2.24,
-        "Falhas": [
-            "position 10",
-            "position 3"
-        ],
-        "posicao": "567:588"
-    },
-    {
         "Sequencia'": "CUGACGCGGCGGCGGCGCAUC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 80.95,
         "AG": -0.29,
@@ -732,7 +764,7 @@
     },
     {
         "Sequencia'": "GGCGCAUCGAGAUCGCGCACA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -0.15,
@@ -744,8 +776,8 @@
     },
     {
         "Sequencia'": "GCAUCGAGAUCGCGCACACGC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 66.67,
         "AG": -0.64,
         "Falhas": [
@@ -756,7 +788,7 @@
     },
     {
         "Sequencia'": "GCGCACACGCUCUGCCUCACG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 71.43,
         "AG": -1.29,
@@ -768,7 +800,7 @@
     },
     {
         "Sequencia'": "CACGCUCUGCCUCACGGAAAG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -2.64,
@@ -780,8 +812,8 @@
     },
     {
         "Sequencia'": "ACGCUCUGCCUCACGGAAAGA",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -2.48,
         "Falhas": [
@@ -792,7 +824,7 @@
     },
     {
         "Sequencia'": "UCUGCCUCACGGAAAGACAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -2.23,
@@ -804,8 +836,8 @@
     },
     {
         "Sequencia'": "UGCCUCACGGAAAGACAGAUC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 52.38,
         "AG": -3.22,
         "Falhas": [
@@ -816,8 +848,8 @@
     },
     {
         "Sequencia'": "UGGUUUCAGAACCGGCGCAUG",
-        "Pontuacao": 7,
-        "TM": 0.28,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 57.14,
         "AG": -2.77,
         "Falhas": [
@@ -828,8 +860,8 @@
     },
     {
         "Sequencia'": "AACCGGCGCAUGAAGUGGAAA",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 52.38,
         "AG": -3.63,
         "Falhas": [
@@ -839,8 +871,20 @@
         "posicao": "657:678"
     },
     {
+        "Sequencia'": "GCCCGGGGACCACCGGCCAAG",
+        "Pontuacao": 8,
+        "TM": 20.78,
+        "CG": 80.95,
+        "AG": -3.68,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "697:718"
+    },
+    {
         "Sequencia'": "CCCGGGGACCACCGGCCAAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 20.78,
         "CG": 76.19,
         "AG": -4.34,
@@ -852,7 +896,7 @@
     },
     {
         "Sequencia'": "GGGACCACCGGCCAAGACAGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 71.43,
         "AG": -2.53,
@@ -864,8 +908,8 @@
     },
     {
         "Sequencia'": "AAGACAGGGCUGAAGCAGAGG",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -3.72,
         "Falhas": [
@@ -876,8 +920,8 @@
     },
     {
         "Sequencia'": "AGACAGGGCUGAAGCAGAGGA",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -0.34,
         "Falhas": [
@@ -888,7 +932,7 @@
     },
     {
         "Sequencia'": "GGGCUGAAGCAGAGGAGGAAG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -3.61,
@@ -900,7 +944,7 @@
     },
     {
         "Sequencia'": "CUGAAGCAGAGGAGGAAGAGG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -0.01,
@@ -912,8 +956,8 @@
     },
     {
         "Sequencia'": "AAGCAGAGGAGGAAGAGGAAG",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 52.38,
         "AG": -0.17,
         "Falhas": [
@@ -924,7 +968,7 @@
     },
     {
         "Sequencia'": "AGCAGAGGAGGAAGAGGAAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -0.9,
@@ -936,7 +980,7 @@
     },
     {
         "Sequencia'": "CAGAGGAGGAAGAGGAAGAGU",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -2.16,
@@ -948,8 +992,8 @@
     },
     {
         "Sequencia'": "AGAGUGAGGGAUGGAGAAAGG",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 52.38,
         "AG": -1.61,
         "Falhas": [
@@ -960,7 +1004,7 @@
     },
     {
         "Sequencia'": "GAGGGAUGGAGAAAGGGCAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -2.19,
@@ -972,7 +1016,7 @@
     },
     {
         "Sequencia'": "AUGGAGAAAGGGCAGAGGAAG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 0.28,
         "CG": 52.38,
         "AG": -0.4,
@@ -984,8 +1028,8 @@
     },
     {
         "Sequencia'": "UGGAGAAAGGGCAGAGGAAGA",
-        "Pontuacao": 7,
-        "TM": 0.28,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 52.38,
         "AG": -0.25,
         "Falhas": [
@@ -996,7 +1040,7 @@
     },
     {
         "Sequencia'": "GAGAAAGGGCAGAGGAAGAGA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -1.49,
@@ -1008,8 +1052,8 @@
     },
     {
         "Sequencia'": "GAAAGGGCAGAGGAAGAGACA",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 52.38,
         "AG": -0.34,
         "Falhas": [
@@ -1020,7 +1064,7 @@
     },
     {
         "Sequencia'": "AAGGGCAGAGGAAGAGACAUG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -3.09,
@@ -1032,8 +1076,8 @@
     },
     {
         "Sequencia'": "GAGACAUGAGAAAGGGAGAGG",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 0.28,
         "CG": 52.38,
         "AG": -3.13,
         "Falhas": [
@@ -1044,8 +1088,8 @@
     },
     {
         "Sequencia'": "GGAAGAGAAGCCCAGCUCUGG",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 0.28,
         "CG": 61.9,
         "AG": -2.17,
         "Falhas": [
@@ -1056,7 +1100,7 @@
     },
     {
         "Sequencia'": "GAGAAGCCCAGCUCUGGGAAC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -0.8,
@@ -1068,7 +1112,7 @@
     },
     {
         "Sequencia'": "CCAGCUCUGGGAACUGAAUCA",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -4.03,
@@ -1080,8 +1124,8 @@
     },
     {
         "Sequencia'": "AGCUCUGGGAACUGAAUCAGG",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 52.38,
         "AG": -2.17,
         "Falhas": [
@@ -1092,8 +1136,8 @@
     },
     {
         "Sequencia'": "AUAGGGAAGUAAAAAAACAAA",
-        "Pontuacao": 7,
-        "TM": 0.28,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 23.81,
         "AG": -5.27,
         "Falhas": [
@@ -1102,8 +1146,20 @@
         "posicao": "842:863"
     },
     {
+        "Sequencia'": "AAACAAAAAAAAAACCCUAUU",
+        "Pontuacao": 8,
+        "TM": -9.97,
+        "CG": 19.05,
+        "AG": -3.78,
+        "Falhas": [
+            "tm",
+            "position 10"
+        ],
+        "posicao": "877:898"
+    },
+    {
         "Sequencia'": "AAAACCCUAUUUAAAUGAAAG",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 0.28,
         "CG": 23.81,
         "AG": -2.14,
@@ -1113,9 +1169,21 @@
         "posicao": "887:908"
     },
     {
+        "Sequencia'": "CUAUUUAAAUGAAAGGAGUUU",
+        "Pontuacao": 8,
+        "TM": -15.1,
+        "CG": 23.81,
+        "AG": -4.29,
+        "Falhas": [
+            "tm",
+            "position 19!= A"
+        ],
+        "posicao": "893:914"
+    },
+    {
         "Sequencia'": "UGAAAGGAGUUUAAAAACAUU",
-        "Pontuacao": 7,
-        "TM": 0.28,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 23.81,
         "AG": -3.6,
         "Falhas": [
@@ -1124,8 +1192,44 @@
         "posicao": "902:923"
     },
     {
+        "Sequencia'": "AAAAUACUACCUAUAGGAAAG",
+        "Pontuacao": 8,
+        "TM": -9.97,
+        "CG": 28.57,
+        "AG": -4.14,
+        "Falhas": [
+            "tm",
+            "position 10"
+        ],
+        "posicao": "968:989"
+    },
+    {
+        "Sequencia'": "AAAUACUACCUAUAGGAAAGU",
+        "Pontuacao": 8,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -3.32,
+        "Falhas": [
+            "tm",
+            "position 10"
+        ],
+        "posicao": "969:990"
+    },
+    {
+        "Sequencia'": "AUGAAAAGGAUAUUAUCUACC",
+        "Pontuacao": 8,
+        "TM": 0.28,
+        "CG": 28.57,
+        "AG": -3.57,
+        "Falhas": [
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1017:1038"
+    },
+    {
         "Sequencia'": "UGAAAAGGAUAUUAUCUACCU",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 0.28,
         "CG": 28.57,
         "AG": -3.58,
@@ -1136,9 +1240,21 @@
         "posicao": "1018:1039"
     },
     {
+        "Sequencia'": "AAAAGGAUAUUAUCUACCUGU",
+        "Pontuacao": 8,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -2.46,
+        "Falhas": [
+            "tm",
+            "position 19!= A"
+        ],
+        "posicao": "1020:1041"
+    },
+    {
         "Sequencia'": "UGUGGACUGUGGGUCUGGACU",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -0.67,
         "Falhas": [
@@ -1149,7 +1265,7 @@
     },
     {
         "Sequencia'": "GACUGUGGGUCUGGACUAACC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -1.62,
@@ -1161,7 +1277,7 @@
     },
     {
         "Sequencia'": "UGGUUGCCUGCCCUCCUGAGC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -0.99,
@@ -1173,8 +1289,8 @@
     },
     {
         "Sequencia'": "UGCCUGCCCUCCUGAGCCUCC",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 71.43,
         "AG": -0.27,
         "Falhas": [
@@ -1185,7 +1301,7 @@
     },
     {
         "Sequencia'": "CUGAGCCUCCGCCUUCCCAGC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 71.43,
         "AG": -1.26,
@@ -1197,8 +1313,8 @@
     },
     {
         "Sequencia'": "AGCCUCCGCCUUCCCAGCAGC",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 20.78,
         "CG": 71.43,
         "AG": -1.0,
         "Falhas": [
@@ -1209,7 +1325,7 @@
     },
     {
         "Sequencia'": "CGCCUUCCCAGCAGCGGCACC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 76.19,
         "AG": -2.24,
@@ -1221,7 +1337,7 @@
     },
     {
         "Sequencia'": "CACCAAGGGGCCUUAGGGAGC",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -3.81,
@@ -1233,8 +1349,8 @@
     },
     {
         "Sequencia'": "GGGGCCUUAGGGAGCCCCAAA",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -4.61,
         "Falhas": [
@@ -1245,8 +1361,8 @@
     },
     {
         "Sequencia'": "UUAGGGAGCCCCAAAACCUAC",
-        "Pontuacao": 7,
-        "TM": 5.4,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 52.38,
         "AG": -1.54,
         "Falhas": [
@@ -1257,8 +1373,8 @@
     },
     {
         "Sequencia'": "UAGGGAGCCCCAAAACCUACC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -0.28,
         "Falhas": [
@@ -1268,21 +1384,9 @@
         "posicao": "1221:1242"
     },
     {
-        "Sequencia'": "CAAAACCUACCACUCGCGUGU",
-        "Pontuacao": 7,
-        "TM": 0.28,
-        "CG": 52.38,
-        "AG": -4.31,
-        "Falhas": [
-            "position 19!= A",
-            "position 10"
-        ],
-        "posicao": "1231:1252"
-    },
-    {
         "Sequencia'": "AAACCUACCACUCGCGUGUUC",
-        "Pontuacao": 7,
-        "TM": 0.28,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 52.38,
         "AG": -1.59,
         "Falhas": [
@@ -1293,8 +1397,8 @@
     },
     {
         "Sequencia'": "ACCACUCGCGUGUUCCCCAAG",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 61.9,
         "AG": -0.73,
         "Falhas": [
@@ -1305,7 +1409,7 @@
     },
     {
         "Sequencia'": "CCAAGCGCCUGGCUGCUGCUU",
-        "Pontuacao": 7,
+        "Pontuacao": 8,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -0.14,
@@ -1317,8 +1421,8 @@
     },
     {
         "Sequencia'": "CAAGCGCCUGGCUGCUGCUUC",
-        "Pontuacao": 7,
-        "TM": 15.65,
+        "Pontuacao": 8,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -1.37,
         "Falhas": [
@@ -1329,8 +1433,8 @@
     },
     {
         "Sequencia'": "GCUGCUUCUUGCUUCCCGUCC",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 5.4,
         "CG": 61.9,
         "AG": -2.71,
         "Falhas": [
@@ -1341,8 +1445,8 @@
     },
     {
         "Sequencia'": "UUCCCGUCCCCCAGCCCCAUG",
-        "Pontuacao": 7,
-        "TM": 10.53,
+        "Pontuacao": 8,
+        "TM": 15.65,
         "CG": 71.43,
         "AG": -0.92,
         "Falhas": [
@@ -1352,21 +1456,46 @@
         "posicao": "1281:1302"
     },
     {
-        "Sequencia'": "GAUGGAAAAAUAAAACGCAAU",
+        "Sequencia'": "CUAAUUCUGUAAUAUAUCAAG",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 23.81,
+        "AG": -1.32,
+        "Falhas": [
+            "tm",
+            "free energy"
+        ],
+        "posicao": "22:43"
+    },
+    {
+        "Sequencia'": "AUAUAUCAAGGAAUCUCGUAA",
+        "Pontuacao": 7,
+        "TM": -9.97,
+        "CG": 28.57,
+        "AG": -2.97,
+        "Falhas": [
+            "tm",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "33:54"
+    },
+    {
+        "Sequencia'": "AUAUCAAGGAAUCUCGUAAAA",
         "Pontuacao": 7,
         "TM": 0.28,
         "CG": 28.57,
-        "AG": -0.25,
+        "AG": -0.21,
         "Falhas": [
-            "position 10",
-            "position 3"
+            "free energy",
+            "position 10"
         ],
-        "posicao": "1332:1353"
+        "posicao": "35:56"
     },
     {
         "Sequencia'": "GCCUACAAAUCAUCCGGCCAA",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 52.38,
         "AG": -1.18,
         "Falhas": [
@@ -1377,8 +1506,21 @@
         "posicao": "75:96"
     },
     {
+        "Sequencia'": "GUUCAUUGUAUUAUGCGAAUA",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -1.99,
+        "Falhas": [
+            "tm",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "103:124"
+    },
+    {
         "Sequencia'": "UUAUGCGAAUACUUUAUUUUC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 23.81,
         "AG": -3.75,
@@ -1390,8 +1532,8 @@
     },
     {
         "Sequencia'": "GCGAAUACUUUAUUUUCUAAA",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 23.81,
         "AG": -3.0,
         "Falhas": [
@@ -1401,8 +1543,32 @@
         "posicao": "117:138"
     },
     {
+        "Sequencia'": "CGAAUACUUUAUUUUCUAAAU",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 19.05,
+        "AG": -1.65,
+        "Falhas": [
+            "tm",
+            "free energy"
+        ],
+        "posicao": "118:139"
+    },
+    {
+        "Sequencia'": "AUACUUUAUUUUCUAAAUAUC",
+        "Pontuacao": 7,
+        "TM": -9.97,
+        "CG": 14.29,
+        "AG": -0.74,
+        "Falhas": [
+            "tm",
+            "free energy"
+        ],
+        "posicao": "121:142"
+    },
+    {
         "Sequencia'": "AAGUUCGGUUUUCGCUACCGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -3.53,
@@ -1415,8 +1581,8 @@
     },
     {
         "Sequencia'": "GUUCGGUUUUCGCUACCGGAG",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 57.14,
         "AG": -2.26,
         "Falhas": [
@@ -1428,7 +1594,7 @@
     },
     {
         "Sequencia'": "GGUUUUCGCUACCGGAGCCUU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -3.52,
@@ -1441,8 +1607,8 @@
     },
     {
         "Sequencia'": "CCGGAGCCUUCCCAGAACAAA",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -7.21,
         "Falhas": [
@@ -1453,7 +1619,7 @@
     },
     {
         "Sequencia'": "UUGUGCGUUUGCUUCCAACCC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -1.77,
@@ -1466,8 +1632,8 @@
     },
     {
         "Sequencia'": "CAACCCCCAGCGCCCGGGCUA",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 76.19,
         "AG": -0.55,
         "Falhas": [
@@ -1479,8 +1645,8 @@
     },
     {
         "Sequencia'": "AACCCCCAGCGCCCGGGCUAU",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 71.43,
         "AG": -1.9,
         "Falhas": [
@@ -1492,8 +1658,8 @@
     },
     {
         "Sequencia'": "UGGAGCGGGUUCGGGCGCUUC",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 20.78,
         "CG": 71.43,
         "AG": -1.13,
         "Falhas": [
@@ -1505,7 +1671,7 @@
     },
     {
         "Sequencia'": "GGCGCUUCCUUCGCCGCCUCG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 76.19,
         "AG": -0.36,
@@ -1518,8 +1684,8 @@
     },
     {
         "Sequencia'": "GCGCUUCCUUCGCCGCCUCGA",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 71.43,
         "AG": -1.3,
         "Falhas": [
@@ -1531,7 +1697,7 @@
     },
     {
         "Sequencia'": "GCUUCCUUCGCCGCCUCGAUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 66.67,
         "AG": -1.74,
@@ -1544,7 +1710,7 @@
     },
     {
         "Sequencia'": "CUUCCUUCGCCGCCUCGAUGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 66.67,
         "AG": -2.23,
@@ -1557,7 +1723,7 @@
     },
     {
         "Sequencia'": "GCCGCCUCGAUGCAGGGCUUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 20.78,
         "CG": 71.43,
         "AG": -2.78,
@@ -1570,7 +1736,7 @@
     },
     {
         "Sequencia'": "CCUCGAUGCAGGGCUUGUACC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -1.65,
@@ -1583,7 +1749,7 @@
     },
     {
         "Sequencia'": "CGAUGCAGGGCUUGUACCCCG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -1.87,
@@ -1596,8 +1762,8 @@
     },
     {
         "Sequencia'": "UACCCCGGCGGGGGGGGCAUG",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 20.78,
         "CG": 80.95,
         "AG": -0.27,
         "Falhas": [
@@ -1609,7 +1775,7 @@
     },
     {
         "Sequencia'": "GGGGGCAUGGCGGGCCAGAGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 80.95,
         "AG": -3.2,
@@ -1622,7 +1788,7 @@
     },
     {
         "Sequencia'": "GCAUGGCGGGCCAGAGCGCGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 80.95,
         "AG": -1.26,
@@ -1635,7 +1801,7 @@
     },
     {
         "Sequencia'": "GCCAGAGCGCGGCCGGCGUCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 80.95,
         "AG": -0.51,
@@ -1648,7 +1814,7 @@
     },
     {
         "Sequencia'": "CCAGAGCGCGGCCGGCGUCUA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 76.19,
         "AG": -1.48,
@@ -1661,7 +1827,7 @@
     },
     {
         "Sequencia'": "CGUCUACGCGGCCGGCUAUGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 71.43,
         "AG": -0.81,
@@ -1674,7 +1840,7 @@
     },
     {
         "Sequencia'": "CUACGCGGCCGGCUAUGGGCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 71.43,
         "AG": -1.49,
@@ -1686,21 +1852,21 @@
         "posicao": "317:338"
     },
     {
-        "Sequencia'": "ACGCGGCCGGCUAUGGGCUCG",
-        "Pontuacao": 6,
+        "Sequencia'": "CGGCCGGCUAUGGGCUCGAGC",
+        "Pontuacao": 7,
         "TM": 20.78,
         "CG": 76.19,
-        "AG": -0.34,
+        "AG": -3.3,
         "Falhas": [
-            "position 19!= A",
+            "position 13",
             "position 10",
             "position 3"
         ],
-        "posicao": "319:340"
+        "posicao": "322:343"
     },
     {
         "Sequencia'": "GGCUAUGGGCUCGAGCCGAGU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -2.38,
@@ -1713,7 +1879,7 @@
     },
     {
         "Sequencia'": "GCUAUGGGCUCGAGCCGAGUU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -0.14,
@@ -1726,8 +1892,8 @@
     },
     {
         "Sequencia'": "CUAUGGGCUCGAGCCGAGUUC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 61.9,
         "AG": -0.8,
         "Falhas": [
@@ -1739,8 +1905,8 @@
     },
     {
         "Sequencia'": "UAUGGGCUCGAGCCGAGUUCC",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -1.31,
         "Falhas": [
@@ -1752,8 +1918,8 @@
     },
     {
         "Sequencia'": "GAGCCGAGUUCCUUCAACAUG",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 52.38,
         "AG": -5.23,
         "Falhas": [
@@ -1764,7 +1930,7 @@
     },
     {
         "Sequencia'": "AGCCGAGUUCCUUCAACAUGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -3.61,
@@ -1777,7 +1943,7 @@
     },
     {
         "Sequencia'": "CCGAGUUCCUUCAACAUGCAC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -0.16,
@@ -1790,8 +1956,8 @@
     },
     {
         "Sequencia'": "CCUUCAACAUGCACUGCGCGC",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 61.9,
         "AG": -5.47,
         "Falhas": [
@@ -1803,8 +1969,8 @@
     },
     {
         "Sequencia'": "CAACAUGCACUGCGCGCCCUU",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 61.9,
         "AG": -4.59,
         "Falhas": [
@@ -1816,8 +1982,8 @@
     },
     {
         "Sequencia'": "AACAUGCACUGCGCGCCCUUU",
-        "Pontuacao": 6,
-        "TM": 0.28,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 57.14,
         "AG": -1.81,
         "Falhas": [
@@ -1829,7 +1995,7 @@
     },
     {
         "Sequencia'": "GCACUGCGCGCCCUUUGAGCA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -2.35,
@@ -1841,8 +2007,21 @@
         "posicao": "359:380"
     },
     {
+        "Sequencia'": "UGCGCGCCCUUUGAGCAGAAC",
+        "Pontuacao": 7,
+        "TM": 25.9,
+        "CG": 61.9,
+        "AG": -4.15,
+        "Falhas": [
+            "tm",
+            "position 13",
+            "position 3"
+        ],
+        "posicao": "363:384"
+    },
+    {
         "Sequencia'": "CGCCCUUUGAGCAGAACCUCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -2.56,
@@ -1855,8 +2034,8 @@
     },
     {
         "Sequencia'": "GCAGAACCUCUCCGGGGUGUG",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 66.67,
         "AG": -2.05,
         "Falhas": [
@@ -1868,7 +2047,7 @@
     },
     {
         "Sequencia'": "CAGAACCUCUCCGGGGUGUGU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 61.9,
         "AG": -1.21,
@@ -1881,7 +2060,7 @@
     },
     {
         "Sequencia'": "GAACCUCUCCGGGGUGUGUCC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 66.67,
         "AG": -1.03,
@@ -1894,8 +2073,8 @@
     },
     {
         "Sequencia'": "UCCGGGGUGUGUCCCGGCGAC",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 20.78,
         "CG": 76.19,
         "AG": -1.95,
         "Falhas": [
@@ -1907,7 +2086,7 @@
     },
     {
         "Sequencia'": "CGGGGUGUGUCCCGGCGACUC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 76.19,
         "AG": -1.76,
@@ -1920,7 +2099,7 @@
     },
     {
         "Sequencia'": "GCCAAGGCGGCGGGCGCCAAG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 80.95,
         "AG": -0.76,
@@ -1933,7 +2112,7 @@
     },
     {
         "Sequencia'": "CAAGGCGGCGGGCGCCAAGGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 76.19,
         "AG": -0.08,
@@ -1945,8 +2124,34 @@
         "posicao": "413:434"
     },
     {
+        "Sequencia'": "AGGCGGCGGGCGCCAAGGAGC",
+        "Pontuacao": 7,
+        "TM": 25.9,
+        "CG": 80.95,
+        "AG": -3.7,
+        "Falhas": [
+            "tm",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "415:436"
+    },
+    {
+        "Sequencia'": "CGGCGGGCGCCAAGGAGCAGA",
+        "Pontuacao": 7,
+        "TM": 25.9,
+        "CG": 76.19,
+        "AG": -3.38,
+        "Falhas": [
+            "tm",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "418:439"
+    },
+    {
         "Sequencia'": "GCCAAGGAGCAGAGGGACUCG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -0.48,
@@ -1959,7 +2164,7 @@
     },
     {
         "Sequencia'": "GGAGCAGAGGGACUCGGACUU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -2.19,
@@ -1972,7 +2177,7 @@
     },
     {
         "Sequencia'": "GAGCAGAGGGACUCGGACUUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -1.6,
@@ -1985,8 +2190,8 @@
     },
     {
         "Sequencia'": "AGCAGAGGGACUCGGACUUGG",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 61.9,
         "AG": -1.18,
         "Falhas": [
@@ -1998,7 +2203,7 @@
     },
     {
         "Sequencia'": "AGAGGGACUCGGACUUGGCGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -0.05,
@@ -2011,8 +2216,8 @@
     },
     {
         "Sequencia'": "UCGGACUUGGCGGCCGAGAGU",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -1.27,
         "Falhas": [
@@ -2024,7 +2229,7 @@
     },
     {
         "Sequencia'": "GGCCGAGAGUAACUUCCGGAU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 57.14,
         "AG": -1.95,
@@ -2037,8 +2242,8 @@
     },
     {
         "Sequencia'": "CCGAGAGUAACUUCCGGAUCU",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 52.38,
         "AG": -0.92,
         "Falhas": [
@@ -2050,7 +2255,7 @@
     },
     {
         "Sequencia'": "GUAACUUCCGGAUCUACCCCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 52.38,
         "AG": -5.69,
@@ -2063,8 +2268,8 @@
     },
     {
         "Sequencia'": "UAACUUCCGGAUCUACCCCUG",
-        "Pontuacao": 6,
-        "TM": 0.28,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 52.38,
         "AG": -6.13,
         "Falhas": [
@@ -2076,7 +2281,7 @@
     },
     {
         "Sequencia'": "ACUUCCGGAUCUACCCCUGGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -3.09,
@@ -2089,7 +2294,7 @@
     },
     {
         "Sequencia'": "UCCGGAUCUACCCCUGGAUGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -0.43,
@@ -2102,7 +2307,7 @@
     },
     {
         "Sequencia'": "GAUCUACCCCUGGAUGCGAAG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -1.75,
@@ -2115,8 +2320,8 @@
     },
     {
         "Sequencia'": "UACCCCUGGAUGCGAAGCUCA",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -2.28,
         "Falhas": [
@@ -2128,8 +2333,8 @@
     },
     {
         "Sequencia'": "GGAUGCGAAGCUCAGGAACUG",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 57.14,
         "AG": -2.05,
         "Falhas": [
@@ -2141,7 +2346,7 @@
     },
     {
         "Sequencia'": "GAUGCGAAGCUCAGGAACUGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -2.05,
@@ -2154,7 +2359,7 @@
     },
     {
         "Sequencia'": "UGCGAAGCUCAGGAACUGACC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -0.51,
@@ -2167,8 +2372,8 @@
     },
     {
         "Sequencia'": "CGAAGCUCAGGAACUGACCGC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 61.9,
         "AG": -2.47,
         "Falhas": [
@@ -2180,7 +2385,7 @@
     },
     {
         "Sequencia'": "GAAGCUCAGGAACUGACCGCA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -2.57,
@@ -2193,7 +2398,7 @@
     },
     {
         "Sequencia'": "AGCUCAGGAACUGACCGCAAA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 52.38,
         "AG": -0.78,
@@ -2206,7 +2411,7 @@
     },
     {
         "Sequencia'": "GGAACUGACCGCAAACGAGGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 61.9,
         "AG": -2.42,
@@ -2219,7 +2424,7 @@
     },
     {
         "Sequencia'": "GAACUGACCGCAAACGAGGCC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 61.9,
         "AG": -4.47,
@@ -2232,8 +2437,8 @@
     },
     {
         "Sequencia'": "ACCGCAAACGAGGCCGCCAGA",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -1.42,
         "Falhas": [
@@ -2245,7 +2450,7 @@
     },
     {
         "Sequencia'": "CAAACGAGGCCGCCAGACCUA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 61.9,
         "AG": -2.11,
@@ -2258,8 +2463,8 @@
     },
     {
         "Sequencia'": "CCAGACCUACACCCGCUACCA",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 61.9,
         "AG": -0.95,
         "Falhas": [
@@ -2271,7 +2476,7 @@
     },
     {
         "Sequencia'": "CUACACCCGCUACCAGACCCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -1.9,
@@ -2284,8 +2489,8 @@
     },
     {
         "Sequencia'": "UACACCCGCUACCAGACCCUG",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 61.9,
         "AG": -0.71,
         "Falhas": [
@@ -2297,8 +2502,8 @@
     },
     {
         "Sequencia'": "GCUACCAGACCCUGGAGCUGG",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 66.67,
         "AG": -0.89,
         "Falhas": [
@@ -2310,8 +2515,8 @@
     },
     {
         "Sequencia'": "AGACCCUGGAGCUGGAGAAAG",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -4.5,
         "Falhas": [
@@ -2322,7 +2527,7 @@
     },
     {
         "Sequencia'": "CCCUGGAGCUGGAGAAAGAAU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 52.38,
         "AG": -8.17,
@@ -2333,20 +2538,33 @@
         "posicao": "544:565"
     },
     {
-        "Sequencia'": "GAGAAAGAAUUUCACUACAAU",
-        "Pontuacao": 6,
-        "TM": 0.28,
+        "Sequencia'": "AGAAAGAAUUUCACUACAAUC",
+        "Pontuacao": 7,
+        "TM": -4.85,
         "CG": 28.57,
-        "AG": -1.08,
+        "AG": -0.66,
         "Falhas": [
-            "free energy",
+            "tm",
+            "free energy"
+        ],
+        "posicao": "556:577"
+    },
+    {
+        "Sequencia'": "CACUACAAUCGCUACCUGACG",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 52.38,
+        "AG": -2.24,
+        "Falhas": [
+            "tm",
+            "position 10",
             "position 3"
         ],
-        "posicao": "555:576"
+        "posicao": "567:588"
     },
     {
         "Sequencia'": "CUACAAUCGCUACCUGACGCG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 57.14,
         "AG": -5.06,
@@ -2359,8 +2577,8 @@
     },
     {
         "Sequencia'": "UACAAUCGCUACCUGACGCGG",
-        "Pontuacao": 6,
-        "TM": 0.28,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 57.14,
         "AG": -5.83,
         "Falhas": [
@@ -2372,7 +2590,7 @@
     },
     {
         "Sequencia'": "ACAAUCGCUACCUGACGCGGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 61.9,
         "AG": -5.82,
@@ -2385,8 +2603,8 @@
     },
     {
         "Sequencia'": "UGACGCGGCGGCGGCGCAUCG",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 20.78,
         "CG": 80.95,
         "AG": -1.16,
         "Falhas": [
@@ -2397,8 +2615,34 @@
         "posicao": "583:604"
     },
     {
+        "Sequencia'": "CGGCGGCGGCGCAUCGAGAUC",
+        "Pontuacao": 7,
+        "TM": 25.9,
+        "CG": 76.19,
+        "AG": -5.42,
+        "Falhas": [
+            "tm",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "588:609"
+    },
+    {
+        "Sequencia'": "GGCGGCGCAUCGAGAUCGCGC",
+        "Pontuacao": 7,
+        "TM": 20.78,
+        "CG": 76.19,
+        "AG": -3.03,
+        "Falhas": [
+            "position 19",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "592:613"
+    },
+    {
         "Sequencia'": "CGCAUCGAGAUCGCGCACACG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -0.73,
@@ -2411,8 +2655,8 @@
     },
     {
         "Sequencia'": "UCGAGAUCGCGCACACGCUCU",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -1.59,
         "Falhas": [
@@ -2424,7 +2668,7 @@
     },
     {
         "Sequencia'": "CGAGAUCGCGCACACGCUCUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -1.59,
@@ -2437,7 +2681,7 @@
     },
     {
         "Sequencia'": "GAGAUCGCGCACACGCUCUGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -2.71,
@@ -2450,8 +2694,8 @@
     },
     {
         "Sequencia'": "AGAUCGCGCACACGCUCUGCC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -1.5,
         "Falhas": [
@@ -2463,7 +2707,7 @@
     },
     {
         "Sequencia'": "UCGCGCACACGCUCUGCCUCA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -0.6,
@@ -2476,8 +2720,8 @@
     },
     {
         "Sequencia'": "GCACACGCUCUGCCUCACGGA",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -0.34,
         "Falhas": [
@@ -2489,7 +2733,7 @@
     },
     {
         "Sequencia'": "CACACGCUCUGCCUCACGGAA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -1.15,
@@ -2502,8 +2746,8 @@
     },
     {
         "Sequencia'": "UCAGAACCGGCGCAUGAAGUG",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -0.35,
         "Falhas": [
@@ -2515,7 +2759,7 @@
     },
     {
         "Sequencia'": "CAGAACCGGCGCAUGAAGUGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -0.0,
@@ -2528,8 +2772,8 @@
     },
     {
         "Sequencia'": "AGAACCGGCGCAUGAAGUGGA",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -0.26,
         "Falhas": [
@@ -2541,7 +2785,7 @@
     },
     {
         "Sequencia'": "ACCGGCGCAUGAAGUGGAAAA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 20.78,
         "CG": 52.38,
         "AG": -6.35,
@@ -2553,7 +2797,7 @@
     },
     {
         "Sequencia'": "AAAAGGAGAACAAGACCGCGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 52.38,
         "AG": -6.24,
@@ -2566,7 +2810,7 @@
     },
     {
         "Sequencia'": "CAAGACCGCGGGCCCGGGGAC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 80.95,
         "AG": -3.68,
@@ -2579,8 +2823,8 @@
     },
     {
         "Sequencia'": "AGACCGCGGGCCCGGGGACCA",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 20.78,
         "CG": 80.95,
         "AG": -0.82,
         "Falhas": [
@@ -2591,22 +2835,9 @@
         "posicao": "688:709"
     },
     {
-        "Sequencia'": "ACCGCGGGCCCGGGGACCACC",
-        "Pontuacao": 6,
-        "TM": 20.78,
-        "CG": 85.71,
-        "AG": -1.56,
-        "Falhas": [
-            "position 13",
-            "position 10",
-            "position 3"
-        ],
-        "posicao": "690:711"
-    },
-    {
         "Sequencia'": "CGGGGACCACCGGCCAAGACA",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 71.43,
         "AG": -4.88,
         "Falhas": [
@@ -2618,7 +2849,7 @@
     },
     {
         "Sequencia'": "GGACCACCGGCCAAGACAGGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 71.43,
         "AG": -0.25,
@@ -2631,7 +2862,7 @@
     },
     {
         "Sequencia'": "CCACCGGCCAAGACAGGGCUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 20.78,
         "CG": 71.43,
         "AG": -0.39,
@@ -2644,8 +2875,8 @@
     },
     {
         "Sequencia'": "CACCGGCCAAGACAGGGCUGA",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -0.17,
         "Falhas": [
@@ -2657,7 +2888,7 @@
     },
     {
         "Sequencia'": "CCGGCCAAGACAGGGCUGAAG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 66.67,
         "AG": -4.78,
@@ -2670,8 +2901,8 @@
     },
     {
         "Sequencia'": "CGGCCAAGACAGGGCUGAAGC",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 66.67,
         "AG": -2.45,
         "Falhas": [
@@ -2683,7 +2914,7 @@
     },
     {
         "Sequencia'": "GGCUGAAGCAGAGGAGGAAGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -1.28,
@@ -2696,7 +2927,7 @@
     },
     {
         "Sequencia'": "AGAGGAAGAGUGAGGGAUGGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -1.49,
@@ -2709,7 +2940,7 @@
     },
     {
         "Sequencia'": "AGGAAGAGUGAGGGAUGGAGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -0.22,
@@ -2722,7 +2953,7 @@
     },
     {
         "Sequencia'": "AGUGAGGGAUGGAGAAAGGGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -0.16,
@@ -2735,8 +2966,8 @@
     },
     {
         "Sequencia'": "UGAGGGAUGGAGAAAGGGCAG",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -0.62,
         "Falhas": [
@@ -2748,7 +2979,7 @@
     },
     {
         "Sequencia'": "GGGAUGGAGAAAGGGCAGAGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -0.16,
@@ -2761,8 +2992,8 @@
     },
     {
         "Sequencia'": "GGCAGAGGAAGAGACAUGAGA",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 52.38,
         "AG": -2.97,
         "Falhas": [
@@ -2774,7 +3005,7 @@
     },
     {
         "Sequencia'": "AAAGGGAGAGGAAGAGAAGCC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -1.25,
@@ -2787,8 +3018,8 @@
     },
     {
         "Sequencia'": "GGAGAGGAAGAGAAGCCCAGC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 61.9,
         "AG": -2.32,
         "Falhas": [
@@ -2799,7 +3030,7 @@
     },
     {
         "Sequencia'": "GAGGAAGAGAAGCCCAGCUCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -1.08,
@@ -2812,7 +3043,7 @@
     },
     {
         "Sequencia'": "GAAGAGAAGCCCAGCUCUGGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 61.9,
         "AG": -2.83,
@@ -2825,8 +3056,8 @@
     },
     {
         "Sequencia'": "AGAGAAGCCCAGCUCUGGGAA",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -2.18,
         "Falhas": [
@@ -2838,7 +3069,7 @@
     },
     {
         "Sequencia'": "GAAGCCCAGCUCUGGGAACUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -2.58,
@@ -2851,8 +3082,8 @@
     },
     {
         "Sequencia'": "AAGCCCAGCUCUGGGAACUGA",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -3.08,
         "Falhas": [
@@ -2864,8 +3095,8 @@
     },
     {
         "Sequencia'": "GAAUAGGGAAGUAAAAAAACA",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 28.57,
         "AG": -2.94,
         "Falhas": [
@@ -2875,8 +3106,21 @@
         "posicao": "840:861"
     },
     {
+        "Sequencia'": "AAAACAAAAAAAAAACCCUAU",
+        "Pontuacao": 7,
+        "TM": -9.97,
+        "CG": 19.05,
+        "AG": -4.92,
+        "Falhas": [
+            "tm",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "876:897"
+    },
+    {
         "Sequencia'": "AAAAACCCUAUUUAAAUGAAA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 19.05,
         "AG": -0.87,
@@ -2888,7 +3132,7 @@
     },
     {
         "Sequencia'": "AACCCUAUUUAAAUGAAAGGA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 28.57,
         "AG": -1.03,
@@ -2901,8 +3145,8 @@
     },
     {
         "Sequencia'": "GAAAGGAGUUUAAAAACAUUU",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 23.81,
         "AG": -3.77,
         "Falhas": [
@@ -2913,7 +3157,7 @@
     },
     {
         "Sequencia'": "AAAGGAGUUUAAAAACAUUUU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 19.05,
         "AG": -3.35,
@@ -2924,8 +3168,72 @@
         "posicao": "904:925"
     },
     {
+        "Sequencia'": "UUAAAAACAUUUUUUAAGGAG",
+        "Pontuacao": 7,
+        "TM": -9.97,
+        "CG": 19.05,
+        "AG": -5.96,
+        "Falhas": [
+            "tm",
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "912:933"
+    },
+    {
+        "Sequencia'": "AAAAACAUUUUUUAAGGAGGG",
+        "Pontuacao": 7,
+        "TM": -9.97,
+        "CG": 28.57,
+        "AG": -8.17,
+        "Falhas": [
+            "tm",
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "914:935"
+    },
+    {
+        "Sequencia'": "AAAACAUUUUUUAAGGAGGGA",
+        "Pontuacao": 7,
+        "TM": -9.97,
+        "CG": 28.57,
+        "AG": -8.44,
+        "Falhas": [
+            "tm",
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "915:936"
+    },
+    {
+        "Sequencia'": "AUUUUGGUUUUUCAACACUGA",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -3.48,
+        "Falhas": [
+            "tm",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "946:967"
+    },
+    {
+        "Sequencia'": "UUUCAACACUGAAAAAAUACU",
+        "Pontuacao": 7,
+        "TM": 0.28,
+        "CG": 23.81,
+        "AG": -1.23,
+        "Falhas": [
+            "free energy",
+            "position 3"
+        ],
+        "posicao": "955:976"
+    },
+    {
         "Sequencia'": "ACACUGAAAAAAUACUACCUA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 28.57,
         "AG": -1.34,
@@ -2938,8 +3246,8 @@
     },
     {
         "Sequencia'": "GGUUUGGUUUUUUUGUACAAU",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 28.57,
         "AG": -2.85,
         "Falhas": [
@@ -2949,20 +3257,46 @@
         "posicao": "996:1017"
     },
     {
-        "Sequencia'": "GUUUGGUUUUUUUGUACAAUA",
-        "Pontuacao": 6,
+        "Sequencia'": "UGUACAAUAUGAAAAGGAUAU",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 23.81,
+        "AG": -0.29,
+        "Falhas": [
+            "tm",
+            "position 19!= A",
+            "position 3"
+        ],
+        "posicao": "1009:1030"
+    },
+    {
+        "Sequencia'": "AAAGGAUAUUAUCUACCUGUU",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -1.95,
+        "Falhas": [
+            "tm",
+            "position 19",
+            "position 19!= A"
+        ],
+        "posicao": "1021:1042"
+    },
+    {
+        "Sequencia'": "AUUGUAAGGUCUUUGUAAAAU",
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 23.81,
-        "AG": -2.62,
+        "AG": -1.14,
         "Falhas": [
             "free energy",
             "position 3"
         ],
-        "posicao": "997:1018"
+        "posicao": "1083:1104"
     },
     {
         "Sequencia'": "UAAGGUCUUUGUAAAAUCUUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 28.57,
         "AG": -2.53,
@@ -2974,7 +3308,7 @@
     },
     {
         "Sequencia'": "UGCUGUCUUUGUGGACUGUGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -0.71,
@@ -2987,7 +3321,7 @@
     },
     {
         "Sequencia'": "CUGUCUUUGUGGACUGUGGGU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 52.38,
         "AG": -3.5,
@@ -3000,7 +3334,7 @@
     },
     {
         "Sequencia'": "GUCUUUGUGGACUGUGGGUCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 52.38,
         "AG": -4.67,
@@ -3013,8 +3347,8 @@
     },
     {
         "Sequencia'": "CUUUGUGGACUGUGGGUCUGG",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 57.14,
         "AG": -4.84,
         "Falhas": [
@@ -3026,8 +3360,8 @@
     },
     {
         "Sequencia'": "UGGACUGUGGGUCUGGACUAA",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 52.38,
         "AG": -2.46,
         "Falhas": [
@@ -3039,7 +3373,7 @@
     },
     {
         "Sequencia'": "GGACUGUGGGUCUGGACUAAC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -3.48,
@@ -3051,7 +3385,7 @@
     },
     {
         "Sequencia'": "CUGUGGGUCUGGACUAACCCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -2.28,
@@ -3064,7 +3398,7 @@
     },
     {
         "Sequencia'": "GUGGGUCUGGACUAACCCUGU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -0.42,
@@ -3077,8 +3411,8 @@
     },
     {
         "Sequencia'": "GGGUCUGGACUAACCCUGUGG",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -0.35,
         "Falhas": [
@@ -3090,7 +3424,7 @@
     },
     {
         "Sequencia'": "GGUCUGGACUAACCCUGUGGU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -1.36,
@@ -3103,7 +3437,7 @@
     },
     {
         "Sequencia'": "UCUGGACUAACCCUGUGGUUG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 52.38,
         "AG": -1.76,
@@ -3116,8 +3450,8 @@
     },
     {
         "Sequencia'": "CUGGACUAACCCUGUGGUUGC",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 57.14,
         "AG": -0.14,
         "Falhas": [
@@ -3129,7 +3463,7 @@
     },
     {
         "Sequencia'": "GGACUAACCCUGUGGUUGCCU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -1.82,
@@ -3142,8 +3476,8 @@
     },
     {
         "Sequencia'": "ACCCUGUGGUUGCCUGCCCUC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -1.37,
         "Falhas": [
@@ -3155,7 +3489,7 @@
     },
     {
         "Sequencia'": "GUGGUUGCCUGCCCUCCUGAG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -1.34,
@@ -3168,8 +3502,8 @@
     },
     {
         "Sequencia'": "CCCUCCUGAGCCUCCGCCUUC",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 71.43,
         "AG": -1.82,
         "Falhas": [
@@ -3181,7 +3515,7 @@
     },
     {
         "Sequencia'": "CCUCCUGAGCCUCCGCCUUCC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 71.43,
         "AG": -0.14,
@@ -3194,8 +3528,8 @@
     },
     {
         "Sequencia'": "UGAGCCUCCGCCUUCCCAGCA",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -1.09,
         "Falhas": [
@@ -3207,7 +3541,7 @@
     },
     {
         "Sequencia'": "GCCUCCGCCUUCCCAGCAGCG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 20.78,
         "CG": 76.19,
         "AG": -1.25,
@@ -3220,8 +3554,8 @@
     },
     {
         "Sequencia'": "CCUCCGCCUUCCCAGCAGCGG",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 76.19,
         "AG": -0.01,
         "Falhas": [
@@ -3233,7 +3567,7 @@
     },
     {
         "Sequencia'": "CUUCCCAGCAGCGGCACCAAG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -1.18,
@@ -3246,7 +3580,7 @@
     },
     {
         "Sequencia'": "UUCCCAGCAGCGGCACCAAGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -0.17,
@@ -3259,7 +3593,7 @@
     },
     {
         "Sequencia'": "CCAGCAGCGGCACCAAGGGGC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 76.19,
         "AG": -1.32,
@@ -3272,8 +3606,8 @@
     },
     {
         "Sequencia'": "GCAGCGGCACCAAGGGGCCUU",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 71.43,
         "AG": -0.39,
         "Falhas": [
@@ -3285,8 +3619,8 @@
     },
     {
         "Sequencia'": "GCGGCACCAAGGGGCCUUAGG",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 71.43,
         "AG": -4.07,
         "Falhas": [
@@ -3298,7 +3632,7 @@
     },
     {
         "Sequencia'": "GCACCAAGGGGCCUUAGGGAG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 66.67,
         "AG": -0.19,
@@ -3311,7 +3645,7 @@
     },
     {
         "Sequencia'": "GGGCCUUAGGGAGCCCCAAAA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 61.9,
         "AG": -4.6,
@@ -3324,7 +3658,7 @@
     },
     {
         "Sequencia'": "AGCCCCAAAACCUACCACUCG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 57.14,
         "AG": -2.98,
@@ -3337,7 +3671,7 @@
     },
     {
         "Sequencia'": "CCCAAAACCUACCACUCGCGU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 5.4,
         "CG": 57.14,
         "AG": -3.39,
@@ -3350,8 +3684,8 @@
     },
     {
         "Sequencia'": "CCAAAACCUACCACUCGCGUG",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 0.28,
         "CG": 57.14,
         "AG": -4.48,
         "Falhas": [
@@ -3362,9 +3696,22 @@
         "posicao": "1230:1251"
     },
     {
+        "Sequencia'": "CAAAACCUACCACUCGCGUGU",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 52.38,
+        "AG": -4.31,
+        "Falhas": [
+            "tm",
+            "position 19!= A",
+            "position 10"
+        ],
+        "posicao": "1231:1252"
+    },
+    {
         "Sequencia'": "ACCUACCACUCGCGUGUUCCC",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 61.9,
         "AG": -0.11,
         "Falhas": [
@@ -3376,8 +3723,8 @@
     },
     {
         "Sequencia'": "ACUCGCGUGUUCCCCAAGCGC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 66.67,
         "AG": -0.37,
         "Falhas": [
@@ -3389,8 +3736,8 @@
     },
     {
         "Sequencia'": "CUCGCGUGUUCCCCAAGCGCC",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 71.43,
         "AG": -0.83,
         "Falhas": [
@@ -3402,7 +3749,7 @@
     },
     {
         "Sequencia'": "GCGUGUUCCCCAAGCGCCUGG",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 10.53,
         "CG": 71.43,
         "AG": -3.28,
@@ -3415,8 +3762,8 @@
     },
     {
         "Sequencia'": "GUUCCCCAAGCGCCUGGCUGC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 71.43,
         "AG": -1.09,
         "Falhas": [
@@ -3428,7 +3775,7 @@
     },
     {
         "Sequencia'": "CCUGGCUGCUGCUUCUUGCUU",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 57.14,
         "AG": -4.85,
@@ -3441,8 +3788,8 @@
     },
     {
         "Sequencia'": "CUGGCUGCUGCUUCUUGCUUC",
-        "Pontuacao": 6,
-        "TM": 15.65,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -3.42,
         "Falhas": [
@@ -3454,8 +3801,8 @@
     },
     {
         "Sequencia'": "UGGCUGCUGCUUCUUGCUUCC",
-        "Pontuacao": 6,
-        "TM": 10.53,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 57.14,
         "AG": -2.53,
         "Falhas": [
@@ -3467,7 +3814,7 @@
     },
     {
         "Sequencia'": "GGCUGCUGCUUCUUGCUUCCC",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 15.65,
         "CG": 61.9,
         "AG": -1.08,
@@ -3480,8 +3827,8 @@
     },
     {
         "Sequencia'": "UGCUGCUUCUUGCUUCCCGUC",
-        "Pontuacao": 6,
-        "TM": 5.4,
+        "Pontuacao": 7,
+        "TM": 10.53,
         "CG": 57.14,
         "AG": -0.55,
         "Falhas": [
@@ -3493,8 +3840,8 @@
     },
     {
         "Sequencia'": "CGUCCCCCAGCCCCAUGCUCC",
-        "Pontuacao": 6,
-        "TM": 20.78,
+        "Pontuacao": 7,
+        "TM": 15.65,
         "CG": 76.19,
         "AG": -2.33,
         "Falhas": [
@@ -3506,7 +3853,7 @@
     },
     {
         "Sequencia'": "UCUAAAGGAUGGAAAAAUAAA",
-        "Pontuacao": 6,
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 23.81,
         "AG": -3.47,
@@ -3517,21 +3864,21 @@
         "posicao": "1325:1346"
     },
     {
-        "Sequencia'": "CUAAAGGAUGGAAAAAUAAAA",
-        "Pontuacao": 6,
+        "Sequencia'": "UAAAGGAUGGAAAAAUAAAAC",
+        "Pontuacao": 7,
         "TM": 0.28,
         "CG": 23.81,
-        "AG": -4.32,
+        "AG": -3.6,
         "Falhas": [
             "free energy",
             "position 10"
         ],
-        "posicao": "1326:1347"
+        "posicao": "1327:1348"
     },
     {
         "Sequencia'": "AAAGGAUGGAAAAAUAAAACG",
-        "Pontuacao": 6,
-        "TM": 0.28,
+        "Pontuacao": 7,
+        "TM": 5.4,
         "CG": 28.57,
         "AG": -2.16,
         "Falhas": [
@@ -3539,5 +3886,18 @@
             "position 10"
         ],
         "posicao": "1328:1349"
+    },
+    {
+        "Sequencia'": "GAUGGAAAAAUAAAACGCAAU",
+        "Pontuacao": 7,
+        "TM": -4.85,
+        "CG": 28.57,
+        "AG": -0.25,
+        "Falhas": [
+            "tm",
+            "position 10",
+            "position 3"
+        ],
+        "posicao": "1332:1353"
     }
 ]

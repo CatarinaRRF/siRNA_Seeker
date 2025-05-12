@@ -27,6 +27,7 @@ class model_forms(models.Model):
     size = models.IntegerField(default=21, blank=True, null=True)
     include_tm = models.BooleanField(default=True)
     max_tm = models.FloatField(blank=True, null=True)
+    threshold = models.FloatField(default=0.6, blank=True, null=True)
 
     # Configurações Blast
     # ------------------------------------------------------------------------------#

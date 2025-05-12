@@ -52,9 +52,9 @@
             <form class="card" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 
-                <!-- siRNAs Parameters -->
+                <!-- siRNA Parameters -->
                 <div class="card-body">
-                    <h2 class="card-title"><b> siRNAs Parameters </b></h2>
+                    <h2 class="card-title"><b> Parameters </b></h2>
                     <div class="row row-cards">
                         <div class="col-sm-6 col-md-4">
                             <div class="mb-3">
@@ -104,9 +104,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-4 d-none">
-                            <input type="hidden" name="include_tm" value="True">
-                        </div>
                     </div>
                     <div class="row row-cards">
                         <div class="col-sm-6 col-md-4">
@@ -115,7 +112,40 @@
                                 {{ form.max_tm }}
                             </div>
                         </div>
+                        
+                        <div class="col-sm-6 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label" for="{{ form.threshold.id_for_label }}">Threshold</label>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        {{ form.threshold }}
+                                    </div>
+                                    <div class="col-auto align-self-center">
+                                        <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="
+                                            <p> The threshold determines the minimum compliance required with the evaluation 
+                                            parameters for a sequence to be considered acceptable. 
+                                            By default, it is set to 0.6, meaning the sequence must achieve at 
+                                            least 60% of the total possible score. </p><p class='mb-0'>">
+                                            ?
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Include tm</label>
+                            <div>
+                                {% for radio in form.include_tm %}
+                                <label class="form-check form-check-inline">
+                                    {{ radio.tag }}
+                                    <span class="form-check-label">{{ radio.choice_label }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+
                     </div>
+                    
                 </div>
 
                 <!-- submit -->

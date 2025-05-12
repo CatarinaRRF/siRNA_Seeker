@@ -8,9 +8,9 @@ from django_celery_results.models import TaskResult
 
 @shared_task(bind=True)
 def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
-              max_tm, run_blast, organism, database, identity, query_cover):
+              max_tm, threshold, run_blast, organism, database, identity, query_cover):
     
-    print(f'include_tm:{include_tm} and run_blast:{run_blast}')
+    print(f'include_tm:{include_tm}, run_blast:{run_blast}, threshold:{threshold}')
     user_id = User.objects.get(username=user)
     # Cache settings 
     cache.set(self.request.id, user_id, 300)
@@ -32,11 +32,11 @@ def selection(self, user, sequence, sequence_tag, autor, size, include_tm,
 
         # Filtering siRNA candidates 
         progress_recorder.set_progress(30, 100, description='Filtering siRNA candidates')
-        table, sirna_verified = filtro_siRNA(candidates, tuplas, conformidade=0.6,
+        table, sirna_verified = filtro_siRNA(candidates, tuplas, threshold=threshold,
                                              autor=autor,
                                              tm=include_tm, tmmax=max_tm)
         
-        
+         
         # Runing Blast
         if run_blast == True:
             progress_recorder.set_progress(50, 100, description='Running Blast')
