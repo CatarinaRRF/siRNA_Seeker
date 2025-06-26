@@ -15,6 +15,9 @@ from Bio.SeqUtils import gc_fraction
 import pandas as pd
 from ViennaRNA import RNA
 
+from sirna_seeker.perl.pain import *
+#from perl.pain import *
+
 ## Blast
 #--------------------#
 from Bio.SeqRecord import SeqRecord
@@ -94,8 +97,6 @@ def possiveis_siRNA(dado, tamanho=21):
 # ----------------------------------------------------------------- #
 #                            Free Energy                            #
 # ----------------------------------------------------------------- #
-from Bio.Seq import Seq
-
 # Parâmetros de energia do modelo nearest-neighbor (valores refinados do usuário)
 nearest_neighbor_params = {
     'GC': (-16.52, -42.13),  # GC/CG
@@ -284,7 +285,6 @@ def Ui_Tei (sequence, extremidade=7):
     score += 1
   else:
     falha.append(str("Repetition of more than 9 C/G in a row"))
-    score -= 2
 
   return score, falha
 
@@ -367,6 +367,9 @@ def siRNA_score (sequence, tuplas,
         conteudo_gc = round(gc_fraction(sequence)*100, 2)
         if 30 <= conteudo_gc <= 52:
             score += 1
+        else:
+            falha.append("GC content out of range 30:52")
+
 
         # tempmelt
         #--------------------------------------------------------------#
@@ -380,10 +383,13 @@ def siRNA_score (sequence, tuplas,
 
         # G°
         #--------------------------------------------------------------#
-        energia_livre = free_energy(sequence)
-        dG_antisense, dG_diff = energia_livre
+        thermo = Thermodynamics(sequence)
+        thermo.cal_energy()
+        thermo.cal_duplex_energy_diff()
+        dG_antisense = thermo.antisense_energy
+        dG_diff = thermo.energy_diff
         #if autor != 'ui-tei':
-        if -13 < dG_antisense < -7:
+        if -14 < dG_diff < -6:
                 score += 2
         else:
                 falha.append(str("free energy"))
@@ -419,6 +425,8 @@ def siRNA_score (sequence, tuplas,
                     break
         #--------------------------------------------------------------#
         return score, falha, conteudo_gc, dG_diff, tm_score, posicao
+
+#print(siRNA_score("CGCAAUAUCUGUUUCUUCU", 'ui-tei'))
 # ----------------------------------------------------------------- #
 # Selecionando os siRNA funcionais
 # ----------------------------------------------------------------- #
@@ -449,11 +457,11 @@ def filtro_siRNA(sequences, tuplas, threshold=0.6,
         if tm == True:
           total_reynolds = 11 * threshold
           total_uitei = 9 * threshold
-          total_ama = 11 * threshold
+          total_ama = 10 * threshold
         else:
           total_reynolds = 10 * threshold
           total_uitei = 8 * threshold
-          total_ama = 10 * threshold
+          total_ama = 9 * threshold
 
 
         # Iterador
@@ -468,19 +476,19 @@ def filtro_siRNA(sequences, tuplas, threshold=0.6,
             # ----------------------------------#
             incluir_siRNA = True
 
-            if 30 <= resultado[2] <= 52:
+            if not (29 <= resultado[2] <= 53):
                 incluir_siRNA = False
 
             if autor == "reynolds":
-                if resultado[0] <= total_reynolds: #or not (0 < resultado[4] <= tmmax):
+                if resultado[0] < total_reynolds: #or not (0 < resultado[4] <= tmmax):
                     incluir_siRNA = False
 
             if autor == 'ui-tei':
-              if resultado[0] <= total_uitei: #or not (-13 < resultado[3] <-7):
+              if resultado[0] < total_uitei: #or not (-13 < resultado[3] <-7):
                     incluir_siRNA = False
 
             if autor == 'amarzguioui':
-                if resultado[0] <= total_ama:
+                if resultado[0] < total_ama:
                     incluir_siRNA = False
 
             if incluir_siRNA:
@@ -494,7 +502,7 @@ def filtro_siRNA(sequences, tuplas, threshold=0.6,
 
         # Organizando os resultados por pontuação
         resultados = list(zip(siRNA_verificados, score, TM_score, conteudo_gc, energia_livre, falha, posicao))
-        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)[:50]
+        resultados_ordenados = sorted(resultados, key=lambda x: x[1], reverse=True)
         siRNA_verificados = [resultado[0] for resultado in resultados_ordenados]
         score = [resultado[1] for resultado in resultados_ordenados]
         TM_score = [resultado[2] for resultado in resultados_ordenados]

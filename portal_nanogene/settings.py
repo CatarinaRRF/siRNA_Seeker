@@ -26,6 +26,17 @@ SECRET_KEY = "django-insecure-ko@8^pgwg&g+%2pry)8^%q$)smwop$6la^ks^6+%lsz%*3%z77
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+"""
+DEBUG = False
+ALLOWED_HOSTS = [
+    'www.nanogene.com.br',
+    'nanogene.com.br',
+    'www.nanogene.com.br',
+    'nanogene.com.br',
+    '127.0.0.1',
+]
+"""
+
 # Application definition
 INSTALLED_APPS = [
     "django.contrib.admin",
