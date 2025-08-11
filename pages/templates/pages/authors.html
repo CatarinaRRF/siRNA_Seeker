@@ -1,0 +1,422 @@
+{% extends "navbar_footer_main.html" %}
+{% load static %}
+
+{% block conteudo %}
+
+<!-- Conteúdo Principal -->
+    <main class="main">
+        <style>
+            /* Estilos da Página */
+            .page-section + .page-section {
+                margin-top: 4rem;
+            }
+            .section-title {
+                position: relative;
+                padding-bottom: 1rem;
+                margin-bottom: 3.5rem;
+                text-align: center;
+            }
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background-color: #206bc4;
+            }
+
+            /* --- Layout em Grade (Grid) para Autores --- */
+            .author-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem; /* Espaçamento entre os cards */
+            }
+            
+            /* Estilos dos Cards na Grade */
+            .author-grid-card {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                color: inherit;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                height: 100%;
+                text-align: center;
+                padding: 1.5rem;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+            .author-grid-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 16px rgba(0,0,0,0.1);
+            }
+            .author-grid-card img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+                border: 4px solid #f8f9fa;
+            }
+            .author-grid-card .card-title {
+                margin-bottom: 0.25rem;
+                font-size: 1.1rem;
+                color: #182433;
+            }
+            .author-grid-card .card-subtitle {
+                font-size: 0.9rem;
+                color: #6c757d;
+                margin-bottom: 0.75rem;
+            }
+            .author-grid-card .card-description {
+                font-size: 0.85rem;
+                color: #333;
+                flex-grow: 1; /* Faz a descrição ocupar o espaço restante */
+                line-height: 1.4;
+            }
+
+            /* Estilos do Modal */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(255, 255, 255, 0.3);
+                animation: fadeIn 0.3s;
+                visibility: hidden;
+            }
+
+            .modal.show {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto;
+                padding: 2rem;
+                border: 1px solid #888;
+                width: 90%;
+                max-width: 700px;
+                border-radius: 8px;
+                position: relative;
+                animation: slideIn 0.4s;
+                display: flex;
+                align-items: flex-start;
+            }
+            .modal-close {
+                color: #aaa;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .modal-close:hover,
+            .modal-close:focus {
+                color: black;
+            }
+            .modal-photo {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: 2rem;
+                flex-shrink: 0;
+            }
+            .modal-body {
+                flex-grow: 1;
+            }
+            .modal-body h3 {
+                margin-top: 0;
+            }
+            @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+            @keyframes slideIn { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+            
+            @media (max-width: 768px) {
+                .modal-content {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .modal-photo {
+                    margin-right: 0;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        </style>
+        <div class="section pt-6 pb-6 bg-secondary" style="padding-bottom: 4rem;">
+            <div class="container text-center">
+                <h1 class="page-title" data-aos="fade-up">Our Research and Development Team</h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Meet the talent behind our projects. Our team is comprised of researchers and developers with extensive academic and market experience, dedicated to creating innovative solutions.
+                </p>
+            </div>
+        </div>
+
+        <div class="page-body">
+            <div class="container">
+                <div class="author-grid">
+                    <!-- Card Matheus (Coordenador) -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="author-grid-card" data-modal-target="#details-matheus">
+                            <img src="./static/img/matheus.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/206BC4/FFFFFF?text=Foto';" alt="Foto de Dr. Matheus de Souza Gomes">
+                            <h3 class="card-title">Dr. Matheus S. Gomes</h3>
+                            <p class="card-subtitle">Coordenador do Projeto</p>
+                            <p class="card-description">Especialista em Bioinformática, Ciência de Dados e Biologia Molecular.</p>
+                        </div>
+                    </div>
+                    <!-- Card Catarina -->
+                    <div data-aos="fade-up" data-aos-delay="150">
+                        <div class="author-grid-card" data-modal-target="#details-catarina">
+                            <img src="./static/img/catarina.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Catarina Ribeiro Rezende de Freitas">
+                            <h3 class="card-title">Catarina R. de Freitas</h3>
+                            <p class="card-subtitle">Desenvolvedora Principal</p>
+                            <p class="card-description">Estudante de graduação em Biotecnologia na UFU.</p>
+                        </div>
+                    </div>
+                    <!-- Card Valdeir -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="author-grid-card" data-modal-target="#details-valdeir">
+                            <img src="./static/img/valdeir.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Valdeir Braz de Paula">
+                            <h3 class="card-title">Valdeir Braz de Paula</h3>
+                            <p class="card-subtitle">Desenvolvedor Principal</p>
+                            <p class="card-description">Estudante de graduação em Biotecnologia na UFU.</p>
+                        </div>
+                    </div>
+                    <!-- Card Frederico -->
+                    <div data-aos="fade-up" data-aos-delay="250">
+                        <div class="author-grid-card" data-modal-target="#details-frederico">
+                            <img src="./static/img/frederico.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr. Frederico Pittella Silva">
+                            <h3 class="card-title">Dr. Frederico Pittella</h3>
+                            <p class="card-subtitle">Pesquisador Sênior</p>
+                            <p class="card-description">Especialista em Nanotecnologia Farmacêutica e Terapia Gênica.</p>
+                        </div>
+                    </div>
+                    <!-- Card Laurence -->
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="author-grid-card" data-modal-target="#details-laurence">
+                            <img src="./static/img/laurence.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr. Laurence Rodrigues">
+                            <h3 class="card-title">Dr. Laurence Rodrigues</h3>
+                            <p class="card-subtitle">Pesquisador em IA</p>
+                            <p class="card-description">Especialista em Machine Learning e Bioinformática.</p>
+                        </div>
+                    </div>
+                    <!-- Card Pedro -->
+                    <div data-aos="fade-up" data-aos-delay="350">
+                        <div class="author-grid-card" data-modal-target="#details-pedro">
+                            <img src="./static/img/pedro.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr. Pedro Luiz Bertarini">
+                            <h3 class="card-title">Dr. Pedro Luiz Bertarini</h3>
+                            <p class="card-subtitle">Pesquisador em Engenharia</p>
+                            <p class="card-description">Especialista em Sistemas de Comunicações, IoT e IA.</p>
+                        </div>
+                    </div>
+                    <!-- Card Silvia -->
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <div class="author-grid-card" data-modal-target="#details-silvia">
+                            <img src="./static/img/silvia.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr.ª Silvia Ligorio Fialho">
+                                <h3 class="card-title">Dr.ª Silvia Ligorio Fialho</h3>
+                                <p class="card-subtitle">Pesquisadora Farmacêutica</p>
+                                <p class="card-description">Especialista em sistemas de liberação de fármacos.</p>
+                            </div>
+                        </div>
+                    <!-- Card Ana -->
+                    <div data-aos="fade-up" data-aos-delay="450">
+                        <div class="author-grid-card" data-modal-target="#details-ana">
+                            <img src="./static/img/ana.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de M.ª Ana Beatriz Valle">
+                            <h3 class="card-title">M.ª Ana Beatriz Valle</h3>
+                            <p class="card-subtitle">Pesquisadora em Biotecnologia</p>
+                            <p class="card-description">Especialista em silenciamento de genes e nanotecnologia.</p>
+                        </div>
+                    </div>
+                    <!-- Card Davi -->
+                    <div data-aos="fade-up" data-aos-delay="500">
+                        <div class="author-grid-card" data-modal-target="#details-davi">
+                            <img src="./static/img/davi.png" onerror="this.onerror=null;this.src='https://placehold.co/120x120/cccccc/FFFFFF?text=Foto';" alt="Foto de Davi Trombini Aleixo">
+                            <h3 class="card-title">Davi Trombini Aleixo</h3>
+                            <p class="card-subtitle">Pesquisador em Nanotecnologia</p>
+                            <p class="card-description">Focado no desenvolvimento de sistemas nanoestruturados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Estrutura do Modal -->
+    <div id="authorModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modalBodyContainer">
+                <!-- Conteúdo será injetado aqui pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Detalhado Oculto para o Modal -->
+    <div class="hidden-details" style="display: none;">
+        <div id="details-matheus">
+            <img src="./static/img/matheus.png" onerror="this.onerror=null; this.src='https://placehold.co/150x150/206BC4/FFFFFF?text=Foto';" alt="Foto de Dr. Matheus de Souza Gomes" class="modal-photo">
+            <div class="modal-body">
+                <h3>Dr. Matheus de Souza Gomes</h3>
+                <p><strong>Coordenador do Projeto</strong></p>
+                <p>Professor Associado no Instituto de Biotecnologia da Universidade Federal de Uberlândia (UFU), Campus Patos de Minas. Com uma formação interdisciplinar em Farmácia e Sistemas de Informação, é Mestre e Doutor em Biologia Molecular pela UFU, com período de doutorado na Irlanda. Como coordenador do Laboratório de Bioinformática e Análises Moleculares (LBAM), lidera pesquisas nas áreas de Bioinformática, Ciência de Dados e Bioquímica, com notável produção científica e experiência em gestão acadêmica.</p>
+            </div>
+        </div>
+        <div id="details-catarina">
+            <img src="./static/img/catarina.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Catarina Ribeiro Rezende de Freitas" class="modal-photo">
+            <div class="modal-body">
+                <h3>Catarina Ribeiro Rezende de Freitas</h3>
+                <p><strong>Desenvolvedora Principal</strong></p>
+                <p>Estudante de Graduação em Biotecnologia na Universidade Federal de Uberlândia (UFU), Campus Patos de Minas. Formada em Meio Ambiente pela instituição CEFET-MG. Possui experiência em Análise de dados, com conhecimento nas linguagens de programação Python, R e SQL e de softwares AutoCAD, QGIS/ArcGIS. </p>
+            </div>
+        </div>
+        <div id="details-valdeir">
+            <img src="./static/img/valdeir.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Valdeir Braz de Paula" class="modal-photo">
+            <div class="modal-body">
+                <h3>Valdeir Braz de Paula</h3>
+                <p><strong>Desenvolvedor Principal</strong></p>
+                <p>Estudante de Graduação em Biotecnologia na Universidade Federal de Uberlândia (UFU), Campus Patos de Minas.</p>
+            </div>
+        </div>
+        <div id="details-frederico">
+            <img src="./static/img/frederico.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr. Frederico Pittella Silva" class="modal-photo">
+            <div class="modal-body">
+                <h3>Dr. Frederico Pittella Silva</h3>
+                <p><strong>Pesquisador Sênior</strong></p>
+                <p>Professor Adjunto na Universidade Federal de Juiz de Fora (UFJF) e líder do Laboratório de Desenvolvimento de Sistemas Nanoestruturados (LDSNANO). Doutor em Bioengenharia pela Universidade de Tóquio, sua pesquisa de alto impacto é focada em Nanotecnologia Farmacêutica, Sistemas de Liberação de Fármacos e Terapia Gênica. Possui vasta experiência em gestão acadêmica, tendo sido Diretor da Faculdade de Farmácia da UFJF.</p>
+            </div>
+        </div>
+        <div id="details-laurence">
+            <img src="./static/img/laurence.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr. Laurence Rodrigues do Amaral" class="modal-photo">
+            <div class="modal-body">
+                <h3>Dr. Laurence Rodrigues do Amaral</h3>
+                <p><strong>Pesquisador em IA e Computação</strong></p>
+                <p>Professor Associado da Faculdade de Computação (FACOM) da UFU. Doutor em Ciência da Computação, sua expertise abrange Inteligência Artificial, Machine Learning, Algoritmos Genéticos e Bioinformática. Aplica seu conhecimento no desenvolvimento de soluções computacionais para problemas complexos na área da saúde e biotecnologia, participando ativamente de projetos de pesquisa interdisciplinares.</p>
+            </div>
+        </div>
+        <div id="details-pedro">
+            <img src="./static/img/pedro.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr. Pedro Luiz Lima Bertarini" class="modal-photo">
+            <div class="modal-body">
+                <h3>Dr. Pedro Luiz Lima Bertarini</h3>
+                <p><strong>Pesquisador em Engenharia e Telecomunicações</strong></p>
+                <p>Professor da UFU na área de Engenharia Eletrônica e de Telecomunicações. Doutor em Engenharia Elétrica pela USP, sua pesquisa transita entre Sistemas de Comunicações, Processamento de Sinais, Internet das Coisas (IoT) e Inteligência Artificial. Possui experiência na coordenação de cursos e no desenvolvimento de projetos que integram engenharia e ciência de dados.</p>
+            </div>
+        </div>
+        <div id="details-silvia">
+            <img src="./static/img/silvia.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Dr.ª Silvia Ligorio Fialho" class="modal-photo">
+            <div class="modal-body">
+                <h3>Dr.ª Silvia Ligorio Fialho</h3>
+                <p><strong>Pesquisadora em Desenvolvimento Farmacêutico</strong></p>
+                <p>Pesquisadora na Fundação Ezequiel Dias (FUNED) e Doutora em Ciências Farmacêuticas. Coordena pesquisas focadas no desenvolvimento de sistemas de liberação de fármacos para doenças oftálmicas. Seu trabalho é reconhecido e fomentado por importantes agências de pesquisa, destacando-se pela inovação na área da saúde e farmácia.</p>
+            </div>
+        </div>
+        <div id="details-ana">
+            <img src="./static/img/ana.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de M.ª Ana Beatriz Caribé dos Santos Valle" class="modal-photo">
+            <div class="modal-body">
+                <h3>M.ª Ana Beatriz Caribé dos Santos Valle</h3>
+                <p><strong>Pesquisadora em Biotecnologia</strong></p>
+                <p>Mestre em Ciências Biológicas pela UFJF, com pesquisa focada no silenciamento de genes relacionados ao câncer de mama utilizando nanotecnologia. Sua produção científica inclui artigos em periódicos internacionais, demonstrando sua sólida atuação na fronteira da biotecnologia com a terapia gênica.</p>
+            </div>
+        </div>
+        <div id="details-davi">
+            <img src="./static/img/davi.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Foto';" alt="Foto de Davi Trombini Aleixo" class="modal-photo">
+            <div class="modal-body">
+                <h3>Davi Trombini Aleixo</h3>
+                <p><strong>Pesquisador em Nanotecnologia Farmacêutica</strong></p>
+                <p>Doutorando em Ciências Farmacêuticas pela UFJF, com pesquisa focada no desenvolvimento e avaliação de sistemas nanoestruturados para a liberação de fármacos, especialmente para o tratamento de doenças como a leishmaniose. Atua no Laboratório de Desenvolvimento de Sistemas Nanoestruturados (LDSNANO).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+
+            const modal = document.getElementById('authorModal');
+            const modalBodyContainer = document.getElementById('modalBodyContainer');
+            const closeModalBtn = document.querySelector('.modal-close');
+            const authorCards = document.querySelectorAll('.author-grid-card');
+            const modalContent = document.querySelector('.modal-content');
+
+            // Função para abrir modal
+            const openModal = (card) => {
+                const targetId = card.dataset.modalTarget;
+                const detailsSource = document.querySelector(targetId);
+
+                if (!detailsSource) {
+                    console.error('Fonte do conteúdo do modal não encontrada:', targetId);
+                    return;
+                }
+
+                modalBodyContainer.innerHTML = '';
+
+                Array.from(detailsSource.children).forEach(child => {
+                    modalBodyContainer.appendChild(child.cloneNode(true));
+                });
+
+                // Remove qualquer estilo de display:none antes de animar
+                modal.style.display = 'block';
+
+                // Pequeno atraso para permitir a transição
+                requestAnimationFrame(() => {
+                    modal.classList.add('show');
+                });
+            };
+
+            // Função para fechar modal
+            const hideModal = () => {
+                modal.classList.remove('show');
+                // Aguarda a duração da animação antes de esconder de vez
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    modalBodyContainer.innerHTML = '';
+                }, 300); // 300ms = duração da transição no CSS
+            };
+
+            // Evita que clique no card feche o modal
+            authorCards.forEach(card => {
+                card.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    openModal(card);
+                });
+            });
+
+            // Botão X fecha modal
+            closeModalBtn.addEventListener('click', hideModal);
+
+            // Evita fechar clicando dentro do conteúdo
+            modalContent.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            // Fecha clicando no fundo
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    hideModal();
+                }
+            });
+
+            // Fecha no ESC
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('show')) {
+                    hideModal();
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+
+{% endblock conteudo %}
