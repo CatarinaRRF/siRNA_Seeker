@@ -9,4 +9,8 @@ urlpatterns = [
     path('authors', TemplateView.as_view(template_name='pages/authors.html'), name='authors'), #Events
     path('events', TemplateView.as_view(template_name='pages/events.html'), name='events'), #Events
     path('tools', TemplateView.as_view(template_name='pages/tools.html'), name='Tools'), #Pagina que coleta todos as ferramentas do grupo # Pagina com as informações de contato  
+
+    
+    path('erro_404', TemplateView.as_view(template_name='errors/error_404.html'), name='erro_404'),
+    path('erro_500', TemplateView.as_view(template_name='errors/error_500.html'), name='erro_500'),
 ]

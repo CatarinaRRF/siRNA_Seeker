@@ -76,7 +76,7 @@ def loading(request, token):
     user_profile, _ = UserProfile.objects.get_or_create(user=user_p)
     # Obtém o token da sessão
     session_token = request.session.get('loading_token')
-
+ 
     # Verifica se o token é válido
     if session_token != token:
         # Se o token não corresponder, redireciona para uma página de erro ou inicial

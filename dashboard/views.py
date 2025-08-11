@@ -202,7 +202,22 @@ def dashboard(request):
         page_obj = paginator.page(1)
     except EmptyPage:
         page_obj = paginator.page(paginator.num_pages)
-
+    
+    MAX_QUERIES = 5
+    user_queries = TaskResult.objects.filter(task_creator=user, status='SUCCESS').order_by('-date_created')[:MAX_QUERIES]
+    
+    user_queries_with_titles = []
+    for query in user_queries:
+        try: 
+            query_result_data = json.loads(query.result)
+            query_meta_data = {}
+            if isinstance(query_result_data, list) and len(query_result_data) > 1 and isinstance(query_result_data[1], dict):
+                query_meta_data = query_result_data[1]
+            query_title = query_meta_data.get('query_title', '') or f"Unnamed"
+        except (json.JSONDecodeError, IndexError, TypeError):
+            query_title = f"Unnamed"
+        user_queries_with_titles.append({'id': query.id, 'title': query_title, 'date_created': query.date_created})
+    
     context = {
         'sirnas': page_obj.object_list,
         'total_sirnas': paginator.count,
@@ -213,7 +228,8 @@ def dashboard(request):
             'name': user_p.get_full_name(),
             'profission': user_profile.profission,
             'profile_image': user_profile.profile_image,
-        }
+        },
+        'user_queries': user_queries_with_titles,
     }
 
     return render(request, 'core/core.html', context)
