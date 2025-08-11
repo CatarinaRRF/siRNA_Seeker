@@ -140,11 +140,11 @@ def dashboard(request):
         if user_task:
             task_result_string = user_task.result
         else:
-            return HttpResponseRedirect('sirna/search', {'error': 'Query not found or not successful.'})
+            return HttpResponseRedirect('sirna/search/', {'error': 'Query not found or not successful.'})
     else:
         user_tasks = TaskResult.objects.filter(task_creator=user, status='SUCCESS').order_by('-date_created')
         if not user_tasks.exists():
-            return HttpResponseRedirect('sirna/search', {'error': 'No successful tasks found for this user.'})
+            return HttpResponseRedirect('sirna/search/', {'error': 'No successful tasks found for this user.'})
         latest_user_task = user_tasks.first()
         task_result_string = latest_user_task.result
 
