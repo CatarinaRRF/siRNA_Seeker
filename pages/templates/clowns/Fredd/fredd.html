@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévia da Modal do Projeto</title>
+    <!-- Incluindo Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Habilitando a estratégia de modo escuro do Tailwind CSS baseada na preferência do sistema
+        tailwind.config = {
+            darkMode: 'media', // ou 'class' se você quiser controlar com JS
+        }
+    </script>
+    <style>
+        /* Usando a fonte Inter para um visual mais moderno */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-gray-900 flex items-center justify-center min-h-screen transition-colors duration-300">
+
+    <!-- Fundo da página que simula o "canvas" -->
+    <div class="w-full max-w-4xl mx-auto p-4">
+        
+        <!-- Simulação do backdrop/overlay escurecido -->
+        <div class="fixed inset-0 bg-gray-900 bg-opacity-60 dark:bg-opacity-75 flex items-center justify-center p-4 z-10">
+
+            <!-- A Janela Modal -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl flex flex-col max-h-[90vh] animate-fade-in">
+                
+                <!-- Cabeçalho da Modal com o nome do pesquisador -->
+                <div class="flex items-start justify-between p-5 border-b border-gray-200 dark:border-gray-700 rounded-t-xl">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                           Frederico Pittella Silva
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Universidade Federal de Juiz de Fora</p>
+                    </div>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 dark:hover:bg-gray-600 dark:hover:text-white hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" aria-label="Fechar modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Corpo da Modal com as informações do DOCX -->
+                <div class="p-6 space-y-8 overflow-y-auto">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Terapia por RNA de interferência (RNAi) em câncer de mama: o uso de nanopartículas</h4>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6">
+                        <img src="fredd.png" alt="Foto de Frederico Pittella Silva" class="w-32 h-40 rounded-lg object-cover border dark:border-gray-600 flex-shrink-0">
+                        <div class="space-y-4">
+                             <div>
+                                <h5 class="font-semibold text-gray-700 dark:text-gray-300">Link Lattes:</h5>
+                                <a href="http://lattes.cnpq.br/1840687382026247" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">http://lattes.cnpq.br/1840687382026247</a>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-700 dark:text-gray-300">Equipe associada:</h5>
+                                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-1 space-y-1">
+                                    <li><strong>Natália Prado da Silva</strong> – Pós-doc</li>
+                                    <li><strong>Lívia Mara Silva</strong> - Doutoranda</li>
+                                    <li><strong>Davi Trombini Aleixo</strong> - Doutorando</li>
+                                    <li><strong>Estael Cruz Cazarim</strong> - Doutoranda</li>
+                                    <li><strong>Kezia Cristine Barbosa Ferreira</strong> - Doutoranda</li>
+                                    <li><strong>Lívia do Nascimento Grossi</strong> - Doutoranda</li>
+                                    <li><strong>Allana Carvalho Silva</strong> - Doutoranda</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <h5 class="font-semibold text-gray-700 dark:text-gray-300">Artigos publicados relacionados à Rede:</h5>
+                        <div class="flex flex-col space-y-1 mt-2">
+                            <a href="https://doi.org/10.1515/oncologie-2023-0177" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1515/oncologie-2023-0177</a>
+                            <a href="https://doi.org/10.3390/ph17101325" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.3390/ph17101325</a>
+                            <a href="https://doi.org/10.1039/D4PM00158C" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1039/D4PM00158C</a>
+                            <a href="https://doi.org/10.1007/s13346-024-01772-x" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1007/s13346-024-01772-x</a>
+                        </div>
+                    </div>
+
+                     <div>
+                        <h5 class="font-semibold text-gray-700 dark:text-gray-300">Outros produtos relacionados à Rede:</h5>
+                        <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-2">
+                            <li>Construção de software <strong>siRNASeeker</strong>, baseado no Guia de Design de moléculas de siRNA do laboratório LDNano, coordenado por Frederico Pittella. O produto foi desenvolvido pela parceria entre Matheus Gomes (UFU) e Frederico Pittella (UFJF), e a versão Beta está incorporada ao site da Rede: nanogene.com.br.</li>
+                            <li>Defesa de tese de doutorado por Ana Beatriz Caribé dos Santos Valle, em 27 de Março de 2024. Agradecimento explícito à Rede Nanogene na tese.</li>
+                            <li>Prêmio “Young Scientist Travel Grant 2024” – recebido por Ana Beatriz Caribé dos Santos Valle. Melhor apresentação Oral, Controlled Release Society - CRS Brazilian Chapter, 2024.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SEÇÃO DE IMAGENS E TEXTOS -->
+                    <div>
+                        <h5 class="font-semibold text-gray-700 dark:text-gray-300">Fotos e Ilustrações do Projeto:</h5>
+                        <div class="mt-4 space-y-8">
+                            <figure>
+                                <img src="imagem1.png" alt="Figura 1: Curva de distribuição de tamanho de HNP-siHOXB7" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                                <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 1.</strong> Curva de distribuição de tamanho de HNP-siHOXB7 (A) e HNP-mock (B) por intensidade. Cada curva em uma cor diferente representa uma única medida (n = 9).</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="imgem2.png" alt="Figura 7: Vias de silenciamento de RNAi de miRNA e siRNA" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                                <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Fig.7</strong> Vias de silenciamento de RNAi de miRNA e siRNA. Criado com BioRender.com</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="imgem3.png" alt="Figura 13: Representação da nanopartícula híbrida" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                                <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 13 -</strong> Representação da nanopartícula híbrida formada pelo núcleo inorgânico composto por fosfato de cálcio, com siRNA complexado, e pelo revestimento orgânico de bloco de copolímero PEG-poliânion. Fonte: Elaborado pela autora com BioRender (2024), adaptado de Pittella et al., 2011.</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="imgem4.png" alt="Figura 14: Representação da internalização e escape endossomal" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                                <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 14 -</strong> Representação de internalização e escape endossomal promovido pelas NP. Fonte: Elaborado pela autora com BioRender (2024).</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rodapé da Modal com o botão Fechar -->
+                <div class="flex items-center justify-end p-4 border-t border-gray-200 dark:border-gray-700 rounded-b-xl bg-gray-50 dark:bg-gray-800">
+                    <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Fechar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        /* Animação simples para a modal aparecer suavemente */
+        @keyframes fade-in {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out forwards;
+        }
+    </style>
+
+</body>
+</html>

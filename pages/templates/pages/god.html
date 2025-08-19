@@ -1,0 +1,468 @@
+{% extends "navbar_footer_main.html" %}
+{% load static %}
+
+{% block conteudo %}
+
+<main class="main">
+    <style>
+        /* --- Estilos da Página --- */
+        .page-section + .page-section { margin-top: 4rem; }
+        .section-title { position: relative; padding-bottom: 1rem; margin-bottom: 3.5rem; text-align: center; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: #206bc4; }
+
+        .author-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; }
+        .author-grid-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 100%; text-align: center; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+        .author-grid-card:hover { transform: translateY(-5px); box-shadow: 0 12px 16px rgba(0,0,0,0.1); }
+        .author-grid-card img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin: 0 auto 1rem; border: 4px solid #f8f9fa; }
+        .card-title { margin-bottom: 0.25rem; font-size: 1.1rem; color: #182433; }
+        .card-subtitle { font-size: 0.9rem; color: #6c757d; margin-bottom: 0.75rem; }
+        .card-description { font-size: 0.85rem; color: #333; flex-grow: 1; line-height: 1.4; }
+
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(255, 255, 255, 0.3); animation: fadeIn 0.3s; visibility: hidden; }
+        .modal.show { display: block; opacity: 1; visibility: visible; }
+        .modal-content { background-color: #fefefe; margin: 5% auto; padding: 2rem; border: 1px solid #888; width: 90%; max-width: 700px; border-radius: 8px; position: relative; animation: slideIn 0.4s; display: flex; align-items: flex-start; }
+        .modal-close { color: #aaa; position: absolute; top: 10px; right: 25px; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .modal-close:hover, .modal-close:focus { color: black; }
+        .modal-photo { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-right: 2rem; flex-shrink: 0; }
+        .modal-body { flex-grow: 1; }
+        .modal-body h3 { margin-top: 0; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        @keyframes slideIn { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+        @media (max-width: 768px) { .modal-content { flex-direction: column; align-items: center; text-align: center; } .modal-photo { margin-right: 0; margin-bottom: 1.5rem; } }
+    </style>
+
+    <div class="section col-12 text-center" data-theme="dark">
+        <div class="hero-subheader">
+            Get to know us
+        </div>
+        <h1 class="hero-title">Our Researchers Groups</h1>
+        <p class="hero-description mt-4">A diverse team of scientists and innovators dedicated to advancing biotechnology and nanomedicine.
+    </div>
+
+
+    <div class="page-body">
+        <div class="container">
+            <!-- Grupo 1 -->
+            <section id="grupo1" class="page-section">
+                <div class="section pt-6 pb-6">
+                    <div class="container text-center">
+                        <h2 class="section-title section-title-lg">Group 1 – Frederico Pittella Silva</h2>
+                        <div class="section-description">
+                            Based at the Federal University of Juiz de Fora (UFJF), Group 1 focuses on the development of RNA interference (RNAi) therapies for breast cancer using advanced nanoparticle delivery systems. Led by Dr. Frederico Pittella Silva, the team includes postdoctoral and doctoral researchers who are pioneering novel approaches for targeted gene silencing. Their projects combine nanotechnology, molecular biology, and therapeutic design, emphasizing translational applications and high-impact innovations in RNA-based therapeutics.
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-lime">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Natália Prado da Silva</h2>
+                                    <p class="text-secondary">Pós-doc</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Lívia Mara Silva</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Davi Trombini Aleixo</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                        
+                                    </div>
+                                    <h2 class="h3">Estael Cruz Cazarim</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Kezia Cristine Barbosa</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Lívia do Nascimento Grossi </h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Allana Carvalho Silva</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Grupo 2 -->
+            <section id="grupo2" class=" page-section">
+                <div class="section pt-6 pb-6 bg-secondary">
+                    <div class="container text-center">
+                        <h2 class="section-title section-title-lg">Group 2 – Silvia Ligorio Fialho</h2>
+                        <div class="section-description">
+                            Operating at Funed, Group 2 specializes in ocular drug delivery and preclinical evaluation of intravitreal therapies. Under the leadership of Silvia Ligorio Fialho, the group develops protein-loaded liposomes and intravitreal devices coated with nanofibers, aiming to treat retinal vein occlusion and age-related macular degeneration. Their work integrates nanomaterials, biomedical engineering, and in vivo safety studies, supporting the creation of a research core for biopharmaceutical development.
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-red">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Marina França Dias</h2>
+                                    <p class="text-secondary">Researcher</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-red">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Lutiana Amaral de Melo</h2>
+                                    <p class="text-secondary">Researcher</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-red">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Maria Carolina Guerra</h2>
+                                    <p class="text-secondary">Researcher</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Deivisson Fagundes</h2>
+                                    <p class="text-secondary">Master's student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Gabriela Pierazoli</h2>
+                                    <p class="text-secondary">undergrad</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Amaury Souza</h2>
+                                    <p class="text-secondary">undergrad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Grupo 3 -->
+            <section id="grupo3" class="page-section">
+                <div class="section pt-6 pb-6">
+                    <div class="container text-center">
+                        <h2 class="section-title section-title-lg">Group 3 – Mauro Aparecido de Sousa Xavier</h2>
+                        <div class="section-description">
+                            Based at UNIMONTES, Group 3 focuses on vaccine development, particularly recombinant multi-epitope vaccines against Rhipicephalus microplus. Led by Mauro Aparecido de Sousa Xavier, the team combines collaborative efforts in molecular immunology and protein engineering, designing innovative vaccine platforms and alternative strategies, with an emphasis on translational applications in disease prevention.
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-lime">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Alessandra Xavier</h2>
+                                    <p class="text-secondary">Collaborator</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Viviane Andrade</h2>
+                                    <p class="text-secondary">Collaborator</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Fábio Ribeiro</h2>
+                                    <p class="text-secondary">Collaborator</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                        
+                                    </div>
+                                    <h2 class="h3">Léia Cardoso</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Mayka Rabelo</h2>
+                                    <p class="text-secondary">Collaborator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Grupo 4 -->
+            <section id="grupo4" class="page-section">
+                <div class="section pt-6 pb-6 bg-secondary">
+                    <div class="container text-center">
+                        <h2 class="section-title section-title-lg">Group 4 – Luciana Maria Silva Lopes</h2>
+                        <div class="section-description">
+                            Operating at Funed, Group 4 is dedicated to cancer therapeutics using gene editing technologies. Led by Luciana Maria Silva Lopes, the team explores STAT3 gene inactivation via CRISPR/Cas9 in 3D tumor spheroids enriched with cancer stem cells (CD44+/CD24-/low). Their research integrates molecular biology, stem cell technologies, and translational oncology, aiming to discover new therapeutic approaches for aggressive cancers and advancing preclinical modeling tools.
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-red">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Milene Pereira Moreira</h2>
+                                    <p class="text-secondary">Researcher</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Bianca Nataliene Carvalho de Camargos</h2>
+                                    <p class="text-secondary">Master's student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Julia Guerra Vieira de Sousa</h2>
+                                    <p class="text-secondary">Master's student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                        
+                                    </div>
+                                    <h2 class="h3">Estael Cruz Cazarim</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Kezia Cristine Barbosa</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Lívia do Nascimento Grossi </h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Allana Carvalho Silva</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Grupo 5 -->
+            <section id="grupo5" class="page-section">
+                <div class="section pt-6 pb-6">
+                    <div class="container text-center">
+                        <h2 class="section-title section-title-lg">Group 5 – Armando da Silva Cunha Junior</h2>
+                        <div class="section-description">
+                            Based at UFMG, Group 5 focuses on innovative gene therapy and nanomedicine approaches for ocular disorders, including hereditary retinal dystrophies and age-related macular degeneration. Led by Armando da Silva Cunha Junior, the group develops non-viral gene transfer vectors, polymeric nanofibers loaded with bevacizumab, and alternative drug delivery systems. Their work combines biomaterials, pharmacology, and therapeutic engineering to create cutting-edge ocular therapeutics.
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-lime">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Carolina Nunes da Silva</h2>
+                                    <p class="text-secondary">Researcher (DTI)</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Ana Carolina Guimaraes Ribeiro</h2>
+                                    <p class="text-secondary">Researcher (PDJ)</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Thomas Toshio Inoue</h2>
+                                    <p class="text-secondary">PhD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                        
+                                    </div>
+                                    <h2 class="h3">Michelle Gouvêa Gomes</h2>
+                                    <p class="text-secondary">PhD</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Ana Luiza Faria Silvério</h2>
+                                    <p class="text-secondary">Undergrad student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Vitória Luísa Lopes de Souza </h2>
+                                    <p class="text-secondary">Undergrad student</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Larissa Santos Covre Stefanon</h2>
+                                    <p class="text-secondary">ADC 2A</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Grupo 6 -->
+            <section id="grupo6" class="page-section">
+                <div class="section pt-6 pb-6 bg-secondary">
+                    <div class="container text-center">
+                        <h2 class="section-title section-title-lg">PADM2 - Matheus Souza Gomes</h2>
+                        <div class="section-description">
+                            Operating at the Federal University of Uberlândia (UFU), 
+                            PADM2 is centered on bioinformatics and RNA-based technologies. 
+                            Led by Dr. Matheus S. Gomes, the team develops tools for RNA selection of siRNA (siRNA Seeker) and miRNA, in a web-based aproach, integrating computational biology, data science, and molecular genetics. In addition, the group carries out a 3D protein modeling project powered by the MOE software, enhancing structural analysis and drug design capabilities. The focus is on enabling precision RNA therapeutics and advancing digital tools for gene regulation research.
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3 text-lime">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Catarina Ribeiro Rezende de Freitas</h2>
+                                    <p class="text-secondary">Undergrad student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Valdeir Braz de Paula</h2>
+                                    <p class="text-secondary">Undergrad student</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Laurence Rodrigues do Amaral</h2>
+                                    <p class="text-secondary">Collaborator</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img-overlap-padding">
+                            <div class="row items-center text-center lg:g-6">
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                        
+                                    </div>
+                                    <h2 class="h3">Pedro Luiz Lima Bertarini</h2>
+                                    <p class="text-secondary">Collaborator</p>
+                                </div>
+                                <div class="md:col-6 lg:col">
+                                    <div class="shape shape-dark shape-md mb-3">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-hexagon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741" /><path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" /></svg>
+                                    </div>
+                                    <h2 class="h3">Carlos Bruno de Araújo</h2>
+                                    <p class="text-secondary">PhD student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+           
+
+        </div>
+    </div>
+
+    <div class="section pt-6 pb-6 bg-dark">
+        <div class="container text-center text-white">
+            <h1 class="page-title text-white" data-aos="fade-up">Discover Our Future Tools</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+                See what other cool tools we're working on while you browse through our ongoing projects. 
+            </p>
+            
+            <a href="/projects" class="btn btn-lime btn-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-binoculars"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M16.346 9.17l-.729 -1.261c-.16 -.248 -1.056 -.203 -1.117 .091l-.177 1.38"></path><path d="M19.761 14.813l-2.84 -5.133c-.189 -.31 -.592 -.68 -1.421 -.68c-.828 0 -1.5 .448 -1.5 1v6"></path><path d="M7.654 9.17l.729 -1.261c.16 -.249 1.056 -.203 1.117 .091l.177 1.38"></path><path d="M4.239 14.813l2.84 -5.133c.189 -.31 .592 -.68 1.421 -.68c.828 0 1.5 .448 1.5 1v6"></path><rect width="4" height="2" x="10" y="12"></rect></svg>
+                <span class="btn-text">Check Out Our Projects
+                </span>
+            </a>
+      
+        </div>
+    </div>
+
+</main>
+
+
+{% endblock conteudo %}
