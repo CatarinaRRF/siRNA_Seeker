@@ -1,0 +1,102 @@
+{% extends "navbar_footer_main.html" %}
+{% load static%}
+
+{% block conteudo %}
+
+<style>
+  .lg\:p-8 {
+    padding: 1rem !important;
+  }
+</style>
+
+<div class="container mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+            <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
+                <div class="hero-subheader">
+                    Get to know us
+                </div>
+                <h1 class="hero-title">Luciana Maria Silva Lopes</h1>
+                <p class="hero-description mt-4">Fundação Ezequiel Dias (FUNED)</p>
+            </div>
+        
+        <main class="p-6 space-y-6">
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
+                    Genetics and Biotechnology Studies in Cancer
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                <div class="flex-shrink-0">
+                    <img 
+                        src="{% static 'img/pesquisadores/luciana.png' %}" 
+                        alt="Photo of Luciana Maria Silva Lopes" 
+                        class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
+                        style="display: block; margin: auto;"
+                    >
+                </div>
+                
+                <div class="w-full space-y-6" style="margin-top: 3rem;">
+                     <div>
+                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
+                        <a href="http://lattes.cnpq.br/0162558710954506" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            http://lattes.cnpq.br/0162558710954506
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
+                        <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                            <li><strong>Milene Pereira Moreira</strong> – Funed Server, Researcher</li>
+                            <li><strong>Bianca Nataliene Carvalho de Camargos</strong> - Master's Student PPG Biotec Funed, Scholar</li>
+                            <li><strong>Julia Guerra Vieira de Sousa</strong> - Master's Student PPG Biotec Funed, Scholar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Other products related to the Network:</h3>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-2">
+                    <li><strong>Master's thesis:</strong> In silico characterization, recombinant expression and biological functions of TNFRSF10C/TRAILR3 – BIANCA NATALIENE CARVALHO DE CAMARGOS.</li>
+                    <li><strong>Master's thesis:</strong> Recombinant expression of genetic variants found in patients with Epithelial Ovarian Cancer for functional studies - JÚLIA GUERRA VIEIRA DE SOUSA.</li>
+                </ul>
+            </div>
+
+            <!-- SECTION: PROJECT IMAGES AND ILLUSTRATIONS -->
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Project Photos and Illustrations:</h3>
+                <div class="mt-4 space-y-8">
+                    <figure>
+                        <img src=".\static\img\pesquisadores\luciana1.png" alt="Figure 1: HEK-293 RAD51B transfection" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 1.</strong> Transfection of wild-type RAD51B (Vector 1) and RAD51Bc.295delGinsTTO (Vector 2) genes into TOV-21G cells using nanoparticles. A–E: HEK-293 RAD51B expression analysis.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\luciana2.png" alt="Figure 2: RAD51B protein localization" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 2.</strong> Subcellular localization of RAD51B protein in transfected TOV-21G cells observed by immunofluorescence microscopy. Images depict nuclear and cytoplasmic distribution.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\luciana3.png" alt="Figure 3: Nanoparticle-mediated gene delivery" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 3.</strong> Schematic representation of nanoparticle-mediated gene delivery into TOV-21G cells, showing complex formation and cellular uptake. Adapted from experimental design.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\luciana4.png" alt="Figure 4: RAD51B protein expression analysis" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 4.</strong> Western blot analysis showing RAD51B protein levels in TOV-21G cells after transfection with wild-type and mutant constructs.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\luciana5.png" alt="Figure 5: Nanoparticle uptake in cells" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 5.</strong> Confocal microscopy images illustrating the uptake of nanoparticles carrying RAD51B constructs into TOV-21G cells. Fluorescent signal indicates successful internalization.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\luciana6.png" alt="Figure 6: Representation of nanoparticle internalization and endosomal escape" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 6.</strong> Representation of internalization and endosomal escape promoted by nanoparticles carrying RAD51B constructs. Adapted from experimental design and prepared using BioRender (2024).</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </main>
+        
+    </div>
+</div>
+
+{% endblock conteudo %}

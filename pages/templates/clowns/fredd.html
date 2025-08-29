@@ -1,0 +1,109 @@
+{% extends "navbar_footer_main.html" %}
+{% load static%}
+
+{% block conteudo %}
+
+<style>
+  .lg\:p-8 {
+    padding: 1rem !important;
+  }
+</style>
+ 
+<div class="container mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+            <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
+                <div class="hero-subheader">
+                    Get to know us
+                </div>
+                <h1 class="hero-title">Frederico Pittella Silva</h1>
+                <p class="hero-description mt-4">Universidade Federal de Juiz de Fora (UFJF)</p>
+            </div>
+        
+        <main class="p-6 space-y-6">
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
+                    Interference RNA (RNAi) therapy in breast cancer: the use of nanoparticles
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                <div class="flex-shrink-0">
+                    <img 
+                        src="{% static 'img/pesquisadores/fredd.png' %}" 
+                        alt="Photo of Frederico Pittella Silva" 
+                        class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
+                        style="display: block; margin: auto;"
+                    >
+                </div>
+                
+                <div class="w-full space-y-6" style="margin-top: 3rem;">
+                     <div>
+                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
+                        <a href="http://lattes.cnpq.br/1840687382026247" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            http://lattes.cnpq.br/1840687382026247
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
+                        <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                            <li><strong>Natália Prado da Silva</strong> – Post-doc</li>
+                            <li><strong>Lívia Mara Silva</strong> - PhD Student</li>
+                            <li><strong>Davi Trombini Aleixo</strong> - PhD Student</li>
+                            <li><strong>Estael Cruz Cazarim</strong> - PhD Student</li>
+                            <li><strong>Kezia Cristine Barbosa Ferreira</strong> - PhD Student</li>
+                            <li><strong>Lívia do Nascimento Grossi</strong> - PhD Student</li>
+                            <li><strong>Allana Carvalho Silva</strong> - PhD Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Published Articles Related to the Network:</h3>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                    <li><a href="https://doi.org/10.1515/oncologie-2023-0177" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1515/oncologie-2023-0177</a></li>
+                    <li><a href="https://doi.org/10.3390/ph17101325" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.3390/ph17101325</a></li>
+                    <li><a href="https://doi.org/10.1039/D4PM00158C" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1039/D4PM00158C</a></li>
+                    <li><a href="https://doi.org/10.1007/s13346-024-01772-x" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1007/s13346-024-01772-x</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Other products related to the Network:</h3>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-2">
+                    <li>Development of the <strong>siRNASeeker</strong> software, partnership between Matheus Gomes (UFU) and Frederico Pittella (UFJF).</li>
+                    <li>PhD thesis defense by Ana Beatriz Caribé dos Santos Valle (2024).</li>
+                    <li>“Young Scientist Travel Grant 2024” Award – Ana Beatriz Caribé dos Santos Valle.</li>
+                </ul>
+            </div>
+
+            
+
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Project Photos and Illustrations:</h3>
+                <div class="mt-4 space-y-8">
+                    <figure>
+                        <img src=".\static\img\pesquisadores\imagem1.png" alt="Figura 1: Curva de distribuição de tamanho de HNP-siHOXB7" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 1. </strong> Size distribution curve of HNP-siHOXB7 (A) and HNP-mock (B) by intensity. Each curve in a different color represents a single measurement (n = 9).</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\imgem2.png" alt="Figura 7: Vias de silenciamento de RNAi de miRNA e siRNA" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 2. </strong> miRNA and siRNA RNAi silencing pathways. Created with BioRender.com</figcaption>
+                    </figure>
+                    <figure>
+                        <img src=".\static\img\pesquisadores\imgem3.png" alt="Figura 13: Representação da nanopartícula híbrida" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 3. </strong> Representation of the hybrid nanoparticle formed by the inorganic core composed of calcium phosphate, with complexed siRNA, and the organic coating of PEG-polyanion block copolymer. Source: Prepared by the author with BioRender (2024), adapted from Pittella et al., 2011.</figcaption>
+                    </figure>
+                    <figure>
+                        <img img src=".\static\img\pesquisadores\imgem4.png" alt="Figura 14: Representação da internalização e escape endossomal" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 4. </strong> Representation of internalization and endosomal escape promoted by NP. Source: Prepared by the author with BioRender (2024).</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+</div>
+
+{% endblock conteudo %}

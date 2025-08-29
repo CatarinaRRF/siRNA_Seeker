@@ -9,7 +9,14 @@ urlpatterns = [
     path('projects', TemplateView.as_view(template_name='pages/projects_test.html'), name='project_list'), #Projects 
     path('authors', TemplateView.as_view(template_name='pages/god.html'), name='authors'), #Events
     path('events', TemplateView.as_view(template_name='pages/events.html'), name='events'), #Events
-    path('tools', TemplateView.as_view(template_name='pages/tools.html'), name='Tools'), #Pagina que coleta todos as ferramentas do grupo # Pagina com as informações de contato  
+    path('tools', TemplateView.as_view(template_name='pages/tools.html'), name='Tools'), #Pagina que coleta todos as ferramentas do grupo # Pagina com as informações de contato 
+    
+    #Reaserch Groups
+    path('armando', TemplateView.as_view(template_name='clowns/armando.html'), name='armando'), 
+    path('fredd', TemplateView.as_view(template_name='clowns/fredd.html'), name='fredd'), 
+    path('luciana', TemplateView.as_view(template_name='clowns/luciana.html'), name='luciana'), 
+    path('mauro', TemplateView.as_view(template_name='clowns/mauro.html'), name='mauro'), 
+    path('silvia', TemplateView.as_view(template_name='clowns/silvia.html'), name='silvia'), 
 
     
     path('erro_404', TemplateView.as_view(template_name='errors/error_404.html'), name='erro_404'),

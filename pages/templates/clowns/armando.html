@@ -1,0 +1,101 @@
+{% extends "navbar_footer_main.html" %}
+{% load static%}
+
+{% block conteudo %}
+
+<style>
+  .lg\:p-8 {
+    padding: 0.5rem !important;
+  }
+</style>
+
+    <!-- Main page container -->
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Main card with researcher information -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+            <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
+                <div class="hero-subheader">
+                    Get to know us
+                </div>
+                <h1 class="hero-title">Armando da Silva Cunha Junior</h1>
+                <p class="hero-description mt-4">Universidade Federal de Minas Gerais (UFMG)</p>
+            </div>
+            
+            <!-- Card Body -->
+            <main class="p-6">
+                
+                <!-- Project Title Section -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
+                        Development of Nanostructured Systems for Drug Delivery
+                    </h2>
+                </div>
+
+                <!-- Details Section with Photo and Team -->
+                <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                    <!-- Researcher Image -->
+                    <div class="flex-shrink-0" >
+                        <img 
+                            src=".\static\img\pesquisadores\armando.png" 
+                            alt="Photo of Armando da Silva Cunha Junior" 
+                            class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
+                            style="display: block; margin: auto;"
+                        >
+                    </div>
+                    
+                    <!-- Information: Lattes and Team -->
+                    <div class="w-full space-y-6" style="margin-top: 3rem;">
+                         <div>
+                            <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
+                            <a href="http://lattes.cnpq.br/8278273904187275" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
+                                http://lattes.cnpq.br/8278273904187275
+                            </a>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
+                            <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                                <li><strong>Carolina Nunes da Silva</strong> – Researcher (DTI)</li>
+                                <li><strong>Ana Carolina Guimaraes Ribeiro</strong> – Researcher (PDJ)</li>
+                                <li><strong>Thomas Toshio Inoue</strong> – PhD Student</li>
+                                <li><strong>Michelle Gouvêa Gomes</strong> - PhD Student</li>
+                                <li><strong>Ana Luiza Faria Silvério</strong> – Scientific Initiation</li>
+                                <li><strong>Vitória Luísa Lopes de Souza</strong> – Scientific Initiation</li>
+                                <li><strong>Larissa Santos Covre Stefanon</strong> - Knowledge Diffusion Support Fellow - ADC 2A</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Published Articles Section -->
+                <div>
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Published Articles Related to the Network:</h3>
+                    <ul class="">
+                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
+                           <strong class="text-gray-800 dark:text-gray-200">New intraocular lens containing a drug delivery system (IOL-DDS) loaded with dexamethasone.</strong>
+                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">BIOMEDICAL MICRODEVICES. <a href="https://doi.org/10.1007/s10544-025-00743-4" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1007/s10544-025-00743-4</a></p>
+                       </li>
+                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
+                           <strong class="text-gray-800 dark:text-gray-200">Anti-angiogenic activity of polymeric nanoparticles loaded with ursolic acid.</strong>
+                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">JOURNAL OF DRUG TARGETING. <a href="https://doi.org/10.1080/1061186X.2024.2409881" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1080/1061186X.2024.2409881</a></p>
+                       </li>
+                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
+                           <strong class="text-gray-800 dark:text-gray-200">Nanofiber-coated implants: Development and safety after intravitreal application in rabbits.</strong>
+                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">INTERNATIONAL JOURNAL OF PHARMACEUTICS. <a href="https://doi.org/10.1016/j.ijpharm.2023.122809" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1016/j.ijpharm.2023.122809</a></p>
+                       </li>
+                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
+                           <strong class="text-gray-800 dark:text-gray-200">PLGA-TPGS-Based Hybrid Nanoparticles Loaded with Doxorubicin for Breast Cancer Therapy.</strong>
+                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">PHARMACEUTICS. <a href="https://doi.org/10.3390/pharmaceutics14112394" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.3390/pharmaceutics14112394</a></p>
+                       </li>
+                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
+                           <strong class="text-gray-800 dark:text-gray-200">Treatment for chemical burning using liquid crystalline nanoparticles as an ophthalmic delivery system for pirfenidone.</strong>
+                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">INTERNATIONAL JOURNAL OF PHARMACEUTICS. <a href="https://doi.org/10.1016/j.ijpharm.2019.118466" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1016/j.ijpharm.2019.118466</a></p>
+                       </li>
+                    </ul>
+                </div>
+            </main>
+            
+        </div>
+
+{% endblock conteudo %}

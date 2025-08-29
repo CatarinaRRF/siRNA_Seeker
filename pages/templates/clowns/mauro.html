@@ -1,0 +1,77 @@
+{% extends "navbar_footer_main.html" %}
+{% load static%}
+
+{% block conteudo %}
+
+<style>
+  .lg\:p-8 {
+    padding: 1rem !important;
+  }
+</style>
+
+<div class="container mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+        <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
+                <div class="hero-subheader">
+                    Get to know us
+                </div>
+                <h1 class="hero-title">Mauro Aparecido de Sousa Xavier</h1>
+                <p class="hero-description mt-4">Fundação Ezequiel Dias (FUNED)</p>
+            </div>
+        <header class="p-6 border-b border-gray-200 dark:border-gray-700">
+            <h1 class="section-title section-title-lg">
+               
+            </h1>
+            <p class="text-md text-gray-500 dark:text-gray-400 mt-1">
+                Universidade Estadual de Montes Claros (Unimontes)
+            </p>
+        </header>
+        
+        <main class="p-6 space-y-6">
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
+                    Development of a multi-epitope recombinant vaccine as an alternative method for the control of Rhipicephalus microplus
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                <div class="flex-shrink-0">
+                    <img 
+                        src="{% static 'img/pesquisadores/mauro.png' %}" 
+                        alt="Photo of Mauro Aparecido de Sousa Xavier" 
+                        class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
+                        style="display: block; margin: auto;"
+                    >
+                </div>
+                
+                <div class="w-full space-y-6">
+                     <div>
+                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
+                        <a href="http://lattes.cnpq.br/2855671095187615" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            http://lattes.cnpq.br/2855671095187615
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Patents filed related to the Network:</h3>
+                        <p class="text-base text-gray-600 dark:text-gray-400">Not yet - scheduled for 2026 (Léia's doctorate project).</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                    <li><strong>Alessandra Rejane Ericsson de Oliveria Xavier</strong> – Collaborating Researcher</li>
+                    <li><strong>Viviane Aguiar Andrade</strong> – Collaborating Researcher</li>
+                    <li><strong>Fábio Ribeiro</strong> – Collaborating Researcher</li>
+                    <li><strong>Léia Cardoso</strong> – PhD student</li>
+                    <li><strong>Mayka Rabelo</strong> – Collaborator</li>
+                </ul>
+            </div>
+        </main>
+        
+    </div>
+</div>
+
+{% endblock conteudo %}
