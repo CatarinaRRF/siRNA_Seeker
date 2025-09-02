@@ -13,10 +13,11 @@ urlpatterns = [
     
     #Reaserch Groups
     path('armando', TemplateView.as_view(template_name='clowns/armando.html'), name='armando'), 
-    path('fredd', TemplateView.as_view(template_name='clowns/fredd.html'), name='fredd'), 
+    path('frederico', TemplateView.as_view(template_name='clowns/fredd.html'), name='frederico'), 
     path('luciana', TemplateView.as_view(template_name='clowns/luciana.html'), name='luciana'), 
     path('mauro', TemplateView.as_view(template_name='clowns/mauro.html'), name='mauro'), 
     path('silvia', TemplateView.as_view(template_name='clowns/silvia.html'), name='silvia'), 
+    path('matheus', TemplateView.as_view(template_name='clowns/matheus.html'), name='matheus'), 
 
     
     path('erro_404', TemplateView.as_view(template_name='errors/error_404.html'), name='erro_404'),
