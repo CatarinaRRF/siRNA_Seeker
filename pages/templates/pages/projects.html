@@ -9,11 +9,11 @@
         <div class="hero-gradient_main">
             <div class="row_main items-center_main xl:g-6_main text-center_main">
                 <div class="col-12_main">
-                    <div class="hero-subheader_main ">Our Projects</div>
+                    <div class="hero-subheader_main ">Nossos Projetos</div>
                     <div class="xl:pr-7_main">
-                        <h1 class="hero-title_main ">Explore the projects within Nanogene</h1>
+                        <h1 class="hero-title_main ">Explore os projetos dentro da Nanogene</h1>
                         <p class="hero-description_main mt-4_main">
-                          Detailed catalog of innovative projects focused on nanotechnology, showcasing applications in vaccines and genetic therapies for a sustainable future.
+                          Catálogo detalhado de projetos inovadores focados em nanotecnologia, apresentando aplicações em vacinas e terapias genéticas para um futuro sustentável.
                         </p>
                     </div>
                     <div class="mt-6">
@@ -22,20 +22,20 @@
                           <a href="/tools" class="btn_main btn-accent_main lg_main:btn-md_main" >
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-binoculars"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.346 9.17l-.729 -1.261c-.16 -.248 -1.056 -.203 -1.117 .091l-.177 1.38" /><path d="M19.761 14.813l-2.84 -5.133c-.189 -.31 -.592 -.68 -1.421 -.68c-.828 0 -1.5 .448 -1.5 1v6" /><path d="M7.654 9.17l.729 -1.261c.16 -.249 1.056 -.203 1.117 .091l.177 1.38" /><path d="M4.239 14.813l2.84 -5.133c.189 -.31 .592 -.68 1.421 -.68c.828 0 1.5 .448 1.5 1v6" /><rect width="4" height="2" x="10" y="12" /></svg>
                             <span class="btn-text_main">
-                              Explore our tools
+                              Explorar as nossas ferramentas
                             </span>
                           </a>
                         </div>
                         <div class="col-auto_main">
                           <a href="/events" class="btn_main lg_main:btn-md_main" rel="noreferrer">
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2z" /></svg>
-                            <span class="btn-text_main">See Events</span>
+                            <span class="btn-text_main">Ver Eventos</span>
                           </a>
                         </div>
                         <div class="col-auto_main">
                            <a class="btn_main lg_main:btn-md_main btn-lime" href="mailto:contactnanogene@network.com">
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-share"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M13 18l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v6" /><path d="M16 22l5 -5" /><path d="M21 21.5v-4.5h-4.5" /></svg>
-                            Contact us
+                            Entre em contato
                           </a>
                           </div>
                         </div>
@@ -56,7 +56,7 @@
             <div class="row g-2 align-items-center">
               <div class="col">
                 <h1 class="page-title">
-                  Search Projects
+                  Procurar Projetos
                 </h1>
               </div>
             </div>
@@ -71,34 +71,34 @@
               <div class="col-md-3  sticky-top">
                 <form action="{% url 'project_list' %}" method="get" autocomplete="off" novalidate class="sticky-top">
                     
-                  <div class="form-label">Projects Types</div> 
+                  <div class="form-label">Tipos de Projetos</div> 
                   <div class="mb-4">
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input" name="form-type[]" value="1" {% if '1' in selected_types %}checked{% endif %}>
-                        <span class="form-check-label">Gene Therapies</span>
+                        <span class="form-check-label">Terapias Genéticas</span>
                     </label>
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input" name="form-type[]" value="2" {% if '2' in selected_types %}checked{% endif %}>
-                        <span class="form-check-label">Immunotherapies</span>
+                        <span class="form-check-label">Imunoterapias</span>
                     </label>
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input" name="form-type[]" value="3" {% if '3' in selected_types %}checked{% endif %}>
-                        <span class="form-check-label">Nanotechnology</span>
+                        <span class="form-check-label">Nanotecnologia</span>
                     </label>
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input" name="form-type[]" value="4" {% if '4' in selected_types %}checked{% endif %}>
-                        <span class="form-check-label">Infrastructure Development</span>
+                        <span class="form-check-label">Desenvolvimento de Infraestrutura</span>
                     </label>
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input" name="form-type[]" value="5" {% if '5' in selected_types %}checked{% endif %}>
-                        <span class="form-check-label">Preclinical and Clinical Studies</span>
+                        <span class="form-check-label">Estudos Pré-clínicos e Clínicos</span>
                     </label>
                 </div>
 
-                  <div class="form-label">University</div>
+                  <div class="form-label">Universidade</div>
                   <div class="mb-4">
                     <select class="form-select" name="university">
-                        <option {% if not university_filter %}selected{% endif %} disabled>Select a option</option>
+                        <option {% if not university_filter %}selected{% endif %} disabled>Selecione uma opção</option>
                         <option value="Funed" {% if university_filter == "Funed" %}selected{% endif %}>Funed</option>
                         <option value="UFJF" {% if university_filter == "UFJF" %}selected{% endif %}>UFJF</option>
                         <option value="UFMG" {% if university_filter == "UFMG" %}selected{% endif %}>UFMG</option>
@@ -109,10 +109,10 @@
                 </div>
                   <div class="mt-5">
                     <button class="btn btn-primary w-100">
-                      Confirm changes
+                      Confirmar alterações
                     </button>
                     <a href="{% url 'project_list' %}" class="btn btn-link w-100">
-                      Reset to defaults
+                      Redefinir para o padrão
                     </a>
                   </div>
                 </form>
@@ -191,14 +191,14 @@
 <div class="section pt-6 pb-6">
   <div class="container_main text-center">
     
-    <h2 class="section-title section-title-lg"> Discover Our Tools</h2>
+    <h2 class="section-title section-title-lg"> Descubra as Nossas Ferramentas</h2>
     <div class="section-description">
-      Explore our range of tools after diving into our projects.
+      Explore a nossa gama de ferramentas após mergulhar nos nossos projetos.
     </div>
     <div class="mt-6">
       <a href="/tools" class="btn_main btn-accent_main btn-lg">
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tools"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" /><path d="M14.5 5.5l4 4" /><path d="M12 8l-5 -5l-4 4l5 5" /><path d="M7 8l-1.5 1.5" /><path d="M16 12l5 5l-4 4l-5 -5" /><path d="M16 17l-1.5 1.5" /></svg>
-        <span class="btn-text_main">Check Out Our Tools</del>
+        <span class="btn-text_main">Verificar as Nossas Ferramentas
         </span>
       </a>
     </div>

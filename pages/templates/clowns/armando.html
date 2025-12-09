@@ -5,97 +5,274 @@
 
 <style>
   .lg\:p-8 {
-    padding: 0.5rem !important;
+    padding: 1rem !important;
   }
-</style>
+  /* Estilos para o Modal de Visualização (Popup) */
+  .modal {
+      position: fixed;
+      z-index: 9999; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none; /* Escondido por padrão */
+      justify-content: center;
+      align-items: center;
+  }
+  .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+  }
+  .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+  }
 
-    <!-- Main page container -->
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-        
-        <!-- Main card with researcher information -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+  /* Estilos para a imagem de coordenação (pequena e no canto) */
+  .coord-img-container {
+      width: 100px;
+      height: 100px;
+      margin-left: 1rem;
+      flex-shrink: 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+  }
+  .coord-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  /* Estilos para garantir que o texto e a foto na Coordenação fiquem lado a lado */
+  .coord-content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+  }
+  
+  /* Novo Estilo para a Galeria de Imagens Maiores (Vertical) */
+  .large-gallery-item {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem; 
+      border-radius: 0.5rem;
+      cursor: pointer;
+      overflow: hidden;
+  }
+  .large-gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; 
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+  }
+  .large-gallery-item:hover img {
+    transform: scale(1.02);
+  }
+
+</style>
+ 
+<div class="container mx-auto p-4 sm:p-6 lg:p-8">
+    <!-- Removendo shadow-xl e rounded-2xl do contêiner principal -->
+    <div class="bg-white dark:bg-gray-800 w-full max-w-5xl mx-auto overflow-hidden">
             <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
                 <div class="hero-subheader">
-                    Get to know us
+                    Conheça-nos
                 </div>
-                <h1 class="hero-title">Armando da Silva Cunha Junior</h1>
-                <p class="hero-description mt-4">Universidade Federal de Minas Gerais (UFMG)</p>
+                <!-- TÍTULO DO PROJETO -->
+                <h1 class="hero-title">Desenvolvimento de Sistemas Nanoestruturados para Liberação de Fármacos</h1>
+                <!-- AFILIAÇÃO PRINCIPAL -->
+                <p class="hero-description mt-4">Universidade Federal de Minas Gerais (UFMG)</p> 
+            </div>
+        
+        <main class="p-6 space-y-4">
+            
+            <!-- COORDENAÇÃO e DESCRIÇÃO (LADO A LADO) -->
+            <div class="flex flex-col md:flex-row gap-4">
+                
+                <!-- Início da Nova Seção: Coordenação (50% de largura no desktop) -->
+                <div class="md:w-1/2">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Coordenação:</h3>
+                    <!-- Removendo shadow-lg do card de coordenação -->
+                    <div class="space-y-2 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full">
+                        
+                        <!-- Wrapper para alinhar texto e foto horizontalmente -->
+                        <div class="coord-content-wrapper">
+                            
+                            <!-- Texto (esquerda) -->
+                            <div class="space-y-1">
+                                <!-- NOME COMPLETO DO PESQUISADOR -->
+                                <h4 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+                                    Armando da Silva Cunha Júnior
+                                </h4>
+                                <!-- AFILIAÇÃO COMPLETA -->
+                                <p class="text-base text-gray-600 dark:text-gray-300">
+                                    Professor/Pesquisador da UFMG
+                                </p>
+                                <!-- LINK LATTES -->
+                                <div class="break-all">
+                                    <a href="http://lattes.cnpq.br/8278273904187275" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 dark:text-blue-400 hover:underline font-mono">
+                                        http://lattes.cnpq.br/8278273904187275
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagem (direita, quadradinho pequeno) - FOTO ARMANDO.PNG -->
+                            <div class="coord-img-container" onclick="openModal('{% static 'img/pesquisadores/armando.png' %}')">
+                                <img 
+                                    src="{% static 'img/pesquisadores/armando.png' %}" 
+                                    alt="Foto de Armando da Silva Cunha Júnior" 
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Armando';"
+                                >
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim da Nova Seção: Coordenação -->
+
+                <!-- SOBRE O GRUPO (50% de largura no desktop) -->
+                <div class="md:w-1/2">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Sobre o Grupo (INOVASENSE):</h3>
+                    <!-- Removendo shadow-lg do card de laboratório -->
+                    <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full">
+                        <!-- DESCRIÇÃO DO PROJETO - INOVASENSE -->
+                        <p class="text-base text-gray-600 dark:text-gray-400 mt-2">
+                           O grupo de pesquisa INOVASENSE, coordenado pelo professor Armando Cunha, foi criado em 2014. Contudo, a maior parte dos pesquisadores já trabalha em colaboração e, desde 20022, desenvolve pesquisas visando a obtenção de sistemas de liberação de fármacos na forma de implantes de aplicação intravítrea, como alternativa para o tratamento de doenças que acometem o segmento posterior do olho. Os estudos realizados já possibilitaram o desenvolvimento, a caracterização e a realização de estudos pré-clínicos de 13 diferentes implantes. Além disso, destaca-se que, de forma inédita no país, dois estudos de casos foram realizados no inícios dos anos de 2020, intitulados: “Implante de liberação lenta e injeção intravítrea de clindamicina para retinocoroidite por toxoplasmose em pacientes intolerantes ao tratamento clássico” (Aprovado pelo CEP/CONEP em 04/08/2020) e “Implante de liberação lenta de acetazolamida para edema macular cistóide” (Aprovado pelo CEP/CONEP em 12/01/2022), demonstrando a aplicação da tecnologia em ambiente relevante. O grupo já desenvolveu mais de 20 projetos de pesquisa nessa área temática nos últimos 15 anos e desenvolve, atualmente, 7 projetos financiados por agências de fomento e empresas do setor.
+                        </p>
+                    </div>
+                </div>
+                <!-- Fim Sobre o Grupo -->
+
+            </div>
+
+            <!-- Equipe Associada (Colaboradores e Alunos) -->
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Equipe Associada (Colaboradores e Alunos):</h3>
+                
+                <h4 class="font-semibold text-gray-700 dark:text-gray-300 text-md mt-4">Membros Colaboradores:</h4>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                    <li>
+                        <strong>Rodrigo Jorge</strong> (Colab)
+                    </li>
+                    <li>
+                        <strong>Sílvia Ligório Fialho</strong> (Colab)
+                    </li>
+                    <li>
+                        <strong>Daniel Vítor de Vasconcelos Santos</strong> (Colab)
+                    </li>
+                    <li>
+                        <strong>Maria Elena de Lima Perez Garcia</strong> (Colab)
+                    </li>
+                    <li>
+                        <strong>Gracielle Ferreira Andrade</strong> (Colab)
+                    </li>
+                </ul>
+
+                <h4 class="font-semibold text-gray-700 dark:text-gray-300 text-md mt-4">Alunos Vinculados:</h4>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                    <li><strong>Thomas Toshio Inoue</strong> (Doutorado)</li>
+                    <li><strong>Michelle Gouvêa Gomes Lima</strong> (Doutorado)</li>
+                    <li><strong>Carolina Nunes da Silva</strong> (Pós-Doc)</li>
+                    <li><strong>Ana Luiza de Faria Silvério</strong> (Graduação)</li>
+                    <li><strong>Vitoria Luisa Lopes de Souza</strong> (Graduação)</li>
+                    <li><strong>Rodrigo Martins Bretas</strong> (Graduação)</li>
+                </ul>
             </div>
             
-            <!-- Card Body -->
-            <main class="p-6">
-                
-                <!-- Project Title Section -->
-                <div>
-                    <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
-                        Development of Nanostructured Systems for Drug Delivery
-                    </h2>
-                </div>
-
-                <!-- Details Section with Photo and Team -->
-                <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
-                    <!-- Researcher Image -->
-                    <div class="flex-shrink-0" >
-                        <img 
-                            src=".\static\img\pesquisadores\armando.png" 
-                            alt="Photo of Armando da Silva Cunha Junior" 
-                            class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
-                            style="display: block; margin: auto;"
-                        >
-                    </div>
-                    
-                    <!-- Information: Lattes and Team -->
-                    <div class="w-full space-y-6" style="margin-top: 3rem;">
-                         <div>
-                            <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
-                            <a href="http://lattes.cnpq.br/8278273904187275" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
-                                http://lattes.cnpq.br/8278273904187275
-                            </a>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
-                            <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
-                                <li><strong>Carolina Nunes da Silva</strong> – Researcher (DTI)</li>
-                                <li><strong>Ana Carolina Guimaraes Ribeiro</strong> – Researcher (PDJ)</li>
-                                <li><strong>Thomas Toshio Inoue</strong> – PhD Student</li>
-                                <li><strong>Michelle Gouvêa Gomes</strong> - PhD Student</li>
-                                <li><strong>Ana Luiza Faria Silvério</strong> – Scientific Initiation</li>
-                                <li><strong>Vitória Luísa Lopes de Souza</strong> – Scientific Initiation</li>
-                                <li><strong>Larissa Santos Covre Stefanon</strong> - Knowledge Diffusion Support Fellow - ADC 2A</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Published Articles Section -->
-                <div>
-                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Published Articles Related to the Network:</h3>
-                    <ul class="">
-                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
-                           <strong class="text-gray-800 dark:text-gray-200">New intraocular lens containing a drug delivery system (IOL-DDS) loaded with dexamethasone.</strong>
-                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">BIOMEDICAL MICRODEVICES. <a href="https://doi.org/10.1007/s10544-025-00743-4" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1007/s10544-025-00743-4</a></p>
-                       </li>
-                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
-                           <strong class="text-gray-800 dark:text-gray-200">Anti-angiogenic activity of polymeric nanoparticles loaded with ursolic acid.</strong>
-                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">JOURNAL OF DRUG TARGETING. <a href="https://doi.org/10.1080/1061186X.2024.2409881" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1080/1061186X.2024.2409881</a></p>
-                       </li>
-                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
-                           <strong class="text-gray-800 dark:text-gray-200">Nanofiber-coated implants: Development and safety after intravitreal application in rabbits.</strong>
-                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">INTERNATIONAL JOURNAL OF PHARMACEUTICS. <a href="https://doi.org/10.1016/j.ijpharm.2023.122809" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1016/j.ijpharm.2023.122809</a></p>
-                       </li>
-                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
-                           <strong class="text-gray-800 dark:text-gray-200">PLGA-TPGS-Based Hybrid Nanoparticles Loaded with Doxorubicin for Breast Cancer Therapy.</strong>
-                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">PHARMACEUTICS. <a href="https://doi.org/10.3390/pharmaceutics14112394" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.3390/pharmaceutics14112394</a></p>
-                       </li>
-                       <li class="bg-slate-50 dark:bg-gray-700/50 rounded-lg">
-                           <strong class="text-gray-800 dark:text-gray-200">Treatment for chemical burning using liquid crystalline nanoparticles as an ophthalmic delivery system for pirfenidone.</strong>
-                           <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">INTERNATIONAL JOURNAL OF PHARMACEUTICS. <a href="https://doi.org/10.1016/j.ijpharm.2019.118466" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1016/j.ijpharm.2019.118466</a></p>
-                       </li>
-                    </ul>
-                </div>
-            </main>
+            <!-- SEÇÃO DE IMAGENS (Equipe) - REMOVIDA CONFORME SOLICITADO -->
             
-        </div>
+            <!-- Publicações e Resultados (SESSÃO SEPARADA) -->
+            <div class="flex flex-col md:flex-row gap-4">
+                
+                <div class="md:w-full">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Publicações e Resultados:</h3>
+                    <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full">
+                        <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 space-y-2">
+                           <!-- Artigos do HTML original traduzidos e formatados -->
+                           <li>
+                               PLGA-TPGS-Based Hybrid Nanoparticles Loaded with Doxorubicin for Breast Cancer Therapy. PHARMACEUTICS.
+                               <a href="https://doi.org/10.3390/pharmaceutics14112394" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.3390/pharmaceutics14112394</a>
+                           </li>
+                            <li>
+                                New intraocular lens containing a drug delivery system (IOL-DDS) loaded with dexamethasone. BIOMEDICAL MICRODEVICES.
+                                <a href="https://doi.org/10.1007/s10544-025-00743-4" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1007/s10544-025-00743-4</a>
+                            </li>
+                            <li>
+                                Anti-angiogenic activity of polymeric nanoparticles loaded with ursolic acid. JOURNAL OF DRUG TARGETING.
+                                <a href="https://doi.org/10.1080/1061186X.2024.2409881" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1080/1061186X.2024.2409881</a>
+                            </li>
+                            <li>
+                                Nanofiber-coated implants: Development and safety after intravitreal application in rabbits. INTERNATIONAL JOURNAL OF PHARMACEUTICS.
+                                <a href="https://doi.org/10.1016/j.ijpharm.2023.122809" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1016/j.ijpharm.2023.122809</a>
+                            </li>
+                            <li>
+                                Treatment for chemical burning using liquid crystalline nanoparticles as an ophthalmic delivery system for pirfenidone. INTERNATIONAL JOURNAL OF PHARMACEUTICS.
+                                <a href="https://doi.org/10.1016/j.ijpharm.2019.118466" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">DOI: 10.1016/j.ijpharm.2019.118466</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        
+    </div>
+</div>
+
+<!-- Modal para exibir a imagem em tamanho original -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="expandedImage">
+</div>
+
+<script>
+    // Função para abrir o modal de expansão
+    function openModal(imgSrc) {
+        const modal = document.getElementById('imageModal');
+        const expandedImage = document.getElementById('expandedImage');
+        
+        console.log('Abrindo modal para:', imgSrc);
+        
+        expandedImage.src = imgSrc;
+        modal.style.display = 'flex';
+        
+        // Adiciona um listener para fechar o modal ao clicar fora da imagem
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+        // Remove o listener ao fechar para evitar acúmulo
+        modal.onclick = null; 
+    }
+    
+    // Adiciona listener para fechar com a tecla ESC (Melhora a acessibilidade)
+    document.addEventListener('keydown', function(event) {
+        const modal = document.getElementById('imageModal');
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
 
 {% endblock conteudo %}

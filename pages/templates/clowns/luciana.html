@@ -7,90 +7,323 @@
   .lg\:p-8 {
     padding: 1rem !important;
   }
+  /* Estilos para o Modal de Visualização (Popup) - Modelo Fredd */
+  .modal {
+      position: fixed;
+      z-index: 9999; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none; /* Escondido por padrão */
+      justify-content: center;
+      align-items: center;
+  }
+  .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+  }
+  .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+  }
+
+  /* Estilos para a imagem de coordenação (pequena e no canto) */
+  .coord-img-container {
+      width: 100px;
+      height: 100px;
+      margin-left: 1rem;
+      flex-shrink: 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+  }
+  .coord-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  /* Estilos para garantir que o texto e a foto na Coordenação fiquem lado a lado */
+  .coord-content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+  }
+  
+  /* Estilo para a Galeria de Imagens Maiores (Vertical) */
+  .large-gallery-item {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      overflow: hidden;
+  }
+  .large-gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; 
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+  }
+  .large-gallery-item:hover img {
+    transform: scale(1.02);
+  }
 </style>
 
 <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+    <div class="bg-white dark:bg-gray-800 w-full max-w-5xl mx-auto overflow-hidden">
             <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
                 <div class="hero-subheader">
-                    Get to know us
+                    Conheça-nos
                 </div>
-                <h1 class="hero-title">Luciana Maria Silva Lopes</h1>
+                <h1 class="hero-title">Grupo de Biologia Celular</h1>
                 <p class="hero-description mt-4">Fundação Ezequiel Dias (FUNED)</p>
             </div>
         
-        <main class="p-6 space-y-6">
+        <main class="p-6 space-y-4">
+            
+            <!-- SEÇÃO: COORDENAÇÃO e SOBRE (Lado a Lado) -->
+            <div class="flex flex-col md:flex-row gap-4">
+                
+                <!-- Coordenação -->
+                <div class="md:w-1/2">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Coordenação:</h3>
+                    <div class="space-y-2 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full">
+                        
+                        <div class="coord-content-wrapper">
+                            <!-- Texto (esquerda) -->
+                            <div class="space-y-1">
+                                <h4 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+                                    Luciana Maria Silva Lopes
+                                </h4>
+                                <p class="text-base text-gray-600 dark:text-gray-300">
+                                    Fundação Ezequiel Dias (FUNED)
+                                </p>
+                                <div class="break-all">
+                                    <a href="http://lattes.cnpq.br/0162558710954506" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 dark:text-blue-400 hover:underline font-mono">
+                                        Currículo Lattes
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagem (direita) -->
+                            <div class="coord-img-container" onclick="openModal('{% static 'img/pesquisadores/luciana.png' %}')">
+                                <img 
+                                    src="{% static 'img/pesquisadores/luciana.png' %}" 
+                                    alt="Foto de Luciana Maria Silva Lopes" 
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Luciana';"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sobre o Grupo -->
+                <div class="md:w-1/2">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Sobre o Grupo:</h3>
+                    <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full overflow-y-auto max-h-80">
+                        <p class="text-base text-gray-600 dark:text-gray-400 mt-2 text-justify">
+                            O Grupo de Biologia Celular da Fundação Ezequiel atua no desenvolvimento de produtos biotecnológicos atuando principalmente nos seguintes temas: Biologia Celular, Cultivo in vitro de células animais, Cultura primária de células, câncer, medicina translacional, células-tronco do câncer, heterogeneidade celular, "Scale-up" de células animais para produção de produtos biológicos. Pesquisa de vias de sinalização celular relacionados a quimioresistência e agressividade dos tumores humanos. Temos também estudos da patofisiologia e desenvolvimento de antígenos vacinais de doenças infecciosas.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Membros Colaboradores -->
             <div>
-                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
-                    Genetics and Biotechnology Studies in Cancer
-                </h2>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Membros Colaboradores:</h3>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
+                    <li>
+                        <strong>Milene Pereira Moreira</strong> 
+                        (<a href="http://lattes.cnpq.br/7161584290291649" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Janete Soares Coelho dos Santos</strong> 
+                        (<a href="http://lattes.cnpq.br/0272632037995865" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Silvia Catarina Salgado Oloris</strong> 
+                        (<a href="http://lattes.cnpq.br/2694854855300313" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Luciana Soares Salomon</strong> 
+                        (<a href="http://lattes.cnpq.br/0649651336168556" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Frederico Scott Varella Malta</strong> 
+                        (<a href="http://lattes.cnpq.br/3104920782497897" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                </ul>
             </div>
 
-            <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
-                <div class="flex-shrink-0">
-                    <img 
-                        src="{% static 'img/pesquisadores/luciana.png' %}" 
-                        alt="Photo of Luciana Maria Silva Lopes" 
-                        class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
-                        style="display: block; margin: auto;"
-                    >
-                </div>
-                
-                <div class="w-full space-y-6" style="margin-top: 3rem;">
-                     <div>
-                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
-                        <a href="http://lattes.cnpq.br/0162558710954506" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
-                            http://lattes.cnpq.br/0162558710954506
-                        </a>
-                    </div>
+            <!-- Alunos Vinculados -->
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Alunos Vinculados:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                    <!-- Graduação -->
                     <div>
-                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
-                        <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
-                            <li><strong>Milene Pereira Moreira</strong> – Funed Server, Researcher</li>
-                            <li><strong>Bianca Nataliene Carvalho de Camargos</strong> - Master's Student PPG Biotec Funed, Scholar</li>
-                            <li><strong>Julia Guerra Vieira de Sousa</strong> - Master's Student PPG Biotec Funed, Scholar</li>
+                        <h4 class="font-medium text-gray-800 dark:text-gray-200">Graduação</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Ana Paula Moreira da Silva</li>
+                            <li>Luísa Meireles Pessoa da Costa</li>
+                            <li>Luiz Gustavo Dias Silva</li>
+                            <li>Isabela Azevedo de Almeida</li>
+                            <li>Alice Martins da Silva Santos</li>
+                            <li>Mariana Dias Nogueira de Souza</li>
+                            <li>Yasmim Arifa Sampaio</li>
+                            <li>Sarah Aparecida Dias Fradigo</li>
+                            <li>Giovanna Alícia Silva Fernandes</li>
+                            <li>Julia Baeta Boucinhas</li>
+                            <li>Davi Emmanuel Lisboa Lopes</li>
+                            <li>Marisa Camargos Barbosa</li>
+                        </ul>
+                    </div>
+                    <!-- Pós-Graduação -->
+                    <div>
+                        <h4 class="font-medium text-gray-800 dark:text-gray-200">Mestrado e Doutorado</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <li>Carolina Pereira Lages (Mestrado)</li>
+                            <li>Guilherme Rodrigues Andrade (Mestrado)</li>
+                            <li>Victório Emannuel Sena Amaral (Mestrado)</li>
+                            <li>Douglas Dellaretti Mendes (Mestrado)</li>
+                            <li>Hanna Carolina Oliveira Mendes (Mestrado)</li>
+                            <li>Luciana Soares Salomon (Mestrado)</li>
+                            <li>Marina Neves Zerbini de Faria (Mestrado)</li>
+                            <li>Elisangela Eliene de Almeida (Mestrado)</li>
+                            <li>Bárbara Avelar Ferreira Barros (Doutorado)</li>
+                            <li>Bianca Rocha dos Anjos (Doutorado)</li>
+                            <li>Paulo Roberto Moreira Lauar (Doutorado)</li>
+                            <li>Bianca N. Carvalho de Camargos (Doutorado)</li>
+                            <li>José Bryan da Rocha Rhis (Doutorado)</li>
                         </ul>
                     </div>
                 </div>
             </div>
-           
-            <div>
-                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Other products related to the Network:</h3>
-                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-2">
-                    <li><strong>Master's thesis:</strong> In silico characterization, recombinant expression and biological functions of TNFRSF10C/TRAILR3 – BIANCA NATALIENE CARVALHO DE CAMARGOS.</li>
-                    <li><strong>Master's thesis:</strong> Recombinant expression of genetic variants found in patients with Epithelial Ovarian Cancer for functional studies - JÚLIA GUERRA VIEIRA DE SOUSA.</li>
-                </ul>
+            
+            <!-- GALERIA DE FOTOS (Vertical) -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Fotos do Laboratório:</h3>
+                
+                <div class="p-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6932f03ce5a0c.jpg' %}')">
+                        <img src="{% static 'img/pesquisadores/6932f03ce5a0c.jpg' %}" alt="Foto Laboratório 1" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Foto+Lab+1';">
+                    </div>
+                    
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6932f03ce5c37.jpg' %}')">
+                        <img src="{% static 'img/pesquisadores/6932f03ce5c37.jpg' %}" alt="Foto Laboratório 2" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Foto+Lab+2';">
+                    </div>
+
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6932f03ce50e1.jpg' %}')">
+                        <img src="{% static 'img/pesquisadores/6932f03ce50e1.jpg' %}" alt="Foto Laboratório 3" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Foto+Lab+3';">
+                    </div>
+
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6932f03ce570a.jpg' %}')">
+                        <img src="{% static 'img/pesquisadores/6932f03ce570a.jpg' %}" alt="Foto Laboratório 4" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Foto+Lab+4';">
+                    </div>
+                    
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6932f03ce628b.jpg' %}')">
+                        <img src="{% static 'img/pesquisadores/6932f03ce628b.jpg' %}" alt="Foto Laboratório 5" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Foto+Lab+5';">
+                    </div>
+
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6932f03ce6809.jpg' %}')">
+                        <img src="{% static 'img/pesquisadores/6932f03ce6809.jpg' %}" alt="Foto Laboratório 6" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Foto+Lab+6';">
+                    </div>
+
+                </div>
             </div>
 
-            <!-- SECTION: PROJECT IMAGES AND ILLUSTRATIONS -->
+            <!-- Artigos Publicados -->
             <div>
-                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Project Photos and Illustrations:</h3>
-                <div class="mt-4 space-y-8">
-                    <figure>
-                        <img src=".\static\img\pesquisadores\luciana1.png" alt="Figure 1: HEK-293 RAD51B transfection" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 1.</strong> Transfection of wild-type RAD51B (Vector 1) and RAD51Bc.295delGinsTTO (Vector 2) genes into TOV-21G cells using nanoparticles. A–E: HEK-293 RAD51B expression analysis.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src=".\static\img\pesquisadores\luciana2.png" alt="Figure 2: RAD51B protein localization" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 2.</strong> Subcellular localization of RAD51B protein in transfected TOV-21G cells observed by immunofluorescence microscopy. Images depict nuclear and cytoplasmic distribution.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src=".\static\img\pesquisadores\luciana3.png" alt="Figure 3: Nanoparticle-mediated gene delivery" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 3.</strong> Schematic representation of nanoparticle-mediated gene delivery into TOV-21G cells, showing complex formation and cellular uptake. Adapted from experimental design.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src=".\static\img\pesquisadores\luciana4.png" alt="Figure 4: RAD51B protein expression analysis" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 4.</strong> Western blot analysis showing RAD51B protein levels in TOV-21G cells after transfection with wild-type and mutant constructs.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src=".\static\img\pesquisadores\luciana5.png" alt="Figure 5: Nanoparticle uptake in cells" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 5.</strong> Confocal microscopy images illustrating the uptake of nanoparticles carrying RAD51B constructs into TOV-21G cells. Fluorescent signal indicates successful internalization.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src=".\static\img\pesquisadores\luciana6.png" alt="Figure 6: Representation of nanoparticle internalization and endosomal escape" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 6.</strong> Representation of internalization and endosomal escape promoted by nanoparticles carrying RAD51B constructs. Adapted from experimental design and prepared using BioRender (2024).</figcaption>
-                    </figure>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Artigos Publicados (Seleção):</h3>
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 max-h-[600px] overflow-y-auto">
+                    <ul class="list-decimal list-inside text-sm text-gray-600 dark:text-gray-400 space-y-3">
+                        <li>DE AMORIM, IZABELA FERREIRA GONTIJO et al. Association of a CHEK2 somatic variant with tumor microenvironment calprotectin expression predicts platinum resistance in a small cohort of ovarian carcinoma. PLoS One, v. 20, p. e0315487, 2025.</li>
+                        <li>BRAGA, L. C. et al. The OvarianTag? Biomarker Panel Emerges as a Prognostic Tool to Guide Clinical Decisions in Cisplatin-Based Treatment of Epithelial Ovarian Cancer. INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES, v. 26, p. 8393, 2025.</li>
+                        <li>DE LIMA, ALINE BRITO et al. Ovarian cancer cell heterogeneity and paclitaxel response in vitro 2D and 3D cancer cell models and xenograft growth in the chicken chorioallantoic membrane (CAM). BIOCHEMICAL AND BIOPHYSICAL RESEARCH COMMUNICATIONS, v. 777, p. 152322, 2025.</li>
+                        <li>Silva, L.M. et al. TRAIL receptors as prognostic markers and survival predictors in ovarian cancer: A systematic review of clinical studies and meta-analysis. REV. COLOMB. CIENC. QUÍM. FARM, v. 52, p. 1138-1162, 2024.</li>
+                        <li>GONÇALVES, BRYAN ÔRTERO PEREZ ; Silva, Luciana Maria . Investigating the Influence of Everolimus, Recombinant TGF-alpha, and Methotrexate on Cell Cycle Phases in Human Cancer Cell Lines. BRAZILIAN ARCHIVES OF BIOLOGY AND TECHNOLOGY (ONLINE), v. 67, p. e24231139, 2024.</li>
+                        <li>MOREIRA, MILENE PEREIRA et al. Standard chemotherapy impacts on in vitro cellular heterogeneity in spheroids enriched with cancer stem cells (CSCs) derived from triple-negative breast cancer cell line. BIOCHEMICAL AND BIOPHYSICAL RESEARCH COMMUNICATIONS, v. 734, p. 150765, 2024.</li>
+                        <li>GONÇALES, NIKOLE GONTIJO et al. TNFRSF10D expression as a potential biomarker for cisplatin-induced damage and ovarian tumor relapse prediction. PATHOLOGY RESEARCH AND PRACTICE, v. 263, p. 155592, 2024.</li>
+                        <li>CARVALHO, C. M. et al. GERMLINE MUTATIONS LANDSCAPE IN A COHORT OF THE STATE OF MINAS GERAIS, BRAZIL PATIENTS UNDERGONE TO GENETIC COUNSELING FOR GYNECOLOGICAL AND BREAST CANCER. REVISTA BRASILEIRA DE GINECOLOGIA E OBSTETRÍCIA, v. 45, p. 74-81, 2023.</li>
+                        <li>ROCHA, B. G. S. et al. Tissue resident glial cells associate with tumoral vasculature and promote cancer progression. ANGIOGENESIS, v. 26, p. 129-166, 2023.</li>
+                        <li>SIMÕES, RICARDO et al. Evaluation of the RDW Index (Red Cell Distribution Width) in Women with Breast Cancer Treated with Doxorubicin in a One-Year Follow-Up Study. Diagnostics, v. 13, p. 1552, 2023.</li>
+                        <li>SOUZA, S. O. L. et al. Tuning the structure and properties of cell-embedded gelatin hydrogels for tumor organoids. Polímeros: ciência e Tecnologia, v. 33, p. 33, 2023.</li>
+                        <li>BRAGA, L. C. et al. Identification of best housekeeping genes for the normalization of RT-qPCR in human cell lines. ACTA HISTOCHEMICA, v. 124, p. 151821, 2022.</li>
+                        <li>GONÇALVES, BRYAN ÔRTERO PEREZ et al. Markers to sensibility and relapse on IMR-32 neuroblastoma cell line cultured in monolayer (2D) and neurosphere (3D) models cisplatin-treated. ACTA HISTOCHEMICA, v. 124, p. 151849, 2022.</li>
+                        <li>PESTANA, RODRIGO M.C. et al. Hemostatic status in women with breast cancer and cardiotoxicity associated to doxorubicin-based chemotherapy - A one-year follow-up study. THROMBOSIS RESEARCH, v. 211, p. 56-59, 2022.</li>
+                        <li>DA SILVA, CAROLINA NUNES et al. Pathophysiological Effects of Lycosa erythrognatha Derived Peptide LyeTxI-b on RKO-AS-45-1 Colorectal Carcinoma Cell Line Using the Chicken Chorioallantoic Membrane Model. International Journal of Peptide Research and Therapeutics, v. 28, p. 36, 2022.</li>
+                        <li>ALVES, M. T. et al. microRNA miR-133a as a biomarker for doxorrubicin-induced cardiotoxicity in women with breast cancer – a signaling pathway investigation. Cardiovascular Toxicology, v. 22, p. na, 2022.</li>
+                        <li>MANSUR, A. A. P. et al. Carboxymethylcellulose biofunctionalized ternary quantum dots for subcellular-targeted brain cancer nanotheranostics. INTERNATIONAL JOURNAL OF BIOLOGICAL MACROMOLECULES, v. 1, p. 1, 2022.</li>
+                        <li>SOUZA, SARAH O. L. et al. Biomolecule-based hydrogels containing electrospun fiber mats with enhanced mechanical properties and biological activity. JOURNAL OF APPLIED POLYMER SCIENCE (ONLINE), v. NA, p. NA, 2022.</li>
+                        <li>MOREIRA CASTRO, BRENDA FERNANDA et al. Low-dose melittin is safe for intravitreal administration and ameliorates inflammation in an experimental model of uveitis. Current Research in Pharmacology and Drug Discovery, v. 3, p. 100107, 2022.</li>
+                        <li>PESTANA, RODRIGO M.C. et al. Interleukin-10 levels and the risk of thromboembolism according to COMPASS-Cancer associated thrombosis score in breast cancer patients prior to undergoing doxorubicin-based chemotherapy. BLOOD COAGULATION & FIBRINOLYSIS, 2022.</li>
+                        <li>SIMOES, R. et al. Identification of Clinical and Laboratory Variables Associated with Cardiotoxicity Events Due to Doxorubicin in Breast Cancer Patients: A 1-Year Follow-Up Study. Cardiovascular Toxicology, v. 21, p. 106-114, 2021.</li>
+                        <li>ALVES, M. T. et al. Interleukin-10 Levels are Associated with Doxorubicin-Related Cardiotoxicity in Breast Cancer Patients in a One-Year Follow-Up Study. IMMUNOLOGICAL INVESTIGATIONS, v. 9, p. 1-16, 2021.</li>
+                        <li>ANDRADE, WARNE PEDRO et al. Upregulation of HSPB1 heat shock gene and ERCC1 gene on serous ovarian cancer cell line in HIPEC in vitro model. JOURNAL OF CLINICAL ONCOLOGY, v. 39, p. e17559-e17559, 2021.</li>
+                        <li>PEREZ GONÇALVES, BRYAN ÔRTERO et al. Phenotypic changes on central nervous system (CNS) tumor cell lines cultured in vitro 2D and 3D models and treated with cisplatin. ACTA HISTOCHEMICA, v. 123, p. 151768, 2021.</li>
+                        <li>BRAGA, L. C. et al. Apoptosis-related gene expression can predict the response of ovarian cancer cell lines to treatment with recombinant human TRAIL alone or combined with cisplatin. Clinics, v. 75, p. e1492, 2020.</li>
+                        <li>QUEIROZ, F. R. et al. Deep sequencing of small RNAs reveals the repertoire of miRNAs and piRNAs in Biomphalaria glabrata. Memórias do Instituto Oswaldo Cruz, v. 115, p. e190498, 2020.</li>
+                        <li>BRAGA, LETICIA DA CONCEIÇÃO et al. OvarianTag biomarker panel in order guide treatment decisions cisplatin-based for women with epithelial ovarian cancer. JOURNAL OF CLINICAL ONCOLOGY, v. 38, p. e18075-e18075, 2020.</li>
+                        <li>MAGALHAES, T. et al. Cinnamyl Schiff Bases: Synthesis, Cytotoxic Effects and Antifungal Activity of Clinical Interest. Letters Applied Microbiology, 2020.</li>
+                        <li>SILVA NETO, A. et al. Interaction of Biomphalaria cells in primary culture with Schistosoma mansoni sporocysts. SOCIEDADE BRASILEIRA DE MEDICINA TROPICAL. REVISTA, v. 53, p. e20200257, 2020.</li>
+                        <li>CASTRO, BRENDA FERNANDA MOREIRA et al. Intravitreal thalidomide ameliorates inflammation in a model of experimental uveitis induced by BCG. INTERNATIONAL IMMUNOPHARMACOLOGY, v. 81, p. 106129, 2020.</li>
+                        <li>GONCALVES, B. O. P. et al. Central nervous system (CNS) tumor cell heterogeneity contributes to differential platinum-based response in an in vitro 2D and 3D cell culture approach. EXPERIMENTAL AND MOLECULAR PATHOLOGY, v. x, p. 104520, 2020.</li>
+                        <li>VIEIRA, LORENA CARLA et al. Rosmarinic Acid Intravitreal Implants: A New Therapeutic Approach for Ocular Neovascularization. PLANTA MEDICA, 2020.</li>
+                        <li>PEREZ GONÇALVES, BRYAN et al. Epithelial-to-mesenchymal transition markers are differentially expressed in epithelial cancer cell lines after everolimus treatment. Oncology Letters, v. 20, p. 1-1, 2020.</li>
+                        <li>Silva, L.M. et al. Immunodetection of toxins in historesin-embedded sections of Phoneutria nigriventer venom glands using laser confocal scanning microscopy. TOXICON, v. 167, p. 168-171, 2019.</li>
+                        <li>ANDRADE, W. P. et al. HSPA1A, HSPA1L and TRAP1 Heat Shock genes could be related to prognosis features in ovarian epithelial cancer. ONCOLOGY LETTERS, v. 1, p. 1, 2019.</li>
+                        <li>MOREIRA, M. P. et al. Phenotypic, structural, and ultrastructural analysis of triple-negative breast cancer cell lines and breast cancer stem cell subpopulation. EUROPEAN BIOPHYSICS JOURNAL, v. 48, p. 673-684, 2019.</li>
+                        <li>MOREIRA, MILENE PEREIRA et al. STAT3 as a promising chemoresistance biomarker associated with the CD44 +/high /CD24 -/low /ALDH + BCSCs-like subset of the triple-negative breast cancer (TNBC) cell line. EXPERIMENTAL CELL RESEARCH, v. 363, p. 283-290, 2018.</li>
+                        <li>DE LIMA, ALINE BRITO et al. Three-Dimensional Cellular Arrangement in Epithelial Ovarian Cancer Cell Lines TOV-21G and SKOV-3 is Associated with Apoptosis-Related miRNA Expression Modulation. CANCER MICROENVIRONMENT, v. 1, p. 1, 2018.</li>
+                        <li>SIMÕES, RICARDO et al. Troponin as a cardiotoxicity marker in breast cancer patients receiving anthracycline-based chemotherapy: A narrative review. BIOMEDICINE & PHARMACOTHERAPY, v. 107, p. 989-996, 2018.</li>
+                        <li>LIBERTO, N. A. et al. Quinolines: Microwave-assisted synthesis and their antifungal, anticancer and radical scavenger properties. Bioorganic & Medicinal Chemistry, v. 25, p. 1153-1162, 2017.</li>
+                        <li>Silva, L.M. et al. Digoxin reduces the mutagenic effects of Mitomycin C in human and rodent cell lines. Cytotechnology, v. 69, p. 699-710, 2017.</li>
+                        <li>QUEIROZ, FÁBIO RIBEIRO et al. Differential expression of small RNA pathway genes associated with the Biomphalaria glabrata/Schistosoma mansoni interaction. PLoS One, v. 12, p. e0181483, 2017.</li>
+                        <li>EVANGELISTA, F. C. G. et al. Synthesis and in vitro evaluation of novel triazole/azide chalcones. Medicinal Chemistry Research, v. 13, p. 1-17, 2016.</li>
+                        <li>LIMA, A. B. et al. New 3-alkylpyridine marine alkaloid analogues as promising antitumor agents against the CD44 +/high /CD24 -/low subset of triple-negative breast cancer (TNBC) cell line. Chemical Biology & Drug Design, 2016.</li>
+                        <li>FERREIRA, S. et al. Synthesis of a new peptide-coumarin conjugate: a potential agent against cryptococcosis. ACS MED CHEM LETT, v. 6, p. 150107183701004, 2015.</li>
+                        <li>ALVES, S. et al. γ-Benzylidene digoxin derivatives synthesis and molecular modeling: Evaluation of anticancer and the Na,K-ATPase activity effect. Bioorganic & Medicinal Chemistry, v. 23, p. 4397-4404, 2015.</li>
+                        <li>MOREIRA, P. O. L. et al. Síntese e avaliação da atividade citotóxica in vitro de análogos de alcalóides 3-alquilpiridínicos contendo o grupo tiossemicarbazona. REVISTA CIENTÍFICA DA FACULDADE DE MEDICINA DE CAMPOS, v. 10, p. 17-21, 2015.</li>
+                        <li>BRAGA, L. C. et al. Single CpG island methylation is not sufficient to maintain the silenced expression of CASPASE-8 apoptosis-related gene among women with epithelial ovarian cancer. Biomedicine & Pharmacotherapy, v. 68, p. 87-91, 2014.</li>
+                        <li>SILVA NETO, A. et al. Ultrastructural characterization of cells in primary cultures from different adult tissues of Biomphalaria tenagophila TAIM, a strain that is absolutely resistant to Schistosoma mansoni infection. Micron, v. 67, p. 37-49, 2014.</li>
+                        <li>GONTIJO, V. S. et al. Long-chain alkyltriazoles as antitumor agents: synthesis, physicochemical properties, and biological and computational evaluation. Medicinal Chemistry Research, v. 12, p. 5000, 2014.</li>
+                        <li>GONCALVES, A. M. M. N. et al. Synthesis and Biological Evaluation of Novel 3-Alkylpyridine Marine Alkaloid Analogs with Promising Anticancer Activity. Marine Drugs, v. 12, p. 4361-4378, 2014.</li>
+                        <li>ROCHA, S. C. et al. 21-Benzylidene Digoxin: A Proapoptotic Cardenolide of Cancer Cells That Up-Regulates Na,K-ATPase and Epithelial Tight Junctions. Plos One, v. 9, p. e108776, 2014.</li>
+                        <li>VIANA, A. G. et al. Histopathological and immunohistochemical aspects of American cutaneous leishmaniasis before and after different treatments. Anais Brasileiros de Dermatologia, p. 32-40, 2013.</li>
+                        <li>MENDES, EVELINE ALBUQUERQUE et al. Expression of IL-4, IL-10 and IFN-γ in the liver tissue of cattle that are naturally infected with Fasciola hepatica. Veterinary Parasitology, v. 195, p. 177-192, 2013.</li>
+                        <li>BRAGA, LETÍCIA et al. Epigenetic and expression analysis of TRAIL-R2 and BCL2: on the TRAIL to knowledge of apoptosis in ovarian tumors. Archives of Gynecology and Obstetrics, v. 289, p. 1061-1069, 2013.</li>
+                        <li>CANDIDO, E. B. et al. Immune Response Evaluation Through Determination of Type 1, Type 2, and Type 17 Patterns in Patients With Epithelial Ovarian Cancer. Reproductive Sciences, v. 20, p. 828-837, 2013.</li>
+                        <li>Pereira, Juliana R.C.S. et al. Cytotoxicity evaluation of marine alkaloid analogues of viscosaline and theonelladin C. Biomedicine & Preventive Nutrition, v. 02, p. 145-148, 2012.</li>
+                        <li>Braga, Letícia da Conceição et al. TRAIL-R3-related apoptosis: Epigenetic and expression analyses in women with ovarian neoplasia. Gynecologic Oncology, p. 268-273, 2012.</li>
+                        <li>CALIMAN, L. P. et al. Evaluation of microsatellite instability in women with epithelial ovarian cancer. Oncology Letters, v. 4, p. 556-560, 2012.</li>
+                        <li>SILVA, L. M. et al. Developmental biology of the Brazilian ‘Armed’ spider Phoneutria. Toxicon, v. 57, p. 19-27, 2011.</li>
+                        <li>Martins, G.F. et al. Isolation, primary culture and morphological characterization of oenocytes from Aedes aegypti pupae. Tissue & Cell, v. 43, p. 83-90, 2011.</li>
+                        <li>Naumann, Gustavo B. et al. Cytotoxicity and inhibition of platelet aggregation caused by an l-amino acid oxidase from Bothrops leucurus venom. Biochimica et Biophysica Acta, v. 1810, p. 683-694, 2011.</li>
+                        <li>HILARIO, F. F. et al. Synthesis and evaluation of antimalarial activity of oxygenated 3-alkylpyridine marine alkaloid analogues. Chemical Biology & Drug Design, v. 2011, p. 1-6, 2011.</li>
+                        <li>ROCHA, F. F. et al. Primary culture of Rhodnius prolixus (Hemíptera: Reduviidae) salivary gland cells. Memórias do Instituto Oswaldo Cruz, v. 105, p. 132-136, 2010.</li>
+                        <li>MOREIRA, M. P. et al. The Role of GADD45A in Resistance to Oxidative Stress-Mediated Cell Death in Human Colon Tumor Cell Lines. Applied Cancer Research, v. 29, p. 180-185, 2009.</li>
+                        <li>SANT'ANA, J. R. C. et al. Reestruturação do banco de células animais da Fundação Ezequiel Dias. Gestão, Ciência & Saúde, v. 5, p. 73-83, 2009.</li>
+                        <li>SILVA, L. M. et al. Structural analysis of the venom glands of the armed spider Phoneutria nigriventer. TOXICON, v. 51, p. 693-706, 2008.</li>
+                        <li>SILVA, L. M. et al. Primary culture of venom glands from the Brazilian armed spider, Phoneutria nigriventer. Toxicon, v. 51, p. 428-434, 2007.</li>
+                        <li>L Barbosa et al. Primary culture of the APO region of B. glabrata. Memórias do Instituto Oswaldo Cruz, 2006.</li>
+                        <li>SILVA, L. M. et al. Fingerprinting of cell lines by directed amplication of minissatellite-region DNA (DMAD). Brazilian Journal of Medical and Biological Research, v. 34, p. 1405-1410, 2001.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -98,5 +331,44 @@
         
     </div>
 </div>
+
+<!-- Modal para exibir a imagem em tamanho original -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="expandedImage">
+</div>
+
+<script>
+    // Função para abrir o modal de expansão
+    function openModal(imgSrc) {
+        const modal = document.getElementById('imageModal');
+        const expandedImage = document.getElementById('expandedImage');
+        
+        console.log('Abrindo modal para:', imgSrc);
+        
+        expandedImage.src = imgSrc;
+        modal.style.display = 'flex';
+        
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+        modal.onclick = null; 
+    }
+    
+    document.addEventListener('keydown', function(event) {
+        const modal = document.getElementById('imageModal');
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
 
 {% endblock conteudo %}

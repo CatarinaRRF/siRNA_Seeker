@@ -7,103 +7,399 @@
   .lg\:p-8 {
     padding: 1rem !important;
   }
+  /* Estilos para o Modal de Visualização (Popup) */
+  .modal {
+      position: fixed;
+      z-index: 9999; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none; /* Escondido por padrão */
+      justify-content: center;
+      align-items: center;
+  }
+  .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+  }
+  .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+  }
+
+  /* Estilos para a imagem de coordenação (pequena e no canto) */
+  .coord-img-container {
+      width: 100px;
+      height: 100px;
+      margin-left: 1rem; /* Espaço à esquerda do texto */
+      flex-shrink: 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      /* Removendo a sombra da imagem de coordenação */
+      cursor: pointer;
+  }
+  .coord-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  /* Estilos para garantir que o texto e a foto na Coordenação fiquem lado a lado */
+  .coord-content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+  }
+  
+  /* Novo Estilo para a Galeria de Imagens Maiores (Vertical) */
+  .large-gallery-item {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem; /* Espaçamento entre as imagens */
+      border-radius: 0.5rem;
+      /* Removendo a sombra da galeria vertical */
+      cursor: pointer;
+      overflow: hidden;
+  }
+  .large-gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; 
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+  }
+  /* Adiciona hover para indicar que são clicáveis */
+  .large-gallery-item:hover img {
+    transform: scale(1.02);
+  }
+
+  /* Removendo estilos de galeria horizontal e vertical antigos */
+  .vertical-gallery-card, .horizontal-gallery, .gallery-card {
+      display: none !important;
+  }
 </style>
  
 <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden">
+    <!-- Removendo shadow-xl e rounded-2xl do contêiner principal -->
+    <div class="bg-white dark:bg-gray-800 w-full max-w-5xl mx-auto overflow-hidden">
             <div class="section col-12 text-center" data-theme="dark" style="border-radius: 30px;">
                 <div class="hero-subheader">
-                    Get to know us
+                    Conheça-nos
                 </div>
-                <h1 class="hero-title">Frederico Pittella Silva</h1>
-                <p class="hero-description mt-4">Universidade Federal de Juiz de Fora (UFJF)</p>
+                <h1 class="hero-title">Terapia de RNA de Interferência (RNAi) no câncer de mama: o uso de nanopartículas</h1>
+                <p class="hero-description mt-4">UFJF</p> <!-- Afiliação genérica no cabeçalho -->
             </div>
         
-        <main class="p-6 space-y-6">
-            <div>
-                <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 text-center">
-                    Interference RNA (RNAi) therapy in breast cancer: the use of nanoparticles
-                </h2>
-            </div>
-
-            <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
-                <div class="flex-shrink-0">
-                    <img 
-                        src="{% static 'img/pesquisadores/fredd.png' %}" 
-                        alt="Photo of Frederico Pittella Silva" 
-                        class="w-40 h-40 rounded-lg object-cover border-4 border-white dark:border-gray-700 shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Image+Unavailable';"
-                        style="display: block; margin: auto;"
-                    >
-                </div>
+        <main class="p-6 space-y-4">
+            
+            <!-- COORDENAÇÃO e LABORATÓRIO LADO A LADO -->
+            <div class="flex flex-col md:flex-row gap-4">
                 
-                <div class="w-full space-y-6" style="margin-top: 3rem;">
-                     <div>
-                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Lattes Link:</h3>
-                        <a href="http://lattes.cnpq.br/1840687382026247" target="_blank" rel="noopener noreferrer" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">
-                            http://lattes.cnpq.br/1840687382026247
-                        </a>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Associated Team:</h3>
-                        <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
-                            <li><strong>Natália Prado da Silva</strong> – Post-doc</li>
-                            <li><strong>Lívia Mara Silva</strong> - PhD Student</li>
-                            <li><strong>Davi Trombini Aleixo</strong> - PhD Student</li>
-                            <li><strong>Estael Cruz Cazarim</strong> - PhD Student</li>
-                            <li><strong>Kezia Cristine Barbosa Ferreira</strong> - PhD Student</li>
-                            <li><strong>Lívia do Nascimento Grossi</strong> - PhD Student</li>
-                            <li><strong>Allana Carvalho Silva</strong> - PhD Student</li>
-                        </ul>
+                <!-- Início da Nova Seção: Coordenação (50% de largura no desktop) -->
+                <div class="md:w-1/2">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Coordenação:</h3>
+                    <!-- Removendo shadow-lg do card de coordenação -->
+                    <div class="space-y-2 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full">
+                        
+                        <!-- Wrapper para alinhar texto e foto horizontalmente -->
+                        <div class="coord-content-wrapper">
+                            
+                            <!-- Texto (esquerda) -->
+                            <div class="space-y-1">
+                                <h4 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+                                    Frederico Pittella Silva
+                                </h4>
+                                <p class="text-base text-gray-600 dark:text-gray-300">
+                                    Universidade Federal de Juiz de Fora (UFJF)
+                                </p>
+                                <div class="break-all">
+                                    <a href="http://lattes.cnpq.br/1840687382026247" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 dark:text-blue-400 hover:underline font-mono">
+                                        http://lattes.cnpq.br/1840687382026247
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagem (direita, quadradinho pequeno) - FREDD.PNG -->
+                            <div class="coord-img-container" onclick="openModal('{% static 'img/pesquisadores/fredd.png' %}')">
+                                <img 
+                                    src="{% static 'img/pesquisadores/fredd.png' %}" 
+                                    alt="Foto de Frederico Pittella Silva" 
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x400/e2e8f0/64748b?text=Fredd';"
+                                >
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+                <!-- Fim da Nova Seção: Coordenação -->
+
+                <!-- Laboratório Associado (LDNano) (50% de largura no desktop) -->
+                <div class="md:w-1/2">
+                    <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Laboratório Associado (LDNano):</h3>
+                    <!-- Removendo shadow-lg do card de laboratório -->
+                    <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl h-full">
+                        <p class="text-base text-gray-600 dark:text-gray-400 mt-2">
+                            O Laboratório de Desenvolvimento de Sistemas Nanoestruturados (LDNano) foi formado em 2017 para propor soluções baseadas em nanotecnologia para pesquisadores e empresas. É coordenado pelos professores Frederico Pittella e Guilherme Tavares. A principal área de pesquisa inclui o desenvolvimento de sistemas de administração de medicamentos baseados em nanopartículas, com o intuito de modular as propriedades farmacológicas dos medicamentos e genes. O LDNano tem a sua sede na Faculdade de Farmácia da UFJF, e recebe apoio financeiro do CNPq, FAPEMIG, e outros órgãos de fomento.
+                        </p>
+                    </div>
+                </div>
+                <!-- Fim Laboratório Associado (LDNano) -->
+
             </div>
-           
+            
+            <!-- Alunos Vinculados (Detalhado do TXT) -->
             <div>
-                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Published Articles Related to the Network:</h3>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Equipe Associada (Alunos Vinculados):</h3>
+                <!-- Removendo o fundo de card, deixando só a lista -->
                 <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-1">
-                    <li><a href="https://doi.org/10.1515/oncologie-2023-0177" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1515/oncologie-2023-0177</a></li>
-                    <li><a href="https://doi.org/10.3390/ph17101325" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.3390/ph17101325</a></li>
-                    <li><a href="https://doi.org/10.1039/D4PM00158C" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1039/D4PM00158C</a></li>
-                    <li><a href="https://doi.org/10.1007/s13346-024-01772-x" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1007/s13346-024-01772-x</a></li>
+                    <li>
+                        <strong>Natália Prado da Silva</strong> – Post-doc 
+                        (<a href="http://lattes.cnpq.br/4676493329914830" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Davi Trombini Aleixo</strong> - PhD Student 
+                        (<a href="http://lattes.cnpq.br/0897260282620091" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Estael Cruz Cazarim</strong> - PhD Student 
+                        (<a href="http://lattes.cnpq.br/4184538110302084" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Kezia Cristine Barbosa Ferreira</strong> - PhD Student 
+                        (<a href="http://lattes.cnpq.br/2721708314060597" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Lívia do Nascimento Grossi</strong> - PhD Student 
+                        (<a href="http://lattes.cnpq.br/5077468939598550" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Allana Carvalho Silva</strong> - PhD Student 
+                        (<a href="http://lattes.cnpq.br/1519534387369622" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Maria Luiza Teixeira Mendes</strong> - Master Student 
+                        (<a href="http://lattes.cnpq.br/1880990302402556" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Lívia Chaves Corvino Silva</strong> - Master Student 
+                        (<a href="http://lattes.cnpq.br/7370050378399874" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
+                    <li>
+                        <strong>Rebeca Rocha Batista</strong> - Master Student 
+                        (<a href="http://lattes.cnpq.br/2046052710630783" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">Lattes</a>)
+                    </li>
                 </ul>
             </div>
+            
+            <!-- NOVA SEÇÃO: IMAGENS DO PROJETO E EQUIPE (VERTICAL) -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Equipe:</h3>
+                
+                <!-- Removendo estilos de card do contêiner da galeria -->
+                <div class="p-3">
+                    
+                    <!-- Imagem 'equipe 1' -> 6924ac44e23ef.jpeg -->
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6924ac44e23ef.jpeg' %}')">
+                        <img 
+                            src="{% static 'img/pesquisadores/6924ac44e23ef.jpeg' %}" 
+                            alt="Membros do Laboratório - Equipe 1" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Equipe+1';"
+                        >
+                    </div>
 
+                    <!-- Imagem 'equipe 2' -> 6924ac44e28cc.jpeg -->
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6924ac44e28cc.jpeg' %}')">
+                        <img 
+                            src="{% static 'img/pesquisadores/6924ac44e28cc.jpeg' %}" 
+                            alt="Membros do Laboratório em Atividade - Equipe 2" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Equipe+2';"
+                        >
+                    </div>
+
+                    <!-- Imagem 'instalações' -> 6924ac44e2ae6.jpg (AGORA COM .jpg) -->
+                    <div class="large-gallery-item mx-auto" onclick="openModal('{% static 'img/pesquisadores/6924ac44e2ae6.jpg' %}')">
+                        <img 
+                            src="{% static 'img/pesquisadores/6924ac44e2ae6.jpg' %}" 
+                            alt="Instalações do Laboratório" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/64748b?text=Instala%C3%A7%C3%B5es';"
+                        >
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Outros Produtos -->
             <div>
-                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Other products related to the Network:</h3>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Outros Produtos Relacionados à Rede:</h3>
+                <!-- Removendo o fundo de card, deixando só a lista -->
                 <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-2">
-                    <li>Development of the <strong>siRNASeeker</strong> software, partnership between Matheus Gomes (UFU) and Frederico Pittella (UFJF).</li>
-                    <li>PhD thesis defense by Ana Beatriz Caribé dos Santos Valle (2024).</li>
-                    <li>“Young Scientist Travel Grant 2024” Award – Ana Beatriz Caribé dos Santos Valle.</li>
+                    <li>Desenvolvimento do software siRNASeeker, parceria entre Matheus Gomes (UFU) e Frederico Pittella (UFJF).</li>
+                    <li>Defesa de tese de Doutorado de Ana Beatriz Caribé dos Santos Valle (2024).</li>
+                    <li>Prêmio “Young Scientist Travel Grant 2024” – Ana Beatriz Caribé dos Santos Valle.</li>
                 </ul>
             </div>
 
             
-
+            <!-- Fotos e Ilustrações (Legendas Traduzidas) - CORRIGINDO AS FIGURAS -->
             <div>
-                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Project Photos and Illustrations:</h3>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg">Fotos e Ilustrações do Projeto:</h3>
                 <div class="mt-4 space-y-8">
+                    <!-- Figura 1 removida (Curva de distribuição) -->
                     <figure>
-                        <img src=".\static\img\pesquisadores\imagem1.png" alt="Figura 1: Curva de distribuição de tamanho de HNP-siHOXB7" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 1. </strong> Size distribution curve of HNP-siHOXB7 (A) and HNP-mock (B) by intensity. Each curve in a different color represents a single measurement (n = 9).</figcaption>
+                        <img src="{% static 'img/pesquisadores/imgem2.png' %}" alt="Figura 7: Vias de silenciamento de RNAi de miRNA e siRNA" class="w-full max-w-2xl mx-auto rounded-lg">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 1. </strong> Vias de silenciamento de RNAi de miRNA e siRNA. Criado com BioRender.com</figcaption>
                     </figure>
                     <figure>
-                        <img src=".\static\img\pesquisadores\imgem2.png" alt="Figura 7: Vias de silenciamento de RNAi de miRNA e siRNA" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 2. </strong> miRNA and siRNA RNAi silencing pathways. Created with BioRender.com</figcaption>
+                        <img src="{% static 'img/pesquisadores/imgem3.png' %}" alt="Figura 13: Representação da nanopartícula híbrida" class="w-full max-w-2xl mx-auto rounded-lg">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 2. </strong> Representação da nanopartícula híbrida formada pelo núcleo inorgânico de fosfato de cálcio, com siRNA complexado, e o revestimento orgânico de copolímero em bloco PEG-polianiônico. Fonte: Preparado pelo autor com BioRender (2024), adaptado de Pittella et al., 2011.</figcaption>
                     </figure>
                     <figure>
-                        <img src=".\static\img\pesquisadores\imgem3.png" alt="Figura 13: Representação da nanopartícula híbrida" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 3. </strong> Representation of the hybrid nanoparticle formed by the inorganic core composed of calcium phosphate, with complexed siRNA, and the organic coating of PEG-polyanion block copolymer. Source: Prepared by the author with BioRender (2024), adapted from Pittella et al., 2011.</figcaption>
-                    </figure>
-                    <figure>
-                        <img img src=".\static\img\pesquisadores\imgem4.png" alt="Figura 14: Representação da internalização e escape endossomal" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figure 4. </strong> Representation of internalization and endosomal escape promoted by NP. Source: Prepared by the author with BioRender (2024).</figcaption>
+                        <img src="{% static 'img/pesquisadores/imgem4.png' %}" alt="Figura 14: Representação da internalização e escape endossomal" class="w-full max-w-2xl mx-auto rounded-lg">
+                        <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 3. </strong> Representação da internalização e escape endossomal promovido por NP. Fonte: Preparado pelo autor com BioRender (2024).</figcaption>
                     </figure>
                 </div>
+            </div>
+
+            <!-- Artigos Publicados (Lista Unificada) - ÚLTIMA SEÇÃO DE CONTEÚDO -->
+            <div>
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300 text-lg mb-3">Artigos Publicados Relacionados à Rede:</h3>
+                <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 mt-2 space-y-3">
+                    <li>
+                        <a href="https://doi.org/10.1515/oncologie-2023-0177" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            10.1515/oncologie-2023-0177
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://doi.org/10.3390/ph17101325" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            10.3390/ph17101325
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://doi.org/10.1039/D4PM00158C" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            10.1039/D4PM00158C
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://doi.org/10.1007/s13346-024-01772-x" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline break-all">
+                            10.1007/s13346-024-01772-x
+                        </a>
+                    </li>
+                    <!-- Artigos do TXT (Citações) -->
+                    <li class="pt-2 font-semibold text-gray-800 dark:text-gray-200">
+                        --- Artigos Adicionais (Citações Completas) ---
+                    </li>
+                    <li>
+                        PHUNGULA, AMANDA et al. Lauryl-NrTP6 lipopeptide self-assembled nanorods for nuclear-targeted delivery of doxorubicin. Nanoscale, v. 17, p. 4659-4669, 2025.
+                    </li>
+                    <li>
+                        PRIGOL, ANNE NATALIE et al. Calcium phosphate nanoparticles efficiently deliver miR-205-5p to modulate oncogenic targets in prostate cancer cells. INTERNATIONAL JOURNAL OF PHARMACEUTICS, v. 682, p. 125984--, 2025.
+                    </li>
+                    <li>
+                        DIAS, MARINA F. et al. Co-delivery of antioxidants and siRNA-VEGF: promising treatment for age-related macular degeneration. Drug Delivery and Translational Research, v. 15, p. 2272-2300, 2025.
+                    </li>
+                    <li>
+                        ALEIXO, DAVI TROMBINI et al. Breakthroughs in the nanoparticle-mediated delivery of siRNA for breast cancer treatment. Nanomedicine, v. -, p. 1-25, 2025.
+                    </li>
+                    <li>
+                        SIQUEIRA PALMIERI, MIGUEL GONTIJO et al. Novel natural lipids based NLC containing finasteride improved androgenetic alopecia treatment in rats. INTERNATIONAL JOURNAL OF PHARMACEUTICS, v. 666, p. 124804, 2024.
+                    </li>
+                    <li>
+                        VALLE, ANA BEATRIZ CARIBÉ DOS SANTOS et al. In Vivo HOXB7 Gene Silencing and Cotreatment with Tamoxifen for Luminal A Breast Cancer Therapy. PHARMACEUTICALS, v. 17, p. 1325, 2024.
+                    </li>
+                    <li>
+                        PITTELLA, FELIPE et al. PRECISE Scale: a quantitative classification for androgenetic alopecia and its application to hair transplantation. AESTHETIC PLASTIC SURGERY, v. 48, p. 775-784, 2024.
+                    </li>
+                    <li>
+                        ALEIXO, DAVI T. et al. Macauba oil carried by polymeric micelles reduces migration and proliferation of triple-negative breast cancer cells. RSC Pharmaceutics, v. 1, p. 524-535, 2024.
+                    </li>
+                    <li>
+                        SILVA, LÍVIA MARA et al. The Influence of the Omicron Variant on RNA Extraction and RT-qPCR Detection of SARS-CoV-2 in a Laboratory in Brazil. Viruses-Basel, v. 15, p. 1690, 2023.
+                    </li>
+                    <li>
+                        SILVA, LÍVIA MARA et al. Comparison of Rapid Nucleic Acid Extraction Methods for SARS-CoV-2 Detection by RT-qPCR. Diagnostics, v. 12, p. 601, 2022.
+                    </li>
+                    <li>
+                        FERREIRA, KÉZIA CRISTINE BARBOSA et al. Kaurenoic acid nanocarriers regulates cytokine production and inhibit breast cancer cell migration. JOURNAL OF CONTROLLED RELEASE, v. 352, p. 712-725, 2022.
+                    </li>
+                    <li>
+                        SOUZA, GABRIELA REGINA ROSA et al. Short interfering RNA delivered by a hybrid nanoparticlße targeting VEGF: Biodistribution and anti-tumor effect. BIOCHIMICA ET BIOPHYSICA ACTA-GENERAL SUBJECTS, v. 1865, p. 129938, 2021.
+                    </li>
+                    <li>
+                        JAEGER, LAUREN HUBERT et al. Adjusting RT-qPCR conditions to avoid unspecific amplification in SARS-CoV-2 diagnosis. INTERNATIONAL JOURNAL OF INFECTIOUS DISEASES, v. 102, p. 437-439, 2021.
+                    </li>
+                    <li>
+                        RIBEIRO, M. C. S. et al. Neuroprotective Effect of siRNA Entrapped in Hyaluronic Acid-Coated Lipoplexes by Intravitreal Administration. PHARMACEUTICS, v. 13, p. 1-18, 2021.
+                    </li>
+                    <li>
+                        SILVA, LÍVIA MARA et al. Licochalcone A-loaded solid lipid nanoparticles improve antischistosomal activity in vitro and in vivo. Nanomedicine, v. 16, p. 1641-1655, 2021.
+                    </li>
+                    <li>
+                        FERREIRA, KÉZIA CRISTINE BARBOSA et al. Nanostructured Lipid Carriers for the Formulation of Topical Anti-Inflammatory Nanomedicines Based on Natural Substances. PHARMACEUTICS, v. 13, p. 1454, 2021.
+                    </li>
+                    <li>
+                        CRISTOFOLINI, TATIANE et al. Multifunctional hybrid nanoparticles as magnetic delivery systems for siRNA targeting the HER2 gene in breast cancer cells. Materials Science & Engineering C-Materials for Biological Applications, v. 109, p. 110555, 2020.
+                    </li>
+                </ul>
             </div>
         </main>
         
     </div>
 </div>
+
+<!-- Modal para exibir a imagem em tamanho original -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="expandedImage">
+</div>
+
+<script>
+    // Função para abrir o modal de expansão
+    function openModal(imgSrc) {
+        const modal = document.getElementById('imageModal');
+        const expandedImage = document.getElementById('expandedImage');
+        
+        // Tenta forçar a visibilidade e o SRC
+        console.log('Abrindo modal para:', imgSrc);
+        
+        expandedImage.src = imgSrc;
+        modal.style.display = 'flex';
+        
+        // Adiciona um listener para fechar o modal ao clicar fora da imagem
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+        // Remove o listener ao fechar para evitar acúmulo
+        modal.onclick = null; 
+    }
+    
+    // Adiciona listener para fechar com a tecla ESC (Melhora a acessibilidade)
+    document.addEventListener('keydown', function(event) {
+        const modal = document.getElementById('imageModal');
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
 
 {% endblock conteudo %}
