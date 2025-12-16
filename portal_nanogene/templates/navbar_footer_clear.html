@@ -1,16 +1,16 @@
 {% load static%}
 
 <!DOCTYPE html> 
-<html dir="ltr" lang="en" data-theme="light" style="color-scheme:light;">
+<html dir="ltr" lang="pt-br" data-theme="light" style="color-scheme:light;">
   <head>
       <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
       <link rel="preload" as="image" Src="{% static '/img/undraw_quitting_time_dm8t.svg' %}" fetchPriority="high"/>
 
       <!-- CSS files -->
-      <link rel="stylesheet" href="static\static_main\css\main.css"/>
-      <link rel="stylesheet" href="static\static_main\css\projects.css" data-precedence="next"/> 
-      <link rel="stylesheet" href="static\static_main\css\tabler_main.css" data-precedence="next"/> 
+      <link rel="stylesheet" href="{% static 'static_main/css/main.css' %}"/>
+      <link rel="stylesheet" href="{% static 'static_main/css/projects.css' %}" data-precedence="next"/> 
+      <link rel="stylesheet" href="{% static 'static_main/css/tabler_main.css' %}" data-precedence="next"/> 
 
 
       <!-- Libs JS -->
@@ -27,7 +27,7 @@
       <meta name="author" content="codecalm"/>
       <meta name="keywords" content="css,html,jekyll,sass,bootstrap,modular,html5,dashboard,sponsors,uikit,boilerplate-template,scss,admin-dashboard,themes,dashboards,ui-kit,adminpanel,dashboard-templates,bootstrap4-theme,bootstrap5,bootstrap"/>
       <link rel="icon" href="{% static 'img/flavicon_verde.png' %}" type="image/x-icon" sizes="48x48"/>
-      <script src="static\static_main\js\polyfills-78c92fac7aa8fdd8.js" noModule=""></script>
+      <script src="{% static 'static_main/js/polyfills-78c92fac7aa8fdd8.js' %}" noModule=""></script>
   </head>
 
   <body>
@@ -141,7 +141,7 @@
                                             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                                             <path d="M21 21l-6 -6" />
                                         </svg>
-                                        Explore
+                                        Explorar
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                             <path d="M6 9l6 6l6 -6" />
@@ -149,9 +149,9 @@
                                     </a>
                                     <div class="dropdown-content_main">
 
-                                        <a href="/projects">Projects</a>
-                                        <a href="/events">Events</a>
-                                        <a href="/authors">About us</a>
+                                        <a href="/projects">Projetos</a>
+                                        <a href="/events">Eventos</a>
+                                        <a href="/authors">Sobre nós</a>
                                     </div>
                                 </div>
                             </div> 
@@ -159,19 +159,19 @@
                                 <div class="navbar-link_main dropdown_main">
                                     <a href="#" class="navbar-link_main">
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
-                                        Research Groups
+                                        Grupos de Pesquisa
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                             <path d="M6 9l6 6l6 -6" />
                                         </svg>  
                                     </a>
                                     <div class="dropdown-content_main">
-                                        <a href="/armando">Armando</a>
-                                        <a href="/frederico">Frederico</a>
-                                        <a href="/luciana">Luciana</a>
-                                        <a href="/mauro">Mauro</a>
-                                        <a href="/silvia">Silvia</a>
-                                        <a href="/matheus">Matheus</a>
+                                        <a href="/armando">INOVASENSE</a>
+                                        <a href="/frederico">LDNano</a>
+                                        <a href="/luciana">Biologia Celular</a>
+                                        <a href="/mauro">Vacina Recombinante</a>
+                                        <a href="/silvia">OcuDDel</a>
+                                        <a href="/matheus">PADM2</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,15 +184,16 @@
                                             <path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z" />
                                             <path d="M19 16h-12a2 2 0 0 0 -2 2" />
                                             <path d="M9 8h6" /></svg>
-                                        Products
+                                        Produtos
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                             <path d="M6 9l6 6l6 -6" />
                                         </svg>  
                                     </a>
                                     <div class="dropdown-content_main">
-                                        <a href="/tools">All Tools</a>
+                                        <a href="/tools">Ferramentas</a>
                                         <a href="/sirna/search">siRNA Seeker</a>
+                                        <a href="/facilities/">Infraestrutura</a>
                                     </div>
                                 </div>
                             </div>
@@ -208,7 +209,7 @@
                                             <path d="M5.65 5.65l3.35 3.35" />
                                             <path d="M18.35 5.65l-3.35 3.35" />
                                         </svg>
-                                        Resources
+                                        Recursos
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon_main icon-tabler_main icons-tabler-outline_main icon-tabler-chevron-down_main">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                             <path d="M6 9l6 6l6 -6" />
@@ -216,14 +217,14 @@
                                     </a>
                                     <div class="dropdown-content_main">
                                         <a href="/faq">FAQ</a>
-                                        <a href="/documentation">Documentation</a>
+                                        <a href="/documentation">Documentação</a>
                                     </div>
                                 </div>
                             </div> 
                             {% if user.is_authenticated %}
-                            <a href="/dashboard" class="navbar-link_main btn_main btn-accent_main">Dashboard</a>
+                            <a href="/dashboard" class="navbar-link_main btn_main btn-accent_main">Painel</a>
                             {% else %}
-                            <a href="/accounts/login/" class="navbar-link_main btn_main btn-accent_main">Log In</a>
+                            <a href="/accounts/login/" class="navbar-link_main btn_main btn-accent_main">Entrar</a>
                             {% endif %}
                         </div>
                         <button class="navbar-toggle_main" aria-label="Toggle sidebar"> 
@@ -282,25 +283,28 @@
                         <div class="lg_main:col-7_main">
                             <div class="row_main">
                                 <div class="sm:col-6_main md:col_main">
-                                    <div class="h-subheader_main mb-3_main">Our products</div>
+                                    <div class="h-subheader_main mb-3_main">Nossos Produtos</div>
                                     <ul class="list-unstyled_main list-separated_main">  
                                         <li>
-                                            <a class="link-secondary_main" href="/tools">Tools</a>
+                                            <a class="link-secondary_main" href="/tools">Ferramentas</a>
                                         </li>
                                         <li>
                                             <a class="link-secondary_main" href="/sirna"> siRNA Seeker</a>
                                         </li>
                                         <li>
-                                            <a class="link-secondary_main" href="/projects">Projects</a>
+                                            <a class="link-secondary_main" href="/facilities/"> Infraestrutura</a>
                                         </li>
                                         <li>
-                                            <a class="link-secondary_main" href="/events">Events</a>
+                                            <a class="link-secondary_main" href="/projects">Projetos</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-secondary_main" href="/events">Eventos</a>
                                         </li> 
                                     </ul>
   
                                     <!-- Botão de Preferencia de modo -->
                                     <div class="mt-6_main">
-                                        <div class="h-subheader_main mb-3_main">Preferences</div>
+                                        <div class="h-subheader_main mb-3_main">Preferências</div>
                                         <div class="theme-switcher_main">
                                             <button class="theme-switcher-button_main tooltip_main" data-title="System" aria-label="System">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-imac icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-12z"></path><path d="M3 13h18"></path><path d="M8 21h8"></path><path d="M10 17l-.5 4"></path><path d="M14 17l.5 4"></path></svg>
@@ -320,26 +324,26 @@
                                     <div class="h-subheader_main mb-3_main">Sirna Seeker</div>
                                     <ul class="list-unstyled_main list-separated_main"> 
                                         <li>
-                                          <a class="link-secondary_main" href="/sirna">About</a>
+                                          <a class="link-secondary_main" href="/sirna">Sobre</a>
                                         </li>
                                         <li>
-                                            <a class="link-secondary_main" href="/sirna/search">Search</a>
+                                            <a class="link-secondary_main" href="/sirna/search">Pesquisar</a>
                                         </li>
                                         <li>
-                                            <a class="link-secondary_main" href="/dashboard">Dashboard</a>
+                                            <a class="link-secondary_main" href="/dashboard">Painel</a>
                                         </li>
                                     </ul>
                                 </div>
   
                                 <!-- Resources -->
                                 <div class="sm:col-6_main md:col_main">
-                                  <div class="h-subheader_main mb-3_main">Resources</div>
+                                  <div class="h-subheader_main mb-3_main">Recursos</div>
                                   <ul class="list-unstyled_main list-separated_main">  
                                       <li>
                                           <a class="link-secondary_main" href="/faq">FAQ</a>
                                       </li>
                                       <li>
-                                          <a class="link-secondary_main" href="/documentation">Documentation</a>
+                                          <a class="link-secondary_main" href="/documentation">Documentação</a>
                                       </li> 
                                   </ul>
                               </div> 
@@ -350,26 +354,8 @@
                             <div class="logo_footer_main logo-autodark_main logo-tabler-dashboard_main active_main mb-4_main"> 
                             </div>
                             <div class="text-secondary_main">
-                                Join us in advancing scientific discovery and innovation, shaping the future of genetic medicine.
+                                Junte-se a nós no avanço da descoberta científica e inovação, moldando o futuro da medicina genética.
                             </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <footer class="footer_main">
-            <div class="container_main">
-                <div class="py-5_main text-center_main lg_main:text-left_main">
-                    <div class="row_main">
-                        <div class="lg_main:col-auto_main lg_main:text-right_main lg_main:order-last_main">
-                            <div class="row_main justify-center_main"> 
-                                <div class="col-auto_main">
-                                    <div class="list-inline-dots_main"> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg_main:col_main"> Portal Nanogene • v1.0.0-beta20
                         </div>
                     </div>
                 </div>

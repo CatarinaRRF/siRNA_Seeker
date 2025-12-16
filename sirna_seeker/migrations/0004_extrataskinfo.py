@@ -7,7 +7,8 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("django_celery_results", "0017_remove_taskresult_user"),
+        # CORREÇÃO APLICADA: Referência atualizada para "0001_initial"
+        ("django_celery_results", "0001_initial"),
         ("sirna_seeker", "0003_model_forms_run_blast"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]

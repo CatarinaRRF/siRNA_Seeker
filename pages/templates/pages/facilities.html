@@ -1,0 +1,182 @@
+{% extends 'navbar_footer_main.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<!-- Estilos específicos para esta página para manter o design "clean" sem conflitos -->
+<style>
+    .facilities-hero {
+        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+        padding: 80px 0 60px;
+    }
+    .text-brand-green {
+        color: #65a30d;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .text-brand-blue {
+        color: #1e40af;
+    }
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        flex-shrink: 0;
+    }
+    .icon-box-teal {
+        background-color: #f0fdfa; /* teal-50 */
+        color: #0d9488; /* teal-600 */
+    }
+    .icon-box-blue {
+        background-color: #eff6ff; /* blue-50 */
+        color: #1e40af; /* brand-blue */
+    }
+    .facility-card {
+        border: 1px solid #f1f5f9;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        background: white;
+        height: 100%;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+    .facility-card:hover {
+        border-color: #cbd5e1;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+    }
+    .btn-recapp {
+        background-color: #1e40af;
+        color: white;
+        padding: 12px 32px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        display: inline-flex;
+        align-items: center;
+    }
+    .btn-recapp:hover {
+        background-color: #1e3a8a;
+        color: white;
+        text-decoration: none;
+    }
+    .feature-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        color: #475569;
+        margin-bottom: 0.5rem;
+    }
+    .feature-icon {
+        color: #65a30d;
+        margin-right: 8px;
+    }
+</style>
+
+<div class="page-wrapper">
+    
+    <!-- Hero Section -->
+    <header class="facilities-hero text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-brand-green mb-3 small">
+                        Infraestrutura & Facilities
+                    </p>
+                    
+                    <h1 class="display-4 fw-bold text-dark mb-4">
+                        Acesso à Infraestrutura <br class="d-none d-sm-block" /> Científica Avançada
+                    </h1>
+                    
+                    <p class="lead text-muted mb-5">
+                        Conectando a comunidade acadêmica, setor produtivo e sociedade civil através de tecnologia de ponta.
+                    </p>
+
+                    <div>
+                        <a href="https://recapp.tech/" target="_blank" class="btn-recapp shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+                            Acessar Plataforma Recapp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                
+                <!-- Card 1: Modelo de Facilities -->
+                <div class="col-12">
+                    <div class="facility-card p-4 p-md-5">
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="icon-box icon-box-teal mb-3 mb-md-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            </div>
+                            <div class="flex-grow-1 ms-md-4">
+                                <h3 class="h4 fw-bold text-dark mb-3">Modelo de Facilities</h3>
+                                <p class="text-secondary mb-0" style="line-height: 1.6;">
+                                    As universidades e centros públicos de pesquisa no Brasil mantêm facilities científico-tecnológicas que incluem laboratórios multiusuários, plataformas analíticas e serviços especializados, permitindo o acesso compartilhado a equipamentos avançados e processos de alto custo. Esse modelo otimiza o uso de recursos públicos, evita duplicidades, fortalece a inovação e aproxima comunidade acadêmica, setor produtivo e sociedade civil.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Serviços -->
+                <div class="col-12">
+                    <div class="facility-card p-4 p-md-5" style="border-left: 4px solid #1e40af;">
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class="icon-box icon-box-blue mb-3 mb-md-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            </div>
+                            <div class="flex-grow-1 ms-md-4">
+                                <h3 class="h4 fw-bold text-dark mb-3">Disponibilidade na Rede Nanogene</h3>
+                                <p class="text-secondary mb-4" style="line-height: 1.6;">
+                                    A Rede Nanogene também disponibiliza seus facilities para uso da comunidade científica e empresarial, oferecendo acesso à infraestrutura de pesquisa e serviços especializados.
+                                </p>
+                                
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-4">
+                                        <div class="feature-item">
+                                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            Solicitações de uso
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="feature-item">
+                                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            Registro de demandas
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="feature-item">
+                                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            Horários disponíveis
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 pt-4 border-top text-end">
+                                    <a href="https://recapp.tech/" target="_blank" class="text-decoration-none fw-bold text-brand-blue d-inline-flex align-items-center">
+                                        Ir para Recapp
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ms-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock conteudo %}

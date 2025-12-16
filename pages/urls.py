@@ -11,6 +11,10 @@ urlpatterns = [
     path('events', TemplateView.as_view(template_name='pages/events.html'), name='events'), #Events
     path('tools', TemplateView.as_view(template_name='pages/tools.html'), name='Tools'), #Pagina que coleta todos as ferramentas do grupo # Pagina com as informações de contato 
     
+    # NOVA ROTA: Facilities
+    # O Django buscará automaticamente em pages/templates/pages/facilities.html
+    path('facilities/', TemplateView.as_view(template_name='pages/facilities.html'), name='facilities'),
+
     #Reaserch Groups
     path('armando', TemplateView.as_view(template_name='clowns/armando.html'), name='armando'), 
     path('frederico', TemplateView.as_view(template_name='clowns/fredd.html'), name='frederico'), 

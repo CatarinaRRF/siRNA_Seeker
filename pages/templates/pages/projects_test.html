@@ -4,7 +4,7 @@
 {% block conteudo %}
 <style>
   /* Garantir que o modal esteja visível e acima do backdrop */
-  #authorModal, #authorModalArmando, #authorModalLuciana, #authorModalMauro, #authorModalSilvia, #authorModalMatheus {
+  #authorModal {
        
     opacity: 1 !important;          
     z-index: 1055 !important;       
@@ -42,7 +42,7 @@
                       <div class="row_main justify-center_main g-3_main">
                         <div class="col-auto_main">
                           <a href="/tools" class="btn_main btn-accent_main lg_main:btn-md_main" >
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-binoculars"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.346 9.17l-.729 -1.261c-.16 -.248 -1.056 -.203 -1.117 .091l-.177 1.38" /><path d="M19.761 14.813l-2.84 -5.133c-.189 -.31 -.592 -.68 -1.421 -.68c-.828 0 -1.5 .448 -1.5 1v6" /><path d="M7.654 9.17l.729 -1.261c.16 -.249 1.056 -.203 1.117 .091l.177 1.38" /><path d="M4.239 14.813l2.84 -5.133c.189 -.31 .592 -.68 1.421 -.68c.828 0 1.5 .448 1.5 1v6" /><rect width="4" height="2" x="10" y="12" /></svg>
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-binoculars"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.346 9.17l-.729 -1.261c-.16 -.248 -1.056 -.203 -1.117 .091l-.177 1.38" /><path d="M19.761 14.813l-2.84 -5.133c-.189 -.31 -.592 -.68 -1.421 -.68c-.828 0 -1.5 .448 -1.5 1v6" /><path d="M7.654 9.17l.729 -1.261c.16 -.249 1.056 -.203 1.117 .091l-.177 1.38" /><path d="M4.239 14.813l2.84 -5.133c.189 -.31 .592 -.68 1.421 -.68c.828 0 1.5 .448 1.5 1v6" /><rect width="4" height="2" x="10" y="12" /></svg>
                             <span class="btn-text_main">
                               Explorar as nossas ferramentas
                             </span>
@@ -107,10 +107,8 @@
                             <div class="col-md">
                                 <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
                                 <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorName">
-                                      Frederico Pittella Silva
-                                    </span>
+                                    <!-- Removido o link e o modal para Frederico Pittella Silva -->
+                                    Frederico Pittella Silva
                                 </div>
                                 <div class="list-inline-item">UFJF</div>
                                 <div class="list-inline-item">Juiz de Fora / BR</div>
@@ -122,512 +120,355 @@
                     </div>
                 </div>
 
+
+
+
                 <!-- Projeto 2 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo2">Administração intravítrea da proteína Leuc-a incorporada em lipossomas: estudos de segurança e atividade em modelo animal de oclusão de veia de retina</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameSilvia">
-                                    Silvia Ligório Fialho
-                                    </span>
-                                </div>
-                                <div class="list-inline-item">Funed</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Administração intravítrea da proteína Leuc-a incorporada em lipossomas: estudos de segurança e atividade em modelo animal de oclusão de veia de retina</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Silvia Ligório Fialho</div>
+                            <div class="list-inline-item">Funed</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 3 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo3">Desenvolvimento de vacina recombinante multi-epítopos como método alternativo de controle do Rhipicephalus microplus</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameMauro">
-                                        Mauro Aparecido de Sousa Xavier
-                                    </span>
-                                </div>
-                              <div class="list-inline-item">UNIMONTES</div>
-                              <div class="list-inline-item">Montes Claros / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Desenvolvimento de vacina recombinante multi-epítopos como método alternativo de controle do Rhipicephalus microplus</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Mauro Aparecido de Sousa Xavier</div>
+                            <div class="list-inline-item">UNIMONTES</div>
+                            <div class="list-inline-item">Montes Claros / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 4 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo6">Plataforma de Análise de Dados e Modelagem Molecular (PADM2)</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              <div class="list-inline-item">
-                                  <!-- Nome do autor agora como texto simples -->
-                                  <span class="authorNameMatheus"> 
-                                    Matheus de Souza Gomes
-                                  </span>
-                              </div>
-                              <div class="list-inline-item">UFU</div>
-                              <div class="list-inline-item">Patos de Minas / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Implantação de Infraestrutura Multiusuária de Pesquisa da Rede de Caracterização de Produtos e Processos no Campus de Patos de Minas</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Matheus de Souza Gomes</div>
+                            <div class="list-inline-item">UFU</div>
+                            <div class="list-inline-item">Patos de Minas / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 5 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo4">Inativação do gene STAT3 por CRISPR/CAS9 em sistemas esferoides 3D in vitro, enriquecidos de células tronco do câncer (CD44+/CD24-/low ) para descoberta de novas abordagens terapêuticas em câncer</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameLuciana">
-                                        Luciana Maria Silva Lopes
-                                    </span>
-                                </div>
-                              <div class="list-inline-item">Funed</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Inativação do gene STAT3 por CRISPR/CAS9 em sistemas esferoides 3D in vitro, enriquecidos de células tronco do câncer (CD44+/CD24-/low ) para descoberta de novas abordagens terapêuticas em câncer</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Luciana Maria Silva Lopes</div>
+                            <div class="list-inline-item">Funed</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 6 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="#">Novas estratégias para o desenvolvimento de uma vacina contra Streptococcus Pneumoniae</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              <div class="list-inline-item">Janete Soares Coelho dos Santos</div>
-                              <div class="list-inline-item">Funed</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Novas estratégias para o desenvolvimento de uma vacina contra Streptococcus Pneumoniae</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Janete Soares Coelho dos Santos</div>
+                            <div class="list-inline-item">Funed</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 7 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo5">Desenvolvimento de vetores não virais de transferência gênica para o tratamento de distrofias hereditárias de retina</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameArmando">
-                                        Armando da Silva Cunha Junior
-                                    </span>
-                                </div>
-                              
-                              <div class="list-inline-item">UFMG</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Desenvolvimento de vetores não virais de transferência gênica para o tratamento de distrofias hereditárias de retina</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Armando da Silva Cunha Junior</div>
+                            <div class="list-inline-item">UFMG</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 8 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo5">Desenvolvimento de nanofibras poliméricas contendo bevacizumabe para o tratamento de degeneração macular relacionada à idade (DMRI)</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameArmando">
-                                        Armando da Silva Cunha Junior
-                                    </span>
-                                </div>
-                              
-                              <div class="list-inline-item">UFMG</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Desenvolvimento de nanofibras poliméricas contendo bevacizumabe para o tratamento de degeneração macular relacionada à idade (DMRI)</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Armando da Silva Cunha Junior</div>
+                            <div class="list-inline-item">UFMG</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 9 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo5">Pesquisa de novos fármacos e de sistemas de liberação alternativos para o tratamento do glaucoma</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameArmando">
-                                        Armando da Silva Cunha Junior
-                                    </span>
-                                </div>
-                              
-                              <div class="list-inline-item">UFMG</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Pesquisa de novos fármacos e de sistemas de liberação alternativos para o tratamento do glaucoma</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Armando da Silva Cunha Junior</div>
+                            <div class="list-inline-item">UFMG</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 10 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo2">Estudos pré-clínicos de eficácia e segurança de dispositivo intravítreo revestido por nanofibras para o tratamento de degeneração macular relacionada à idade</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameSilvia">
-                                        Silvia Ligório Fialho
-                                    </span>
-                                </div>
-                              
-                              <div class="list-inline-item">Funed</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Estudos pré-clínicos de eficácia e segurança de dispositivo intravítreo revestido por nanofibras para o tratamento de degeneração macular relacionada à idade</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Sílvia Ligório Fialho</div>
+                            <div class="list-inline-item">Funed</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 11 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="#">Nanopartículas poliméricas contendo dexametasona para o tratamento da síndrome respiratória aguda grave relacionada à COVID-19: estudo de escalonamento, investigação da eficácia e avaliação da estabilidade</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              <div class="list-inline-item">Guilherme Diniz Tavares</div>
-                              <div class="list-inline-item">UFJF</div>
-                              <div class="list-inline-item">Juiz de Fora / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Nanopartículas poliméricas contendo dexametasona para o tratamento da síndrome respiratória aguda grave relacionada à COVID-19: estudo de escalonamento, investigação da eficácia e avaliação da estabilidade</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Guilherme Diniz Tavares</div>
+                            <div class="list-inline-item">UFJF</div>
+                            <div class="list-inline-item">Juiz de Fora / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 12 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="#">Implementação de estrutura para a produção de lotes pilotos e estudos clínicos - apoio à pesquisa e desenvolvimento de vacinas</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              <div class="list-inline-item">Bruno Gonçalves Pereira</div>
-                              <div class="list-inline-item">Funed</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Implementação de estrutura para a produção de lotes pilotos e estudos clínicos - apoio à pesquisa e desenvolvimento de vacinas</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Bruno Gonçalves Pereira</div>
+                            <div class="list-inline-item">Funed</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Projeto 13 -->
                 <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo2">Aquisição de equipamento para implantação do núcleo de pesquisa e desenvolvimento de biofármacos</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                                <div class="list-inline-item">
-                                    <!-- Nome do autor agora como texto simples -->
-                                    <span class="authorNameSilvia">
-                                        Silvia Ligório Fialho
-                                    </span>
-                                </div>
-                              
-                              <div class="list-inline-item">Funed</div>
-                              <div class="list-inline-item">Belo Horizonte / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
+                <div class="row g-0">
+                    <div class="col-auto">
+                    <div class="card-body">
+                        <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card-body ps-0">
+                        <div class="row">
+                        <div class="col">
+                            <h3 class="mb-0"><a href="/authors#grupo1">Aquisição de equipamento para implantação do núcleo de pesquisa e desenvolvimento de biofármacos</a></h3>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md">
+                            <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
+                            <div class="list-inline-item">Silvia Ligório Fialho</div>
+                            <div class="list-inline-item">Funed</div>
+                            <div class="list-inline-item">Belo Horizonte / BR</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-
-                <!-- Projeto 14 -->
-                <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo6">Desenvolvimento de web-tool para seleção de miRNA</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                              <div class="list-inline-item">
-                                <!-- Nome do autor agora como texto simples -->
-                                <span class="authorNameMatheus"> 
-                                  Matheus de Souza Gomes
-                                </span>
-                              </div>
-                              <div class="list-inline-item">UFU</div>
-                              <div class="list-inline-item">Patos de Minas / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
-                </div>
-
-                <!-- Projeto 15 -->
-                <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo6">Desenvolvimento de web-tool para seleção de siRNA (siRNA Seeker)</a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                              <div class="list-inline-item">
-                                <!-- Nome do autor agora como texto simples -->
-                                <span class="authorNameMatheus"> 
-                                  Matheus de Souza Gomes
-                                </span>
-                              </div>
-                              <div class="list-inline-item">UFU</div>
-                              <div class="list-inline-item">Patos de Minas / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
-                </div>
-
-                <!-- Projeto 16 -->
-                <div class="card">
-                  <div class="row g-0">
-                      <div class="col-auto">
-                      <div class="card-body">
-                          <div class="avatar avatar-md" style="background-image: url(./static/img/antecedentes-de-moleculas-verdes.png)"></div>
-                      </div>
-                      </div>
-                      <div class="col">
-                      <div class="card-body ps-0">
-                          <div class="row">
-                          <div class="col">
-                              <h3 class="mb-0"><a href="/authors#grupo6"> Plataforma de modelagem 3d de proteinas usando o software MOE </a></h3>
-                          </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-md">
-                              <div class="mt-3 list-inline list-inline-dots mb-0 text-secondary d-sm-block d-none">
-                              
-                              <div class="list-inline-item">
-                                <!-- Nome do autor agora como texto simples -->
-                                <span class="authorNameMatheus"> 
-                                  Matheus de Souza Gomes
-                                </span>
-                              </div>
-                              <div class="list-inline-item">UFU</div>
-                              <div class="list-inline-item">Patos de Minas / BR</div>
-                              </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
                 </div>
 
                 </div>
@@ -637,338 +478,54 @@
     </div>
   </div>
 </div>
-
-<!-- Modal Frederico Pittella Silva - MANTIDO, MAS SEM ACIONAMENTO VIA JS DE AUTOR --> 
-<div class="modal fade " id="authorModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+<!-- Modal -->
+<div class="modal fade" id="authorModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" style="display:block; margin-bottom:4px;">
-            Frederico Pittella Silva
-        </h5>
+        <h5 class="modal-title" id="authorModalLabel">Detalhes do Autor</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
       </div>
-      
-              <!-- A Janela Modal -->
-              <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl flex flex-col max-h-[90vh] animate-fade-in">
-                  
-                  <!-- Corpo da Modal com as informações do DOCX -->
-                  <div class="p-6 overflow-y-auto">
-                      <div>
-                          <h4 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Terapia por RNA de interferência (RNAi) em câncer de mama: o uso de nanopartículas</h4>
-                      </div>
-                      <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6">
-                          <img src="static\img\pesquisadores\fredd.png" alt="Foto de Frederico Pittella Silva" class="w-32 h-40 rounded-lg object-cover border dark:border-gray-600 flex-shrink-0">
-                          <div class="space-y-4">
-                              <div>
-                                  <h5 class="font-semibold text-gray-700 dark:text-gray-300">Link Lattes:</h5>
-                                  <a href="http://lattes.cnpq.br/1840687382026247" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline break-all">http://lattes.cnpq.br/1840687382026247</a>
-                              </div>
-                              <div>
-                                  <h5 class="font-semibold text-gray-700 dark:text-gray-300">Equipa associada:</h5>
-                                  <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-1 space-y-1">
-                                      <li><strong>Natália Prado da Silva</strong> – Pós-doc</li>
-                                      <li><strong>Lívia Mara Silva</strong> - Doutoranda</li>
-                                      <li><strong>Davi Trombini Aleixo</strong> - Doutorando</li>
-                                      <li><strong>Estael Cruz Cazarim</strong> - Doutoranda</li>
-                                      <li><strong>Kezia Cristine Barbosa Ferreira</strong> - Doutoranda</li>
-                                      <li><strong>Lívia do Nascimento Grossi</strong> - Doutoranda</li>
-                                      <li><strong>Allana Carvalho Silva</strong> - Doutoranda</li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                    
-                      <div>
-                          <h5 class="font-semibold text-gray-700 dark:text-gray-300">Artigos publicados relacionados com a Rede:</h5>
-                          <div class="flex flex-col space-y-1 mt-2">
-                              <a href="https://doi.org/10.1515/oncologie-2023-0177" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1515/oncologie-2023-0177</a>
-                              <a href="https://doi.org/10.3390/ph17101325" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.3390/ph17101325</a>
-                              <a href="https://doi.org/10.1039/D4PM00158C" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1039/D4PM00158C</a>
-                              <a href="https://doi.org/10.1007/s13346-024-01772-x" target="_blank" class="text-base text-blue-600 dark:text-blue-400 hover:underline">https://doi.org/10.1007/s13346-024-01772-x</a>
-                          </div>
-                      </div>
-
-                      <div>
-                          <h5 class="font-semibold text-gray-700 dark:text-gray-300">Outros produtos relacionados com a Rede:</h5>
-                          <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400 mt-2 space-y-2">
-                              <li>Criação do software <strong>siRNASeeker</strong>, baseado no Guia de Design de moléculas de siRNA do laboratório LDNano, coordenado por Frederico Pittella. O produto foi desenvolvido pela parceria entre Matheus de Souza Gomes (UFU) e Frederico Pittella (UFJF), e a versão Beta está incorporada ao site da Rede: nanogene.com.br.</li>
-                              <li>Defesa de tese de doutoramento por Ana Beatriz Caribé dos Santos Valle, a 27 de Março de 2024. Agradecimento explícito à Rede Nanogene na tese.</li>
-                              <li>Prémio “Young Scientist Travel Grant 2024” – recebido por Ana Beatriz Caribé dos Santos Valle. Melhor apresentação Oral, Controlled Release Society - CRS Brazilian Chapter, 2024.</li>
-                          </ul>
-                      </div>
-
-                      <!-- SEÇÃO DE IMAGENS E TEXTOS -->
-                      <div>
-                          <h5 class="font-semibold text-gray-700 dark:text-gray-300">Fotos e Ilustrações do Projeto:</h5>
-                          <div class="mt-4 space-y-8">
-                              <figure>
-                                  <img src="static\img\pesquisadores\imagem1.png" alt="Figura 1: Curva de distribuição de tamanho de HNP-siHOXB7" class="w-full max-w-lg mx-auto rounded-lg border dark:border-gray-600">
-                                  <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 1.</strong> Curva de distribuição de tamanho de HNP-siHOXB7 (A) e HNP-mock (B) por intensidade. Cada curva em uma cor diferente representa uma única medida (n = 9).</figcaption>
-                              </figure>
-                              <figure>
-                                  <img src="static\img\pesquisadores\imgem2.png" alt="Figura 7: Vias de silenciamento de RNAi de miRNA e siRNA" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                                  <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Fig.7</strong> Vias de silenciamento de RNAi de miRNA e siRNA. Criado com BioRender.com</figcaption>
-                              </figure>
-                              <figure>
-                                  <img src="static\img\pesquisadores\imgem3.png" alt="Figura 13: Representação da nanopartícula híbrida" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                                  <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 13 -</strong> Representação da nanopartícula híbrida formada pelo núcleo inorgânico composto por fosfato de cálcio, com siRNA complexado, e pelo revestimento orgânico de bloco de copolímero PEG-poliânion. Fonte: Elaborado pela autora com BioRender (2024), adaptado de Pittella et al., 2011.</figcaption>
-                              </figure>
-                              <figure>
-                                  <img src="static\img\pesquisadores\imgem4.png" alt="Figura 14: Representação da internalização e escape endossomal" class="w-full max-w-2xl mx-auto rounded-lg border dark:border-gray-600">
-                                  <figcaption class="text-xs text-gray-500 dark:text-gray-400 mt-2"><strong>Figura 14 -</strong> Representação de internalização e escape endossomal promovido pelas NP. Fonte: Elaborado pela autora com BioRender (2024).</figcaption>
-                              </figure>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-      </div>
-
-      <style>
-          /* Animação simples para a modal aparecer suavemente */
-          @keyframes fade-in {
-              from { opacity: 0; transform: scale(0.95); }
-              to { opacity: 1; transform: scale(1); }
-          }
-          .animate-fade-in {
-              animation: fade-in 0.3s ease-out forwards;
-          }
-      </style>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Armando da Silva Cunha Junior - MANTIDO, MAS SEM ACIONAMENTO VIA JS DE AUTOR -->
-<div class="modal fade" id="authorModalArmando" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Armando da Silva Cunha Junior</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="p-6 overflow-y-auto">
-        <h4 class="text-lg font-semibold">Desenvolvimento de Sistemas Nanoestruturados para Libertação de Fármacos</h4>
-        <div class="flex flex-col md:flex-row items-start space-x-6 mt-3">
-          <img src="static\img\pesquisadores\armando.png" alt="Foto de Armando da Silva Cunha Junior" class="w-32 h-40 rounded-lg object-cover border">
-          <div>
-            <h5>Link Lattes:</h5>
-            <a href="http://lattes.cnpq.br/8278273904187275" target="_blank">http://lattes.cnpq.br/8278273904187275</a>
-            <h5 class="mt-3">Equipa associada:</h5>
-            <ul>
-              <li>Carolina Nunes da Silva – Investigadora (DTI)</li>
-              <li>Ana Carolina Guimaraes Ribeiro – Investigadora (PDJ)</li>
-              <li>Thomas Toshio Inoue – Doutoramento</li>
-              <li>Michelle Gouvêa Gomes – Doutoramento</li>
-              <li>Ana Luiza Faria Silvério – IC</li>
-              <li>Vitória Luísa Lopes de Souza – IC</li>
-              <li>Larissa Santos Covre Stefanon – ADC 2A</li>
-            </ul>
-          </div>
-        </div>
-        <h5 class="mt-4">Artigos publicados relacionados com a Rede:</h5>
-        <ul>
-          <li><a href="https://doi.org/10.1007/s10544-025-00743-4" target="_blank">DOI: 10.1007/s10544-025-00743-4</a></li>
-          <li><a href="https://doi.org/10.1080/1061186X.2024.2409881" target="_blank">DOI: 10.1080/1061186X.2024.2409881</a></li>
-          <li><a href="https://doi.org/10.1016/j.ijpharm.2023.122809" target="_blank">DOI: 10.1016/j.ijpharm.2023.122809</a></li>
-          <li><a href="https://doi.org/10.3390/pharmaceutics14112394" target="_blank">DOI: 10.3390/pharmaceutics14112394</a></li>
-          <li><a href="https://doi.org/10.1016/j.ijpharm.2019.118466" target="_blank">DOI: 10.1016/j.ijpharm.2019.118466</a></li>
-        </ul>
+      <div class="modal-body">
+        <p><strong>Autor:</strong> <span id="modalAuthor"></span></p>
+        <p><strong>Instituição:</strong> <span id="modalUniversity"></span></p>
+        <p><strong>Local:</strong> <span id="modalLocation"></span></p>
+        <p><strong>Projeto:</strong> <span id="modalProject"></span></p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Modal Luciana Maria Silva Lopes - MANTIDO, MAS SEM ACIONAMENTO VIA JS DE AUTOR -->
-<div class="modal fade" id="authorModalLuciana" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Luciana Maria Silva Lopes</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="p-6 overflow-y-auto">
-        <h4 class="text-lg font-semibold">Estudos de Genética e Biotecnologia no Cancro</h4>
-        <div class="flex flex-col md:flex-row items-start space-x-6 mt-3">
-          <img src="static\img\pesquisadores\luciana.png" alt="Foto de Luciana Maria Silva Lopes" class="w-32 h-40 rounded-lg object-cover border">
-          <div>
-            <h5>Link Lattes:</h5>
-            <a href="http://lattes.cnpq.br/0162558710954506" target="_blank">http://lattes.cnpq.br/0162558710954506</a>
-            <h5 class="mt-3">Equipa associada:</h5>
-            <ul>
-              <li>Milene Pereira Moreira – Investigadora</li>
-              <li>Bianca Nataliene Carvalho de Camargos – Mestranda</li>
-              <li>Julia Guerra Vieira de Sousa – Mestranda</li>
-            </ul>
-          </div>
-        </div>
-        <h5 class="mt-4">Outros produtos relacionados com a Rede:</h5>
-        <ul>
-          <li>Dissertação: TNFRSF10C/TRAILR3 – Bianca Camargos</li>
-          <li>Dissertação: Variantes genéticas em cancro epitelial do ovário – Júlia Sousa</li>
-        </ul>
-        <h5 class="mt-4">Fotos e Ilustrações:</h5>
-        <img src="static\img\pesquisadores\luciana1.png" alt="Figura do experimento" class="w-64 rounded border">
-        <img src="static\img\pesquisadores\luciana2.png" alt="Figura do experimento" class="w-64 rounded border">
-        <img src="static\img\pesquisadores\luciana3.png" alt="Figura do experimento" class="w-64 rounded border">
-        <img src="static\img\pesquisadores\luciana4.png" alt="Figura do experimento" class="w-64 rounded border">
-        <img src="static\img\pesquisadores\luciana5.png" alt="Figura do experimento" class="w-64 rounded border">
-        <img src="static\img\pesquisadores\luciana6.png" alt="Figura do experimento" class="w-64 rounded border">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Mauro Aparecido de Sousa Xavier - MANTIDO, MAS SEM ACIONAMENTO VIA JS DE AUTOR -->
-<div class="modal fade" id="authorModalMauro" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Mauro Aparecido de Sousa Xavier</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="p-6 overflow-y-auto">
-        <h4 class="text-lg font-semibold">Desenvolvimento de vacina recombinante multi-epítopos como método alternativo de controlo do Rhipicephalus microplus</h4>
-        <div class="flex flex-col md:flex-row items-start space-x-6 mt-3">
-          <img src="static\img\pesquisadores\Mauro.png" alt="Foto de Mauro Xavier" class="w-32 h-40 rounded-lg object-cover border">
-          <div>
-            <h5>Link Lattes:</h5>
-            <a href="http://lattes.cnpq.br/2855671095187615" target="_blank">http://lattes.cnpq.br/2855671095187615</a>
-            <h5 class="mt-3">Equipa associada:</h5>
-            <ul>
-              <li>Alessandra Xavier – Colaboradora</li>
-              <li>Viviane Andrade – Colaboradora</li>
-              <li>Fábio Ribeiro – Colaborador</li>
-              <li>Léia Cardoso – Doutoranda</li>
-              <li>Mayka Rabelo – Colaboradora</li>
-            </ul>
-            <h5 class="mt-3">Patentes:</h5>
-            <p>Ainda não há – previsão para 2026 (projeto doutoramento Léia).</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Silvia Ligorio Fialho - MANTIDO, MAS SEM ACIONAMENTO VIA JS DE AUTOR -->
-<div class="modal fade" id="authorModalSilvia" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Silvia Ligorio Fialho</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="p-6 overflow-y-auto">
-        <h4 class="text-lg font-semibold">Administração intravítrea da proteína Leuc-a incorporada em lipossomas</h4>
-        <div class="flex flex-col md:flex-row items-start space-x-6 mt-3">
-          <img src="static\img\pesquisadores\Silvia.png" alt="Foto de Silvia Fialho" class="w-32 h-40 rounded-lg object-cover border">
-          <div>
-            <h5>Link Lattes:</h5>
-            <a href="http://lattes.cnpq.br/6277013725246341" target="_blank">http://lattes.cnpq.br/6277013725246341</a>
-            <h5 class="mt-3">Equipa associada:</h5>
-            <ul>
-              <li>Marina França Dias – Investigadora</li>
-              <li>Lutiana Amaral de Melo – Investigadora</li>
-              <li>Maria Carolina Guerra – Investigadora</li>
-              <li>Deivisson Fagundes – Mestrando</li>
-              <li>Gabriela Pierazoli – Graduação</li>
-              <li>Amaury Souza – Graduação</li>
-            </ul>
-          </div>
-        </div>
-        <h5 class="mt-4">Artigos publicados:</h5>
-        <ul>
-          <li><a href="https://doi.org/10.1007/s13346-024-01772-x" target="_blank">DOI: 10.1007/s13346-024-01772-x</a></li>
-          <li><a href="https://doi.org/10.1016/j.ymeth.2024.11.012" target="_blank">DOI: 10.1016/j.ymeth.2024.11.012</a></li>
-        </ul>
-        <h5 class="mt-4">Outros produtos:</h5>
-        <p>Apresentação oral: CRS 2024 Annual Meeting & Expo (Bolonha, Itália).</p>
-        <h5 class="mt-4">Fotos:</h5>
-        <img src="static\img\pesquisadores\silvia1.png" alt="Microscopia confocal" class="w-64 rounded border">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Matheus de Souza Gomes - MANTIDO, MAS SEM ACIONAMENTO VIA JS DE AUTOR -->
-<div class="modal fade" id="authorModalMatheus" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Matheus de Souza Gomes</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="p-6 overflow-y-auto">
-        <h4 class="text-lg font-semibold">PADM2 – Plataforma de Análise de Dados e Modelação Molecular</h4>
-        <div class="flex flex-col md:flex-row items-start space-x-6 mt-3">
-          
-          <img src="static\img\pesquisadores\matheus.png" alt="Foto de Matheus de Souza Gomes" class="w-32 h-40 rounded-lg object-cover border">
-          
-          <div>
-            <h5>Link Lattes:</h5>
-            <a href="http://lattes.cnpq.br/8674610062329213" target="_blank">http://lattes.cnpq.br/8674610062329213</a>
-            <h5 class="mt-3">Equipa associada:</h5>
-            <ul>
-              <li>Laurence Rodrigues do Amaral – Associado</li>
-              <li>Pedro Luiz Lima Bertarini – Associado</li>
-              <li>Catarina Ribeiro Rezende de Freitas – Graduanda</li>
-              <li>Valdeir Braz de Paula – Graduando</li>
-              <li>Carlos Bruno de Araújo – Doutorando</li>
-            </ul>
-          </div>
-        </div>
-        <h5 class="mt-4">Visão Geral do Projeto:</h5>
-        <p>
-          PADM2 está em desenvolvimento e já conta com a aquisição do software MOE, essencial para o docking e a modelação molecular. 
-          A equipa recebeu formação especializada do Chemical Computing Group, aprimorando a sua experiência na ferramenta. 
-          Paralelamente, está a ser desenvolvido um software próprio para identificação e caracterização de siRNAs fita simples, 
-          com análise de requisitos concluída e implementação em andamento. O grupo também está a criar o <strong>SiRNAseeker</strong>, 
-          um algoritmo dedicado à seleção de siRNAs. Resultados parciais são promissores, destacando a eficiência da aquisição de software, 
-          o trabalho colaborativo e o compromisso com soluções inovadoras em bioinformática e tecnologias baseadas em RNA.
-        </p>
-        <h5 class="mt-4">Artigos publicados relacionados com a Rede:</h5>
-        <ul>
-          <li>Ainda não há publicações, mas já foram alcançados marcos importantes como aquisição de software, 
-          trabalho colaborativo eficaz e progresso em ferramentas relacionadas com siRNA.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fim dos Modais -->
-
-<!-- Script -->
 <script>
-  // O JavaScript para acionar os modais foi removido para desativar a funcionalidade.
-  // Os links de autor agora não possuem a tag <a> e não acionam nenhum modal.
-  document.addEventListener('DOMContentLoaded', () => {
-    /*
-    // Código anterior removido para desativar o modal:
-    const modais = [
-      { className: 'authorModal', id: 'authorModal' },
-      { className: 'authorModalArmando', id: 'authorModalArmando' },
-      { className: 'authorModalLuciana', id: 'authorModalLuciana' },
-      { className: 'authorModalMauro', id: 'authorModalMauro' },
-      { className: 'authorModalSilvia', id: 'authorModalSilvia' },
-      { className: 'authorModalMatheus', id: 'authorModalMatheus' }
-    ];
+    // Espera o DOM carregar
+    document.addEventListener('DOMContentLoaded', () => {
+        // Seleciona todos os links de autor
+        const authorLinks = document.querySelectorAll('.authorModal');
 
-    modais.forEach(({ className, id }) => {
-      document.querySelectorAll('.' + className).forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const modalEl = document.getElementById(id);
-          if (modalEl) {
-            const modal = new bootstrap.Modal(modalEl);
-            modal.show();
-          }
+        authorLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // evita que a página role por causa do href="#"
+
+                // Pega os dados do link clicado
+                const author = link.getAttribute('data-author');
+                const university = link.getAttribute('data-university');
+                const location = link.getAttribute('data-location');
+                const project = link.getAttribute('data-project');
+
+                // Preenche o modal
+                document.getElementById('modalAuthor').textContent = author;
+                document.getElementById('modalUniversity').textContent = university;
+                document.getElementById('modalLocation').textContent = location;
+                document.getElementById('modalProject').textContent = project;
+
+                // Mostra o modal
+                const modalEl = document.getElementById('authorModal');
+                const modal = new bootstrap.Modal(modalEl);
+                modal.show();
+            });
         });
-      });
     });
-    */
-  });
 </script>
-
 
 
 {% endblock conteudo %}
