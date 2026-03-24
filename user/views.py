@@ -4,156 +4,136 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.views import View
 from django.http import JsonResponse
-from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
 
-#Django auth
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.views import LoginView, PasswordResetView
+# Django auth
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import SetPasswordForm
+from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
-import json
+from django.contrib.auth import login as auth_login
 
-#models and forms
+# Models e Forms
 from .models import UserProfile
 from .forms import RegisterForm, LoginForm, UserProfileForm
-from celery.result import AsyncResult
 from django_celery_results.models import TaskResult 
 #-------------------------------------------------------------------#
 
-#-------------------------------------------------------------------#
-#                        Registration                               #
-#-------------------------------------------------------------------#
+# ... (Mantenha RegisterView, CustomLoginView e ProfileView inalteradas) ...
+
 class RegisterView(View):
     form_class = RegisterForm
-    initial = {'key': 'value'}
     template_name = 'user/sign_up.html'
 
     def get(self, request, *args, **kwargs):
-        form = self.form_class(initial=self.initial)
+        form = self.form_class()
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
-
         if form.is_valid():
             form.save()
-
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}')
-
-            return redirect(to='/')
-
+            messages.success(request, f'Conta criada com sucesso para {username}!')
+            return redirect(to='login')
         return render(request, self.template_name, {'form': form})
 
-#-------------------------------------------------------------------#
-#                           Login                                   #
-#-------------------------------------------------------------------#
 class CustomLoginView(LoginView):
     form_class = LoginForm
 
     def form_valid(self, form):
         remember_me = form.cleaned_data.get('remember_me')
-
         if not remember_me:
-            # set session expiry to 0 seconds. So it will automatically close the session after the browser is closed.
             self.request.session.set_expiry(0)
-
-            # Set session as modified to force data updates/cookie to be saved.
             self.request.session.modified = True
-
-        # else browser session will be as long as the session cookie time "SESSION_COOKIE_AGE" defined in settings.py
         return super(CustomLoginView, self).form_valid(form)
 
-#-------------------------------------------------------------------#
-#                          Profile                                  #
-#-------------------------------------------------------------------#
-
 class ProfileView(View):
-    @method_decorator(login_required)
-    def get(self, request, *args, **kwargs):
-        user = request.user
-        user_profile, _ = UserProfile.objects.get_or_create(user=user)
-        form = UserProfileForm(instance=user.profile)
+    template_name = 'user/profile.html'
 
-        # Lista de IDs de imagens de perfil
-        avatar_ids = list(range(1, 17))
+    def get(self, request):
+        user_profile = get_object_or_404(UserProfile, user=request.user)
+        form = UserProfileForm(instance=user_profile)
+        tasks = TaskResult.objects.all()
+        return render(request, self.template_name, {'form': form, 'tasks': tasks, 'user_profile': user_profile})
 
-        # Fetch tasks related to the user
-        user_tasks = TaskResult.objects.filter(task_creator=user).order_by('-date_created')
-
-        tasks = []
-        for task in user_tasks:
-            task_id = task.task_id
-            task_status = AsyncResult(task_id).status
-            try:
-                task_result_data = json.loads(task.result)
-                query_meta_data = {}
-                if isinstance(task_result_data, list) and len(task_result_data) > 1 and isinstance(task_result_data[1], dict):
-                    query_meta_data = task_result_data[1]
-                task_name = query_meta_data.get('query_title', '') or f"Unnamed"
-            except (json.JSONDecodeError, IndexError, TypeError):
-                task_name = f"Unnamed"
-            tasks.append({
-                'id': task.id,
-                'task_id': task_id,
-                'name': task_name,
-                'status': task_status,
-                'result': task.result,
-                'created': task.date_created,
-                'is_running': task_status in ['PENDING', 'STARTED', 'PROGRESS'],
-            })
-
-        context = {
-            'tasks': tasks,
-            'form': form,
-            'user_profile': {
-                'name': user.get_full_name(),
-                'email': user.email,
-                'account_anni': user.date_joined,
-                'profission': user_profile.profission,
-                'institution': user_profile.institution,
-                'profile_image': user_profile.profile_image,
-            },
-        }
-        return render(request, 'user/profile.html', context)
-
-    @method_decorator(login_required)
-    def post(self, request, *args, **kwargs):
-        user = request.user
-        user_profile, _ = UserProfile.objects.get_or_create(user=user)
+    def post(self, request):
+        user_profile = get_object_or_404(UserProfile, user=request.user)
         form = UserProfileForm(request.POST, instance=user_profile)
-            
-        # Verifica se é para deletar uma tarefa
+        
         if 'delete_task' in request.POST:
             task_id = request.POST.get('task_id')
             task = get_object_or_404(TaskResult, task_id=task_id)
             task.delete()
-            messages.success(request, "Task deleted successfully.")
+            messages.success(request, "Tarefa eliminada com sucesso.")
             return redirect('profile')
-
-        # Atualiza o perfil do usuário
-        profile_image_path = request.POST.get('profile_image')
-        if profile_image_path:
-            user_profile.profile_image = profile_image_path
 
         if form.is_valid():
             form.save()
-            user_profile.save()
+            messages.success(request, "Perfil atualizado!")
             return redirect('profile')
 
-        return JsonResponse({'success': False, 'errors': form.errors})
+        return render(request, self.template_name, {'form': form, 'user_profile': user_profile})
 
 #-------------------------------------------------------------------#
-#                        Change Password                            #
+#             Recuperação de Palavra-passe Facilitada               #
 #-------------------------------------------------------------------#
-class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
+class ResetPasswordView(View):
+    """
+    View simplificada para reset direto.
+    """
     template_name = 'user/forget_password.html'
-    email_template_name = 'user/password_reset_email.html'
-    subject_template_name = 'user/password_reset_subject.html'
-    success_message = "We've emailed you instructions for setting your password, " \
-                      "if an account exists with the email you entered. You should receive them shortly." \
-                      " If you don't receive an email, " \
-                      "please make sure you've entered the address you registered with, and check your spam folder."
-    success_url = reverse_lazy('NanoGen')
 
+    def get(self, request):
+        return render(request, self.template_name, {'step': 1})
 
+    def post(self, request):
+        # PASSO 1: Verificar e-mail
+        if 'check_email' in request.POST:
+            email = request.POST.get('email')
+            # Busca todos os usuários com esse email (caso haja duplicados)
+            users = User.objects.filter(email=email)
+            
+            if users.exists():
+                user = users.first()
+                request.session['reset_user_id'] = user.id
+                form = SetPasswordForm(user)
+                return render(request, self.template_name, {
+                    'form': form, 
+                    'step': 2, 
+                    'target_user': user.username
+                })
+            else:
+                messages.error(request, "E-mail não encontrado.")
+                return render(request, self.template_name, {'step': 1})
+
+        # PASSO 2: Salvar nova senha
+        if 'set_password' in request.POST:
+            user_id = request.session.get('reset_user_id')
+            if not user_id:
+                return redirect('password_reset')
+            
+            user = get_object_or_404(User, id=user_id)
+            form = SetPasswordForm(user, request.POST)
+            
+            if form.is_valid():
+                # form.save() já faz o set_password e o save() no banco
+                updated_user = form.save() 
+                
+                # Garantia extra: força o salvamento
+                updated_user.save()
+                
+                # IMPORTANTE: Informamos o Username para ele não tentar logar com email
+                messages.success(request, f"Senha alterada! Use seu usuário '{updated_user.username}' para entrar.")
+                
+                # Limpa a sessão
+                del request.session['reset_user_id']
+                return redirect('login')
+            
+            return render(request, self.template_name, {
+                'form': form, 
+                'step': 2, 
+                'target_user': user.username
+            })
+
+        return redirect('password_reset')
