@@ -38,6 +38,9 @@ class RegisterView(View):
 #                        Login Customizado                          #
 #-------------------------------------------------------------------#
 class CustomLoginView(LoginView):
+    """
+    View de Login que suporta "Lembrar-me" e exibe mensagens de erro explícitas.
+    """
     form_class = LoginForm
 
     def form_valid(self, form):
@@ -47,6 +50,14 @@ class CustomLoginView(LoginView):
             self.request.session.set_expiry(0)
             self.request.session.modified = True
         return super(CustomLoginView, self).form_valid(form)
+
+    def form_invalid(self, form):
+        """
+        Caso o login falhe, adicionamos uma mensagem de erro para garantir
+        que o utilizador saiba que a senha ou o usuário estão incorretos.
+        """
+        messages.error(self.request, "Utilizador ou palavra-passe incorretos. Por favor, tente novamente.")
+        return super().form_invalid(form)
 
 #-------------------------------------------------------------------#
 #                        Perfil do Utilizador                       #
@@ -88,6 +99,7 @@ class ResetPasswordView(View):
     """
     View para redefinição de senha sem dependência de e-mail.
     Garante a invalidação de sessões antigas e limpeza de cache de CSRF.
+    Lida com múltiplos usuários que possuem o mesmo e-mail.
     """
     template_name = 'user/forget_password.html'
 
@@ -105,16 +117,18 @@ class ResetPasswordView(View):
             users = User.objects.filter(email__iexact=email)
             
             if users.exists():
-                # Em caso de múltiplos utilizadores com o mesmo e-mail, usamos o primeiro
+                # Se houver duplicados, pegamos o primeiro, mas avisamos o username
                 user = users.first()
                 request.session['reset_user_id'] = user.id
                 form = SetPasswordForm(user)
                 
-                msg = f"Utilizador '{user.username}' localizado."
+                # Mensagem importante para o usuário saber QUAL conta está mexendo
+                msg = f"Iniciando recuperação para o usuário: '{user.username}'."
                 if users.count() > 1:
-                    msg += " (Nota: existem múltiplas contas com este e-mail)"
+                    usernames = ", ".join([u.username for u in users])
+                    msg = f"Atenção: Existem {users.count()} contas com este e-mail ({usernames}). Recuperando acesso apenas para: '{user.username}'."
                 
-                messages.info(request, msg)
+                messages.warning(request, msg)
                 return render(request, self.template_name, {
                     'form': form, 
                     'step': 2, 
@@ -128,7 +142,7 @@ class ResetPasswordView(View):
         if 'set_password' in request.POST:
             user_id = request.session.get('reset_user_id')
             if not user_id:
-                messages.error(request, "Sessão expirada. Por favor, recomece o processo.")
+                messages.error(request, "Sessão expirada. Por favor, recomece.")
                 return redirect('password_reset')
             
             user = get_object_or_404(User, id=user_id)
@@ -142,6 +156,7 @@ class ResetPasswordView(View):
                     user.set_password(new_password)
                     user.save()
                 
+                # Mensagem de sucesso com o Username para o usuário não esquecer
                 messages.success(request, f"Sucesso! Palavra-passe alterada para o utilizador: {user.username}")
                 
                 # LIMPEZA TOTAL DA SESSÃO
