@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 
 <!doctype html>
 <!--
@@ -9,7 +9,7 @@
 * Copyright 2018-2023 codecalm.net Paweł Kuna
 * Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
 -->
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
@@ -17,7 +17,7 @@
     <title>Nanogene - Login</title>
     <link href="{% static '/img/flavicon_verde.png' %}" rel="shortcut icon" type="image/x-icon">
     
-    <!-- CSS files -->
+    <!-- Arquivos CSS -->
     <link href="{% static 'static_dashboard/css/tabler.css' %}?1692870487" rel="stylesheet"/>
     <link href="{% static 'static_dashboard/css/tabler-flags.css' %}?1692870487" rel="stylesheet"/>
     <link href="{% static 'static_dashboard/css/tabler-payments.css' %}?1692870487" rel="stylesheet"/>
@@ -28,78 +28,95 @@
         :root { --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; }
         body { font-feature-settings: "cv03", "cv04", "cv11"; }
     </style>
-    
-    <!-- Libs JS -->
-    <script src="{% static 'static_dashboard/js/apexcharts.js' %}?1692870487" defer></script>
-    <script src="{% static 'static_dashboard/js/jsvectormap.js' %}?1692870487" defer></script>
-    <script src="{% static 'static_dashboard/js/world.js' %}?1692870487" defer></script>
-    <script src="{% static 'static_dashboard/js/world-merc.js' %}?1692870487" defer></script>
-
-    <!--      -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-    
-    <!-- Tabler Core -->
-    <script src="{% static 'static_dashboard/js/tabler.min.js' %}?1692870487" defer></script>
-    <script src="{% static 'static_dashboard/js/demo.min.js' %}?1692870487" defer></script>
   </head>
-  <body  class=" d-flex flex-column">
+  <body class="d-flex flex-column">
     <div class="page page-center">
       <div class="container container-tight py-4">
         <div class="text-center mb-4">
           <a href="/" class="navbar-brand navbar-brand-autodark">
-            <img src="/static/img/logo_light.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            <img src="{% static 'img/logo_light.svg' %}" width="110" height="32" alt="Nanogene" class="navbar-brand-image">
           </a>
         </div>
+        
         <div class="card card-md">
           <div class="card-body">
-            <h2 class="h2 text-center mb-4">Login to your account</h2>
-            <form method="POST">
+            <h2 class="h2 text-center mb-4">Acesse sua conta</h2>
+
+            <!-- BLOCO DE MENSAGENS (ERROS DE LOGIN E SUCESSO DE SENHA) -->
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible" role="alert">
+                  <div class="d-flex">
+                    <div>{{ message }}</div>
+                  </div>
+                  <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                </div>
+              {% endfor %}
+            {% endif %}
+
+            <form method="POST" autocomplete="off">
               {% csrf_token %}
               <div class="mb-3">
-                <label class="form-label">Username</label>
+                <label class="form-label">Usuário</label>
                 {{ form.username }}
               </div>
               <div class="mb-2">
                 <label class="form-label">
-                  Password
+                  Senha
                   <span class="form-label-description">
-                    <a href="/accounts/password-reset/">I forgot password</a>
+                    <a href="{% url 'password_reset' %}">Esqueci a senha</a>
                   </span>
                 </label>
                 
                 <div class="input-group input-group-flat">
                   {{ form.password }}
                   <span class="input-group-text">
-                    <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+                    <a href="javascript:void(0)" class="link-secondary" title="Mostrar senha" id="togglePassword">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                      </svg>
                     </a>
                   </span>
                 </div>
               </div>
               <div class="mb-2">
                 <label class="form-check">
-                  <input type="checkbox" class="form-check-input"/>
-                  <span class="form-check-label">Remember me on this device</span>
+                  <input type="checkbox" name="remember_me" class="form-check-input"/>
+                  <span class="form-check-label">Lembrar-me neste dispositivo</span>
                 </label>
               </div>
               <div class="form-footer">
-                <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
               </div>
             </form>
           </div>
-          
         </div>
+        
         <div class="text-center text-secondary mt-3">
-          Don't have account yet? <a href="/accounts/signup/" tabindex="-1">Sign up</a>
+          Ainda não tem conta? <a href="{% url 'SignUp' %}" tabindex="-1">Cadastre-se</a>
         </div>
       </div>
     </div>
+
     <!-- Libs JS -->
-    <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1692870487" defer></script>
-    <script src="./dist/js/demo.min.js?1692870487" defer></script>
+    <script src="{% static 'static_dashboard/js/tabler.min.js' %}?1692870487" defer></script>
+    <script src="{% static 'static_dashboard/js/demo.min.js' %}?1692870487" defer></script>
+    
+    <script>
+      // Lógica simples para mostrar/esconder senha
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('togglePassword');
+        const passwordInput = document.querySelector('input[type="password"]');
+        
+        if (toggleBtn && passwordInput) {
+          toggleBtn.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
